@@ -27,6 +27,8 @@ export interface Counts {
   free: number;
   loan: number;
   undisclosed: number;
+  /** Free transfers and loans that the recent source publishes without distinction. */
+  freeOrLoan: number;
 }
 
 /** One club's activity over one transfer window. Amounts are in thousands of euros. */
@@ -67,6 +69,7 @@ export const KIND_LABELS = [
   'Prêt payant',
   'Montant non divulgué',
   'Fin de prêt',
+  'Libre ou prêt',
 ] as const;
 
 /** A single player movement inside one window, as stored in public/data/windows/. */

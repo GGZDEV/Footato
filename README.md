@@ -36,7 +36,7 @@ de Transfermarkt en CSV, un fichier par championnat.
 
 | | |
 |---|---|
-| Couverture | **1992/93 → 2022/23** |
+| Couverture | **1992/93 → 2022/23** (extensible à 2023/24 et au-delà, voir plus bas) |
 | Championnats | Premier League, LaLiga, Serie A, Bundesliga, Ligue 1, Liga Portugal, Eredivisie, Premier Liga (Russie), Championship |
 | Volume | 177 412 mouvements · 413 clubs · 9 951 mercatos |
 | Devise | euros, montants tels que publiés par Transfermarkt |
@@ -44,19 +44,50 @@ de Transfermarkt en CSV, un fichier par championnat.
 Le site s'ouvre par défaut sur **2000/01 → 2022/23**, la plage disponible à l'intérieur de
 la période demandée.
 
-### ⚠️ Les saisons 2023/24 à 2026/27 ne sont pas couvertes
+### Les saisons 2023/24 et suivantes : un import à faire une fois
 
-Le dépôt source n'a plus été mis à jour depuis avril 2023 : sa dernière saison complète est
-**2022/23**. Transfermarkt n'est pas interrogeable directement depuis ce projet (et son scraping
-est contraire à ses conditions d'utilisation), donc ces quatre saisons manquent.
+Le jeu de base (`ewenme/transfers`) s'est arrêté en avril 2023, sa dernière saison complète
+est **2022/23**. C'est aussi le cas de l'autre miroir Transfermarkt public
+(`JaseZiv/worldfootballR_data`, archivé) : l'écosystème open data autour de Transfermarkt
+s'est largement éteint en 2023.
 
-Pour les ajouter, deux chemins :
+Une source reste vivante et **mise à jour chaque semaine** :
+[`dcaribou/transfermarkt-datasets`](https://github.com/dcaribou/transfermarkt-datasets).
+Ses données ne sont pas dans Git (elles sont derrière DVC/Cloudflare R2), mais elles sont
+publiées en téléchargement direct. `scripts/import-recent.mjs` les convertit vers le schéma
+de ce projet.
 
-1. **Une mise à jour en amont** — si `ewenme/transfers` reprend, un `npm run data` suffit à
-   récupérer les nouvelles saisons ; rien d'autre à changer.
-2. **Vos propres données** — `scripts/build-dataset.mjs` lit *tous* les CSV listés dans
-   `data/raw/`, quelle que soit leur provenance, dès lors qu'ils respectent le schéma ci-dessous.
-   Ajoutez vos lignes aux fichiers existants et relancez `npm run data:build`.
+```bash
+# 1. Récupérer l'archive publiée (aucun compte requis)
+curl -L -o tm.zip https://pub-e682421888d945d684bcae8890b0ec20.r2.dev/data/transfermarkt-datasets.zip
+unzip tm.zip -d tm            # doit contenir transfers.csv, clubs.csv, competitions.csv
+#    (alternative : https://www.kaggle.com/datasets/davidcariboo/player-scores)
+
+# 2. Convertir et reconstruire
+npm run data:recent -- --from ./tm     # --since 2023 par défaut
+npm run data:build
+```
+
+Les lignes importées atterrissent dans `data/raw/recent/` et sont fusionnées avec la base
+sans l'écraser : `--since 2023` garantit qu'il n'y a ni doublon ni recouvrement. Rejouez ces
+deux commandes quand vous voulez rafraîchir — l'amont est réactualisé chaque semaine.
+
+**Deux différences de méthode sur les saisons importées**, à connaître :
+
+- **Prêts et transferts libres ne sont pas distingués.** L'amont ramène les deux à 0 €. Ces
+  mouvements apparaissent donc sous « Libre ou prêt » au lieu d'être séparés. Les montants
+  d'achats, de ventes et de bilan restent exacts — seule la ventilation par type est plus
+  grossière. Les indemnités de prêt, elles, sont perdues (elles valent 0 dans cette source).
+- **La fenêtre est déduite de la date** du transfert : juin à septembre pour le mercato
+  d'été, le reste pour celui d'hiver. La source ne publie pas le drapeau de fenêtre.
+
+Le périmètre est celui des clubs des championnats couverts : un transfert vers ou depuis un
+club hors périmètre compte bien pour le club couvert, et est ignoré pour l'autre.
+
+### Alimenter le site depuis n'importe quelle autre source
+
+`scripts/build-dataset.mjs` lit *tous* les CSV de `data/raw/` (et de `data/raw/recent/`),
+quelle que soit leur provenance, dès lors qu'ils respectent le schéma ci-dessous.
 
 Schéma attendu (une ligne = un mouvement, vu depuis le club) :
 
@@ -86,6 +117,7 @@ Les montants sont stockés en **milliers d'euros entiers**, donc les sommes sont
 | Transfert libre | non (0 €), mais compté dans les arrivées/départs |
 | Prêt sec / fin de prêt | non (0 €), compté dans les arrivées/départs |
 | Montant non divulgué (`?`, `-`) | non (0 €), compté dans les arrivées/départs |
+| Libre ou prêt (saisons importées) | non (0 €), compté dans les arrivées/départs |
 
 **Conséquence à garder en tête : les totaux sont des planchers.** Environ la moitié des
 mouvements n'ont pas de montant public — ils comptent pour 0 €. La proportion de transferts
@@ -103,7 +135,8 @@ Autres partis pris :
 ## Structure
 
 ```
-scripts/fetch-source.mjs    télécharge les CSV dans data/raw/
+scripts/fetch-source.mjs    télécharge les CSV de base dans data/raw/
+scripts/import-recent.mjs   convertit les saisons récentes dans data/raw/recent/
 scripts/build-dataset.mjs   agrège les CSV -> public/data/
 public/data/summary.json    championnats, clubs, un agrégat par club × saison × fenêtre (~0,5 Mo)
 public/data/windows/*.json  les mouvements de chaque fenêtre, chargés à la demande

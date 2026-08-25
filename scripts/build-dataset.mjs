@@ -29,7 +29,7 @@ const LEAGUES = [
 ];
 
 /** Movement kinds, kept as small ints in the emitted JSON. */
-const KIND = { PAID: 0, FREE: 1, LOAN: 2, LOAN_FEE: 3, UNDISCLOSED: 4, END_OF_LOAN: 5 };
+const KIND = { PAID: 0, FREE: 1, LOAN: 2, LOAN_FEE: 3, UNDISCLOSED: 4, END_OF_LOAN: 5, FREE_OR_LOAN: 6 };
 
 function parseCsv(text) {
   const rows = [];
@@ -52,6 +52,8 @@ function parseCsv(text) {
 /** Maps a raw Transfermarkt fee label to a movement kind. */
 function classify(fee) {
   const f = fee.trim();
+  // Emitted by scripts/import-recent.mjs: upstream collapses free transfers and loans.
+  if (f === 'free transfer or loan') return KIND.FREE_OR_LOAN;
   if (f === 'free transfer') return KIND.FREE;
   if (f.startsWith('Loan fee')) return KIND.LOAN_FEE;
   if (f === 'loan transfer') return KIND.LOAN;
@@ -78,15 +80,12 @@ const agg = new Map();   // clubId|leagueIdx|year|window -> aggregate row
 const details = new Map(); // leagueId_year_window -> movement list
 let skipped = 0, movements = 0;
 
-for (const [leagueIdx, league] of LEAGUES.entries()) {
-  const path = join(RAW, league.file);
-  if (!existsSync(path)) {
-    console.warn(`! missing ${league.file} — run \`npm run data:fetch\` first`);
-    continue;
-  }
+/** Reads one canonical CSV and folds its movements into the aggregates. */
+function ingest(path, leagueIdx, league) {
   const rows = parseCsv(readFileSync(path, 'utf8'));
   const header = rows[0].map((h) => h.trim());
   const col = Object.fromEntries(header.map((h, i) => [h, i]));
+  let n = 0;
 
   for (let i = 1; i < rows.length; i++) {
     const r = rows[i];
@@ -105,16 +104,18 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
     let a = agg.get(key);
     if (!a) {
       // [clubId, leagueIdx, year, window, spend, income, loanSpend, loanIncome,
-      //  inTotal, inPaid, inFree, inLoan, inUnd, outTotal, outPaid, outFree, outLoan, outUnd]
-      a = [cid, leagueIdx, year, w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      //  in:  total, paid, free, loan, undisclosed, freeOrLoan,
+      //  out: total, paid, free, loan, undisclosed, freeOrLoan]
+      a = [cid, leagueIdx, year, w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       agg.set(key, a);
     }
-    const base = dir === 0 ? 8 : 13;
+    const base = dir === 0 ? 8 : 14;
     a[base] += 1;
     if (kind === KIND.PAID) { a[base + 1] += 1; a[dir === 0 ? 4 : 5] += amount; }
     else if (kind === KIND.FREE) a[base + 2] += 1;
     else if (kind === KIND.LOAN || kind === KIND.END_OF_LOAN) a[base + 3] += 1;
     else if (kind === KIND.LOAN_FEE) { a[base + 3] += 1; a[dir === 0 ? 6 : 7] += amount; }
+    else if (kind === KIND.FREE_OR_LOAN) a[base + 5] += 1;
     else a[base + 4] += 1;
 
     const dkey = `${league.id}_${year}_${w}`;
@@ -125,8 +126,25 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
       r[col.club_involved_name].trim(),
     ]);
     movements++;
+    n++;
   }
-  console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${rows.length - 1} movements`);
+  return n;
+}
+
+for (const [leagueIdx, league] of LEAGUES.entries()) {
+  const base = join(RAW, league.file);
+  const recent = join(RAW, 'recent', league.file);
+  const hasBase = existsSync(base);
+  const hasRecent = existsSync(recent);
+
+  if (!hasBase && !hasRecent) {
+    console.warn(`! missing ${league.file} — run \`npm run data:fetch\` first`);
+    continue;
+  }
+
+  const n = hasBase ? ingest(base, leagueIdx, league) : 0;
+  const extra = hasRecent ? ingest(recent, leagueIdx, league) : 0;
+  console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${n} movements${extra ? ` (+${extra} récents)` : ''}`);
 }
 
 const rows = [...agg.values()].sort((a, b) => a[2] - b[2] || a[3] - b[3] || a[1] - b[1] || a[0] - b[0]);

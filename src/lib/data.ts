@@ -13,7 +13,7 @@ const asset = (path: string) => `${import.meta.env.BASE_URL}data/${path}`.replac
 const C = {
   club: 0, league: 1, year: 2, window: 3,
   spend: 4, income: 5, loanSpend: 6, loanIncome: 7,
-  in: 8, out: 13,
+  in: 8, out: 14,
 } as const;
 
 const counts = (r: number[], base: number) => ({
@@ -22,6 +22,7 @@ const counts = (r: number[], base: number) => ({
   free: r[base + 2],
   loan: r[base + 3],
   undisclosed: r[base + 4],
+  freeOrLoan: r[base + 5] ?? 0,
 });
 
 export async function loadDataset(): Promise<Dataset> {

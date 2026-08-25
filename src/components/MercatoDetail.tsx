@@ -17,6 +17,7 @@ const SEGMENTS: { key: keyof Omit<Counts, 'total'>; label: string; color: string
   { key: 'paid', label: 'Payants', color: 'var(--in)' },
   { key: 'free', label: 'Libres', color: 'var(--accent)' },
   { key: 'loan', label: 'Prêts', color: 'var(--text-3)' },
+  { key: 'freeOrLoan', label: 'Libres ou prêts', color: 'color-mix(in srgb, var(--accent) 55%, var(--text-3))' },
   { key: 'undisclosed', label: 'Non divulgués', color: 'var(--surface-3)' },
 ];
 
@@ -25,7 +26,7 @@ function Breakdown({ title, c }: { title: string; c: Counts }) {
     <div className="col">
       <h3 style={{ marginBottom: 8 }}>{title} · {count(c.total)}</h3>
       <dl>
-        {SEGMENTS.map((s) => (
+        {SEGMENTS.filter((s) => s.key !== 'freeOrLoan' || c.freeOrLoan > 0).map((s) => (
           <div key={s.key} style={{ display: 'contents' }}>
             <dt>{s.label}</dt>
             <dd>{count(c[s.key])}</dd>

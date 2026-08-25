@@ -223,9 +223,10 @@ export default function App() {
       <footer className="source-note" style={{ textAlign: 'left', paddingTop: 8 }}>
         Montants en euros, tels que publiés par Transfermarkt. Les transferts dont le montant n’a pas été
         divulgué comptent comme 0 € : le total réel est donc un plancher, pas une valeur exacte.
-        {meta.yearMax < 2025 && (
-          <> Les saisons postérieures à {season(meta.yearMax)} ne sont pas encore dans le jeu de données —
-          voir le README pour les ajouter.</>
+        {meta.yearMax < 2026 && (
+          <> Les saisons postérieures à {season(meta.yearMax)} ne sont pas dans le jeu de base :
+          lancez <code>npm run data:recent</code> pour les importer depuis la source encore
+          maintenue (voir le README).</>
         )}
       </footer>
 
