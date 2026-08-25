@@ -12,6 +12,8 @@ export interface League {
 
 export interface Meta {
   generatedAt: string;
+  /** Last modification date reported by the maintained upstream export. */
+  sourceUpdatedAt: string | null;
   source: string;
   sourceDataset: string;
   yearMin: number;
@@ -19,6 +21,23 @@ export interface Meta {
   clubCount: number;
   rowCount: number;
   movementCount: number;
+  coverageByLeague: Record<string, { yearMin: number | null; yearMax: number | null; rowCount: number }>;
+  quality: {
+    duplicateRowsRemoved: number;
+    skippedRows: number;
+    recent: null | {
+      duplicatesRemoved: number;
+      skippedFuture: number;
+      skippedBadDate: number;
+      skippedNoMembership: number;
+    };
+    memberships: Array<{
+      leagueId: string;
+      season: number;
+      teamCount: number;
+      complete: boolean;
+    }>;
+  };
 }
 
 /** How the arrivals (or departures) of a window break down by deal type. */

@@ -167,6 +167,11 @@ export default function App() {
 
   const { meta } = dataset;
   const tab = TABS.find((x) => x.value === grouping)!;
+  const currentDate = new Date();
+  const currentSeasonYear = currentDate.getMonth() >= 6 ? currentDate.getFullYear() : currentDate.getFullYear() - 1;
+  const laggingLeagues = dataset.leagues.filter(
+    (league) => (meta.coverageByLeague[league.id]?.yearMax ?? -Infinity) < meta.yearMax,
+  );
 
   return (
     <div className="app">
@@ -180,7 +185,8 @@ export default function App() {
         <p className="source-note">
           Source <strong>Transfermarkt</strong> · {meta.movementCount.toLocaleString('fr-FR')} mouvements ·{' '}
           {meta.clubCount} clubs · {dataset.leagues.length} championnats<br />
-          Couverture {season(meta.yearMin)} → {season(meta.yearMax)} · données du {meta.generatedAt}
+          Couverture {season(meta.yearMin)} → {season(meta.yearMax)} · source observée le{' '}
+          {meta.sourceUpdatedAt ?? '—'} · build du {meta.generatedAt}
         </p>
       </header>
 
@@ -223,10 +229,13 @@ export default function App() {
       <footer className="source-note" style={{ textAlign: 'left', paddingTop: 8 }}>
         Montants en euros, tels que publiés par Transfermarkt. Les transferts dont le montant n’a pas été
         divulgué comptent comme 0 € : le total réel est donc un plancher, pas une valeur exacte.
-        {meta.yearMax < 2026 && (
-          <> Les saisons postérieures à {season(meta.yearMax)} ne sont pas dans le jeu de base :
-          lancez <code>npm run data:recent</code> pour les importer depuis la source encore
-          maintenue (voir le README).</>
+        {laggingLeagues.length > 0 && (
+          <> Couverture récente indisponible pour {laggingLeagues.map((league) => league.name).join(', ')} ;
+          leur historique est conservé sans extrapolation.</>
+        )}{' '}
+        {meta.yearMax < currentSeasonYear && (
+          <>La saison {season(currentSeasonYear)} n’est pas publiée tant que l’amont ne permet pas
+          de rattacher les clubs à leur championnat avec fiabilité.</>
         )}
       </footer>
 

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, 'claude/**']
   workflow_dispatch:
+  schedule:
+    # L'amont est publié de façon hebdomadaire. Le décalage évite les heures pleines.
+    - cron: '17 5 * * 1'
 
 permissions:
   contents: read
@@ -24,8 +27,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Actualiser et contrôler les données
+        run: npm run data:refresh
       - name: Construire le site
-        # Les données agrégées sont versionnées : pas besoin de retélécharger les CSV sources.
         run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/

@@ -14,6 +14,10 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'data', 'raw');
 const OUT = join(ROOT, 'public', 'data');
+const RECENT_MANIFEST_PATH = join(RAW, 'recent', 'manifest.json');
+const recentManifest = existsSync(RECENT_MANIFEST_PATH)
+  ? JSON.parse(readFileSync(RECENT_MANIFEST_PATH, 'utf8'))
+  : null;
 
 /** Source file -> league identity. `code` selects the inline SVG flag. */
 const LEAGUES = [
@@ -69,8 +73,16 @@ function toThousands(feeCleaned) {
   return Number.isFinite(n) ? Math.round(n * 1000) : 0;
 }
 
-const clubIds = new Map();
-const clubs = [];
+// Preserve the published club-id registry across rebuilds. Club ids are part of
+// shareable URLs, so deriving them from changing upstream row order would break
+// old links every time a source reorders its CSV.
+let clubs = [];
+const existingSummaryPath = join(OUT, 'summary.json');
+if (existsSync(existingSummaryPath)) {
+  const existing = JSON.parse(readFileSync(existingSummaryPath, 'utf8'));
+  if (Array.isArray(existing.clubs)) clubs = [...existing.clubs];
+}
+const clubIds = new Map(clubs.map((name, id) => [name, id]));
 function clubId(name) {
   if (!clubIds.has(name)) { clubIds.set(name, clubs.length); clubs.push(name); }
   return clubIds.get(name);
@@ -78,13 +90,20 @@ function clubId(name) {
 
 const agg = new Map();   // clubId|leagueIdx|year|window -> aggregate row
 const details = new Map(); // leagueId_year_window -> movement list
-let skipped = 0, movements = 0;
+const movementKeys = new Set();
+let skipped = 0, movements = 0, duplicates = 0;
 
 /** Reads one canonical CSV and folds its movements into the aggregates. */
-function ingest(path, leagueIdx, league) {
+function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
   const rows = parseCsv(readFileSync(path, 'utf8'));
   const header = rows[0].map((h) => h.trim());
   const col = Object.fromEntries(header.map((h, i) => [h, i]));
+  const required = [
+    'club_name', 'player_name', 'club_involved_name', 'fee', 'transfer_movement',
+    'transfer_period', 'fee_cleaned', 'year',
+  ];
+  const missing = required.filter((name) => col[name] === undefined);
+  if (missing.length) throw new Error(`${path} : colonnes manquantes ${missing.join(', ')}`);
   let n = 0;
 
   for (let i = 1; i < rows.length; i++) {
@@ -93,12 +112,25 @@ function ingest(path, leagueIdx, league) {
 
     const year = Number.parseInt(r[col.year], 10);
     if (!Number.isFinite(year)) { skipped++; continue; }
+    if (year > yearMax) continue;
 
     const w = r[col.transfer_period].trim() === 'Winter' ? 1 : 0;
     const dir = r[col.transfer_movement].trim() === 'out' ? 1 : 0;
     const kind = classify(r[col.fee]);
     const amount = toThousands(r[col.fee_cleaned]);
-    const cid = clubId(r[col.club_name].trim());
+    const clubName = r[col.club_name].trim();
+    const playerName = r[col.player_name].trim();
+    const counterpart = r[col.club_involved_name].trim();
+    if (!clubName || !playerName) { skipped++; continue; }
+
+    const sourceId = col.source_id === undefined ? '' : r[col.source_id].trim();
+    const movementKey = sourceId
+      ? `${origin}|${sourceId}|${dir}|${league.id}`
+      : [origin, league.id, year, w, clubName, dir, kind, amount, playerName, counterpart].join('|');
+    if (movementKeys.has(movementKey)) { duplicates++; continue; }
+    movementKeys.add(movementKey);
+
+    const cid = clubId(clubName);
 
     const key = `${cid}|${leagueIdx}|${year}|${w}`;
     let a = agg.get(key);
@@ -122,8 +154,8 @@ function ingest(path, leagueIdx, league) {
     if (!details.has(dkey)) details.set(dkey, []);
     details.get(dkey).push([
       cid, dir, kind, amount,
-      r[col.player_name].trim(),
-      r[col.club_involved_name].trim(),
+      playerName,
+      counterpart,
     ]);
     movements++;
     n++;
@@ -142,13 +174,28 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
     continue;
   }
 
-  const n = hasBase ? ingest(base, leagueIdx, league) : 0;
-  const extra = hasRecent ? ingest(recent, leagueIdx, league) : 0;
+  // When maintained rows overlap the historical snapshot, the maintained
+  // source owns the overlapping seasons. This prevents accidental double count.
+  const legacyYearMax = hasRecent && recentManifest?.yearMin != null
+    ? recentManifest.yearMin - 1
+    : Infinity;
+  const n = hasBase ? ingest(base, leagueIdx, league, 'legacy', legacyYearMax) : 0;
+  const extra = hasRecent ? ingest(recent, leagueIdx, league, 'recent') : 0;
   console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${n} movements${extra ? ` (+${extra} récents)` : ''}`);
 }
 
 const rows = [...agg.values()].sort((a, b) => a[2] - b[2] || a[3] - b[3] || a[1] - b[1] || a[0] - b[0]);
 const years = rows.map((r) => r[2]);
+if (!years.length) throw new Error('Aucune donnée valide à publier.');
+
+const coverageByLeague = Object.fromEntries(LEAGUES.map((league, leagueIdx) => {
+  const leagueYears = rows.filter((r) => r[1] === leagueIdx).map((r) => r[2]);
+  return [league.id, {
+    yearMin: leagueYears.length ? Math.min(...leagueYears) : null,
+    yearMax: leagueYears.length ? Math.max(...leagueYears) : null,
+    rowCount: leagueYears.length,
+  }];
+}));
 
 rmSync(join(OUT, 'windows'), { recursive: true, force: true });
 mkdirSync(join(OUT, 'windows'), { recursive: true });
@@ -156,13 +203,25 @@ mkdirSync(join(OUT, 'windows'), { recursive: true });
 const summary = {
   meta: {
     generatedAt: new Date().toISOString().slice(0, 10),
+    sourceUpdatedAt: recentManifest?.sourceUpdatedAt?.slice(0, 10) ?? null,
     source: 'Transfermarkt',
-    sourceDataset: 'github.com/ewenme/transfers',
+    sourceDataset: recentManifest
+      ? 'github.com/ewenme/transfers + github.com/dcaribou/transfermarkt-datasets + github.com/openfootball/football.json (league membership)'
+      : 'github.com/ewenme/transfers',
     yearMin: Math.min(...years),
     yearMax: Math.max(...years),
     clubCount: clubs.length,
     rowCount: rows.length,
     movementCount: movements,
+    coverageByLeague,
+    quality: {
+      duplicateRowsRemoved: duplicates,
+      skippedRows: skipped,
+      recent: recentManifest?.quality ?? null,
+      memberships: recentManifest?.memberships?.leagues?.map(({ leagueId, season, teamCount, complete }) => ({
+        leagueId, season, teamCount, complete,
+      })) ?? [],
+    },
   },
   leagues: LEAGUES.map(({ file, ...l }) => l),
   clubs,
@@ -180,4 +239,5 @@ const size = (p) => (readdirSync(p, { withFileTypes: true })
 
 console.log(`\n✓ ${rows.length} mercatos · ${clubs.length} clubs · ${movements} mouvements · ${summary.meta.yearMin}-${summary.meta.yearMax}`);
 console.log(`  summary.json ${(readFileSync(join(OUT, 'summary.json')).length / 1e6).toFixed(1)} Mo · windows/ ${size(join(OUT, 'windows'))} Mo (${details.size} fichiers)`);
+if (duplicates) console.log(`  ${duplicates} doublons exacts retirés`);
 if (skipped) console.log(`  ${skipped} lignes ignorées (malformées)`);

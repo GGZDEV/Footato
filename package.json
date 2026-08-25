@@ -12,7 +12,9 @@
     "data:fetch": "node scripts/fetch-source.mjs",
     "data:build": "node scripts/build-dataset.mjs",
     "data:recent": "node scripts/import-recent.mjs",
-    "data": "npm run data:fetch && npm run data:build"
+    "data:validate": "node scripts/validate-dataset.mjs",
+    "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:build && npm run data:validate",
+    "data": "npm run data:refresh"
   },
   "dependencies": {
     "react": "^18.3.1",
