@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# Raw Transfermarkt CSV exports — ~20 Mo, re-downloadable with `npm run data:fetch`
+data/raw/
+
+# TypeScript incremental build info
+tsconfig.tsbuildinfo

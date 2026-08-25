@@ -1,0 +1,194 @@
+import type { Mercato, Resolved } from './types';
+import { mercatoLabel, season, windowLabel } from './format';
+
+export type Grouping = 'mercato' | 'club' | 'league' | 'season';
+export type BalanceFilter = 'all' | 'positive' | 'negative';
+
+export interface Filters {
+  yearFrom: number;
+  yearTo: number;
+  window: 'all' | 0 | 1;
+  leagues: string[];
+  clubs: number[];
+  balance: BalanceFilter;
+  minVolume: number;
+  includeLoanFees: boolean;
+}
+
+/** Applies the "include loan fees" setting to a mercato's raw amounts. */
+export function resolve(m: Mercato, includeLoanFees: boolean): Resolved {
+  const spend = m.spend + (includeLoanFees ? m.loanSpend : 0);
+  const income = m.income + (includeLoanFees ? m.loanIncome : 0);
+  return { spend, income, balance: income - spend, volume: spend + income };
+}
+
+export function filterMercatos(all: Mercato[], f: Filters): Mercato[] {
+  const leagues = new Set(f.leagues);
+  const clubs = new Set(f.clubs);
+
+  return all.filter((m) => {
+    if (m.year < f.yearFrom || m.year > f.yearTo) return false;
+    if (f.window !== 'all' && m.window !== f.window) return false;
+    if (leagues.size && !leagues.has(m.league.id)) return false;
+    if (clubs.size && !clubs.has(m.clubId)) return false;
+
+    const { balance, volume } = resolve(m, f.includeLoanFees);
+    if (volume < f.minVolume) return false;
+    if (f.balance === 'positive' && balance <= 0) return false;
+    if (f.balance === 'negative' && balance >= 0) return false;
+    return true;
+  });
+}
+
+/** One line of the table: either a single mercato or an aggregate over several. */
+export interface Group {
+  key: string;
+  label: string;
+  sublabel: string;
+  flag: string;
+  spend: number;
+  income: number;
+  balance: number;
+  volume: number;
+  arrivals: number;
+  departures: number;
+  count: number;
+  /** Present only when grouping by mercato — enables the detail drill-down. */
+  mercato?: Mercato;
+}
+
+const empty = (key: string, label: string, sublabel: string, flag: string): Group => ({
+  key, label, sublabel, flag,
+  spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, count: 0,
+});
+
+export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: boolean): Group[] {
+  if (grouping === 'mercato') {
+    return rows.map((m) => {
+      const r = resolve(m, includeLoanFees);
+      return {
+        key: m.key,
+        label: m.club,
+        sublabel: mercatoLabel(m.year, m.window),
+        flag: m.league.flag,
+        ...r,
+        arrivals: m.arrivals.total,
+        departures: m.departures.total,
+        count: 1,
+        mercato: m,
+      };
+    });
+  }
+
+  const out = new Map<string, Group>();
+  for (const m of rows) {
+    let key: string, label: string, sublabel: string, flag: string;
+    if (grouping === 'club') {
+      key = String(m.clubId);
+      label = m.club;
+      sublabel = m.league.name;
+      flag = m.league.flag;
+    } else if (grouping === 'league') {
+      key = m.league.id;
+      label = m.league.name;
+      sublabel = m.league.country;
+      flag = m.league.flag;
+    } else {
+      key = `${m.year}-${m.window}`;
+      label = season(m.year);
+      sublabel = `Mercato d'${windowLabel(m.window).toLowerCase()}`;
+      flag = m.window === 1 ? '❄️' : '☀️';
+    }
+
+    let g = out.get(key);
+    if (!g) { g = empty(key, label, sublabel, flag); out.set(key, g); }
+
+    const r = resolve(m, includeLoanFees);
+    g.spend += r.spend;
+    g.income += r.income;
+    g.volume += r.volume;
+    g.arrivals += m.arrivals.total;
+    g.departures += m.departures.total;
+    g.count += 1;
+    // A club that changed division keeps the league of its most recent window.
+    if (grouping === 'club') { g.sublabel = m.league.name; g.flag = m.league.flag; }
+  }
+
+  for (const g of out.values()) g.balance = g.income - g.spend;
+  return [...out.values()];
+}
+
+export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'count';
+
+export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] {
+  const sorted = [...groups];
+  sorted.sort((a, b) => {
+    if (key === 'label' || key === 'sublabel') {
+      return a[key].localeCompare(b[key], 'fr') * dir;
+    }
+    const diff = a[key] - b[key];
+    return (diff || a.label.localeCompare(b.label, 'fr')) * dir;
+  });
+  return sorted;
+}
+
+export interface Totals {
+  spend: number;
+  income: number;
+  balance: number;
+  mercatos: number;
+  clubs: number;
+  arrivals: number;
+  departures: number;
+  paidDeals: number;
+  undisclosed: number;
+}
+
+export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
+  const t: Totals = {
+    spend: 0, income: 0, balance: 0, mercatos: rows.length, clubs: 0,
+    arrivals: 0, departures: 0, paidDeals: 0, undisclosed: 0,
+  };
+  const clubs = new Set<number>();
+  for (const m of rows) {
+    const r = resolve(m, includeLoanFees);
+    t.spend += r.spend;
+    t.income += r.income;
+    t.arrivals += m.arrivals.total;
+    t.departures += m.departures.total;
+    t.paidDeals += m.arrivals.paid + m.departures.paid;
+    t.undisclosed += m.arrivals.undisclosed + m.departures.undisclosed;
+    clubs.add(m.clubId);
+  }
+  t.balance = t.income - t.spend;
+  t.clubs = clubs.size;
+  return t;
+}
+
+/** Spend/income per season+window, for the timeline chart. Always ordered chronologically. */
+export interface SeasonPoint {
+  year: number;
+  window: 0 | 1;
+  label: string;
+  spend: number;
+  income: number;
+  balance: number;
+}
+
+export function bySeason(rows: Mercato[], includeLoanFees: boolean): SeasonPoint[] {
+  const out = new Map<string, SeasonPoint>();
+  for (const m of rows) {
+    const key = `${m.year}-${m.window}`;
+    let p = out.get(key);
+    if (!p) {
+      p = { year: m.year, window: m.window, label: mercatoLabel(m.year, m.window), spend: 0, income: 0, balance: 0 };
+      out.set(key, p);
+    }
+    const r = resolve(m, includeLoanFees);
+    p.spend += r.spend;
+    p.income += r.income;
+  }
+  const list = [...out.values()];
+  for (const p of list) p.balance = p.income - p.spend;
+  return list.sort((a, b) => a.year - b.year || a.window - b.window);
+}
