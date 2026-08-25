@@ -15,17 +15,17 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'data', 'raw');
 const OUT = join(ROOT, 'public', 'data');
 
-/** Source file -> league identity. `tier` drives the "1re division only" filter. */
+/** Source file -> league identity. `code` selects the inline SVG flag. */
 const LEAGUES = [
-  { file: 'premier-league.csv',   id: 'GB1', name: 'Premier League',  country: 'Angleterre', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', tier: 1 },
-  { file: 'primera-division.csv', id: 'ES1', name: 'LaLiga',          country: 'Espagne',    flag: '🇪🇸', tier: 1 },
-  { file: 'serie-a.csv',          id: 'IT1', name: 'Serie A',         country: 'Italie',     flag: '🇮🇹', tier: 1 },
-  { file: '1-bundesliga.csv',     id: 'DE1', name: 'Bundesliga',      country: 'Allemagne',  flag: '🇩🇪', tier: 1 },
-  { file: 'ligue-1.csv',          id: 'FR1', name: 'Ligue 1',         country: 'France',     flag: '🇫🇷', tier: 1 },
-  { file: 'liga-nos.csv',         id: 'PT1', name: 'Liga Portugal',   country: 'Portugal',   flag: '🇵🇹', tier: 1 },
-  { file: 'eredivisie.csv',       id: 'NL1', name: 'Eredivisie',      country: 'Pays-Bas',   flag: '🇳🇱', tier: 1 },
-  { file: 'premier-liga.csv',     id: 'RU1', name: 'Premier Liga',    country: 'Russie',     flag: '🇷🇺', tier: 1 },
-  { file: 'championship.csv',     id: 'GB2', name: 'Championship',    country: 'Angleterre', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', tier: 2 },
+  { file: 'premier-league.csv',   id: 'GB1', name: 'Premier League',  country: 'Angleterre', code: 'eng', tier: 1 },
+  { file: 'primera-division.csv', id: 'ES1', name: 'LaLiga',          country: 'Espagne',    code: 'es', tier: 1 },
+  { file: 'serie-a.csv',          id: 'IT1', name: 'Serie A',         country: 'Italie',     code: 'it', tier: 1 },
+  { file: '1-bundesliga.csv',     id: 'DE1', name: 'Bundesliga',      country: 'Allemagne',  code: 'de', tier: 1 },
+  { file: 'ligue-1.csv',          id: 'FR1', name: 'Ligue 1',         country: 'France',     code: 'fr', tier: 1 },
+  { file: 'liga-nos.csv',         id: 'PT1', name: 'Liga Portugal',   country: 'Portugal',   code: 'pt', tier: 1 },
+  { file: 'eredivisie.csv',       id: 'NL1', name: 'Eredivisie',      country: 'Pays-Bas',   code: 'nl', tier: 1 },
+  { file: 'premier-liga.csv',     id: 'RU1', name: 'Premier Liga',    country: 'Russie',     code: 'ru', tier: 1 },
+  { file: 'championship.csv',     id: 'GB2', name: 'Championship',    country: 'Angleterre', code: 'eng', tier: 2 },
 ];
 
 /** Movement kinds, kept as small ints in the emitted JSON. */

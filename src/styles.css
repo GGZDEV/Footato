@@ -41,6 +41,15 @@ button { cursor: pointer; border: none; background: none; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
+/* Inline SVG flags — a hairline ring keeps white fields off the dark surface. */
+.flag {
+  display: block; flex: none;
+  width: 18px; height: 12px;
+  border-radius: 2px; overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.18);
+}
+.flag.marker { width: 15px; height: 12px; box-shadow: none; color: var(--text-3); }
+
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
 .pos { color: var(--in); }
 .neg { color: var(--out); }
@@ -113,7 +122,6 @@ section { margin-bottom: 22px; }
 }
 .chip:hover { border-color: var(--text-3); }
 .chip[aria-pressed='true'] { background: color-mix(in srgb, var(--accent) 22%, var(--surface-2)); border-color: var(--accent); color: var(--text); }
-.chip .flag { font-size: 13px; line-height: 1; }
 .chip.removable { background: var(--surface-3); border-color: var(--line-strong); color: var(--text); }
 .chip.removable b { font-weight: 600; }
 .chip.removable .x { color: var(--text-3); font-size: 15px; line-height: 1; }
@@ -209,7 +217,6 @@ tbody tr.clickable:hover td { background: var(--surface-2); }
 tbody tr.active td { background: color-mix(in srgb, var(--accent) 14%, var(--surface)); }
 
 .cell-name { display: flex; align-items: center; gap: 9px; }
-.cell-name .flag { font-size: 15px; line-height: 1; flex: none; }
 .cell-name b { font-weight: 600; }
 .cell-sub { color: var(--text-3); font-size: 12px; }
 .rank { color: var(--text-3); font-family: var(--mono); font-size: 12px; width: 34px; }

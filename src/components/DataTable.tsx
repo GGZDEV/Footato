@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Group, Grouping, SortKey } from '../lib/aggregate';
 import { count, money } from '../lib/format';
+import { Flag } from './Flag';
 
 interface Column {
   key: SortKey;
@@ -115,7 +116,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                 <td className="left rank">{i + 1}</td>
                 <td className="left">
                   <span className="cell-name">
-                    <span className="flag" aria-hidden="true">{g.flag}</span>
+                    <Flag code={g.flag} />
                     <b>{g.label}</b>
                   </span>
                 </td>

@@ -5,7 +5,8 @@ export interface League {
   id: string;
   name: string;
   country: string;
-  flag: string;
+  /** Country key for the inline SVG flag (see components/Flag). */
+  code: string;
   tier: number;
 }
 

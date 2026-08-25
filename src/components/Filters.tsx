@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react';
 import type { Filters as F } from '../lib/aggregate';
 import type { Dataset } from '../lib/types';
 import { season } from '../lib/format';
+import { Flag } from './Flag';
 
 interface Props {
   dataset: Dataset;
@@ -159,7 +160,7 @@ export function Filters({ dataset, filters, onChange, onReset }: Props) {
                   onClick={() => toggleLeague(l.id)}
                   title={`${l.name} — ${l.country}`}
                 >
-                  <span className="flag">{l.flag}</span>{l.name}
+                  <Flag code={l.code} label={l.country} />{l.name}
                 </button>
               ))}
             </div>

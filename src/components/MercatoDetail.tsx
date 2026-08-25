@@ -4,6 +4,7 @@ import { loadWindow } from '../lib/data';
 import { count, mercatoLabel, money, season, windowLabel, windowYear } from '../lib/format';
 import { KIND_LABELS, type Counts, type Dataset, type Mercato, type Movement } from '../lib/types';
 import { DivergingBars, DivergingColumns } from './Bars';
+import { Flag } from './Flag';
 
 interface Props {
   mercato: Mercato;
@@ -95,7 +96,7 @@ export function MercatoDetail({ mercato, dataset, includeLoanFees, onSelect, onC
       <aside className="drawer" role="dialog" aria-modal="true" aria-label={`Mercato ${mercatoLabel(mercato.year, mercato.window)} — ${mercato.club}`}>
         <div className="drawer-head">
           <div className="eyebrow">
-            <span aria-hidden="true">{mercato.league.flag}</span>
+            <Flag code={mercato.league.code} label={mercato.league.country} />
             {mercato.league.name} · {mercato.league.country}
           </div>
           <h2>{mercato.club}</h2>

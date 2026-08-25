@@ -45,6 +45,7 @@ export interface Group {
   key: string;
   label: string;
   sublabel: string;
+  /** A Flag id: a country key, or 'summer' / 'winter'. */
   flag: string;
   spend: number;
   income: number;
@@ -70,7 +71,7 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
         key: m.key,
         label: m.club,
         sublabel: mercatoLabel(m.year, m.window),
-        flag: m.league.flag,
+        flag: m.league.code,
         ...r,
         arrivals: m.arrivals.total,
         departures: m.departures.total,
@@ -87,17 +88,17 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
       key = String(m.clubId);
       label = m.club;
       sublabel = m.league.name;
-      flag = m.league.flag;
+      flag = m.league.code;
     } else if (grouping === 'league') {
       key = m.league.id;
       label = m.league.name;
       sublabel = m.league.country;
-      flag = m.league.flag;
+      flag = m.league.code;
     } else {
       key = `${m.year}-${m.window}`;
       label = season(m.year);
       sublabel = `Mercato d'${windowLabel(m.window).toLowerCase()}`;
-      flag = m.window === 1 ? '❄️' : '☀️';
+      flag = m.window === 1 ? 'winter' : 'summer';
     }
 
     let g = out.get(key);
@@ -111,7 +112,7 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     g.departures += m.departures.total;
     g.count += 1;
     // A club that changed division keeps the league of its most recent window.
-    if (grouping === 'club') { g.sublabel = m.league.name; g.flag = m.league.flag; }
+    if (grouping === 'club') { g.sublabel = m.league.name; g.flag = m.league.code; }
   }
 
   for (const g of out.values()) g.balance = g.income - g.spend;
