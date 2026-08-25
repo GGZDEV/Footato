@@ -149,9 +149,25 @@ requête réseau) ; les fichiers `windows/` ne sont téléchargés qu'à l'ouver
 
 ## Déploiement
 
-Un workflow GitHub Actions (`.github/workflows/deploy.yml`) publie le site sur GitHub Pages à
-chaque push sur la branche par défaut. Activez Pages sur le dépôt avec la source
-**GitHub Actions**. Pour un autre hébergement, `npm run build` puis servez `dist/`.
+`.github/workflows/deploy.yml` construit le site et le publie sur GitHub Pages à chaque push
+sur `main` ou sur une branche `claude/**`.
+
+> **Réglage indispensable — Settings → Pages → Source : « GitHub Actions ».**
+>
+> Laissé sur « Deploy from a branch », GitHub publie les **fichiers source** du dépôt au lieu
+> du site construit. L'`index.html` de la racine est l'entrée de développement de Vite : elle
+> pointe vers `/src/main.tsx`, que le navigateur ne sait pas exécuter. Résultat, une **page
+> blanche** — et comme le pipeline de branche se relance à chaque push, il écrase la
+> publication du workflow quelques secondes après elle. Les deux apparaissent « en succès »
+> dans l'onglet Actions, ce qui rend le symptôme trompeur.
+>
+> Une fois la source basculée, le pipeline de branche disparaît de lui-même. Inutile de créer
+> un workflow depuis les modèles proposés par GitHub (« Jekyll », « Static HTML ») : celui du
+> dépôt fait déjà le travail.
+
+Le chemin de base est déduit du nom du dépôt (`BASE_PATH=/<repo>/`), donc le site fonctionne
+tel quel sur `https://<utilisateur>.github.io/<repo>/`. Pour un autre hébergement :
+`npm run build` puis servez `dist/` (ajustez `BASE_PATH` si le site n'est pas à la racine).
 
 ## Licence et attribution
 
