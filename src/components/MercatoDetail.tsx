@@ -187,7 +187,7 @@ export function MercatoDetail({ mercato, dataset, includeLoanFees, onSelect, onC
               <p className="hint">Aucun mouvement enregistré.</p>
             ) : (
               <div className="movements">
-                <table>
+                <table className="movement-table">
                   <thead>
                     <tr>
                       <th className="left">Sens</th>
@@ -213,6 +213,23 @@ export function MercatoDetail({ mercato, dataset, includeLoanFees, onSelect, onC
                     ))}
                   </tbody>
                 </table>
+                <div className="movement-cards">
+                  {sortedMovements.map((mv, i) => (
+                    <div className="movement-card" key={`${mv.player}-${mv.dir}-${i}`}>
+                      <div>
+                        <span className={mv.dir === 0 ? 'neg' : 'pos'}>{mv.dir === 0 ? '↓ Arrivée' : '↑ Départ'}</span>
+                        <strong>{mv.player}</strong>
+                        <small>{mv.counterpart || 'Club inconnu'}</small>
+                      </div>
+                      <div>
+                        <span className="kind-tag">{KIND_LABELS[mv.kind] ?? '—'}</span>
+                        <strong className={`num ${mv.amount ? (mv.dir === 0 ? 'neg' : 'pos') : 'muted'}`}>
+                          {mv.amount ? money(mv.amount) : '—'}
+                        </strong>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>

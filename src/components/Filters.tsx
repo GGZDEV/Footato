@@ -27,6 +27,7 @@ export function Filters({ dataset, filters, onChange, onReset }: Props) {
   const { meta, leagues } = dataset;
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const blurTimer = useRef<number>();
 
   /** Club id -> the league it most recently played in, for the autocomplete hint. */
@@ -68,27 +69,44 @@ export function Filters({ dataset, filters, onChange, onReset }: Props) {
     filters.leagues.length + filters.clubs.length +
     (filters.window === 'all' ? 0 : 1) + (filters.balance === 'all' ? 0 : 1) +
     (filters.minVolume > 0 ? 1 : 0) +
+    (filters.includeLoanFees ? 1 : 0) +
     (filters.yearFrom !== 2000 || filters.yearTo !== meta.yearMax ? 1 : 0);
 
   return (
-    <section className="panel">
-      <div className="panel-head">
-        <h2>Filtres</h2>
-        {activeCount > 0 && <p>{activeCount} filtre{activeCount > 1 ? 's' : ''} actif{activeCount > 1 ? 's' : ''}</p>}
+    <section className="panel filter-panel" data-open={mobileOpen}>
+      <div className="panel-head filter-panel-head">
+        <div>
+          <h2>Explorer les données</h2>
+          <p>{activeCount > 0
+            ? `${activeCount} filtre${activeCount > 1 ? 's' : ''} actif${activeCount > 1 ? 's' : ''}`
+            : 'Affinez par saison, championnat ou club'}</p>
+        </div>
         <div className="spacer" style={{ flex: 1 }} />
-        <label className="switch" title="Transfermarkt facture séparément les indemnités de prêt : à vous de dire si elles comptent.">
-          <input
-            type="checkbox"
-            checked={filters.includeLoanFees}
-            onChange={(e) => onChange({ includeLoanFees: e.target.checked })}
-          />
-          <span className="track" />
-          Inclure les indemnités de prêt
-        </label>
         {activeCount > 0 && <button className="link-btn" onClick={onReset}>Réinitialiser</button>}
+        <button
+          className="mobile-filter-toggle"
+          onClick={() => setMobileOpen((value) => !value)}
+          aria-expanded={mobileOpen}
+          aria-controls="filter-controls"
+        >
+          {mobileOpen ? 'Masquer' : 'Afficher'}
+          <span aria-hidden="true">⌄</span>
+        </button>
       </div>
 
-      <div className="filters">
+      <div className="filters" id="filter-controls">
+        <div className="filter-toolbar">
+          <label className="switch" title="Inclure les indemnités de prêt dans les montants.">
+            <input
+              type="checkbox"
+              checked={filters.includeLoanFees}
+              onChange={(e) => onChange({ includeLoanFees: e.target.checked })}
+            />
+            <span className="track" />
+            Inclure les indemnités de prêt
+          </label>
+          {activeCount > 0 && <button className="link-btn mobile-reset" onClick={onReset}>Réinitialiser</button>}
+        </div>
         <div className="filter-row">
           <div className="field">
             <span className="field-label">Saisons</span>

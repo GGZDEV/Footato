@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { DataTable } from './components/DataTable';
+import { BrandMark } from './components/BrandMark';
 import { Filters } from './components/Filters';
 import { Kpis } from './components/Kpis';
 import { MercatoDetail } from './components/MercatoDetail';
@@ -172,22 +173,44 @@ export default function App() {
   const laggingLeagues = dataset.leagues.filter(
     (league) => (meta.coverageByLeague[league.id]?.yearMax ?? -Infinity) < meta.yearMax,
   );
+  const sourceDate = meta.sourceUpdatedAt
+    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })
+        .format(new Date(`${meta.sourceUpdatedAt}T12:00:00Z`))
+    : 'date inconnue';
 
   return (
     <div className="app">
-      <header className="topbar">
-        <div className="brand">
-          <span className="ball" aria-hidden="true">⚽</span>
-          <h1>Footato</h1>
-          <span>Achats, ventes et bilan de chaque mercato européen</span>
+      <header className="hero-header">
+        <div className="brand-row">
+          <div className="brand">
+            <BrandMark />
+            <div>
+              <h1>Footato</h1>
+              <span>Football transfer intelligence</span>
+            </div>
+          </div>
+          <div className="freshness" title={`Dernière modification de la source : ${meta.sourceUpdatedAt ?? 'inconnue'}`}>
+            <i aria-hidden="true" />
+            <span><span className="freshness-label">Données vérifiées · </span>{sourceDate}</span>
+          </div>
         </div>
-        <div className="spacer" />
-        <p className="source-note">
-          Source <strong>Transfermarkt</strong> · {meta.movementCount.toLocaleString('fr-FR')} mouvements ·{' '}
-          {meta.clubCount} clubs · {dataset.leagues.length} championnats<br />
-          Couverture {season(meta.yearMin)} → {season(meta.yearMax)} · source observée le{' '}
-          {meta.sourceUpdatedAt ?? '—'} · build du {meta.generatedAt}
-        </p>
+
+        <div className="hero-content">
+          <div className="hero-copy">
+            <p className="hero-kicker">Observatoire des transferts européens</p>
+            <h2>Le mercato,<br /><em>chiffres à l’appui.</em></h2>
+            <p>
+              Explorez plus de trente ans d’achats et de ventes. Comparez les clubs,
+              les championnats et chaque fenêtre de transfert.
+            </p>
+          </div>
+          <div className="hero-metrics" aria-label="Périmètre des données">
+            <div><strong>{meta.movementCount.toLocaleString('fr-FR')}</strong><span>mouvements</span></div>
+            <div><strong>{meta.clubCount}</strong><span>clubs</span></div>
+            <div><strong>{dataset.leagues.length}</strong><span>championnats</span></div>
+            <div><strong>{season(meta.yearMin)} — {season(meta.yearMax)}</strong><span>couverture</span></div>
+          </div>
+        </div>
       </header>
 
       <Filters dataset={dataset} filters={filters} onChange={patch} onReset={reset} />
@@ -207,7 +230,7 @@ export default function App() {
 
       <section className="panel">
         <div className="panel-head">
-          <div className="segmented" role="group" aria-label="Regroupement">
+          <div className="segmented view-tabs" role="group" aria-label="Regroupement">
             {TABS.map((x) => (
               <button key={x.value} aria-pressed={grouping === x.value} onClick={() => onGrouping(x.value)}>
                 {x.label}

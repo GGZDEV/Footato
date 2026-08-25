@@ -3,8 +3,7 @@ import type { SeasonPoint } from '../lib/aggregate';
 import { money, season, windowShort } from '../lib/format';
 import { niceTicks, useMeasure } from '../lib/useMeasure';
 
-const H = 250;
-const M = { top: 22, right: 58, bottom: 28, left: 62 };
+const DESKTOP_HEIGHT = 250;
 
 interface Props {
   points: SeasonPoint[];
@@ -15,8 +14,13 @@ export function SeasonChart({ points, onSelect }: Props) {
   const [ref, width] = useMeasure<HTMLDivElement>();
   const [hover, setHover] = useState<number | null>(null);
 
-  const innerW = Math.max(0, width - M.left - M.right);
-  const innerH = H - M.top - M.bottom;
+  const compact = width > 0 && width < 560;
+  const height = compact ? 210 : DESKTOP_HEIGHT;
+  const margin = compact
+    ? { top: 18, right: 10, bottom: 25, left: 48 }
+    : { top: 22, right: 58, bottom: 28, left: 62 };
+  const innerW = Math.max(0, width - margin.left - margin.right);
+  const innerH = height - margin.top - margin.bottom;
 
   const { ticks, max } = useMemo(() => {
     const peak = points.reduce((n, p) => Math.max(n, p.spend, p.income), 0);
@@ -50,9 +54,9 @@ export function SeasonChart({ points, onSelect }: Props) {
 
       <div ref={ref} style={{ position: 'relative' }}>
         {width > 0 && (
-          <svg className="chart-svg" width={width} height={H} role="img"
+          <svg className="chart-svg" width={width} height={height} role="img"
             aria-label={`Achats et ventes par fenêtre de transfert, de ${points[0].label} à ${points[last].label}`}>
-            <g transform={`translate(${M.left},${M.top})`}>
+            <g transform={`translate(${margin.left},${margin.top})`}>
               {ticks.map((t) => (
                 <g key={t}>
                   <line className="grid-line" x1={0} x2={innerW} y1={y(t)} y2={y(t)} />
@@ -76,8 +80,12 @@ export function SeasonChart({ points, onSelect }: Props) {
               {/* Endpoint markers double as the direct labels for each series. */}
               <circle cx={x(last)} cy={y(points[last].spend)} r={4} fill="var(--out)" stroke="var(--surface)" strokeWidth={2} />
               <circle cx={x(last)} cy={y(points[last].income)} r={4} fill="var(--in)" stroke="var(--surface)" strokeWidth={2} />
-              <text className="axis-text" x={x(last) + 9} y={y(points[last].spend)} dominantBaseline="middle">{money(points[last].spend)}</text>
-              <text className="axis-text" x={x(last) + 9} y={y(points[last].income)} dominantBaseline="middle">{money(points[last].income)}</text>
+              {!compact && (
+                <>
+                  <text className="axis-text" x={x(last) + 9} y={y(points[last].spend)} dominantBaseline="middle">{money(points[last].spend)}</text>
+                  <text className="axis-text" x={x(last) + 9} y={y(points[last].income)} dominantBaseline="middle">{money(points[last].income)}</text>
+                </>
+              )}
 
               {hover !== null && (
                 <g>
@@ -90,13 +98,20 @@ export function SeasonChart({ points, onSelect }: Props) {
               <rect
                 x={0} y={0} width={innerW || 1} height={innerH} fill="transparent"
                 style={{ cursor: onSelect ? 'pointer' : 'crosshair' }}
-                onMouseLeave={() => setHover(null)}
-                onMouseMove={(e) => {
+                onPointerLeave={() => setHover(null)}
+                onPointerMove={(e) => {
                   const box = (e.currentTarget as SVGRectElement).getBoundingClientRect();
                   const ratio = (e.clientX - box.left) / (box.width || 1);
                   setHover(Math.min(last, Math.max(0, Math.round(ratio * last))));
                 }}
-                onClick={() => { if (hover !== null && onSelect) onSelect(points[hover]); }}
+                onClick={(e) => {
+                  if (!onSelect) return;
+                  const box = (e.currentTarget as SVGRectElement).getBoundingClientRect();
+                  const ratio = (e.clientX - box.left) / (box.width || 1);
+                  const index = Math.min(last, Math.max(0, Math.round(ratio * last)));
+                  setHover(index);
+                  onSelect(points[index]);
+                }}
               />
             </g>
           </svg>
@@ -106,7 +121,7 @@ export function SeasonChart({ points, onSelect }: Props) {
           <div
             className="tooltip"
             style={{
-              left: Math.min(Math.max(M.left + x(hover!) - 80, 0), Math.max(0, width - 175)),
+              left: Math.min(Math.max(margin.left + x(hover!) - 80, 0), Math.max(0, width - 175)),
               top: 4,
             }}
           >

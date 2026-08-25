@@ -144,6 +144,32 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
         </table>
       </div>
 
+      <div className="mobile-results">
+        {visible.map((g, i) => (
+          <button
+            className={`result-card${selectedKey === g.key ? ' active' : ''}`}
+            key={g.key}
+            onClick={() => onSelect(g)}
+            disabled={!g.mercato}
+          >
+            <span className="result-rank">#{i + 1}</span>
+            <span className="result-identity">
+              <span className="result-name"><Flag code={g.flag} /><b>{g.label}</b></span>
+              <span>{g.sublabel}{grouping !== 'mercato' ? ` · ${count(g.count)} mercatos` : ''}</span>
+            </span>
+            <span className="result-money">
+              <span><small>Achats</small><b className="num neg">{money(g.spend)}</b></span>
+              <span><small>Ventes</small><b className="num pos">{money(g.income)}</b></span>
+              <span><small>Bilan</small><b className={`num ${g.balance >= 0 ? 'pos' : 'neg'}`}>{money(g.balance, { sign: true })}</b></span>
+            </span>
+            <span className="result-meta">
+              <span>{count(g.arrivals)} arrivées · {count(g.departures)} départs</span>
+              <span>Volume {money(g.volume)}</span>
+            </span>
+          </button>
+        ))}
+      </div>
+
       <div className="table-foot">
         <span>
           {count(Math.min(limit, groups.length))} sur {count(groups.length)} ligne{groups.length > 1 ? 's' : ''}
@@ -152,7 +178,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
           <button className="btn" onClick={() => setLimit((l) => l + PAGE * 4)}>Afficher plus</button>
         )}
         <div className="spacer" />
-        {grouping === 'mercato' && <span>Cliquez sur une ligne pour ouvrir le détail du mercato</span>}
+        {grouping === 'mercato' && <span className="desktop-hint">Cliquez sur une ligne pour ouvrir le détail du mercato</span>}
         <button className="btn" onClick={exportCsv}>Exporter en CSV</button>
       </div>
     </>
