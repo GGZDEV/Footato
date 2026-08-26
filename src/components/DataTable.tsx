@@ -50,7 +50,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'income', label: 'Ventes' },
       { key: 'balance', label: 'Bilan' },
       { key: 'volume', label: 'Volume', title: 'Achats + ventes' },
-      { key: 'coverage', label: 'Fiabilité', title: 'Part des mouvements payants ou indéterminés dont le montant est public' },
+      { key: 'coverage', label: 'Complétude', title: 'Indemnités publiques ÷ (publiques + explicitement indisponibles)' },
     );
     return cols;
   }, [grouping, showHonours]);
@@ -188,7 +188,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             </span>
             <span className="result-meta">
               <span>{count(g.arrivals)} arrivées · {count(g.departures)} départs</span>
-              <span>Volume {money(g.volume)} · Fiabilité {Math.round(g.coverage * 100)}%</span>
+              <span>Volume {money(g.volume)} · Complétude {Math.round(g.coverage * 100)}%</span>
             </span>
           </button>
         ))}

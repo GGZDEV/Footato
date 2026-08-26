@@ -16,6 +16,8 @@ const raw = JSON.parse(readFileSync(join(ROOT, 'public', 'data', 'summary.json')
 const counts = (row, base) => ({
   total: row[base], paid: row[base + 1], free: row[base + 2], loan: row[base + 3],
   undisclosed: row[base + 4], freeOrLoan: row[base + 5] ?? 0,
+  notApplicable: row[base === 8 ? 20 : 21] ?? 0,
+  loanFee: row[base === 8 ? 22 : 23] ?? 0,
 });
 const mercatos = raw.rows.map((row) => ({
   key: `${row[0]}-${row[2]}-${row[3]}`,
@@ -65,7 +67,8 @@ const independentTotals = (rows, includeLoanFees) => {
     result.income += resolved.income;
     result.arrivals += mercato.arrivals.total;
     result.departures += mercato.departures.total;
-    result.paidDeals += mercato.arrivals.paid + mercato.departures.paid;
+    result.paidDeals += mercato.arrivals.paid + mercato.departures.paid
+      + (includeLoanFees ? mercato.arrivals.loanFee + mercato.departures.loanFee : 0);
     result.undisclosed += mercato.arrivals.undisclosed + mercato.departures.undisclosed;
     clubs.add(mercato.clubId);
   }
@@ -113,7 +116,8 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
     target.income += resolved.income;
     target.arrivals += mercato.arrivals.total;
     target.departures += mercato.departures.total;
-    target.knownFees += mercato.arrivals.paid + mercato.departures.paid;
+    target.knownFees += mercato.arrivals.paid + mercato.departures.paid
+      + (includeLoanFees ? mercato.arrivals.loanFee + mercato.departures.loanFee : 0);
     target.unknownFees += mercato.arrivals.undisclosed + mercato.departures.undisclosed;
     target.count += 1;
     if (grouping === 'club') {

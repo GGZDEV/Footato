@@ -27,17 +27,17 @@ export function Kpis({ t }: { t: Totals }) {
         <span className="field-label">Périmètre</span>
         <div className="value num">{count(t.mercatos)}</div>
         <div className="sub">
-          mercatos · {count(t.clubs)} clubs · {coverage.toLocaleString('fr-FR', { maximumFractionDigits: 1 })}% documentés
+          mercatos · {count(t.clubs)} clubs · {coverage.toLocaleString('fr-FR', { maximumFractionDigits: 1 })}% des indemnités trouvées
         </div>
       </div>
       <div className={`quality-banner quality-${quality}`}>
         <div>
-          <span className="field-label">Fiabilité de la vue</span>
-          <strong>Totaux = minimum documenté</strong>
+          <span className="field-label">Complétude des indemnités</span>
+          <strong>{coverage.toLocaleString('fr-FR', { maximumFractionDigits: 1 })}% trouvées</strong>
         </div>
         <p>
-          {count(t.paidDeals)} mouvements avec montant public sur {count(disclosed)} payants ou indéterminés ;{' '}
-          <b>{count(t.undisclosed)} montants inconnus</b>. La somme réelle peut être supérieure, jamais estimée.
+          {count(t.paidDeals)} indemnités publiques et <b>{count(t.undisclosed)} explicitement indisponibles</b>.
+          Retraites, sans-club, réserves, transferts libres et prêts sans indemnité sont exclus du taux.
         </p>
         <span className="quality-score">{coverage.toLocaleString('fr-FR', { maximumFractionDigits: 1 })}%</span>
       </div>

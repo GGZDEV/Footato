@@ -37,17 +37,20 @@ for (const file of readdirSync(windowsDir)) {
     const [clubId, dir, kind, amount, player] = movement;
     if (!Number.isInteger(clubId) || clubId < 0 || clubId >= summary.clubs.length) fail(`club invalide dans ${file}`);
     if (dir !== 0 && dir !== 1) fail(`sens invalide dans ${file}`);
-    if (!Number.isInteger(kind) || kind < 0 || kind > 6) fail(`type invalide dans ${file}`);
+    if (!Number.isInteger(kind) || kind < 0 || kind > 7) fail(`type invalide dans ${file}`);
     if (!Number.isInteger(amount) || amount < 0) fail(`montant invalide dans ${file}`);
     if (typeof player !== 'string' || !player.trim()) fail(`joueur absent dans ${file}`);
     if (kind !== 0 && kind !== 3 && amount !== 0) fail(`montant ${amount} porté par un type non monétaire dans ${file}`);
+    if (kind === 4 && /^(?:Without Club|Retired|Career break|Deceased)$|(?:\s|^)(?:B|II|U\d{2}|Youth|Res\.?|Reserves?|Espoirs?|Primavera)$/i.test(movement[5])) {
+      fail(`mouvement administratif classé comme montant indisponible dans ${file}`);
+    }
 
     const key = `${clubId}|${leagueIdx}|${yearText}|${windowText}`;
-    // Mirrors summary columns 4..19, but is rebuilt independently from the
+    // Mirrors summary columns 4..23, but is rebuilt independently from the
     // public movement files rather than trusting build-dataset.mjs.
     let aggregate = expectedAggregates.get(key);
     if (!aggregate) {
-      aggregate = Array(16).fill(0);
+      aggregate = Array(20).fill(0);
       expectedAggregates.set(key, aggregate);
     }
     const countBase = dir === 0 ? 4 : 10;
@@ -60,7 +63,9 @@ for (const file of readdirSync(windowsDir)) {
     else if (kind === 3) {
       aggregate[countBase + 3] += 1;
       aggregate[dir === 0 ? 2 : 3] += amount;
+      aggregate[dir === 0 ? 18 : 19] += 1;
     } else if (kind === 6) aggregate[countBase + 5] += 1;
+    else if (kind === 7) aggregate[dir === 0 ? 16 : 17] += 1;
     else aggregate[countBase + 4] += 1;
   }
 }
@@ -72,7 +77,7 @@ const uiKeys = new Set();
 const clubsByLeagueSeason = new Map();
 const coverageActual = new Map();
 for (const row of summary.rows) {
-  if (!Array.isArray(row) || row.length !== 20) fail('ligne summary malformée');
+  if (!Array.isArray(row) || row.length !== 24) fail('ligne summary malformée');
   const [clubId, leagueIdx, year, window, spend, income, loanSpend, loanIncome] = row;
   if (![spend, income, loanSpend, loanIncome].every((n) => Number.isInteger(n) && n >= 0)) {
     fail(`montant invalide pour club=${clubId}, saison=${year}, fenêtre=${window}`);
@@ -86,7 +91,8 @@ for (const row of summary.rows) {
   if (window !== 0 && window !== 1) fail(`fenêtre invalide pour club=${clubId}, saison=${year}`);
   if (!Number.isInteger(clubId) || clubId < 0 || clubId >= summary.clubs.length) fail(`club invalide dans summary : ${clubId}`);
   for (const base of [8, 14]) {
-    const parts = row.slice(base + 1, base + 6).reduce((sum, value) => sum + value, 0);
+    const notApplicable = row[base === 8 ? 20 : 21];
+    const parts = row.slice(base + 1, base + 6).reduce((sum, value) => sum + value, 0) + notApplicable;
     if (row[base] !== parts) fail(`${league.id}/${year}/${clubId} : total de mouvements incohérent`);
   }
 
@@ -96,8 +102,8 @@ for (const row of summary.rows) {
   const detailKey = `${league.id}_${year}_${window}`;
   if (!windows.has(detailKey)) fail(`fichier détail absent : ${detailKey}.json`);
   const aggregateKey = `${clubId}|${leagueIdx}|${year}|${window}`;
-  const expected = expectedAggregates.get(aggregateKey) ?? Array(16).fill(0);
-  const actual = row.slice(4, 20);
+  const expected = expectedAggregates.get(aggregateKey) ?? Array(20).fill(0);
+  const actual = row.slice(4, 24);
   if (actual.some((value, index) => value !== expected[index])) {
     fail(`${detailKey}/${summary.clubs[clubId]} : agrégat différent des mouvements détaillés`);
   }

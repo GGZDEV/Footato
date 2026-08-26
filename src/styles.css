@@ -130,17 +130,19 @@ section { margin-bottom: 22px; }
 .mobile-filter-toggle { display: none; }
 
 /* ---------------------------------------------------------- quick rankings */
-.ranking-presets .panel-head > div { display: grid; gap: 3px; }
-.preset-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; padding: 12px; }
-.preset-grid button {
-  display: grid; gap: 3px; min-width: 0; padding: 13px; text-align: left;
-  border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2);
-  transition: border-color 120ms, background 120ms, transform 120ms;
+.ranking-shortcuts {
+  display: flex; align-items: center; gap: 6px; padding: 10px 12px;
+  overflow-x: auto; border-bottom: 1px solid var(--line); scrollbar-width: thin;
 }
-.preset-grid button:hover { border-color: var(--accent); background: var(--surface-3); transform: translateY(-1px); }
-.preset-grid button > span { color: var(--accent); font: 650 9px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
-.preset-grid button strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
-.preset-grid button small { color: var(--text-3); font-size: 9.5px; }
+.ranking-shortcuts > span {
+  flex: none; margin-right: 3px; color: var(--text-3); font: 650 9px var(--mono);
+  text-transform: uppercase; letter-spacing: .08em;
+}
+.ranking-shortcuts button {
+  flex: none; padding: 7px 10px; border: 1px solid var(--line-strong); border-radius: 999px;
+  color: var(--text-2); background: var(--surface-2); font-size: 10.5px; white-space: nowrap;
+}
+.ranking-shortcuts button:hover { border-color: var(--accent); color: var(--accent); background: var(--surface-3); }
 .honours-scope { margin: -8px 0 14px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 11px; color: var(--text-3); background: var(--surface); font-size: 10.5px; }
 .honours-scope strong { color: var(--text-2); }
 .honours-cell { color: var(--accent); font-weight: 650; }
@@ -401,8 +403,7 @@ tbody tr.active td { background: color-mix(in srgb, var(--accent) 14%, var(--sur
 
   .panel { border-radius: 14px; }
   .panel-head { padding: 12px; }
-  .preset-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 8px; }
-  .preset-grid button { padding: 11px; }
+  .ranking-shortcuts { padding: 9px 10px; }
   .roster-signals .panel-head { align-items: flex-start; }
   .roster-signals .panel-head p { line-height: 1.35; }
   .signal-grid { grid-template-columns: 1fr; padding: 8px; }

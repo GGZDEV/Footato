@@ -357,40 +357,6 @@ export default function App() {
         </div>
       </header>
 
-      <section className="panel ranking-presets" aria-labelledby="ranking-presets-title">
-        <div className="panel-head">
-          <div>
-            <h2 id="ranking-presets-title">Classements prêts à l’emploi</h2>
-            <p>Chaque vue conserve son URL et affiche sa complétude</p>
-          </div>
-        </div>
-        <div className="preset-grid">
-          <button onClick={() => applyRanking('spend-decade')}>
-            <span>Top 10</span><strong>Dépenses depuis {decadeStart}</strong><small>Clubs · achats décroissants</small>
-          </button>
-          <button onClick={() => applyRanking('profit')}>
-            <span>Top 20</span><strong>Plus gros bénéfices</strong><small>Clubs · ventes moins achats</small>
-          </button>
-          <button onClick={() => applyRanking('income')}>
-            <span>Top 10</span><strong>Plus grosses ventes</strong><small>Clubs · recettes documentées</small>
-          </button>
-          <button onClick={() => applyRanking('coverage')}>
-            <span>Audit</span><strong>Fiabilité par championnat</strong><small>Montants publics vs inconnus</small>
-          </button>
-          {honoursReady && <>
-            <button onClick={() => applyRanking('titles')}>
-              <span>Palmarès</span><strong>Plus titrés depuis 2000</strong><small>Championnats + Ligue des champions</small>
-            </button>
-            <button onClick={() => applyRanking('efficient')}>
-              <span>Efficacité</span><strong>Moins dépensé par titre</strong><small>Achats documentés ÷ titres suivis</small>
-            </button>
-            <button onClick={() => applyRanking('no-title')}>
-              <span>Sans titre</span><strong>Plus gros dépensiers</strong><small>Aucun titre majeur suivi sur la période</small>
-            </button>
-          </>}
-        </div>
-      </section>
-
       <Filters dataset={dataset} filters={filters} onChange={patch} onReset={reset} />
 
       {freshness?.meta.status === 'ready' && visibleSignals.length > 0 && (
@@ -461,6 +427,18 @@ export default function App() {
           </div>
           <p>{tab.hint}</p>
         </div>
+        <nav className="ranking-shortcuts" aria-label="Vues rapides">
+          <span>Vues rapides</span>
+          <button onClick={() => applyRanking('spend-decade')}>Dépenses {decadeStart}–{meta.yearMax}</button>
+          <button onClick={() => applyRanking('profit')}>Top bénéfices</button>
+          <button onClick={() => applyRanking('income')}>Top ventes</button>
+          <button onClick={() => applyRanking('coverage')}>Complétude</button>
+          {honoursReady && <>
+            <button onClick={() => applyRanking('titles')}>Plus titrés</button>
+            <button onClick={() => applyRanking('efficient')}>Coût par titre</button>
+            <button onClick={() => applyRanking('no-title')}>Dépensiers sans titre</button>
+          </>}
+        </nav>
         <DataTable
           groups={rankingLimit ? titleFilteredGroups.slice(0, rankingLimit) : titleFilteredGroups}
           grouping={grouping}

@@ -23,6 +23,8 @@ const counts = (r: number[], base: number) => ({
   loan: r[base + 3],
   undisclosed: r[base + 4],
   freeOrLoan: r[base + 5] ?? 0,
+  notApplicable: r[base === C.in ? 20 : 21] ?? 0,
+  loanFee: r[base === C.in ? 22 : 23] ?? 0,
 });
 
 export async function loadDataset(): Promise<Dataset> {

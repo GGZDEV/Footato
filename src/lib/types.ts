@@ -52,6 +52,10 @@ export interface Counts {
   undisclosed: number;
   /** Free transfers and loans that the recent source publishes without distinction. */
   freeOrLoan: number;
+  /** Retirement, no-club or reserve movement: no commercial fee is expected. */
+  notApplicable: number;
+  /** Subset of loan: a public loan indemnity exists. */
+  loanFee: number;
 }
 
 /** One club's activity over one transfer window. Amounts are in thousands of euros. */
@@ -173,6 +177,7 @@ export const KIND_LABELS = [
   'Montant non divulgué',
   'Fin de prêt',
   'Libre ou prêt',
+  'Administratif / sans indemnité applicable',
 ] as const;
 
 /** A single player movement inside one window, as stored in public/data/windows/. */

@@ -33,7 +33,10 @@ const LEAGUES = [
 ];
 
 /** Movement kinds, kept as small ints in the emitted JSON. */
-const KIND = { PAID: 0, FREE: 1, LOAN: 2, LOAN_FEE: 3, UNDISCLOSED: 4, END_OF_LOAN: 5, FREE_OR_LOAN: 6 };
+const KIND = {
+  PAID: 0, FREE: 1, LOAN: 2, LOAN_FEE: 3, UNDISCLOSED: 4,
+  END_OF_LOAN: 5, FREE_OR_LOAN: 6, NOT_APPLICABLE: 7,
+};
 
 // Same legal club, different labels in historical Transfermarkt exports.
 // These are explicit on purpose: fuzzy matching could merge unrelated clubs.
@@ -66,7 +69,13 @@ function parseCsv(text) {
 }
 
 /** Maps a raw Transfermarkt fee label to a movement kind. */
-function classify(fee) {
+function administrativeCounterpart(value) {
+  const name = String(value ?? '').trim();
+  if (/^(Without Club|Retired|Career break|Deceased)$/i.test(name)) return true;
+  return /(?:\s|^)(?:B|II|U\d{2}|Youth|Res\.?|Reserves?|Espoirs?|Primavera)$/i.test(name);
+}
+
+function classify(fee, counterpart) {
   const f = fee.trim();
   // Emitted by scripts/import-recent.mjs: upstream collapses free transfers and loans.
   if (f === 'free transfer or loan') return KIND.FREE_OR_LOAN;
@@ -75,7 +84,11 @@ function classify(fee) {
   if (f === 'loan transfer') return KIND.LOAN;
   if (f.startsWith('End of loan')) return KIND.END_OF_LOAN;
   if (f.includes('€')) return KIND.PAID;
-  return KIND.UNDISCLOSED; // '?', '-' and anything unparseable
+  // A movement against no club, retirement or a reserve side does not prove
+  // that a commercial fee is missing. Keep it out of completeness. A bare '-'
+  // between two football clubs remains unavailable, conservatively.
+  if (administrativeCounterpart(counterpart)) return KIND.NOT_APPLICABLE;
+  return KIND.UNDISCLOSED; // '?' or '-' between football clubs: fee unavailable
 }
 
 /** fee_cleaned is expressed in millions of euros, with at most 3 decimals. */
@@ -128,7 +141,7 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
 
     const w = r[col.transfer_period].trim() === 'Winter' ? 1 : 0;
     const dir = r[col.transfer_movement].trim() === 'out' ? 1 : 0;
-    const kind = classify(r[col.fee]);
+    const kind = classify(r[col.fee], r[col.club_involved_name]);
     const amount = toThousands(r[col.fee_cleaned]);
     const clubName = canonicalClubName(r[col.club_name]);
     const playerName = r[col.player_name].trim();
@@ -149,8 +162,9 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
     if (!a) {
       // [clubId, leagueIdx, year, window, spend, income, loanSpend, loanIncome,
       //  in:  total, paid, free, loan, undisclosed, freeOrLoan,
-      //  out: total, paid, free, loan, undisclosed, freeOrLoan]
-      a = [cid, leagueIdx, year, w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      //  out: total, paid, free, loan, undisclosed, freeOrLoan,
+      //  inNotApplicable, outNotApplicable, inLoanFee, outLoanFee]
+      a = [cid, leagueIdx, year, w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       agg.set(key, a);
     }
     const base = dir === 0 ? 8 : 14;
@@ -158,8 +172,13 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
     if (kind === KIND.PAID) { a[base + 1] += 1; a[dir === 0 ? 4 : 5] += amount; }
     else if (kind === KIND.FREE) a[base + 2] += 1;
     else if (kind === KIND.LOAN || kind === KIND.END_OF_LOAN) a[base + 3] += 1;
-    else if (kind === KIND.LOAN_FEE) { a[base + 3] += 1; a[dir === 0 ? 6 : 7] += amount; }
+    else if (kind === KIND.LOAN_FEE) {
+      a[base + 3] += 1;
+      a[dir === 0 ? 6 : 7] += amount;
+      a[dir === 0 ? 22 : 23] += 1;
+    }
     else if (kind === KIND.FREE_OR_LOAN) a[base + 5] += 1;
+    else if (kind === KIND.NOT_APPLICABLE) a[dir === 0 ? 20 : 21] += 1;
     else a[base + 4] += 1;
 
     const dkey = `${league.id}_${year}_${w}`;

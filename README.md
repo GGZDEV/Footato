@@ -20,7 +20,7 @@ et ce qu'il reste à la fin de chaque mercato.
 - **Graphique modulable** — total par saison, été seul, hiver seul ou deux fenêtres séparées.
 - **Contrôle d'effectifs récent** — sept championnats et la Ligue des champions sont relevés
   automatiquement ; les changements détectés restent signalés à part jusqu'à confirmation.
-- **Classements auditables** — top dépenses, bénéfices et ventes, avec la part de montants publics
+- **Classements auditables** — top dépenses, bénéfices et ventes, avec la complétude des indemnités
   visible pour chaque ligne plutôt qu'un classement présenté comme exact à tort.
 - **Dépenses comparées aux titres** — championnats de première division des sept pays et Ligue des
   champions, par saison, avec coût documenté par titre et gros dépensiers sans titre suivi.
@@ -148,13 +148,15 @@ Chaque mouvement est classé par type :
 | Indemnité de prêt (`Loan fee:…`) | **optionnel** — bouton dans les filtres, désactivé par défaut |
 | Transfert libre | non (0 €), mais compté dans les arrivées/départs |
 | Prêt sec / fin de prêt | non (0 €), compté dans les arrivées/départs |
-| Montant non divulgué (`?`, `-`) | non (0 €), compté dans les arrivées/départs |
+| Montant explicitement indisponible (`?`) | non (0 €), compté dans les arrivées/départs et dans le dénominateur de complétude |
+| Administratif / sans indemnité applicable (retraite, sans club, réserves) | non (0 €), compté dans les mouvements mais exclu de la complétude |
 | Libre ou prêt (saisons importées) | non (0 €), compté dans les arrivées/départs |
 
-**Conséquence à garder en tête : les totaux sont des planchers.** Environ la moitié des
-mouvements n'ont pas de montant public — ils comptent pour 0 €. La proportion de transferts
-effectivement chiffrés est affichée dans la synthèse et sur chaque ligne du classement. Un total
-n'est jamais extrapolé à partir d'une moyenne : `100 M€` signifie « au moins 100 M€ documentés ».
+**Conséquence à garder en tête : les totaux sont des planchers.** La complétude est calculée par
+`indemnités publiques ÷ (indemnités publiques + indemnités explicitement indisponibles)`. Elle ne
+prétend pas mesurer la justesse de Transfermarkt et ne compte pas comme « inconnu » un mouvement
+pour lequel aucune indemnité commerciale n'est attendue. Un total n'est jamais extrapolé à partir
+d'une moyenne : `100 M€` signifie « au moins 100 M€ documentés ».
 
 Autres partis pris :
 

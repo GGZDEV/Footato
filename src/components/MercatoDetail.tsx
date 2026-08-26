@@ -14,12 +14,13 @@ interface Props {
   onClose: () => void;
 }
 
-const SEGMENTS: { key: keyof Omit<Counts, 'total'>; label: string; color: string }[] = [
+const SEGMENTS: { key: Exclude<keyof Counts, 'total' | 'loanFee'>; label: string; color: string }[] = [
   { key: 'paid', label: 'Payants', color: 'var(--in)' },
   { key: 'free', label: 'Libres', color: 'var(--accent)' },
   { key: 'loan', label: 'Prêts', color: 'var(--text-3)' },
   { key: 'freeOrLoan', label: 'Libres ou prêts', color: 'color-mix(in srgb, var(--accent) 55%, var(--text-3))' },
   { key: 'undisclosed', label: 'Non divulgués', color: 'var(--surface-3)' },
+  { key: 'notApplicable', label: 'Administratifs / sans indemnité', color: 'var(--line-strong)' },
 ];
 
 function Breakdown({ title, c }: { title: string; c: Counts }) {

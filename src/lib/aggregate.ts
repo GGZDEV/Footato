@@ -55,7 +55,7 @@ export interface Group {
   departures: number;
   knownFees: number;
   unknownFees: number;
-  /** Share of paid-or-undetermined movements whose fee is public (0..1). */
+  /** Share of monetary fees found among found + explicitly unavailable fees (0..1). */
   coverage: number;
   titles?: number;
   domesticTitles?: number;
@@ -86,10 +86,12 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
         ...r,
         arrivals: m.arrivals.total,
         departures: m.departures.total,
-        knownFees: m.arrivals.paid + m.departures.paid,
+        knownFees: m.arrivals.paid + m.departures.paid
+          + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0),
         unknownFees: m.arrivals.undisclosed + m.departures.undisclosed,
         coverage: feeCoverage(
-          m.arrivals.paid + m.departures.paid,
+          m.arrivals.paid + m.departures.paid
+            + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0),
           m.arrivals.undisclosed + m.departures.undisclosed,
         ),
         count: 1,
@@ -128,7 +130,8 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     g.volume += r.volume;
     g.arrivals += m.arrivals.total;
     g.departures += m.departures.total;
-    g.knownFees += m.arrivals.paid + m.departures.paid;
+    g.knownFees += m.arrivals.paid + m.departures.paid
+      + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0);
     g.unknownFees += m.arrivals.undisclosed + m.departures.undisclosed;
     g.count += 1;
     // A club that changed division keeps the league of its most recent window,
@@ -189,7 +192,8 @@ export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
     t.income += r.income;
     t.arrivals += m.arrivals.total;
     t.departures += m.departures.total;
-    t.paidDeals += m.arrivals.paid + m.departures.paid;
+    t.paidDeals += m.arrivals.paid + m.departures.paid
+      + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0);
     t.undisclosed += m.arrivals.undisclosed + m.departures.undisclosed;
     clubs.add(m.clubId);
   }
