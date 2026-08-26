@@ -19,12 +19,15 @@ export interface Meta {
   yearMin: number;
   yearMax: number;
   clubCount: number;
+  /** Registry size can exceed active clubs because old shareable ids are never recycled. */
+  clubRegistryCount: number;
   rowCount: number;
   movementCount: number;
   coverageByLeague: Record<string, { yearMin: number | null; yearMax: number | null; rowCount: number }>;
   quality: {
     duplicateRowsRemoved: number;
     skippedRows: number;
+    clubAliases: Array<{ from: string; to: string; fromId: number; toId: number }>;
     recent: null | {
       duplicatesRemoved: number;
       skippedFuture: number;
@@ -121,6 +124,40 @@ export interface FreshnessData {
     players: Array<{ id: number; name: string; position: string | null; nationality: string | null }>;
   }>;
   signals: FreshnessSignal[];
+  honours: HonoursData;
+}
+
+export interface HonourTitle {
+  competitionCode: string;
+  competitionName: string;
+  kind: 'domestic' | 'continental';
+  season: number;
+  winner: { providerId: number | null; name: string; clubId: number | null };
+}
+
+export interface HonoursData {
+  meta: {
+    status: FreshnessStatus;
+    provider: 'football-data.org';
+    fetchedAt: string | null;
+    competitionCount: number;
+    titleCount: number;
+    matchedTitleCount: number;
+    unmatchedTitleCount: number;
+    yearMin: number | null;
+    yearMax: number | null;
+    commonYearMin: number | null;
+    commonYearMax: number | null;
+  };
+  coverage: Array<{
+    code: string;
+    name: string;
+    yearMin: number | null;
+    yearMax: number | null;
+    titleCount: number;
+    matchedTitleCount: number;
+  }>;
+  titles: HonourTitle[];
 }
 
 export const KIND_LABELS = [

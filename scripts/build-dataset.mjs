@@ -35,6 +35,18 @@ const LEAGUES = [
 /** Movement kinds, kept as small ints in the emitted JSON. */
 const KIND = { PAID: 0, FREE: 1, LOAN: 2, LOAN_FEE: 3, UNDISCLOSED: 4, END_OF_LOAN: 5, FREE_OR_LOAN: 6 };
 
+// Same legal club, different labels in historical Transfermarkt exports.
+// These are explicit on purpose: fuzzy matching could merge unrelated clubs.
+const CLUB_ALIASES = new Map(Object.entries({
+  'SC Cambuur-Leeuwarden': 'SC Cambuur Leeuwarden',
+  'Empoli FC': 'FC Empoli',
+  'Milan AC': 'AC Milan',
+  'AC Parma': 'Parma FC',
+  'Torino Calcio': 'Torino FC',
+  'FC Internazionale': 'Inter Milan',
+}));
+const canonicalClubName = (name) => CLUB_ALIASES.get(name.trim()) ?? name.trim();
+
 function parseCsv(text) {
   const rows = [];
   let row = [], field = '', quoted = false;
@@ -118,9 +130,9 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
     const dir = r[col.transfer_movement].trim() === 'out' ? 1 : 0;
     const kind = classify(r[col.fee]);
     const amount = toThousands(r[col.fee_cleaned]);
-    const clubName = r[col.club_name].trim();
+    const clubName = canonicalClubName(r[col.club_name]);
     const playerName = r[col.player_name].trim();
-    const counterpart = r[col.club_involved_name].trim();
+    const counterpart = canonicalClubName(r[col.club_involved_name]);
     if (!clubName || !playerName) { skipped++; continue; }
 
     const sourceId = col.source_id === undefined ? '' : r[col.source_id].trim();
@@ -187,6 +199,13 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
 const rows = [...agg.values()].sort((a, b) => a[2] - b[2] || a[3] - b[3] || a[1] - b[1] || a[0] - b[0]);
 const years = rows.map((r) => r[2]);
 if (!years.length) throw new Error('Aucune donnée valide à publier.');
+const activeClubIds = new Set(rows.map((row) => row[0]));
+const clubAliases = [...CLUB_ALIASES].map(([from, to]) => ({
+  from,
+  to,
+  fromId: clubIds.get(from) ?? null,
+  toId: clubIds.get(to) ?? null,
+})).filter((alias) => alias.fromId != null && alias.toId != null && alias.fromId !== alias.toId);
 
 const coverageByLeague = Object.fromEntries(LEAGUES.map((league, leagueIdx) => {
   const leagueYears = rows.filter((r) => r[1] === leagueIdx).map((r) => r[2]);
@@ -210,13 +229,15 @@ const summary = {
       : 'github.com/ewenme/transfers',
     yearMin: Math.min(...years),
     yearMax: Math.max(...years),
-    clubCount: clubs.length,
+    clubCount: activeClubIds.size,
+    clubRegistryCount: clubs.length,
     rowCount: rows.length,
     movementCount: movements,
     coverageByLeague,
     quality: {
       duplicateRowsRemoved: duplicates,
       skippedRows: skipped,
+      clubAliases,
       recent: recentManifest?.quality ?? null,
       memberships: recentManifest?.memberships?.leagues?.map(({ leagueId, season, teamCount, complete }) => ({
         leagueId, season, teamCount, complete,
@@ -237,7 +258,8 @@ const size = (p) => (readdirSync(p, { withFileTypes: true })
   .filter((d) => d.isFile())
   .reduce((n, d) => n + readFileSync(join(p, d.name)).length, 0) / 1e6).toFixed(1);
 
-console.log(`\n✓ ${rows.length} mercatos · ${clubs.length} clubs · ${movements} mouvements · ${summary.meta.yearMin}-${summary.meta.yearMax}`);
+console.log(`\n✓ ${rows.length} mercatos · ${activeClubIds.size} clubs actifs · ${movements} mouvements · ${summary.meta.yearMin}-${summary.meta.yearMax}`);
+if (clubAliases.length) console.log(`  ${clubAliases.length} identités historiques de clubs consolidées`);
 console.log(`  summary.json ${(readFileSync(join(OUT, 'summary.json')).length / 1e6).toFixed(1)} Mo · windows/ ${size(join(OUT, 'windows'))} Mo (${details.size} fichiers)`);
 if (duplicates) console.log(`  ${duplicates} doublons exacts retirés`);
 if (skipped) console.log(`  ${skipped} lignes ignorées (malformées)`);

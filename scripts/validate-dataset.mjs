@@ -110,7 +110,14 @@ for (const row of summary.rows) {
 if (expectedAggregates.size) fail(`${expectedAggregates.size} agrégat(s) détaillé(s) absent(s) de summary.json`);
 
 if (summary.meta.rowCount !== summary.rows.length) fail('meta.rowCount incohérent');
-if (summary.meta.clubCount !== summary.clubs.length) fail('meta.clubCount incohérent');
+const activeClubIds = new Set(summary.rows.map((row) => row[0]));
+if (summary.meta.clubCount !== activeClubIds.size) fail('meta.clubCount incohérent');
+if (summary.meta.clubRegistryCount !== summary.clubs.length) fail('meta.clubRegistryCount incohérent');
+for (const alias of summary.meta.quality?.clubAliases ?? []) {
+  if (!Number.isInteger(alias.fromId) || !Number.isInteger(alias.toId)) fail('redirection de club invalide');
+  if (activeClubIds.has(alias.fromId)) fail(`ancien club encore actif : ${alias.from}`);
+  if (!activeClubIds.has(alias.toId)) fail(`club canonique absent : ${alias.to}`);
+}
 const allYears = summary.rows.map((row) => row[2]);
 if (summary.meta.yearMin !== Math.min(...allYears) || summary.meta.yearMax !== Math.max(...allYears)) {
   fail('bornes globales de saisons incohérentes');

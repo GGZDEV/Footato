@@ -20,6 +20,10 @@ et ce qu'il reste à la fin de chaque mercato.
 - **Graphique modulable** — total par saison, été seul, hiver seul ou deux fenêtres séparées.
 - **Contrôle d'effectifs récent** — sept championnats et la Ligue des champions sont relevés
   automatiquement ; les changements détectés restent signalés à part jusqu'à confirmation.
+- **Classements auditables** — top dépenses, bénéfices et ventes, avec la part de montants publics
+  visible pour chaque ligne plutôt qu'un classement présenté comme exact à tort.
+- **Dépenses comparées aux titres** — championnats de première division des sept pays et Ligue des
+  champions, par saison, avec coût documenté par titre et gros dépensiers sans titre suivi.
 
 ## Démarrer
 
@@ -47,6 +51,10 @@ Le pipeline combine deux instantanés dérivés de **Transfermarkt** et deux sou
 Le relevé football-data.org ne fournit pas les indemnités de transfert. Il sert donc de radar : un
 joueur qui change d'équipe entre deux relevés produit un signal, mais ce signal ne modifie jamais les
 montants ou les agrégats Transfermarkt sans une source financière confirmée.
+
+Le même fournisseur expose les vainqueurs saisonniers sous forme structurée. Footato ne parle pas de
+« palmarès total » : seules les sept premières divisions suivies et la Ligue des champions sont mises
+en comparaison. Les coupes nationales, supercoupes et autres compétitions sont explicitement exclues.
 
 Les championnats couverts sont la Premier League, LaLiga, Serie A, Bundesliga, Ligue 1,
 Liga Portugal, Eredivisie, Premier Liga russe et Championship. La couverture
@@ -130,7 +138,8 @@ Chaque mouvement est classé par type :
 
 **Conséquence à garder en tête : les totaux sont des planchers.** Environ la moitié des
 mouvements n'ont pas de montant public — ils comptent pour 0 €. La proportion de transferts
-effectivement chiffrés est affichée en permanence dans la tuile « Périmètre ».
+effectivement chiffrés est affichée dans la synthèse et sur chaque ligne du classement. Un total
+n'est jamais extrapolé à partir d'une moyenne : `100 M€` signifie « au moins 100 M€ documentés ».
 
 Autres partis pris :
 

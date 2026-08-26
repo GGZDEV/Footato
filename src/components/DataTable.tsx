@@ -24,11 +24,12 @@ interface Props {
   onSort: (key: SortKey) => void;
   onSelect: (g: Group) => void;
   selectedKey?: string;
+  showHonours?: boolean;
 }
 
 const PAGE = 100;
 
-export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey }: Props) {
+export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey, showHonours = false }: Props) {
   const [limit, setLimit] = useState(PAGE);
 
   const columns = useMemo<Column[]>(() => {
@@ -38,6 +39,10 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'sublabel', label: subHead, align: 'left' },
     ];
     if (grouping !== 'mercato') cols.push({ key: 'count', label: 'Mercatos' });
+    if (grouping === 'club' && showHonours) cols.push(
+      { key: 'titles', label: 'Titres', title: 'Championnats nationaux et Ligues des champions suivis sur la période' },
+      { key: 'spendPerTitle', label: 'Coût / titre', title: 'Achats documentés divisés par le nombre de titres suivis' },
+    );
     cols.push(
       { key: 'arrivals', label: 'Arr.', title: 'Nombre d’arrivées' },
       { key: 'spend', label: 'Achats' },
@@ -45,9 +50,10 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'income', label: 'Ventes' },
       { key: 'balance', label: 'Bilan' },
       { key: 'volume', label: 'Volume', title: 'Achats + ventes' },
+      { key: 'coverage', label: 'Fiabilité', title: 'Part des mouvements payants ou indéterminés dont le montant est public' },
     );
     return cols;
-  }, [grouping]);
+  }, [grouping, showHonours]);
 
   const maxBalance = useMemo(
     () => groups.slice(0, limit).reduce((n, g) => Math.max(n, Math.abs(g.balance)), 0) || 1,
@@ -57,19 +63,20 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
   const visible = groups.slice(0, limit);
 
   const exportCsv = () => {
-    const monetary = new Set<SortKey>(['spend', 'income', 'balance', 'volume']);
+    const monetary = new Set<SortKey>(['spend', 'income', 'balance', 'volume', 'spendPerTitle']);
+    const percentage = new Set<SortKey>(['coverage']);
     const csvCell = (value: string | number) => {
       const text = String(value);
       return /[;"\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
     };
-    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : c.label)];
+    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : percentage.has(c.key) ? `${c.label} (%)` : c.label)];
     const lines = [head.map(csvCell).join(';')];
     groups.forEach((g, i) => {
       const cells = columns.map((c) => {
         const v = g[c.key];
-        return typeof v === 'number' && monetary.has(c.key)
-          ? (v / 1000).toFixed(3).replace('.', ',')
-          : String(v);
+        if (typeof v === 'number' && monetary.has(c.key)) return (v / 1000).toFixed(3).replace('.', ',');
+        if (typeof v === 'number' && percentage.has(c.key)) return (v * 100).toFixed(1).replace('.', ',');
+        return String(v);
       });
       lines.push([i + 1, ...cells].map(csvCell).join(';'));
     });
@@ -127,6 +134,12 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                 </td>
                 <td className="left cell-sub">{g.sublabel}</td>
                 {grouping !== 'mercato' && <td className="num">{count(g.count)}</td>}
+                {grouping === 'club' && showHonours && <>
+                  <td className="num honours-cell" title={`${g.domesticTitles ?? 0} championnat(s) · ${g.continentalTitles ?? 0} Ligue(s) des champions`}>
+                    {count(g.titles ?? 0)}
+                  </td>
+                  <td className="num muted">{g.titles ? money(g.spendPerTitle ?? 0) : '—'}</td>
+                </>}
                 <td className="num muted">{count(g.arrivals)}</td>
                 <td className="num neg">{money(g.spend)}</td>
                 <td className="num muted">{count(g.departures)}</td>
@@ -143,6 +156,11 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                   <span className={`v ${g.balance >= 0 ? 'pos' : 'neg'}`}>{money(g.balance, { sign: true })}</span>
                 </td>
                 <td className="num muted">{money(g.volume)}</td>
+                <td className="num">
+                  <span className={`coverage-badge ${g.coverage >= .8 ? 'high' : g.coverage >= .6 ? 'medium' : 'low'}`}>
+                    {Math.round(g.coverage * 100)}%
+                  </span>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -161,6 +179,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             <span className="result-identity">
               <span className="result-name"><Flag code={g.flag} /><b>{g.label}</b></span>
               <span>{g.sublabel}{grouping !== 'mercato' ? ` · ${count(g.count)} mercatos` : ''}</span>
+              {grouping === 'club' && showHonours && <span>{count(g.titles ?? 0)} titre(s) suivi(s){g.titles ? ` · ${money(g.spendPerTitle ?? 0)}/titre` : ''}</span>}
             </span>
             <span className="result-money">
               <span><small>Achats</small><b className="num neg">{money(g.spend)}</b></span>
@@ -169,7 +188,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             </span>
             <span className="result-meta">
               <span>{count(g.arrivals)} arrivées · {count(g.departures)} départs</span>
-              <span>Volume {money(g.volume)}</span>
+              <span>Volume {money(g.volume)} · Fiabilité {Math.round(g.coverage * 100)}%</span>
             </span>
           </button>
         ))}

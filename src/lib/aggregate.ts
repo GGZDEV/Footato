@@ -53,6 +53,14 @@ export interface Group {
   volume: number;
   arrivals: number;
   departures: number;
+  knownFees: number;
+  unknownFees: number;
+  /** Share of paid-or-undetermined movements whose fee is public (0..1). */
+  coverage: number;
+  titles?: number;
+  domesticTitles?: number;
+  continentalTitles?: number;
+  spendPerTitle?: number;
   count: number;
   /** Present only when grouping by mercato — enables the detail drill-down. */
   mercato?: Mercato;
@@ -61,7 +69,10 @@ export interface Group {
 const empty = (key: string, label: string, sublabel: string, flag: string): Group => ({
   key, label, sublabel, flag,
   spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, count: 0,
+  knownFees: 0, unknownFees: 0, coverage: 1,
 });
+
+const feeCoverage = (known: number, unknown: number) => known + unknown ? known / (known + unknown) : 1;
 
 export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: boolean): Group[] {
   if (grouping === 'mercato') {
@@ -75,6 +86,12 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
         ...r,
         arrivals: m.arrivals.total,
         departures: m.departures.total,
+        knownFees: m.arrivals.paid + m.departures.paid,
+        unknownFees: m.arrivals.undisclosed + m.departures.undisclosed,
+        coverage: feeCoverage(
+          m.arrivals.paid + m.departures.paid,
+          m.arrivals.undisclosed + m.departures.undisclosed,
+        ),
         count: 1,
         mercato: m,
       };
@@ -111,6 +128,8 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     g.volume += r.volume;
     g.arrivals += m.arrivals.total;
     g.departures += m.departures.total;
+    g.knownFees += m.arrivals.paid + m.departures.paid;
+    g.unknownFees += m.arrivals.undisclosed + m.departures.undisclosed;
     g.count += 1;
     // A club that changed division keeps the league of its most recent window,
     // independently of the input order.
@@ -124,11 +143,14 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     }
   }
 
-  for (const g of out.values()) g.balance = g.income - g.spend;
+  for (const g of out.values()) {
+    g.balance = g.income - g.spend;
+    g.coverage = feeCoverage(g.knownFees, g.unknownFees);
+  }
   return [...out.values()];
 }
 
-export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'count';
+export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'coverage' | 'titles' | 'spendPerTitle' | 'count';
 
 export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] {
   const sorted = [...groups];
@@ -137,7 +159,7 @@ export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] 
       const text = a[key].localeCompare(b[key], 'fr') * dir;
       return text || a.key.localeCompare(b.key, 'fr');
     }
-    const diff = a[key] - b[key];
+    const diff = (a[key] ?? 0) - (b[key] ?? 0);
     return diff ? diff * dir : a.label.localeCompare(b.label, 'fr') || a.key.localeCompare(b.key, 'fr');
   });
   return sorted;

@@ -1,6 +1,6 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { COMPETITIONS, finaliseSnapshot, normaliseSnapshot } from './lib/freshness.mjs';
+import { COMPETITIONS, finaliseSnapshot, normaliseHonours, normaliseSnapshot } from './lib/freshness.mjs';
 
 const token = process.env.FOOTBALL_DATA_TOKEN;
 const outputPath = resolve('public/data/freshness.json');
@@ -44,6 +44,18 @@ async function fetchCompetition(code) {
   return { code, payload: await response.json() };
 }
 
+async function fetchCompetitionHistory(code) {
+  const response = await fetch(`${apiBase}/competitions/${code}`, {
+    headers: {
+      Accept: 'application/json',
+      'X-Auth-Token': token,
+      'User-Agent': 'Footato/1.0 (https://ggzdev.github.io/Footato/)',
+    },
+  });
+  if (!response.ok) throw new Error(`football-data.org historique ${code}: HTTP ${response.status}`);
+  return { code, payload: await response.json() };
+}
+
 if (!token) {
   if (process.env.CI === 'true') {
     throw new Error('Le secret GitHub FOOTBALL_DATA_TOKEN est absent.');
@@ -63,6 +75,19 @@ const current = normaliseSnapshot(responses, fetchedAt);
 if (current.meta.playerCount === 0) {
   throw new Error('football-data.org n’a retourné aucun joueur : publication interrompue.');
 }
+const honoursAge = previous?.honours?.meta?.fetchedAt
+  ? (Date.now() - new Date(previous.honours.meta.fetchedAt).valueOf()) / 86_400_000
+  : Infinity;
+if (previous?.honours?.meta?.status === 'ready' && honoursAge < 30) {
+  current.honours = previous.honours;
+} else {
+  // The free plan allows 10 requests/minute. Eight team calls have just run.
+  await new Promise((resolveDelay) => setTimeout(resolveDelay, 61_000));
+  const historyResponses = [];
+  for (const competition of COMPETITIONS) historyResponses.push(await fetchCompetitionHistory(competition.code));
+  const summary = JSON.parse(await readFile(resolve('public/data/summary.json'), 'utf8'));
+  current.honours = normaliseHonours(historyResponses, summary, fetchedAt);
+}
 const next = finaliseSnapshot(current, previous);
 
 await mkdir(dirname(outputPath), { recursive: true });
@@ -72,4 +97,8 @@ await rename(temporaryPath, outputPath);
 console.log(
   `football-data.org : ${next.meta.teamCount} équipes, ${next.meta.playerCount} joueurs, `
   + `${next.meta.newSignalCount} nouvel(aux) écart(s).`,
+);
+console.log(
+  `Palmarès : ${next.honours.meta.matchedTitleCount}/${next.honours.meta.titleCount} titres rattachés `
+  + `(${next.honours.meta.yearMin ?? '—'}-${next.honours.meta.yearMax ?? '—'}).`,
 );

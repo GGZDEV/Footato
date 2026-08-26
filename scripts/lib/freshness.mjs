@@ -1,13 +1,35 @@
 export const COMPETITIONS = [
-  { code: 'PL', label: 'Premier League' },
-  { code: 'PD', label: 'La Liga' },
-  { code: 'SA', label: 'Serie A' },
-  { code: 'BL1', label: 'Bundesliga' },
-  { code: 'FL1', label: 'Ligue 1' },
-  { code: 'PPL', label: 'Primeira Liga' },
-  { code: 'DED', label: 'Eredivisie' },
-  { code: 'CL', label: 'Ligue des champions' },
+  { code: 'PL', label: 'Premier League', leagueId: 'GB1', kind: 'domestic' },
+  { code: 'PD', label: 'La Liga', leagueId: 'ES1', kind: 'domestic' },
+  { code: 'SA', label: 'Serie A', leagueId: 'IT1', kind: 'domestic' },
+  { code: 'BL1', label: 'Bundesliga', leagueId: 'DE1', kind: 'domestic' },
+  { code: 'FL1', label: 'Ligue 1', leagueId: 'FR1', kind: 'domestic' },
+  { code: 'PPL', label: 'Primeira Liga', leagueId: 'PT1', kind: 'domestic' },
+  { code: 'DED', label: 'Eredivisie', leagueId: 'NL1', kind: 'domestic' },
+  { code: 'CL', label: 'Ligue des champions', leagueId: null, kind: 'continental' },
 ];
+
+const HONOUR_CLUB_ALIASES = new Map(Object.entries({
+  'FC Internazionale Milano': 'Inter Milan',
+  'FC Bayern München': 'Bayern Munich',
+  'Olympique de Marseille': 'Olympique Marseille',
+  'Olympique Lyonnais': 'Olympique Lyon',
+  'Sport Lisboa e Benfica': 'SL Benfica',
+  'Sporting Clube de Portugal': 'Sporting CP',
+  'Futebol Clube do Porto': 'FC Porto',
+  'AFC Ajax': 'Ajax Amsterdam',
+  'PSV': 'PSV Eindhoven',
+  'Feyenoord': 'Feyenoord Rotterdam',
+  'Club Atlético de Madrid': 'Atlético de Madrid',
+  'Real Madrid CF': 'Real Madrid',
+  'Manchester City FC': 'Manchester City',
+  'Manchester United FC': 'Manchester United',
+  'Blackburn Rovers FC': 'Blackburn Rovers',
+  'Leicester City FC': 'Leicester City',
+  'Paris Saint-Germain FC': 'Paris Saint-Germain',
+  'AS Monaco FC': 'AS Monaco',
+  'FC Girondins de Bordeaux': 'Girondins Bordeaux',
+}));
 
 const asIso = (value) => {
   if (!value) return null;
@@ -191,5 +213,87 @@ export function finaliseSnapshot(current, previous) {
       isBaseline: previous?.meta?.status !== 'ready',
     },
     signals,
+  };
+}
+
+const normaliseClubName = (value) => String(value ?? '')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase().replace(/&/g, ' and ').replace(/\([^)]*\)/g, ' ')
+  .replace(/\b(fc|afc|cf|sc|ac|as|ss|club|football|calcio|futbol|futebol)\b/g, ' ')
+  .replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, '');
+
+/** Convert structured season winners into titles joined to Footato's stable club ids. */
+export function normaliseHonours(responses, summary, fetchedAt = new Date().toISOString()) {
+  const activeIds = new Set(summary.rows.map((row) => row[0]));
+  const clubIndex = new Map();
+  const register = (name, id) => {
+    const key = normaliseClubName(name);
+    if (!key) return;
+    const ids = clubIndex.get(key) || new Set();
+    ids.add(id);
+    clubIndex.set(key, ids);
+  };
+  for (const id of activeIds) register(summary.clubs[id], id);
+
+  const resolveClub = (providerName) => {
+    const canonical = HONOUR_CLUB_ALIASES.get(providerName) || providerName;
+    const ids = [...(clubIndex.get(normaliseClubName(canonical)) || [])];
+    return ids.length === 1 ? ids[0] : null;
+  };
+
+  const titles = [];
+  const coverage = [];
+  const seen = new Set();
+  for (const { code, payload } of responses) {
+    if (!payload || !Array.isArray(payload.seasons)) {
+      throw new Error(`Historique football-data.org invalide pour ${code}`);
+    }
+    const config = COMPETITIONS.find((item) => item.code === code);
+    const seasons = [];
+    for (const season of payload.seasons) {
+      const year = Number.parseInt(String(season.startDate || '').slice(0, 4), 10);
+      if (!Number.isInteger(year) || year < summary.meta.yearMin || year > summary.meta.yearMax || !season.winner?.name) continue;
+      const key = `${code}:${year}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const clubId = resolveClub(season.winner.name);
+      titles.push({
+        competitionCode: code,
+        competitionName: payload.name || config?.label || code,
+        kind: config?.kind || 'domestic',
+        season: year,
+        winner: { providerId: season.winner.id ?? null, name: season.winner.name, clubId },
+      });
+      seasons.push({ year, matched: clubId != null });
+    }
+    coverage.push({
+      code,
+      name: payload.name || config?.label || code,
+      yearMin: seasons.length ? Math.min(...seasons.map((item) => item.year)) : null,
+      yearMax: seasons.length ? Math.max(...seasons.map((item) => item.year)) : null,
+      titleCount: seasons.length,
+      matchedTitleCount: seasons.filter((item) => item.matched).length,
+    });
+  }
+
+  titles.sort((a, b) => a.season - b.season || a.competitionCode.localeCompare(b.competitionCode));
+  const unmatched = titles.filter((title) => title.winner.clubId == null);
+  const completeCoverage = coverage.filter((item) => item.yearMin != null && item.yearMax != null);
+  return {
+    meta: {
+      status: 'ready',
+      provider: 'football-data.org',
+      fetchedAt: asIso(fetchedAt),
+      competitionCount: responses.length,
+      titleCount: titles.length,
+      matchedTitleCount: titles.length - unmatched.length,
+      unmatchedTitleCount: unmatched.length,
+      yearMin: titles.length ? Math.min(...titles.map((title) => title.season)) : null,
+      yearMax: titles.length ? Math.max(...titles.map((title) => title.season)) : null,
+      commonYearMin: completeCoverage.length === responses.length ? Math.max(...completeCoverage.map((item) => item.yearMin)) : null,
+      commonYearMax: completeCoverage.length === responses.length ? Math.min(...completeCoverage.map((item) => item.yearMax)) : null,
+    },
+    coverage: coverage.sort((a, b) => a.code.localeCompare(b.code)),
+    titles,
   };
 }

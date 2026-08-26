@@ -105,7 +105,7 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
       flag = mercato.window === 0 ? 'summer' : 'winter';
     }
     if (!result.has(key)) {
-      result.set(key, { key, label, sublabel, flag, spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, count: 0 });
+      result.set(key, { key, label, sublabel, flag, spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, knownFees: 0, unknownFees: 0, coverage: 1, count: 0 });
     }
     const target = result.get(key);
     const resolved = independentResolve(mercato, includeLoanFees);
@@ -113,6 +113,8 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
     target.income += resolved.income;
     target.arrivals += mercato.arrivals.total;
     target.departures += mercato.departures.total;
+    target.knownFees += mercato.arrivals.paid + mercato.departures.paid;
+    target.unknownFees += mercato.arrivals.undisclosed + mercato.departures.undisclosed;
     target.count += 1;
     if (grouping === 'club') {
       const previous = latest.get(key);
@@ -126,12 +128,13 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
   for (const target of result.values()) {
     target.balance = target.income - target.spend;
     target.volume = target.income + target.spend;
+    target.coverage = target.knownFees + target.unknownFees ? target.knownFees / (target.knownFees + target.unknownFees) : 1;
   }
   return [...result.values()].sort((a, b) => a.key.localeCompare(b.key));
 };
 
-const comparableGroup = ({ key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, count }) => ({
-  key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, count,
+const comparableGroup = ({ key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage, count }) => ({
+  key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage, count,
 });
 
 const scenarioList = [{ name: 'toutes les données', filters: { ...defaults } }];
@@ -182,6 +185,8 @@ for (const { name, filters } of scenarioList) {
     assert.equal(groups.reduce((sum, item) => sum + item.volume, 0), expectedTotals.spend + expectedTotals.income, `volumes ${name}/${grouping}`);
     assert.equal(groups.reduce((sum, item) => sum + item.arrivals, 0), expectedTotals.arrivals, `arrivées ${name}/${grouping}`);
     assert.equal(groups.reduce((sum, item) => sum + item.departures, 0), expectedTotals.departures, `départs ${name}/${grouping}`);
+    assert.equal(groups.reduce((sum, item) => sum + item.knownFees, 0), expectedTotals.paidDeals, `montants connus ${name}/${grouping}`);
+    assert.equal(groups.reduce((sum, item) => sum + item.unknownFees, 0), expectedTotals.undisclosed, `montants inconnus ${name}/${grouping}`);
     assert.equal(groups.reduce((sum, item) => sum + item.count, 0), actualRows.length, `comptage ${name}/${grouping}`);
     for (const item of groups) {
       assert.equal(item.balance, item.income - item.spend, `formule bilan ${name}/${grouping}/${item.key}`);
@@ -201,7 +206,7 @@ assert.deepEqual(
 );
 
 const allGroups = group(mercatos, 'mercato', false);
-for (const key of ['label', 'sublabel', 'spend', 'income', 'balance', 'volume', 'arrivals', 'departures', 'count']) {
+for (const key of ['label', 'sublabel', 'spend', 'income', 'balance', 'volume', 'arrivals', 'departures', 'coverage', 'count']) {
   for (const dir of [1, -1]) {
     const originalKeys = allGroups.map((item) => item.key);
     const sorted = sortGroups(allGroups, key, dir);
@@ -256,5 +261,5 @@ assert.equal(withLoans.spend - withoutLoans.spend, mercatos.reduce((sum, item) =
 assert.equal(withLoans.income - withoutLoans.income, mercatos.reduce((sum, item) => sum + item.loanIncome, 0), 'indemnités de prêt perçues');
 for (const mercato of mercatos) assert.deepEqual(resolve(mercato, true), independentResolve(mercato, true));
 
-console.log(`✓ analytique : ${checkedScenarios} scénarios de filtres · 4 regroupements · 18 tris · 4 modes graphiques`);
+console.log(`✓ analytique : ${checkedScenarios} scénarios de filtres · 4 regroupements · 20 tris · 4 modes graphiques`);
 console.log(`  ${mercatos.length} mercatos contrôlés, avec et sans indemnités de prêt`);

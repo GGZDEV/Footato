@@ -11,6 +11,9 @@ assert(data.meta?.provider === 'football-data.org', 'provider inattendu');
 assert(Array.isArray(data.competitions), 'competitions doit être un tableau');
 assert(Array.isArray(data.teams), 'teams doit être un tableau');
 assert(Array.isArray(data.signals), 'signals doit être un tableau');
+assert(['pending', 'ready'].includes(data.honours?.meta?.status), 'honours.meta.status invalide');
+assert(Array.isArray(data.honours?.coverage), 'honours.coverage doit être un tableau');
+assert(Array.isArray(data.honours?.titles), 'honours.titles doit être un tableau');
 
 if (data.meta?.status === 'ready') {
   const required = ['PL', 'PD', 'SA', 'BL1', 'FL1', 'PPL', 'DED', 'CL'];
@@ -43,6 +46,31 @@ if (data.meta?.status === 'ready') {
   }
   assert(data.meta.playerCount === uniquePlayers.size, 'playerCount incohérent');
   assert(data.meta.signalCount === data.signals.length, 'signalCount incohérent');
+}
+
+if (data.honours?.meta?.status === 'ready') {
+  const codes = new Set(data.honours.coverage.map((item) => item.code));
+  for (const code of ['PL', 'PD', 'SA', 'BL1', 'FL1', 'PPL', 'DED', 'CL']) {
+    assert(codes.has(code), `couverture palmarès manquante : ${code}`);
+  }
+  assert(data.honours.meta.competitionCount === data.honours.coverage.length, 'competitionCount palmarès incohérent');
+  assert(data.honours.meta.titleCount === data.honours.titles.length, 'titleCount incohérent');
+  assert(data.honours.meta.titleCount >= 8, 'historique des titres trop court');
+  assert(data.honours.meta.matchedTitleCount + data.honours.meta.unmatchedTitleCount === data.honours.meta.titleCount, 'rattachement des titres incohérent');
+  const titleKeys = new Set();
+  for (const item of data.honours.coverage) assert(item.titleCount > 0, `aucun champion disponible pour ${item.code}`);
+  assert(Number.isInteger(data.honours.meta.commonYearMin), 'commonYearMin absent');
+  assert(Number.isInteger(data.honours.meta.commonYearMax), 'commonYearMax absent');
+  assert(data.honours.meta.commonYearMin <= data.honours.meta.commonYearMax, 'période commune des titres invalide');
+  for (const title of data.honours.titles) {
+    const key = `${title.competitionCode}:${title.season}`;
+    assert(!titleKeys.has(key), `titre dupliqué : ${key}`);
+    titleKeys.add(key);
+    assert(['domestic', 'continental'].includes(title.kind), `type de titre invalide : ${key}`);
+    assert(Number.isInteger(title.season), `saison de titre invalide : ${key}`);
+    assert(typeof title.winner?.name === 'string' && title.winner.name, `vainqueur absent : ${key}`);
+    assert(title.winner.clubId == null || Number.isInteger(title.winner.clubId), `clubId de titre invalide : ${key}`);
+  }
 }
 
 for (const signal of data.signals || []) {

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { diffSnapshots, finaliseSnapshot, normaliseSnapshot } from './lib/freshness.mjs';
+import { diffSnapshots, finaliseSnapshot, normaliseHonours, normaliseSnapshot } from './lib/freshness.mjs';
 
 const competition = (code, teams) => ({
   code,
@@ -48,4 +48,21 @@ const ambiguousAfter = normaliseSnapshot([
 ], '2026-08-26T12:00:00Z');
 assert.equal(diffSnapshots(ambiguousBefore, ambiguousAfter).length, 0, 'un joueur ambigu ne doit pas générer un signal');
 
-console.log('Détection de fraîcheur vérifiée : fusion, baseline, mouvement et ambiguïtés.');
+const honours = normaliseHonours([
+  { code: 'PL', payload: { name: 'Premier League', seasons: [
+    { startDate: '2024-08-01', winner: { id: 1, name: 'Manchester City FC' } },
+    { startDate: '2025-08-01', winner: null },
+  ] } },
+  { code: 'CL', payload: { name: 'UEFA Champions League', seasons: [
+    { startDate: '2024-08-01', winner: { id: 2, name: 'Real Madrid CF' } },
+  ] } },
+], {
+  meta: { yearMin: 1992, yearMax: 2026 },
+  clubs: ['Manchester City', 'Real Madrid'],
+  rows: [[0], [1]],
+}, '2026-08-26T12:00:00Z');
+assert.equal(honours.meta.titleCount, 2);
+assert.equal(honours.meta.matchedTitleCount, 2);
+assert.deepEqual(honours.titles.map((title) => title.winner.clubId), [1, 0]);
+
+console.log('Détection vérifiée : fusion, baseline, mouvements, ambiguïtés et palmarès.');
