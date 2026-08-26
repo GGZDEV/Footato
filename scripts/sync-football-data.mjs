@@ -1,6 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { COMPETITIONS, finaliseSnapshot, normaliseHonours, normaliseSnapshot } from './lib/freshness.mjs';
+import { buildHonoursCatalog, HONOURS_CATALOG_VERSION } from './lib/honours-catalog.mjs';
 
 const token = process.env.FOOTBALL_DATA_TOKEN;
 const outputPath = resolve('public/data/freshness.json');
@@ -75,18 +76,26 @@ const current = normaliseSnapshot(responses, fetchedAt);
 if (current.meta.playerCount === 0) {
   throw new Error('football-data.org n’a retourné aucun joueur : publication interrompue.');
 }
+const summary = JSON.parse(await readFile(resolve('public/data/summary.json'), 'utf8'));
 const honoursAge = previous?.honours?.meta?.fetchedAt
   ? (Date.now() - new Date(previous.honours.meta.fetchedAt).valueOf()) / 86_400_000
   : Infinity;
-if (previous?.honours?.meta?.status === 'ready' && honoursAge < 30) {
+if (previous?.honours?.meta?.status === 'ready'
+  && previous.honours.meta.catalogVersion === HONOURS_CATALOG_VERSION
+  && honoursAge < 30) {
   current.honours = previous.honours;
+} else if (previous?.honours?.meta?.status === 'ready'
+  && previous.honours.meta.provider === 'football-data.org'
+  && previous.honours.titles?.length) {
+  // Upgrade the previously collected API history immediately, without consuming more quota.
+  current.honours = buildHonoursCatalog(summary, previous.honours, fetchedAt);
 } else {
   // The free plan allows 10 requests/minute. Eight team calls have just run.
   await new Promise((resolveDelay) => setTimeout(resolveDelay, 61_000));
   const historyResponses = [];
   for (const competition of COMPETITIONS) historyResponses.push(await fetchCompetitionHistory(competition.code));
-  const summary = JSON.parse(await readFile(resolve('public/data/summary.json'), 'utf8'));
-  current.honours = normaliseHonours(historyResponses, summary, fetchedAt);
+  const apiHonours = normaliseHonours(historyResponses, summary, fetchedAt);
+  current.honours = buildHonoursCatalog(summary, apiHonours, fetchedAt);
 }
 const next = finaliseSnapshot(current, previous);
 

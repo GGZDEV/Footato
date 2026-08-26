@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { diffSnapshots, finaliseSnapshot, normaliseHonours, normaliseSnapshot } from './lib/freshness.mjs';
+import { buildHonoursCatalog } from './lib/honours-catalog.mjs';
 
 const competition = (code, teams) => ({
   code,
@@ -65,4 +66,24 @@ assert.equal(honours.meta.titleCount, 2);
 assert.equal(honours.meta.matchedTitleCount, 2);
 assert.deepEqual(honours.titles.map((title) => title.winner.clubId), [1, 0]);
 
-console.log('Détection vérifiée : fusion, baseline, mouvements, ambiguïtés et palmarès.');
+const realSummary = JSON.parse(await (await import('node:fs/promises')).readFile(
+  new URL('../public/data/summary.json', import.meta.url), 'utf8',
+));
+const apiCrossCheck = normaliseHonours([
+  { code: 'PL', payload: { name: 'Premier League', seasons: [
+    { startDate: '2022-08-01', winner: { id: 65, name: 'Manchester City FC' } },
+  ] } },
+], realSummary, '2026-08-26T12:00:00Z');
+const catalog = buildHonoursCatalog(realSummary, apiCrossCheck, '2026-08-26T12:00:00Z');
+assert.equal(catalog.meta.titleCount, 198);
+assert.equal(catalog.meta.matchedTitleCount, 198);
+assert.equal(catalog.meta.unmatchedTitleCount, 0);
+assert.equal(catalog.meta.crossCheckedTitleCount, 1);
+assert.equal(catalog.meta.commonYearMin, 2000);
+assert.equal(catalog.meta.commonYearMax, 2024);
+assert.deepEqual(
+  catalog.coverage.flatMap((item) => item.missingSeasons.map((season) => `${item.code}:${season.season}`)),
+  ['DED:2019', 'SA:2004'],
+);
+
+console.log('Détection vérifiée : fusion, baseline, mouvements, ambiguïtés et palmarès comparable.');

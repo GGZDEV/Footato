@@ -132,18 +132,21 @@ export interface HonourTitle {
   competitionName: string;
   kind: 'domestic' | 'continental';
   season: number;
+  source?: string;
   winner: { providerId: number | null; name: string; clubId: number | null };
 }
 
 export interface HonoursData {
   meta: {
     status: FreshnessStatus;
-    provider: 'football-data.org';
+    provider: string;
+    catalogVersion?: string;
     fetchedAt: string | null;
     competitionCount: number;
     titleCount: number;
     matchedTitleCount: number;
     unmatchedTitleCount: number;
+    crossCheckedTitleCount?: number;
     yearMin: number | null;
     yearMax: number | null;
     commonYearMin: number | null;
@@ -156,6 +159,8 @@ export interface HonoursData {
     yearMax: number | null;
     titleCount: number;
     matchedTitleCount: number;
+    source?: string;
+    missingSeasons?: Array<{ season: number; reason: string }>;
   }>;
   titles: HonourTitle[];
 }

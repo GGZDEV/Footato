@@ -419,7 +419,10 @@ export default function App() {
         <div className="honours-scope" role="note">
           <strong>Palmarès comparable :</strong> championnats de première division des sept pays et Ligue des champions,
           de {filters.yearFrom} à {filters.yearTo}, période couverte par les huit compétitions.
-          Coupes nationales et autres compétitions exclues. {freshness.honours.meta.unmatchedTitleCount > 0 && `${freshness.honours.meta.unmatchedTitleCount} titre(s) non rattaché(s) à un club Footato.`}
+          Coupes nationales et autres compétitions exclues. Catalogue officiel versionné :{' '}
+          {freshness.honours.meta.matchedTitleCount} titres rattachés, dont{' '}
+          {freshness.honours.meta.crossCheckedTitleCount ?? 0} recoupés automatiquement avec football-data.org.
+          {freshness.honours.meta.unmatchedTitleCount > 0 && ` ${freshness.honours.meta.unmatchedTitleCount} titre(s) non rattaché(s) à un club Footato.`}
         </div>
       )}
 
@@ -483,7 +486,8 @@ export default function App() {
         Les effectifs de sept championnats et de la Ligue des champions sont contrôlés automatiquement via{' '}
         <a href="https://www.football-data.org/" target="_blank" rel="noreferrer">football-data.org</a> ;
         leurs écarts restent séparés des statistiques financières jusqu’à confirmation. Le palmarès comparable
-        ne compte que les sept championnats nationaux suivis et la Ligue des champions, jamais les coupes non couvertes.
+        provient des historiques officiels des ligues et de l’UEFA, recoupés avec l’API ; il ne compte que les sept
+        championnats nationaux suivis et la Ligue des champions, jamais les coupes non couvertes.
       </footer>
 
       {selected && (

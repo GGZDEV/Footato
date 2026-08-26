@@ -62,6 +62,13 @@ if (data.honours?.meta?.status === 'ready') {
   assert(Number.isInteger(data.honours.meta.commonYearMin), 'commonYearMin absent');
   assert(Number.isInteger(data.honours.meta.commonYearMax), 'commonYearMax absent');
   assert(data.honours.meta.commonYearMin <= data.honours.meta.commonYearMax, 'période commune des titres invalide');
+  if (data.honours.meta.catalogVersion) {
+    assert(data.honours.meta.commonYearMin === 2000, 'le catalogue doit commencer en 2000');
+    assert(data.honours.meta.commonYearMax >= 2024, 'le catalogue doit couvrir la saison 2024/25');
+    assert(data.honours.meta.titleCount === 198, 'le catalogue doit contenir 198 titres attribués');
+    assert(data.honours.meta.unmatchedTitleCount === 0, 'tout titre du catalogue doit être rattaché');
+    assert(data.honours.meta.crossCheckedTitleCount > 0, 'aucun titre contre-vérifié par l’API');
+  }
   for (const title of data.honours.titles) {
     const key = `${title.competitionCode}:${title.season}`;
     assert(!titleKeys.has(key), `titre dupliqué : ${key}`);
@@ -70,6 +77,7 @@ if (data.honours?.meta?.status === 'ready') {
     assert(Number.isInteger(title.season), `saison de titre invalide : ${key}`);
     assert(typeof title.winner?.name === 'string' && title.winner.name, `vainqueur absent : ${key}`);
     assert(title.winner.clubId == null || Number.isInteger(title.winner.clubId), `clubId de titre invalide : ${key}`);
+    if (data.honours.meta.catalogVersion) assert(/^https:\/\//.test(title.source), `source officielle absente : ${key}`);
   }
 }
 

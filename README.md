@@ -52,9 +52,22 @@ Le relevé football-data.org ne fournit pas les indemnités de transfert. Il ser
 joueur qui change d'équipe entre deux relevés produit un signal, mais ce signal ne modifie jamais les
 montants ou les agrégats Transfermarkt sans une source financière confirmée.
 
-Le même fournisseur expose les vainqueurs saisonniers sous forme structurée. Footato ne parle pas de
-« palmarès total » : seules les sept premières divisions suivies et la Ligue des champions sont mises
-en comparaison. Les coupes nationales, supercoupes et autres compétitions sont explicitement exclues.
+Le palmarès n'est pas déduit des scores et ne dépend pas de la profondeur inégale d'une API. Un catalogue
+versionné reprend, pour chaque saison 2000/01 à 2024/25, les historiques officiels de la
+[Premier League](https://www.premierleague.com/en/premier-league-explained), de
+[LaLiga](https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga), de la
+[Serie A](https://www.legaseriea.it/serie-a/albo), de la
+[Bundesliga](https://www.bundesliga.com/de/bundesliga/news/liste-deutscher-meister-bundesliga-koln-bayern-nurnberg-dortmund-bremen-kaiserslautern-23908), de la
+[Ligue 1](https://ligue1.com/fr/articles/l1_article_289-le-palmares-des-champions-de-ligue-1), de la
+[Liga Portugal](https://www.ligaportugal.pt/pages/historia), de l'
+[Eredivisie](https://eredivisie.nl/nieuws/psv-voor-de-26e-keer-kampioen-van-nederland/) et de l'
+[UEFA](https://www.uefa.com/uefachampionsleague/history/). Les entrées que fournit football-data.org
+sont recoupées automatiquement ; le build échoue au premier désaccord.
+
+Footato ne parle pas de « palmarès total » : seules les sept premières divisions suivies et la Ligue
+des champions sont comparées. Les coupes nationales, supercoupes et autres compétitions sont exclues.
+Les saisons sans champion ne sont pas transformées en zéro silencieux : Serie A 2004/05 (titre révoqué)
+et Eredivisie 2019/20 (saison interrompue) sont explicitement documentées dans le catalogue.
 
 Les championnats couverts sont la Premier League, LaLiga, Serie A, Bundesliga, Ligue 1,
 Liga Portugal, Eredivisie, Premier Liga russe et Championship. La couverture
@@ -73,7 +86,9 @@ Cette commande :
 2. reconstruit l'appartenance `club × saison × championnat` depuis les matchs, puis exige une
    correspondance intégrale des clubs de la saison courante avec la source de contrôle ;
 3. exclut les mouvements futurs et les couples saison/date incohérents ;
-4. déduplique, agrège, puis vérifie chaque agrégat contre les mouvements détaillés.
+4. déduplique, agrège, puis vérifie chaque agrégat contre les mouvements détaillés ;
+5. rattache chaque titre à l'identifiant stable du club et bloque la publication si le catalogue
+   officiel et une saison disponible dans l'API désignent des vainqueurs différents.
 
 La validation ne se limite pas au nombre de lignes : elle recalcule indépendamment les montants,
 les indemnités de prêt, chaque catégorie de mouvement, les arrivées et les départs depuis les
@@ -158,6 +173,7 @@ scripts/import-recent.mjs   normalise les saisons récentes avec appartenance sa
 scripts/build-dataset.mjs   agrège les CSV -> public/data/
 scripts/validate-dataset.mjs vérifie agrégats, détails, couverture et fraîcheur
 scripts/sync-football-data.mjs relève les effectifs et détecte les changements
+scripts/lib/honours-catalog.mjs catalogue officiel versionné et contre-vérifié des titres
 public/data/summary.json    championnats, clubs, un agrégat par club × saison × fenêtre (~0,5 Mo)
 public/data/freshness.json  dernier relevé d'effectifs et signaux séparés des agrégats
 public/data/windows/*.json  les mouvements de chaque fenêtre, chargés à la demande
@@ -198,4 +214,5 @@ Données © [Transfermarkt](https://www.transfermarkt.com/), agrégées via
 Compositions de ligues vérifiées via
 [`openfootball/football.json`](https://github.com/openfootball/football.json) (CC0).
 Effectifs récents contrôlés via [`football-data.org`](https://www.football-data.org/).
+Palmarès issu des historiques officiels des sept ligues suivies et de l'UEFA, liens détaillés ci-dessus.
 Projet non affilié à Transfermarkt.
