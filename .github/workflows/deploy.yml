@@ -5,8 +5,8 @@ on:
     branches: [main, 'claude/**']
   workflow_dispatch:
   schedule:
-    # L'amont est publié de façon hebdomadaire. Le décalage évite les heures pleines.
-    - cron: '17 5 * * 1'
+    # Relevé léger des effectifs quatre fois par jour, décalé des heures pleines.
+    - cron: '17 */6 * * *'
 
 permissions:
   contents: read
@@ -20,6 +20,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,7 +29,15 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Actualiser et contrôler les données
-        run: npm run data:refresh
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            npm run data:fresh
+            npm test
+          else
+            npm run data:refresh
+          fi
       - name: Construire le site
         run: npm run build
         env:

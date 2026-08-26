@@ -82,6 +82,47 @@ export interface Dataset {
   clubs: string[];
 }
 
+export type FreshnessStatus = 'pending' | 'ready';
+export type FreshnessSignalKind = 'moved' | 'added' | 'removed';
+
+export interface FreshnessSignal {
+  kind: FreshnessSignalKind;
+  playerId: number;
+  playerName: string;
+  fromTeam: { id: number; name: string } | null;
+  toTeam: { id: number; name: string } | null;
+  firstDetectedAt: string;
+  lastSeenAt: string;
+}
+
+export interface FreshnessData {
+  meta: {
+    status: FreshnessStatus;
+    provider: 'football-data.org';
+    fetchedAt: string | null;
+    previousFetchedAt: string | null;
+    sourceUpdatedAt: string | null;
+    competitionCount: number;
+    teamCount: number;
+    playerCount: number;
+    ambiguousPlayerCount: number;
+    newSignalCount: number;
+    signalCount: number;
+    isBaseline: boolean;
+  };
+  competitions: Array<{ code: string; name: string; seasonStart: string | null; teamCount: number }>;
+  teams: Array<{
+    id: number;
+    name: string;
+    shortName: string;
+    tla: string;
+    lastUpdated: string | null;
+    competitions: string[];
+    players: Array<{ id: number; name: string; position: string | null; nationality: string | null }>;
+  }>;
+  signals: FreshnessSignal[];
+}
+
 export const KIND_LABELS = [
   'Transfert payant',
   'Transfert libre',

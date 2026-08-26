@@ -12,10 +12,13 @@
     "data:fetch": "node scripts/fetch-source.mjs",
     "data:build": "node scripts/build-dataset.mjs",
     "data:recent": "node scripts/import-recent.mjs",
+    "data:fresh": "node scripts/sync-football-data.mjs",
     "data:validate": "node scripts/validate-dataset.mjs",
+    "freshness:validate": "node scripts/validate-freshness.mjs",
+    "freshness:verify": "node scripts/verify-freshness.mjs",
     "analytics:verify": "node --experimental-strip-types scripts/verify-analytics.mjs",
-    "test": "npm run data:validate && npm run analytics:verify && npm run typecheck",
-    "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:build && npm run data:validate && npm run analytics:verify",
+    "test": "npm run data:validate && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify && npm run typecheck",
+    "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:build && npm run data:fresh && npm run data:validate && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify",
     "data": "npm run data:refresh"
   },
   "dependencies": {

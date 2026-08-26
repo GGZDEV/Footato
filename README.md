@@ -18,6 +18,8 @@ et ce qu'il reste à la fin de chaque mercato.
 - **Vue partageable** — chaque combinaison de filtres, tri et mercato ouvert a sa propre URL.
 - **Export CSV** de la vue courante.
 - **Graphique modulable** — total par saison, été seul, hiver seul ou deux fenêtres séparées.
+- **Contrôle d'effectifs récent** — sept championnats et la Ligue des champions sont relevés
+  automatiquement ; les changements détectés restent signalés à part jusqu'à confirmation.
 
 ## Démarrer
 
@@ -31,14 +33,20 @@ npm run dev
 
 ## Les données
 
-Le pipeline combine deux instantanés dérivés de **Transfermarkt** et une source de contrôle :
+Le pipeline combine deux instantanés dérivés de **Transfermarkt** et deux sources de contrôle :
 
 - [`ewenme/transfers`](https://github.com/ewenme/transfers) pour l'historique typé
   (transfert libre, prêt, indemnité de prêt, fin de prêt) jusqu'en 2022/23 ;
 - [`dcaribou/transfermarkt-datasets`](https://github.com/dcaribou/transfermarkt-datasets)
   pour les saisons maintenues et révisées régulièrement ;
 - [`openfootball/football.json`](https://github.com/openfootball/football.json) pour vérifier,
-  indépendamment des transferts, la composition des championnats de la saison en cours.
+  indépendamment des transferts, la composition des championnats de la saison en cours ;
+- [`football-data.org`](https://www.football-data.org/) pour relever les effectifs de Premier League,
+  LaLiga, Serie A, Bundesliga, Ligue 1, Primeira Liga, Eredivisie et Ligue des champions.
+
+Le relevé football-data.org ne fournit pas les indemnités de transfert. Il sert donc de radar : un
+joueur qui change d'équipe entre deux relevés produit un signal, mais ce signal ne modifie jamais les
+montants ou les agrégats Transfermarkt sans une source financière confirmée.
 
 Les championnats couverts sont la Premier League, LaLiga, Serie A, Bundesliga, Ligue 1,
 Liga Portugal, Eredivisie, Premier Liga russe et Championship. La couverture
@@ -64,8 +72,11 @@ les indemnités de prêt, chaque catégorie de mouvement, les arrivées et les d
 193 756 mouvements détaillés. Une seconde suite exerce les filtres, les quatre regroupements,
 les tris et les quatre modes du graphique sur près de 200 scénarios.
 
-Le workflow GitHub Actions rejoue ce pipeline à chaque déploiement et chaque lundi. Une source
-vieille de plus de 45 jours fait échouer la validation au lieu d'être publiée silencieusement.
+Le workflow GitHub Actions rejoue le pipeline complet à chaque déploiement. Toutes les six heures,
+il effectue aussi un relevé léger des effectifs, compare avec le dernier relevé publié, valide le
+résultat puis redéploie le site. Le token `FOOTBALL_DATA_TOKEN` reste exclusivement dans les secrets
+GitHub Actions et n'est jamais envoyé au navigateur. Une source vieille de plus de 45 jours fait
+échouer la validation au lieu d'être publiée silencieusement.
 
 ### Limites connues, exposées plutôt que masquées
 
@@ -137,7 +148,9 @@ scripts/fetch-source.mjs    télécharge, empreinte et date les sources dans dat
 scripts/import-recent.mjs   normalise les saisons récentes avec appartenance saisonnière
 scripts/build-dataset.mjs   agrège les CSV -> public/data/
 scripts/validate-dataset.mjs vérifie agrégats, détails, couverture et fraîcheur
+scripts/sync-football-data.mjs relève les effectifs et détecte les changements
 public/data/summary.json    championnats, clubs, un agrégat par club × saison × fenêtre (~0,5 Mo)
+public/data/freshness.json  dernier relevé d'effectifs et signaux séparés des agrégats
 public/data/windows/*.json  les mouvements de chaque fenêtre, chargés à la demande
 src/lib/                    types, agrégation, filtres, formatage
 src/components/             filtres, tuiles, graphiques, tableau, panneau de détail
@@ -175,4 +188,5 @@ Données © [Transfermarkt](https://www.transfermarkt.com/), agrégées via
 [`dcaribou/transfermarkt-datasets`](https://github.com/dcaribou/transfermarkt-datasets).
 Compositions de ligues vérifiées via
 [`openfootball/football.json`](https://github.com/openfootball/football.json) (CC0).
+Effectifs récents contrôlés via [`football-data.org`](https://www.football-data.org/).
 Projet non affilié à Transfermarkt.

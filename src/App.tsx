@@ -9,9 +9,9 @@ import {
   bySeason, filterMercatos, group, sortGroups, totals,
   type ChartMode, type Filters as F, type Grouping, type SortKey,
 } from './lib/aggregate';
-import { loadDataset } from './lib/data';
+import { loadDataset, loadFreshness } from './lib/data';
 import { season } from './lib/format';
-import type { Dataset } from './lib/types';
+import type { Dataset, FreshnessData, FreshnessSignal } from './lib/types';
 
 const TABS: { value: Grouping; label: string; hint: string }[] = [
   { value: 'mercato', label: 'Mercatos', hint: 'Une ligne par club et par fenêtre de transfert' },
@@ -100,6 +100,8 @@ function decode(hash: string, yearMax: number): UrlState | null {
 
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
+  const [freshness, setFreshness] = useState<FreshnessData | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [filters, setFilters] = useState<F>(defaults(2026));
@@ -110,6 +112,7 @@ export default function App() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    loadFreshness().then(setFreshness);
     loadDataset()
       .then((d) => {
         const restored = decode(window.location.hash, d.meta.yearMax);
@@ -142,6 +145,12 @@ export default function App() {
     if (p.window === 0) setChartMode('summer');
     else if (p.window === 1) setChartMode('winter');
     else if (p.window === 'all') setChartMode((mode) => (mode === 'summer' || mode === 'winter' ? 'split' : mode));
+  }, []);
+
+  const refreshFreshness = useCallback(async () => {
+    setRefreshing(true);
+    setFreshness(await loadFreshness(true));
+    setRefreshing(false);
   }, []);
   const reset = useCallback(() => {
     if (dataset) {
@@ -213,6 +222,14 @@ export default function App() {
     ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })
         .format(new Date(`${meta.sourceUpdatedAt}T12:00:00Z`))
     : 'date inconnue';
+  const rosterDate = freshness?.meta.status === 'ready' && freshness.meta.fetchedAt
+    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+        .format(new Date(freshness.meta.fetchedAt))
+    : 'en attente';
+  const rosterTitle = freshness?.meta.status === 'ready'
+    ? `Effectifs football-data.org contrôlés le ${new Date(freshness.meta.fetchedAt!).toLocaleString('fr-FR')} · ${freshness.meta.teamCount} équipes · ${freshness.meta.playerCount.toLocaleString('fr-FR')} joueurs. Ce bouton recharge le dernier relevé publié.`
+    : 'Le premier relevé football-data.org sera créé par le prochain déploiement GitHub Actions.';
+  const visibleSignals = freshness?.signals.slice(0, 8) ?? [];
 
   return (
     <div className="app">
@@ -225,9 +242,22 @@ export default function App() {
               <span>Football transfer intelligence</span>
             </div>
           </div>
-          <div className="freshness" title={`Dernière modification de la source : ${meta.sourceUpdatedAt ?? 'inconnue'}`}>
-            <i aria-hidden="true" />
-            <span><span className="freshness-label">Données vérifiées · </span>{sourceDate}</span>
+          <div className="data-status" aria-label="État des sources">
+            <div className="freshness source-money" title={`Dernière modification de la source des montants : ${meta.sourceUpdatedAt ?? 'inconnue'}`}>
+              <i aria-hidden="true" />
+              <span><span className="freshness-label">Montants · </span>{sourceDate}</span>
+            </div>
+            <button
+              className="freshness source-rosters"
+              title={rosterTitle}
+              onClick={refreshFreshness}
+              disabled={refreshing}
+              aria-label={`${rosterTitle} Recharger maintenant.`}
+            >
+              <i aria-hidden="true" />
+              <span><span className="freshness-label">Effectifs · </span>{refreshing ? 'vérification…' : rosterDate}</span>
+              <b aria-hidden="true">↻</b>
+            </button>
           </div>
         </div>
 
@@ -240,6 +270,26 @@ export default function App() {
       </header>
 
       <Filters dataset={dataset} filters={filters} onChange={patch} onReset={reset} />
+
+      {freshness?.meta.status === 'ready' && visibleSignals.length > 0 && (
+        <section className="panel roster-signals" aria-labelledby="roster-signals-title">
+          <div className="panel-head">
+            <div>
+              <h2 id="roster-signals-title">Changements d’effectif détectés</h2>
+              <p>Signaux football-data.org à confirmer — exclus des montants et agrégats</p>
+            </div>
+            <span className="signal-count">{freshness.meta.signalCount} sur 30 jours</span>
+          </div>
+          <div className="signal-grid">
+            {visibleSignals.map((signal: FreshnessSignal) => (
+              <article className={`signal-card signal-${signal.kind}`} key={`${signal.kind}-${signal.playerId}-${signal.fromTeam?.id ?? 0}-${signal.toTeam?.id ?? 0}`}>
+                <strong>{signal.playerName}</strong>
+                <span>{signal.fromTeam?.name ?? 'Nouveau dans le périmètre'} <b aria-hidden="true">→</b> {signal.toTeam?.name ?? 'Sorti du périmètre'}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       <Kpis t={t} />
 
@@ -298,7 +348,10 @@ export default function App() {
         {meta.yearMax < currentSeasonYear && (
           <>La saison {season(currentSeasonYear)} n’est pas publiée tant que l’amont ne permet pas
           de rattacher les clubs à leur championnat avec fiabilité.</>
-        )}
+        )}{' '}
+        Les effectifs de sept championnats et de la Ligue des champions sont contrôlés automatiquement via{' '}
+        <a href="https://www.football-data.org/" target="_blank" rel="noreferrer">football-data.org</a> ;
+        leurs écarts restent séparés des statistiques financières jusqu’à confirmation.
       </footer>
 
       {selected && (

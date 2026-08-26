@@ -1,4 +1,4 @@
-import type { Dataset, League, Mercato, Meta, Movement, Window } from './types';
+import type { Dataset, FreshnessData, League, Mercato, Meta, Movement, Window } from './types';
 
 interface RawSummary {
   meta: Meta;
@@ -46,6 +46,18 @@ export async function loadDataset(): Promise<Dataset> {
   }));
 
   return { meta: raw.meta, leagues: raw.leagues, clubs: raw.clubs, mercatos };
+}
+
+/** Loads the latest published roster check. It is deliberately separate from financial aggregates. */
+export async function loadFreshness(cacheBust = false): Promise<FreshnessData | null> {
+  try {
+    const suffix = cacheBust ? `?t=${Date.now()}` : '';
+    const res = await fetch(`${asset('freshness.json')}${suffix}`, cacheBust ? { cache: 'no-store' } : undefined);
+    if (!res.ok) return null;
+    return await res.json() as FreshnessData;
+  } catch {
+    return null;
+  }
 }
 
 const detailCache = new Map<string, Promise<Movement[]>>();
