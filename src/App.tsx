@@ -195,21 +195,11 @@ export default function App() {
           </div>
         </div>
 
-        <div className="hero-content">
-          <div className="hero-copy">
-            <p className="hero-kicker">Observatoire des transferts européens</p>
-            <h2>Le mercato,<br /><em>chiffres à l’appui.</em></h2>
-            <p>
-              Explorez plus de trente ans d’achats et de ventes. Comparez les clubs,
-              les championnats et chaque fenêtre de transfert.
-            </p>
-          </div>
-          <div className="hero-metrics" aria-label="Périmètre des données">
-            <div><strong>{meta.movementCount.toLocaleString('fr-FR')}</strong><span>mouvements</span></div>
-            <div><strong>{meta.clubCount}</strong><span>clubs</span></div>
-            <div><strong>{dataset.leagues.length}</strong><span>championnats</span></div>
-            <div><strong>{season(meta.yearMin)} — {season(meta.yearMax)}</strong><span>couverture</span></div>
-          </div>
+        <div className="hero-metrics" aria-label="Périmètre des données">
+          <div><strong>{meta.movementCount.toLocaleString('fr-FR')}</strong><span>mouvements</span></div>
+          <div><strong>{meta.clubCount}</strong><span>clubs</span></div>
+          <div><strong>{dataset.leagues.length}</strong><span>championnats</span></div>
+          <div><strong>{season(meta.yearMin)} — {season(meta.yearMax)}</strong><span>couverture</span></div>
         </div>
       </header>
 
