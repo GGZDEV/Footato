@@ -134,10 +134,11 @@ export interface FreshnessData {
 export interface HonourTitle {
   competitionCode: string;
   competitionName: string;
-  kind: 'domestic' | 'continental';
+  category: 'league' | 'domesticCup' | 'leagueCup' | 'championsLeague' | 'europaLeague' | 'conferenceLeague' | 'domesticSupercup' | 'uefaSupercup' | 'world';
   season: number;
   source?: string;
-  winner: { providerId: number | null; name: string; clubId: number | null };
+  verificationSource?: string;
+  winner: { providerId: number | null; name: string; clubId: number | null; outsideScope?: boolean };
 }
 
 export interface HonoursData {
@@ -150,6 +151,7 @@ export interface HonoursData {
     titleCount: number;
     matchedTitleCount: number;
     unmatchedTitleCount: number;
+    outsideScopeTitleCount?: number;
     crossCheckedTitleCount?: number;
     yearMin: number | null;
     yearMax: number | null;
@@ -159,11 +161,14 @@ export interface HonoursData {
   coverage: Array<{
     code: string;
     name: string;
+    category?: HonourTitle['category'];
     yearMin: number | null;
     yearMax: number | null;
     titleCount: number;
     matchedTitleCount: number;
+    outsideScopeTitleCount?: number;
     source?: string;
+    verificationSource?: string;
     missingSeasons?: Array<{ season: number; reason: string }>;
   }>;
   titles: HonourTitle[];

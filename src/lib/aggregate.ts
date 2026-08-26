@@ -58,8 +58,17 @@ export interface Group {
   /** Share of monetary fees found among found + explicitly unavailable fees (0..1). */
   coverage: number;
   titles?: number;
-  domesticTitles?: number;
-  continentalTitles?: number;
+  titleBreakdown?: {
+    league: number;
+    domesticCup: number;
+    leagueCup: number;
+    championsLeague: number;
+    europaLeague: number;
+    conferenceLeague: number;
+    domesticSupercup: number;
+    uefaSupercup: number;
+    world: number;
+  };
   spendPerTitle?: number;
   count: number;
   /** Present only when grouping by mercato — enables the detail drill-down. */

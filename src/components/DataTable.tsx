@@ -25,11 +25,40 @@ interface Props {
   onSelect: (g: Group) => void;
   selectedKey?: string;
   showHonours?: boolean;
+  trophyScope?: string;
+  trophyScopeLabel?: string;
+}
+
+const TROPHY_BADGES = [
+  { key: 'league', label: 'CH', title: 'Championnats' },
+  { key: 'domesticCup', label: 'CN', title: 'Coupes nationales' },
+  { key: 'leagueCup', label: 'CL', title: 'Coupes de la Ligue' },
+  { key: 'championsLeague', label: 'LDC', title: 'Ligues des champions' },
+  { key: 'europaLeague', label: 'UEL', title: 'Coupes UEFA / Europa League' },
+  { key: 'conferenceLeague', label: 'UECL', title: 'Conference League' },
+  { key: 'domesticSupercup', label: 'SCN', title: 'Supercoupes nationales' },
+  { key: 'uefaSupercup', label: 'SCU', title: 'Supercoupes UEFA' },
+  { key: 'world', label: 'MON', title: 'Titres mondiaux FIFA' },
+] as const;
+
+const trophyDetails = (g: Group) => TROPHY_BADGES
+  .map((badge) => `${badge.title} : ${g.titleBreakdown?.[badge.key] ?? 0}`)
+  .join(' · ');
+
+function TrophyBadges({ group }: { group: Group }) {
+  return (
+    <span className="trophy-badges" aria-label={trophyDetails(group)}>
+      {TROPHY_BADGES.map((badge) => {
+        const value = group.titleBreakdown?.[badge.key] ?? 0;
+        return value > 0 ? <span key={badge.key} title={`${badge.title} : ${value}`}><i>{badge.label}</i>{value}</span> : null;
+      })}
+    </span>
+  );
 }
 
 const PAGE = 100;
 
-export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey, showHonours = false }: Props) {
+export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey, showHonours = false, trophyScope = 'all', trophyScopeLabel = 'Tous' }: Props) {
   const [limit, setLimit] = useState(PAGE);
 
   const columns = useMemo<Column[]>(() => {
@@ -40,8 +69,8 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
     ];
     if (grouping !== 'mercato') cols.push({ key: 'count', label: 'Mercatos' });
     if (grouping === 'club' && showHonours) cols.push(
-      { key: 'titles', label: 'Titres', title: 'Championnats nationaux et Ligues des champions suivis sur la période' },
-      { key: 'spendPerTitle', label: 'Coût / titre', title: 'Achats documentés divisés par le nombre de titres suivis' },
+      { key: 'titles', label: trophyScope === 'all' ? 'Trophées' : `Trophées · ${trophyScopeLabel}`, title: 'Trophées officiels remportés sur la période et dans la famille sélectionnée' },
+      { key: 'spendPerTitle', label: 'Coût / trophée', title: 'Achats documentés divisés par le nombre de trophées sélectionnés' },
     );
     cols.push(
       { key: 'arrivals', label: 'Arr.', title: 'Nombre d’arrivées' },
@@ -53,7 +82,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'coverage', label: 'Complétude', title: 'Indemnités publiques ÷ (publiques + explicitement indisponibles)' },
     );
     return cols;
-  }, [grouping, showHonours]);
+  }, [grouping, showHonours, trophyScope, trophyScopeLabel]);
 
   const maxBalance = useMemo(
     () => groups.slice(0, limit).reduce((n, g) => Math.max(n, Math.abs(g.balance)), 0) || 1,
@@ -69,7 +98,8 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       const text = String(value);
       return /[;"\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
     };
-    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : percentage.has(c.key) ? `${c.label} (%)` : c.label)];
+    const trophyHeads = grouping === 'club' && showHonours ? TROPHY_BADGES.map((badge) => badge.title) : [];
+    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : percentage.has(c.key) ? `${c.label} (%)` : c.label), ...trophyHeads];
     const lines = [head.map(csvCell).join(';')];
     groups.forEach((g, i) => {
       const cells = columns.map((c) => {
@@ -78,7 +108,10 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
         if (typeof v === 'number' && percentage.has(c.key)) return (v * 100).toFixed(1).replace('.', ',');
         return String(v);
       });
-      lines.push([i + 1, ...cells].map(csvCell).join(';'));
+      const trophyCells = grouping === 'club' && showHonours
+        ? TROPHY_BADGES.map((badge) => g.titleBreakdown?.[badge.key] ?? 0)
+        : [];
+      lines.push([i + 1, ...cells, ...trophyCells].map(csvCell).join(';'));
     });
     const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -135,8 +168,9 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                 <td className="left cell-sub">{g.sublabel}</td>
                 {grouping !== 'mercato' && <td className="num">{count(g.count)}</td>}
                 {grouping === 'club' && showHonours && <>
-                  <td className="num honours-cell" title={`${g.domesticTitles ?? 0} championnat(s) · ${g.continentalTitles ?? 0} Ligue(s) des champions`}>
-                    {count(g.titles ?? 0)}
+                  <td className="num honours-cell" title={`${count(g.titles ?? 0)} dans la sélection · ${trophyDetails(g)}`}>
+                    <span className="trophy-total">{count(g.titles ?? 0)}</span>
+                    <TrophyBadges group={g} />
                   </td>
                   <td className="num muted">{g.titles ? money(g.spendPerTitle ?? 0) : '—'}</td>
                 </>}
@@ -179,7 +213,13 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             <span className="result-identity">
               <span className="result-name"><Flag code={g.flag} /><b>{g.label}</b></span>
               <span>{g.sublabel}{grouping !== 'mercato' ? ` · ${count(g.count)} mercatos` : ''}</span>
-              {grouping === 'club' && showHonours && <span>{count(g.titles ?? 0)} titre(s) suivi(s){g.titles ? ` · ${money(g.spendPerTitle ?? 0)}/titre` : ''}</span>}
+              {grouping === 'club' && showHonours && (
+                <span className="mobile-trophies">
+                  <b>{count(g.titles ?? 0)} trophée{g.titles === 1 ? '' : 's'} {trophyScope === 'all' ? '' : `· ${trophyScopeLabel}`}</b>
+                  <TrophyBadges group={g} />
+                  {g.titles ? <small>{money(g.spendPerTitle ?? 0)} / trophée</small> : null}
+                </span>
+              )}
             </span>
             <span className="result-money">
               <span><small>Achats</small><b className="num neg">{money(g.spend)}</b></span>

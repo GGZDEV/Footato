@@ -143,9 +143,26 @@ section { margin-bottom: 22px; }
   color: var(--text-2); background: var(--surface-2); font-size: 10.5px; white-space: nowrap;
 }
 .ranking-shortcuts button:hover { border-color: var(--accent); color: var(--accent); background: var(--surface-3); }
-.honours-scope { margin: -8px 0 14px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 11px; color: var(--text-3); background: var(--surface); font-size: 10.5px; }
-.honours-scope strong { color: var(--text-2); }
-.honours-cell { color: var(--accent); font-weight: 650; }
+.honours-toolbar {
+  display: flex; align-items: center; gap: 9px; padding: 9px 12px;
+  border-top: 1px solid var(--line); color: var(--text-3); font-size: 10.5px;
+}
+.honours-toolbar label { color: var(--text-2); font-weight: 600; white-space: nowrap; }
+.honours-toolbar .trophy-select { width: auto; min-height: 34px; padding-block: 5px; font-size: 11.5px; }
+.honours-toolbar > span { margin-left: auto; text-align: right; }
+.trophy-legend { position: relative; }
+.trophy-legend summary { cursor: pointer; color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.trophy-legend > div { position: absolute; z-index: 12; top: calc(100% + 7px); left: 0; width: 390px; padding: 9px 11px; border: 1px solid var(--line-strong); border-radius: 8px; color: var(--text-3); background: var(--surface-2); box-shadow: 0 12px 28px rgb(0 0 0 / .42); line-height: 1.65; }
+.trophy-legend b { color: var(--accent); font: 700 9px var(--mono); }
+.honours-cell { color: var(--accent); }
+.trophy-total { display: inline-block; min-width: 20px; font: 700 14px var(--mono); vertical-align: middle; }
+.trophy-badges { display: inline-flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 3px; margin-left: 6px; vertical-align: middle; }
+.trophy-badges > span { display: inline-flex; align-items: center; gap: 3px; padding: 2px 4px; border: 1px solid var(--line); border-radius: 5px; color: var(--text-2); font: 600 9px var(--mono); background: var(--surface-2); }
+.trophy-badges i { color: var(--text-3); font: 600 7px var(--sans); letter-spacing: .03em; }
+.mobile-trophies { display: flex !important; align-items: center; flex-wrap: wrap; gap: 4px 5px; margin-top: 3px; }
+.mobile-trophies > b { color: var(--accent); font-size: 10px; }
+.mobile-trophies .trophy-badges { justify-content: flex-start; margin-left: 0; }
+.mobile-trophies > small { width: 100%; color: var(--text-3); font-size: 9px; }
 
 /* ------------------------------------------------------- roster monitoring */
 .roster-signals .panel-head { justify-content: space-between; }
@@ -404,6 +421,11 @@ tbody tr.active td { background: color-mix(in srgb, var(--accent) 14%, var(--sur
   .panel { border-radius: 14px; }
   .panel-head { padding: 12px; }
   .ranking-shortcuts { padding: 9px 10px; }
+  .honours-toolbar { display: grid; grid-template-columns: auto 1fr; gap: 6px 8px; padding: 9px 10px; }
+  .honours-toolbar .trophy-select { width: 100%; min-width: 0; min-height: 40px; }
+  .honours-toolbar .trophy-legend { grid-column: 1 / -1; }
+  .trophy-legend > div { width: min(330px, calc(100vw - 40px)); }
+  .honours-toolbar > span { grid-column: 1 / -1; margin: 0; text-align: left; font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .roster-signals .panel-head { align-items: flex-start; }
   .roster-signals .panel-head p { line-height: 1.35; }
   .signal-grid { grid-template-columns: 1fr; padding: 8px; }
@@ -472,6 +494,8 @@ tbody tr.active td { background: color-mix(in srgb, var(--accent) 14%, var(--sur
   .result-name { display: flex; align-items: center; gap: 7px; min-width: 0; }
   .result-name b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
   .result-identity > span:last-child { color: var(--text-3); font-size: 10px; }
+  .result-identity .mobile-trophies { color: inherit; }
+  .result-identity .trophy-badges > span { padding: 1px 4px; font-size: 8.5px; }
   .result-money { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 12px; }
   .result-money > span { display: grid; gap: 2px; min-width: 0; padding: 8px; border-radius: 9px; background: rgb(5 9 7 / .34); }
   .result-money small { color: var(--text-3); font-size: 8px; text-transform: uppercase; letter-spacing: .06em; }

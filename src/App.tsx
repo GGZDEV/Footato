@@ -27,6 +27,23 @@ const CHART_MODES: { value: ChartMode; label: string; title: string }[] = [
   { value: 'split', label: 'Séparés', title: 'Afficher été et hiver séparément' },
 ];
 
+type TrophyScope = 'all' | 'league' | 'domesticCup' | 'leagueCup' | 'europe' | 'supercup' | 'world';
+
+const TROPHY_SCOPES: { value: TrophyScope; label: string; shortLabel: string }[] = [
+  { value: 'all', label: 'Tous les trophées', shortLabel: 'Tous' },
+  { value: 'league', label: 'Championnats', shortLabel: 'Champ.' },
+  { value: 'domesticCup', label: 'Coupes nationales', shortLabel: 'Coupes' },
+  { value: 'leagueCup', label: 'Coupes de la Ligue', shortLabel: 'C. Ligue' },
+  { value: 'europe', label: 'Europe : LDC, Europa, Conference', shortLabel: 'Europe' },
+  { value: 'supercup', label: 'Supercoupes nationales et UEFA', shortLabel: 'Supercoupes' },
+  { value: 'world', label: 'Titres mondiaux FIFA', shortLabel: 'Monde' },
+];
+
+const categoryMatchesScope = (category: string, scope: TrophyScope) => scope === 'all'
+  || category === scope
+  || (scope === 'europe' && ['championsLeague', 'europaLeague', 'conferenceLeague'].includes(category))
+  || (scope === 'supercup' && ['domesticSupercup', 'uefaSupercup'].includes(category));
+
 const defaults = (yearMax: number): F => ({
   yearFrom: 2000,
   yearTo: yearMax,
@@ -46,6 +63,7 @@ interface UrlState {
   selected: string | null;
   limit: number | null;
   titleFilter: 'all' | 'with' | 'without';
+  trophyScope: TrophyScope;
 }
 
 function encode(s: UrlState): string {
@@ -64,6 +82,7 @@ function encode(s: UrlState): string {
   if (s.selected) p.set('m', s.selected);
   if (s.limit) p.set('top', String(s.limit));
   if (s.titleFilter !== 'all') p.set('tf', s.titleFilter);
+  if (s.trophyScope !== 'all') p.set('ts', s.trophyScope);
   return p.toString();
 }
 
@@ -98,6 +117,7 @@ function decode(hash: string, yearMax: number): UrlState | null {
       selected: p.get('m'),
       limit: [10, 20].includes(Number(p.get('top'))) ? Number(p.get('top')) : null,
       titleFilter: p.get('tf') === 'with' || p.get('tf') === 'without' ? p.get('tf') as 'with' | 'without' : 'all',
+      trophyScope: TROPHY_SCOPES.some((scope) => scope.value === p.get('ts')) ? p.get('ts') as TrophyScope : 'all',
     };
   } catch {
     return null;
@@ -128,6 +148,7 @@ export default function App() {
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [rankingLimit, setRankingLimit] = useState<number | null>(null);
   const [titleFilter, setTitleFilter] = useState<'all' | 'with' | 'without'>('all');
+  const [trophyScope, setTrophyScope] = useState<TrophyScope>('all');
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -145,6 +166,7 @@ export default function App() {
           setSelectedKey(restored.selected);
           setRankingLimit(restored.limit);
           setTitleFilter(restored.titleFilter);
+          setTrophyScope(restored.trophyScope);
         } else {
           setFilters(defaults(d.meta.yearMax));
         }
@@ -156,11 +178,11 @@ export default function App() {
   // Keep the address bar in sync so any view can be bookmarked or shared.
   useEffect(() => {
     if (!ready) return;
-    const next = `#${encode({ filters, grouping, chartMode, sort, selected: selectedKey, limit: rankingLimit, titleFilter })}`;
+    const next = `#${encode({ filters, grouping, chartMode, sort, selected: selectedKey, limit: rankingLimit, titleFilter, trophyScope })}`;
     if (next !== window.location.hash) {
       window.history.replaceState(null, '', next);
     }
-  }, [ready, filters, grouping, chartMode, sort, selectedKey, rankingLimit, titleFilter]);
+  }, [ready, filters, grouping, chartMode, sort, selectedKey, rankingLimit, titleFilter, trophyScope]);
 
   const patch = useCallback((p: Partial<F>) => {
     setRankingLimit(null);
@@ -182,6 +204,7 @@ export default function App() {
       setChartMode('split');
       setRankingLimit(null);
       setTitleFilter('all');
+      setTrophyScope('all');
     }
   }, [dataset]);
 
@@ -203,24 +226,31 @@ export default function App() {
   const groups = useMemo(() => {
     const baseGroups = group(rows, grouping, filters.includeLoanFees);
     if (grouping === 'club' && honoursComparable) {
-      const titles = new Map<number, { domestic: number; continental: number }>();
+      const titles = new Map<number, NonNullable<(typeof baseGroups)[number]['titleBreakdown']>>();
       for (const title of freshness.honours.titles) {
         const clubId = title.winner.clubId;
         if (clubId == null || title.season < filters.yearFrom || title.season > filters.yearTo) continue;
-        const current = titles.get(clubId) ?? { domestic: 0, continental: 0 };
-        current[title.kind] += 1;
+        const current = titles.get(clubId) ?? {
+          league: 0, domesticCup: 0, leagueCup: 0, championsLeague: 0,
+          europaLeague: 0, conferenceLeague: 0, domesticSupercup: 0, uefaSupercup: 0, world: 0,
+        };
+        current[title.category] += 1;
         titles.set(clubId, current);
       }
       for (const item of baseGroups) {
-        const titleCounts = titles.get(Number(item.key)) ?? { domestic: 0, continental: 0 };
-        item.domesticTitles = titleCounts.domestic;
-        item.continentalTitles = titleCounts.continental;
-        item.titles = titleCounts.domestic + titleCounts.continental;
+        const titleCounts = titles.get(Number(item.key)) ?? {
+          league: 0, domesticCup: 0, leagueCup: 0, championsLeague: 0,
+          europaLeague: 0, conferenceLeague: 0, domesticSupercup: 0, uefaSupercup: 0, world: 0,
+        };
+        item.titleBreakdown = titleCounts;
+        item.titles = Object.entries(titleCounts)
+          .filter(([category]) => categoryMatchesScope(category, trophyScope))
+          .reduce((sum, [, value]) => sum + value, 0);
         item.spendPerTitle = item.titles ? item.spend / item.titles : Number.POSITIVE_INFINITY;
       }
     }
     return sortGroups(baseGroups, sort.key, sort.dir);
-  }, [rows, grouping, filters.includeLoanFees, filters.yearFrom, filters.yearTo, sort, freshness, honoursComparable]);
+  }, [rows, grouping, filters.includeLoanFees, filters.yearFrom, filters.yearTo, sort, freshness, honoursComparable, trophyScope]);
   const titleFilteredGroups = useMemo(
     () => titleFilter === 'all' ? groups : groups.filter((item) => titleFilter === 'with' ? (item.titles ?? 0) > 0 : (item.titles ?? 0) === 0),
     [groups, titleFilter],
@@ -256,6 +286,7 @@ export default function App() {
     if (!dataset) return;
     const base = defaults(dataset.meta.yearMax);
     setTitleFilter('all');
+    setTrophyScope('all');
     if (preset === 'spend-decade') {
       setFilters({ ...base, yearFrom: Math.floor(dataset.meta.yearMax / 10) * 10 });
       setGrouping('club'); setSort({ key: 'spend', dir: -1 }); setRankingLimit(10);
@@ -381,17 +412,6 @@ export default function App() {
 
       <Kpis t={t} />
 
-      {grouping === 'club' && honoursComparable && (
-        <div className="honours-scope" role="note">
-          <strong>Palmarès comparable :</strong> championnats de première division des sept pays et Ligue des champions,
-          de {filters.yearFrom} à {filters.yearTo}, période couverte par les huit compétitions.
-          Coupes nationales et autres compétitions exclues. Catalogue officiel versionné :{' '}
-          {freshness.honours.meta.matchedTitleCount} titres rattachés, dont{' '}
-          {freshness.honours.meta.crossCheckedTitleCount ?? 0} recoupés automatiquement avec football-data.org.
-          {freshness.honours.meta.unmatchedTitleCount > 0 && ` ${freshness.honours.meta.unmatchedTitleCount} titre(s) non rattaché(s) à un club Footato.`}
-        </div>
-      )}
-
       <section className="panel">
         <div className="panel-head chart-panel-head">
           <h2>Achats et ventes dans le temps</h2>
@@ -434,11 +454,39 @@ export default function App() {
           <button onClick={() => applyRanking('income')}>Top ventes</button>
           <button onClick={() => applyRanking('coverage')}>Complétude</button>
           {honoursReady && <>
-            <button onClick={() => applyRanking('titles')}>Plus titrés</button>
-            <button onClick={() => applyRanking('efficient')}>Coût par titre</button>
-            <button onClick={() => applyRanking('no-title')}>Dépensiers sans titre</button>
+            <button onClick={() => applyRanking('titles')}>Plus de trophées</button>
+            <button onClick={() => applyRanking('efficient')}>Coût / trophée</button>
+            <button onClick={() => applyRanking('no-title')}>Dépensiers sans trophée</button>
           </>}
         </nav>
+        {grouping === 'club' && honoursComparable && (
+          <div className="honours-toolbar">
+            <label htmlFor="trophy-scope">Trophées comptés</label>
+            <select
+              id="trophy-scope"
+              className="select trophy-select"
+              value={trophyScope}
+              onChange={(event) => {
+                setRankingLimit(null);
+                setTitleFilter('all');
+                setTrophyScope(event.target.value as TrophyScope);
+              }}
+            >
+              {TROPHY_SCOPES.map((scope) => <option key={scope.value} value={scope.value}>{scope.label}</option>)}
+            </select>
+            <details className="trophy-legend">
+              <summary>Légende</summary>
+              <div>
+                <b>CH</b> championnat · <b>CN</b> coupe nationale · <b>CL</b> coupe de la Ligue ·
+                <b> LDC</b> Champions League · <b>UEL</b> Europa · <b>UECL</b> Conference ·
+                <b> SCN</b> supercoupe nationale · <b>SCU</b> Supercoupe UEFA · <b>MON</b> monde FIFA
+              </div>
+            </details>
+            <span title={`${freshness.honours.meta.competitionCount} compétitions · ${freshness.honours.meta.matchedTitleCount} trophées rattachés · ${freshness.honours.meta.outsideScopeTitleCount ?? 0} remportés hors des sept pays`}>
+              2000/01–2024/25 · {freshness.honours.meta.competitionCount} compétitions · chaque trophée compte pour 1
+            </span>
+          </div>
+        )}
         <DataTable
           groups={rankingLimit ? titleFilteredGroups.slice(0, rankingLimit) : titleFilteredGroups}
           grouping={grouping}
@@ -447,6 +495,8 @@ export default function App() {
           onSelect={(g) => g.mercato && setSelectedKey(g.mercato.key)}
           selectedKey={selectedKey ?? undefined}
           showHonours={grouping === 'club' && honoursComparable}
+          trophyScope={trophyScope}
+          trophyScopeLabel={TROPHY_SCOPES.find((scope) => scope.value === trophyScope)?.shortLabel ?? 'Tous'}
         />
       </section>
 
@@ -464,8 +514,8 @@ export default function App() {
         Les effectifs de sept championnats et de la Ligue des champions sont contrôlés automatiquement via{' '}
         <a href="https://www.football-data.org/" target="_blank" rel="noreferrer">football-data.org</a> ;
         leurs écarts restent séparés des statistiques financières jusqu’à confirmation. Le palmarès comparable
-        provient des historiques officiels des ligues et de l’UEFA, recoupés avec l’API ; il ne compte que les sept
-        championnats nationaux suivis et la Ligue des champions, jamais les coupes non couvertes.
+        couvre les trophées officiels majeurs des sept pays, les compétitions UEFA et les titres mondiaux FIFA ;
+        les éditions non disputées sont explicitement exclues et chaque trophée a le même poids.
       </footer>
 
       {selected && (

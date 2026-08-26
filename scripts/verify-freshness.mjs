@@ -75,15 +75,30 @@ const apiCrossCheck = normaliseHonours([
   ] } },
 ], realSummary, '2026-08-26T12:00:00Z');
 const catalog = buildHonoursCatalog(realSummary, apiCrossCheck, '2026-08-26T12:00:00Z');
-assert.equal(catalog.meta.titleCount, 198);
-assert.equal(catalog.meta.matchedTitleCount, 198);
+assert.equal(catalog.meta.competitionCount, 29);
+assert.equal(catalog.meta.titleCount, 674);
+assert.equal(catalog.meta.matchedTitleCount, 664);
 assert.equal(catalog.meta.unmatchedTitleCount, 0);
+assert.equal(catalog.meta.outsideScopeTitleCount, 10);
 assert.equal(catalog.meta.crossCheckedTitleCount, 1);
 assert.equal(catalog.meta.commonYearMin, 2000);
 assert.equal(catalog.meta.commonYearMax, 2024);
 assert.deepEqual(
-  catalog.coverage.flatMap((item) => item.missingSeasons.map((season) => `${item.code}:${season.season}`)),
-  ['DED:2019', 'SA:2004'],
+  Object.fromEntries(Object.entries(Object.groupBy(catalog.titles, (title) => title.category)).map(([key, values]) => [key, values.length])),
+  {
+    league: 173,
+    domesticCup: 174,
+    leagueCup: 63,
+    championsLeague: 25,
+    domesticSupercup: 164,
+    europaLeague: 25,
+    world: 21,
+    uefaSupercup: 25,
+    conferenceLeague: 4,
+  },
 );
+assert.equal(catalog.coverage.flatMap((item) => item.missingSeasons).length, 51);
+assert(catalog.coverage.some((item) => item.code === 'ECL' && item.titleCount === 4));
+assert(catalog.coverage.some((item) => item.code === 'CDL' && item.titleCount === 20));
 
 console.log('Détection vérifiée : fusion, baseline, mouvements, ambiguïtés et palmarès comparable.');

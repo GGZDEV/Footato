@@ -167,6 +167,26 @@ Autres partis pris :
 - Le mercato d'hiver d'une saison se déroule en janvier de l'année civile suivante ; le site
   l'affiche sous la saison (`2022/23 · Hiver`) et le détail rappelle l'année réelle.
 
+## Palmarès comparable
+
+Les classements de clubs couvrent **674 trophées attribués dans 29 compétitions** entre
+2000/01 et 2024/25 : les sept championnats, les sept coupes nationales, les coupes de la
+Ligue anglaise, française et portugaise, les sept supercoupes nationales, la Ligue des
+champions, la Coupe UEFA / Europa League, la Conference League, la Supercoupe UEFA et les
+titres mondiaux FIFA.
+
+Chaque trophée vaut 1, sans coefficient de prestige. Le sélecteur « Trophées comptés » permet
+de recalculer le classement et le coût par trophée pour une famille précise. Le tableau et le
+CSV conservent le détail par catégorie (`CH`, `CN`, `CL`, `LDC`, `UEL`, `UECL`, `SCN`, `SCU`,
+`MON`). Les 51 éditions non organisées, supprimées ou annulées sont documentées explicitement ;
+elles ne deviennent jamais des zéros attribués. Dix titres UEFA/FIFA remportés par des clubs
+hors des sept pays restent dans le contrôle de couverture, mais pas dans le classement Footato.
+
+Le catalogue est versionné et le build échoue en cas de saison vide non expliquée, de club
+intra-périmètre introuvable, de doublon ou de désaccord avec l'historique football-data.org.
+Chaque compétition conserve sa source officielle et, pour les coupes, une source de
+recoupement indépendante.
+
 ## Structure
 
 ```

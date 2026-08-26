@@ -56,7 +56,7 @@ if (data.honours?.meta?.status === 'ready') {
   assert(data.honours.meta.competitionCount === data.honours.coverage.length, 'competitionCount palmarès incohérent');
   assert(data.honours.meta.titleCount === data.honours.titles.length, 'titleCount incohérent');
   assert(data.honours.meta.titleCount >= 8, 'historique des titres trop court');
-  assert(data.honours.meta.matchedTitleCount + data.honours.meta.unmatchedTitleCount === data.honours.meta.titleCount, 'rattachement des titres incohérent');
+  assert(data.honours.meta.matchedTitleCount + data.honours.meta.unmatchedTitleCount + (data.honours.meta.outsideScopeTitleCount ?? 0) === data.honours.meta.titleCount, 'rattachement des titres incohérent');
   const titleKeys = new Set();
   for (const item of data.honours.coverage) assert(item.titleCount > 0, `aucun champion disponible pour ${item.code}`);
   assert(Number.isInteger(data.honours.meta.commonYearMin), 'commonYearMin absent');
@@ -65,19 +65,25 @@ if (data.honours?.meta?.status === 'ready') {
   if (data.honours.meta.catalogVersion) {
     assert(data.honours.meta.commonYearMin === 2000, 'le catalogue doit commencer en 2000');
     assert(data.honours.meta.commonYearMax >= 2024, 'le catalogue doit couvrir la saison 2024/25');
-    assert(data.honours.meta.titleCount === 198, 'le catalogue doit contenir 198 titres attribués');
+    assert(data.honours.meta.competitionCount === 29, 'le catalogue doit couvrir 29 compétitions');
+    assert(data.honours.meta.titleCount === 674, 'le catalogue doit contenir 674 trophées attribués');
+    assert(data.honours.meta.matchedTitleCount === 664, '664 trophées doivent être rattachés au périmètre Footato');
+    assert(data.honours.meta.outsideScopeTitleCount === 10, '10 trophées européens ou mondiaux doivent être signalés hors périmètre');
     assert(data.honours.meta.unmatchedTitleCount === 0, 'tout titre du catalogue doit être rattaché');
-    assert(data.honours.meta.crossCheckedTitleCount > 0, 'aucun titre contre-vérifié par l’API');
+    if (data.meta?.status === 'ready') assert(data.honours.meta.crossCheckedTitleCount > 0, 'aucun titre contre-vérifié par l’API');
   }
   for (const title of data.honours.titles) {
     const key = `${title.competitionCode}:${title.season}`;
     assert(!titleKeys.has(key), `titre dupliqué : ${key}`);
     titleKeys.add(key);
-    assert(['domestic', 'continental'].includes(title.kind), `type de titre invalide : ${key}`);
+    assert(['league', 'domesticCup', 'leagueCup', 'championsLeague', 'europaLeague', 'conferenceLeague', 'domesticSupercup', 'uefaSupercup', 'world'].includes(title.category), `catégorie de trophée invalide : ${key}`);
     assert(Number.isInteger(title.season), `saison de titre invalide : ${key}`);
     assert(typeof title.winner?.name === 'string' && title.winner.name, `vainqueur absent : ${key}`);
     assert(title.winner.clubId == null || Number.isInteger(title.winner.clubId), `clubId de titre invalide : ${key}`);
-    if (data.honours.meta.catalogVersion) assert(/^https:\/\//.test(title.source), `source officielle absente : ${key}`);
+    if (data.honours.meta.catalogVersion) {
+      assert(/^https:\/\//.test(title.source), `source officielle absente : ${key}`);
+      if (!['league'].includes(title.category)) assert(/^https:\/\//.test(title.verificationSource), `source de recoupement absente : ${key}`);
+    }
   }
 }
 
