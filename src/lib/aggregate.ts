@@ -1,5 +1,5 @@
 import type { Mercato, Resolved } from './types';
-import { mercatoLabel, season, windowLabel } from './format';
+import { mercatoLabel, season, windowLabel } from './format.ts';
 
 export type Grouping = 'mercato' | 'club' | 'league' | 'season';
 export type BalanceFilter = 'all' | 'positive' | 'negative';
@@ -82,6 +82,7 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
   }
 
   const out = new Map<string, Group>();
+  const latestClubWindow = new Map<string, [number, number]>();
   for (const m of rows) {
     let key: string, label: string, sublabel: string, flag: string;
     if (grouping === 'club') {
@@ -111,8 +112,16 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     g.arrivals += m.arrivals.total;
     g.departures += m.departures.total;
     g.count += 1;
-    // A club that changed division keeps the league of its most recent window.
-    if (grouping === 'club') { g.sublabel = m.league.name; g.flag = m.league.code; }
+    // A club that changed division keeps the league of its most recent window,
+    // independently of the input order.
+    if (grouping === 'club') {
+      const previous = latestClubWindow.get(key);
+      if (!previous || m.year > previous[0] || (m.year === previous[0] && m.window > previous[1])) {
+        latestClubWindow.set(key, [m.year, m.window]);
+        g.sublabel = m.league.name;
+        g.flag = m.league.code;
+      }
+    }
   }
 
   for (const g of out.values()) g.balance = g.income - g.spend;
@@ -125,10 +134,11 @@ export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] 
   const sorted = [...groups];
   sorted.sort((a, b) => {
     if (key === 'label' || key === 'sublabel') {
-      return a[key].localeCompare(b[key], 'fr') * dir;
+      const text = a[key].localeCompare(b[key], 'fr') * dir;
+      return text || a.key.localeCompare(b.key, 'fr');
     }
     const diff = a[key] - b[key];
-    return (diff || a.label.localeCompare(b.label, 'fr')) * dir;
+    return diff ? diff * dir : a.label.localeCompare(b.label, 'fr') || a.key.localeCompare(b.key, 'fr');
   });
   return sorted;
 }
@@ -169,20 +179,32 @@ export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
 /** Spend/income per season+window, for the timeline chart. Always ordered chronologically. */
 export interface SeasonPoint {
   year: number;
-  window: 0 | 1;
+  window: 'all' | 0 | 1;
   label: string;
   spend: number;
   income: number;
   balance: number;
 }
 
-export function bySeason(rows: Mercato[], includeLoanFees: boolean): SeasonPoint[] {
+export type ChartMode = 'annual' | 'summer' | 'winter' | 'split';
+
+export function bySeason(rows: Mercato[], includeLoanFees: boolean, mode: ChartMode = 'split'): SeasonPoint[] {
   const out = new Map<string, SeasonPoint>();
   for (const m of rows) {
-    const key = `${m.year}-${m.window}`;
+    if (mode === 'summer' && m.window !== 0) continue;
+    if (mode === 'winter' && m.window !== 1) continue;
+    const annual = mode === 'annual';
+    const key = annual ? String(m.year) : `${m.year}-${m.window}`;
     let p = out.get(key);
     if (!p) {
-      p = { year: m.year, window: m.window, label: mercatoLabel(m.year, m.window), spend: 0, income: 0, balance: 0 };
+      p = {
+        year: m.year,
+        window: annual ? 'all' : m.window,
+        label: annual ? season(m.year) : mercatoLabel(m.year, m.window),
+        spend: 0,
+        income: 0,
+        balance: 0,
+      };
       out.set(key, p);
     }
     const r = resolve(m, includeLoanFees);
@@ -191,5 +213,5 @@ export function bySeason(rows: Mercato[], includeLoanFees: boolean): SeasonPoint
   }
   const list = [...out.values()];
   for (const p of list) p.balance = p.income - p.spend;
-  return list.sort((a, b) => a.year - b.year || a.window - b.window);
+  return list.sort((a, b) => a.year - b.year || (a.window === 'all' ? 0 : a.window) - (b.window === 'all' ? 0 : b.window));
 }

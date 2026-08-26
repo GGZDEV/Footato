@@ -17,6 +17,7 @@ et ce qu'il reste à la fin de chaque mercato.
   club, et la liste des mouvements avec leurs montants.
 - **Vue partageable** — chaque combinaison de filtres, tri et mercato ouvert a sa propre URL.
 - **Export CSV** de la vue courante.
+- **Graphique modulable** — total par saison, été seul, hiver seul ou deux fenêtres séparées.
 
 ## Démarrer
 
@@ -57,6 +58,11 @@ Cette commande :
    correspondance intégrale des clubs de la saison courante avec la source de contrôle ;
 3. exclut les mouvements futurs et les couples saison/date incohérents ;
 4. déduplique, agrège, puis vérifie chaque agrégat contre les mouvements détaillés.
+
+La validation ne se limite pas au nombre de lignes : elle recalcule indépendamment les montants,
+les indemnités de prêt, chaque catégorie de mouvement, les arrivées et les départs depuis les
+193 756 mouvements détaillés. Une seconde suite exerce les filtres, les quatre regroupements,
+les tris et les quatre modes du graphique sur près de 200 scénarios.
 
 Le workflow GitHub Actions rejoue ce pipeline à chaque déploiement et chaque lundi. Une source
 vieille de plus de 45 jours fait échouer la validation au lieu d'être publiée silencieusement.

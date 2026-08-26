@@ -7,7 +7,7 @@ import { MercatoDetail } from './components/MercatoDetail';
 import { SeasonChart } from './components/SeasonChart';
 import {
   bySeason, filterMercatos, group, sortGroups, totals,
-  type Filters as F, type Grouping, type SortKey,
+  type ChartMode, type Filters as F, type Grouping, type SortKey,
 } from './lib/aggregate';
 import { loadDataset } from './lib/data';
 import { season } from './lib/format';
@@ -18,6 +18,13 @@ const TABS: { value: Grouping; label: string; hint: string }[] = [
   { value: 'club', label: 'Clubs', hint: 'Cumul sur toute la période filtrée' },
   { value: 'league', label: 'Championnats', hint: 'Cumul par championnat' },
   { value: 'season', label: 'Saisons', hint: 'Cumul par fenêtre de transfert' },
+];
+
+const CHART_MODES: { value: ChartMode; label: string; title: string }[] = [
+  { value: 'annual', label: 'Année', title: 'Fusionner été et hiver par saison' },
+  { value: 'summer', label: 'Été', title: 'Afficher uniquement les mercatos d’été' },
+  { value: 'winter', label: 'Hiver', title: 'Afficher uniquement les mercatos d’hiver' },
+  { value: 'split', label: 'Séparés', title: 'Afficher été et hiver séparément' },
 ];
 
 const defaults = (yearMax: number): F => ({
@@ -34,6 +41,7 @@ const defaults = (yearMax: number): F => ({
 interface UrlState {
   filters: F;
   grouping: Grouping;
+  chartMode: ChartMode;
   sort: { key: SortKey; dir: 1 | -1 };
   selected: string | null;
 }
@@ -49,6 +57,7 @@ function encode(s: UrlState): string {
   if (f.minVolume) p.set('v', String(f.minVolume));
   if (f.includeLoanFees) p.set('lf', '1');
   if (s.grouping !== 'mercato') p.set('g', s.grouping);
+  if (s.chartMode !== 'split') p.set('cm', s.chartMode);
   p.set('s', `${s.sort.key}:${s.sort.dir}`);
   if (s.selected) p.set('m', s.selected);
   return p.toString();
@@ -71,10 +80,16 @@ function decode(hash: string, yearMax: number): UrlState | null {
     f.includeLoanFees = p.get('lf') === '1';
 
     const g = p.get('g') as Grouping | null;
+    const requestedChartMode = p.get('cm') as ChartMode | null;
+    const chartMode = requestedChartMode && CHART_MODES.some((mode) => mode.value === requestedChartMode)
+      ? requestedChartMode
+      : f.window === 0 ? 'summer' : f.window === 1 ? 'winter' : 'split';
+    f.window = chartMode === 'summer' ? 0 : chartMode === 'winter' ? 1 : 'all';
     const [sk, sd] = (p.get('s') ?? 'volume:-1').split(':');
     return {
       filters: f,
       grouping: g && TABS.some((t) => t.value === g) ? g : 'mercato',
+      chartMode,
       sort: { key: (sk || 'volume') as SortKey, dir: sd === '1' ? 1 : -1 },
       selected: p.get('m'),
     };
@@ -89,6 +104,7 @@ export default function App() {
 
   const [filters, setFilters] = useState<F>(defaults(2026));
   const [grouping, setGrouping] = useState<Grouping>('mercato');
+  const [chartMode, setChartMode] = useState<ChartMode>('split');
   const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({ key: 'volume', dir: -1 });
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
@@ -101,6 +117,7 @@ export default function App() {
         if (restored) {
           setFilters(restored.filters);
           setGrouping(restored.grouping);
+          setChartMode(restored.chartMode);
           setSort(restored.sort);
           setSelectedKey(restored.selected);
         } else {
@@ -114,15 +131,23 @@ export default function App() {
   // Keep the address bar in sync so any view can be bookmarked or shared.
   useEffect(() => {
     if (!ready) return;
-    const next = `#${encode({ filters, grouping, sort, selected: selectedKey })}`;
+    const next = `#${encode({ filters, grouping, chartMode, sort, selected: selectedKey })}`;
     if (next !== window.location.hash) {
       window.history.replaceState(null, '', next);
     }
-  }, [ready, filters, grouping, sort, selectedKey]);
+  }, [ready, filters, grouping, chartMode, sort, selectedKey]);
 
-  const patch = useCallback((p: Partial<F>) => setFilters((f) => ({ ...f, ...p })), []);
+  const patch = useCallback((p: Partial<F>) => {
+    setFilters((f) => ({ ...f, ...p }));
+    if (p.window === 0) setChartMode('summer');
+    else if (p.window === 1) setChartMode('winter');
+    else if (p.window === 'all') setChartMode((mode) => (mode === 'summer' || mode === 'winter' ? 'split' : mode));
+  }, []);
   const reset = useCallback(() => {
-    if (dataset) setFilters(defaults(dataset.meta.yearMax));
+    if (dataset) {
+      setFilters(defaults(dataset.meta.yearMax));
+      setChartMode('split');
+    }
   }, [dataset]);
 
   const rows = useMemo(
@@ -130,7 +155,10 @@ export default function App() {
     [dataset, filters],
   );
   const t = useMemo(() => totals(rows, filters.includeLoanFees), [rows, filters.includeLoanFees]);
-  const points = useMemo(() => bySeason(rows, filters.includeLoanFees), [rows, filters.includeLoanFees]);
+  const points = useMemo(
+    () => bySeason(rows, filters.includeLoanFees, chartMode),
+    [rows, filters.includeLoanFees, chartMode],
+  );
   const groups = useMemo(
     () => sortGroups(group(rows, grouping, filters.includeLoanFees), sort.key, sort.dir),
     [rows, grouping, filters.includeLoanFees, sort],
@@ -148,6 +176,14 @@ export default function App() {
   const onGrouping = useCallback((g: Grouping) => {
     setGrouping(g);
     setSort((s) => (g === 'mercato' && s.key === 'count' ? { key: 'volume', dir: -1 } : s));
+  }, []);
+
+  const onChartMode = useCallback((mode: ChartMode) => {
+    setChartMode(mode);
+    setFilters((f) => ({
+      ...f,
+      window: mode === 'summer' ? 0 : mode === 'winter' ? 1 : 'all',
+    }));
   }, []);
 
   if (error) {
@@ -208,9 +244,22 @@ export default function App() {
       <Kpis t={t} />
 
       <section className="panel">
-        <div className="panel-head">
-          <h2>Achats et ventes, mercato par mercato</h2>
-          <p>Cliquez une fenêtre pour n’afficher qu’elle</p>
+        <div className="panel-head chart-panel-head">
+          <h2>Achats et ventes dans le temps</h2>
+          <p>Cliquez un point pour filtrer la vue</p>
+          <div className="spacer" />
+          <div className="segmented chart-modes" role="group" aria-label="Affichage du graphique">
+            {CHART_MODES.map((mode) => (
+              <button
+                key={mode.value}
+                aria-pressed={chartMode === mode.value}
+                onClick={() => onChartMode(mode.value)}
+                title={mode.title}
+              >
+                {mode.label}
+              </button>
+            ))}
+          </div>
         </div>
         <SeasonChart
           points={points}

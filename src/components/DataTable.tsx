@@ -57,16 +57,21 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
   const visible = groups.slice(0, limit);
 
   const exportCsv = () => {
-    const head = ['rang', ...columns.map((c) => c.label)];
-    const lines = [head.join(';')];
+    const monetary = new Set<SortKey>(['spend', 'income', 'balance', 'volume']);
+    const csvCell = (value: string | number) => {
+      const text = String(value);
+      return /[;"\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+    };
+    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : c.label)];
+    const lines = [head.map(csvCell).join(';')];
     groups.forEach((g, i) => {
       const cells = columns.map((c) => {
         const v = g[c.key];
-        return typeof v === 'number' && c.key !== 'count' && c.key !== 'arrivals' && c.key !== 'departures'
+        return typeof v === 'number' && monetary.has(c.key)
           ? (v / 1000).toFixed(3).replace('.', ',')
           : String(v);
       });
-      lines.push([i + 1, ...cells].join(';'));
+      lines.push([i + 1, ...cells].map(csvCell).join(';'));
     });
     const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);

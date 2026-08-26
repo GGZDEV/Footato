@@ -13,7 +13,9 @@
     "data:build": "node scripts/build-dataset.mjs",
     "data:recent": "node scripts/import-recent.mjs",
     "data:validate": "node scripts/validate-dataset.mjs",
-    "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:build && npm run data:validate",
+    "analytics:verify": "node --experimental-strip-types scripts/verify-analytics.mjs",
+    "test": "npm run data:validate && npm run analytics:verify && npm run typecheck",
+    "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:build && npm run data:validate && npm run analytics:verify",
     "data": "npm run data:refresh"
   },
   "dependencies": {

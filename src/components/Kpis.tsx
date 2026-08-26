@@ -26,7 +26,7 @@ export function Kpis({ t }: { t: Totals }) {
         <span className="field-label">Périmètre</span>
         <div className="value num">{count(t.mercatos)}</div>
         <div className="sub">
-          mercatos · {count(t.clubs)} clubs · {coverage}% des transferts chiffrés
+          mercatos · {count(t.clubs)} clubs · {coverage}% des transferts payants chiffrés
         </div>
       </div>
     </section>

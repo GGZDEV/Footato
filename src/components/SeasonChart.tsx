@@ -41,6 +41,7 @@ export function SeasonChart({ points, onSelect }: Props) {
   const labelEvery = Math.max(1, Math.ceil(points.length / Math.max(1, Math.floor(innerW / 60))));
   const last = points.length - 1;
   const active = hover === null ? null : points[hover];
+  const annual = points.every((point) => point.window === 'all');
 
   return (
     <div className="chart-body">
@@ -48,7 +49,7 @@ export function SeasonChart({ points, onSelect }: Props) {
         <span className="key"><i className="swatch" style={{ background: 'var(--out)' }} />Achats</span>
         <span className="key"><i className="swatch" style={{ background: 'var(--in)' }} />Ventes</span>
         <span className="muted" style={{ marginLeft: 'auto', fontSize: 12 }}>
-          {points.length} fenêtre{points.length > 1 ? 's' : ''} de transfert
+          {points.length} {annual ? `saison${points.length > 1 ? 's' : ''}` : `fenêtre${points.length > 1 ? 's' : ''}`}
         </span>
       </div>
 
@@ -69,7 +70,7 @@ export function SeasonChart({ points, onSelect }: Props) {
               {points.map((p, i) =>
                 i % labelEvery === 0 || i === last ? (
                   <text key={p.label} className="axis-text" x={x(i)} y={innerH + 16} textAnchor="middle">
-                    {season(p.year).slice(2)}{windowShort(p.window)}
+                    {season(p.year).slice(2)}{p.window === 'all' ? '' : windowShort(p.window)}
                   </text>
                 ) : null,
               )}
