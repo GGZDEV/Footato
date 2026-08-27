@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import {
   bySeason, filterMercatos, group, resolve, sortGroups, totals,
 } from '../src/lib/aggregate.ts';
+import { titleWeight, trophyFamily } from '../src/lib/honours.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const raw = JSON.parse(readFileSync(join(ROOT, 'public', 'data', 'summary.json'), 'utf8'));
@@ -36,6 +37,15 @@ const defaults = {
   minVolume: 0,
   includeLoanFees: false,
 };
+
+assert.equal(titleWeight({ competitionCode: 'CL', category: 'championsLeague' }), 10, 'poids Ligue des champions');
+assert.equal(titleWeight({ competitionCode: 'PL', category: 'league' }), 6, 'poids Premier League');
+assert.equal(titleWeight({ competitionCode: 'PPL', category: 'league' }), 3, 'poids Liga Portugal');
+assert.equal(titleWeight({ competitionCode: 'FAC', category: 'domesticCup' }), 2, 'poids coupe nationale');
+assert.equal(titleWeight({ competitionCode: 'TDC', category: 'domesticSupercup' }), 0.5, 'poids supercoupe nationale');
+assert.equal(trophyFamily('league'), 'league');
+assert.equal(trophyFamily('domesticCup'), 'domestic');
+assert.equal(trophyFamily('uefaSupercup'), 'continental');
 
 const independentResolve = (mercato, includeLoanFees) => {
   const spend = mercato.spend + (includeLoanFees ? mercato.loanSpend : 0);
@@ -266,4 +276,4 @@ assert.equal(withLoans.income - withoutLoans.income, mercatos.reduce((sum, item)
 for (const mercato of mercatos) assert.deepEqual(resolve(mercato, true), independentResolve(mercato, true));
 
 console.log(`✓ analytique : ${checkedScenarios} scénarios de filtres · 4 regroupements · 20 tris · 4 modes graphiques`);
-console.log(`  ${mercatos.length} mercatos contrôlés, avec et sans indemnités de prêt`);
+console.log(`  ${mercatos.length} mercatos contrôlés, avec et sans indemnités de prêt · barème du palmarès vérifié`);

@@ -3,7 +3,7 @@ import { BrandMark } from './components/BrandMark';
 import { CompletenessView } from './components/CompletenessView';
 import { DataTable } from './components/DataTable';
 import { Filters } from './components/Filters';
-import { HonoursView, type TrophyScope } from './components/HonoursView';
+import { HonoursView } from './components/HonoursView';
 import { Kpis } from './components/Kpis';
 import { MercatoDetail } from './components/MercatoDetail';
 import { SeasonChart } from './components/SeasonChart';
@@ -21,6 +21,7 @@ import {
 } from './lib/aggregate';
 import { loadDataset, loadFreshness } from './lib/data';
 import { season } from './lib/format';
+import { titleWeight, trophyFamily, type TitlePointBreakdown } from './lib/honours';
 import type { Dataset, FreshnessData } from './lib/types';
 
 type AppSection = 'market' | 'honours' | 'coverage';
@@ -116,11 +117,6 @@ function restoreClubAliases(state: UrlState, dataset: Dataset): UrlState {
   return state;
 }
 
-const categoryMatchesScope = (category: string, scope: TrophyScope) => scope === 'all'
-  || category === scope
-  || (scope === 'europe' && ['championsLeague', 'europaLeague', 'conferenceLeague'].includes(category))
-  || (scope === 'supercup' && ['domesticSupercup', 'uefaSupercup'].includes(category));
-
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [freshness, setFreshness] = useState<FreshnessData | null>(null);
@@ -134,7 +130,6 @@ export default function App() {
   const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({ key: 'volume', dir: -1 });
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [quickView, setQuickView] = useState<QuickView>('overview');
-  const [trophyScope, setTrophyScope] = useState<TrophyScope>('all');
   const [honourFrom, setHonourFrom] = useState(2000);
   const [honourTo, setHonourTo] = useState(2024);
   const [honourPeriodReady, setHonourPeriodReady] = useState(false);
@@ -195,7 +190,6 @@ export default function App() {
     setSort({ key: 'volume', dir: -1 });
     setSelectedKey(null);
     setQuickView('overview');
-    setTrophyScope('all');
     if (freshness?.honours?.meta.status === 'ready') {
       setHonourFrom(Math.max(2000, freshness.honours.meta.commonYearMin ?? 2000));
       setHonourTo(freshness.honours.meta.commonYearMax ?? 2024);
@@ -263,26 +257,38 @@ export default function App() {
     if (!dataset || freshness?.honours?.meta.status !== 'ready') return [];
     const honourRows = dataset.mercatos.filter((item) => item.year >= honourFrom && item.year <= honourTo);
     const clubs = group(honourRows, 'club', false);
-    const titles = new Map<number, NonNullable<Group['titleBreakdown']>>();
+    const titles = new Map<number, {
+      breakdown: NonNullable<Group['titleBreakdown']>;
+      points: number;
+      pointBreakdown: TitlePointBreakdown;
+    }>();
     for (const title of freshness.honours.titles) {
       const clubId = title.winner.clubId;
       if (clubId == null || title.season < honourFrom || title.season > honourTo) continue;
       const current = titles.get(clubId) ?? {
-        league: 0,
-        domesticCup: 0,
-        leagueCup: 0,
-        championsLeague: 0,
-        europaLeague: 0,
-        conferenceLeague: 0,
-        domesticSupercup: 0,
-        uefaSupercup: 0,
-        world: 0,
+        breakdown: {
+          league: 0,
+          domesticCup: 0,
+          leagueCup: 0,
+          championsLeague: 0,
+          europaLeague: 0,
+          conferenceLeague: 0,
+          domesticSupercup: 0,
+          uefaSupercup: 0,
+          world: 0,
+        },
+        points: 0,
+        pointBreakdown: { league: 0, domestic: 0, continental: 0 },
       };
-      current[title.category] += 1;
+      const points = titleWeight(title);
+      current.breakdown[title.category] += 1;
+      current.points += points;
+      current.pointBreakdown[trophyFamily(title.category)] += points;
       titles.set(clubId, current);
     }
     for (const club of clubs) {
-      club.titleBreakdown = titles.get(Number(club.key)) ?? {
+      const record = titles.get(Number(club.key));
+      club.titleBreakdown = record?.breakdown ?? {
         league: 0,
         domesticCup: 0,
         leagueCup: 0,
@@ -293,13 +299,12 @@ export default function App() {
         uefaSupercup: 0,
         world: 0,
       };
-      club.titles = Object.entries(club.titleBreakdown)
-        .filter(([category]) => categoryMatchesScope(category, trophyScope))
-        .reduce((sum, [, value]) => sum + value, 0);
-      club.spendPerTitle = club.titles ? club.spend / club.titles : Number.POSITIVE_INFINITY;
+      club.titles = Object.values(club.titleBreakdown).reduce((sum, value) => sum + value, 0);
+      club.titlePoints = record?.points ?? 0;
+      club.titlePointBreakdown = record?.pointBreakdown ?? { league: 0, domestic: 0, continental: 0 };
     }
     return clubs;
-  }, [dataset, freshness, honourFrom, honourTo, trophyScope]);
+  }, [dataset, freshness, honourFrom, honourTo]);
 
   const coverageGroups = useMemo(
     () => dataset ? group(dataset.mercatos, 'league', false) : [],
@@ -410,9 +415,7 @@ export default function App() {
             yearMax={honourTo}
             availableYearMin={honourMin}
             availableYearMax={honourMax}
-            scope={trophyScope}
             onPeriodChange={(from, to) => { setHonourFrom(from); setHonourTo(to); }}
-            onScopeChange={setTrophyScope}
           />
         )}
 

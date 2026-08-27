@@ -22,8 +22,8 @@ et ce qu'il reste à la fin de chaque mercato.
   automatiquement ; les changements détectés restent signalés à part jusqu'à confirmation.
 - **Classements auditables** — top dépenses, bénéfices et ventes, avec la complétude des indemnités
   visible pour chaque ligne plutôt qu'un classement présenté comme exact à tort.
-- **Dépenses comparées aux titres** — championnats de première division des sept pays et Ligue des
-  champions, par saison, avec coût documenté par titre et gros dépensiers sans titre suivi.
+- **Investissement comparé aux titres** — achats, investissement net ou ventes face à un indice
+  sportif pondéré, avec championnats, coupes nationales et titres continentaux séparés visuellement.
 
 ## Démarrer
 
@@ -64,10 +64,9 @@ versionné reprend, pour chaque saison 2000/01 à 2024/25, les historiques offic
 [UEFA](https://www.uefa.com/uefachampionsleague/history/). Les entrées que fournit football-data.org
 sont recoupées automatiquement ; le build échoue au premier désaccord.
 
-Footato ne parle pas de « palmarès total » : seules les sept premières divisions suivies et la Ligue
-des champions sont comparées. Les coupes nationales, supercoupes et autres compétitions sont exclues.
-Les saisons sans champion ne sont pas transformées en zéro silencieux : Serie A 2004/05 (titre révoqué)
-et Eredivisie 2019/20 (saison interrompue) sont explicitement documentées dans le catalogue.
+Footato ne parle pas de « palmarès total » : la vue compare uniquement les 29 compétitions documentées
+dans le catalogue. Les saisons sans champion ne sont pas transformées en zéro silencieux : Serie A
+2004/05 (titre révoqué) et Eredivisie 2019/20 (saison interrompue) sont explicitement documentées.
 
 Les championnats couverts sont la Premier League, LaLiga, Serie A, Bundesliga, Ligue 1,
 Liga Portugal, Eredivisie, Premier Liga russe et Championship. La couverture
@@ -175,12 +174,15 @@ Ligue anglaise, française et portugaise, les sept supercoupes nationales, la Li
 champions, la Coupe UEFA / Europa League, la Conference League, la Supercoupe UEFA et les
 titres mondiaux FIFA.
 
-Chaque trophée vaut 1, sans coefficient de prestige. Le sélecteur « Trophées comptés » permet
-de recalculer le classement et le coût par trophée pour une famille précise. Le tableau et le
-CSV conservent le détail par catégorie (`CH`, `CN`, `CL`, `LDC`, `UEL`, `UECL`, `SCN`, `SCU`,
-`MON`). Les 51 éditions non organisées, supprimées ou annulées sont documentées explicitement ;
-elles ne deviennent jamais des zéros attribués. Dix titres UEFA/FIFA remportés par des clubs
-hors des sept pays restent dans le contrôle de couverture, mais pas dans le classement Footato.
+La comparaison emploie un indice éditorial transparent : 10 points pour une Ligue des champions,
+6 pour une Premier League, 5,5 pour LaLiga, 5 pour la Serie A ou la Bundesliga, 4 pour la Ligue 1
+et 3 pour la Liga Portugal ou l’Eredivisie. Les compétitions de coupe vont de 0,5 point pour une
+supercoupe nationale à 5 points pour l’Europa League ou un titre mondial. Tous les coefficients
+sont visibles directement dans la page ; ils ne prétendent pas constituer un classement officiel.
+Les trois familles de titres restent affichées séparément pour que l’indice ne masque jamais le
+palmarès brut. Les 51 éditions non organisées, supprimées ou annulées sont documentées explicitement ;
+elles ne deviennent jamais des zéros attribués. Dix titres UEFA/FIFA remportés par des clubs hors des
+sept pays restent dans le contrôle de couverture, mais pas dans le classement Footato.
 
 Le catalogue est versionné et le build échoue en cas de saison vide non expliquée, de club
 intra-périmètre introuvable, de doublon ou de désaccord avec l'historique football-data.org.

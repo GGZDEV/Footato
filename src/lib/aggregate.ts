@@ -69,7 +69,12 @@ export interface Group {
     uefaSupercup: number;
     world: number;
   };
-  spendPerTitle?: number;
+  titlePoints?: number;
+  titlePointBreakdown?: {
+    league: number;
+    domestic: number;
+    continental: number;
+  };
   count: number;
   /** Present on the legacy per-window grouping. */
   mercato?: Mercato;
@@ -164,7 +169,7 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
   return [...out.values()];
 }
 
-export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'coverage' | 'titles' | 'spendPerTitle' | 'count';
+export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'coverage' | 'titles' | 'count';
 
 export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] {
   const sorted = [...groups];
