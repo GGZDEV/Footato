@@ -150,9 +150,15 @@ for (const league of summary.leagues) {
 
 const membershipAudits = recentManifest?.memberships?.leagues ?? [];
 if (recentManifest && !membershipAudits.length) fail('audit des compositions de ligue récentes absent');
+const latestAuditedSeason = membershipAudits.reduce((max, audit) => Math.max(max, audit.season), -Infinity);
 for (const audit of membershipAudits) {
-  if (!audit.complete || audit.resolvedCount !== audit.teamCount) {
-    fail(`${audit.leagueId} ${audit.season} : composition de ligue incomplète`);
+  // Past seasons may miss clubs that have since left every covered competition;
+  // only the current season, on which the freshness claims rest, must be whole.
+  if (audit.season === latestAuditedSeason && !audit.complete) {
+    fail(`${audit.leagueId} ${audit.season} : composition de la saison courante incomplète`);
+  }
+  if (!audit.resolvedCount || audit.resolvedCount < Math.ceil(audit.teamCount * 0.75)) {
+    fail(`${audit.leagueId} ${audit.season} : composition de ligue trop partielle`);
   }
   const coverage = summary.meta.coverageByLeague[audit.leagueId];
   if ((coverage?.yearMax ?? -Infinity) < audit.season) {

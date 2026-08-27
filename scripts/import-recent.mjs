@@ -298,6 +298,7 @@ const membershipSeasons = Array.isArray(acquisition?.sources?.memberships?.seaso
   ? acquisition.sources.memberships.seasons.map(Number).filter(Number.isFinite)
   : [Number.parseInt(acquisition?.sources?.memberships?.season, 10)].filter(Number.isFinite);
 
+const latestMembershipSeason = membershipSeasons.length ? Math.max(...membershipSeasons) : null;
 const membershipAudit = [];
 const membershipRefused = [];
 let membershipConflicts = 0;
@@ -316,11 +317,19 @@ for (const season of membershipSeasons) {
       else unresolved.push(outcome.unresolved);
     }
     const uniqueIds = new Set(resolved.map((team) => team.clubId));
-    const complete = teamNames.length >= 14 && unresolved.length === 0 && uniqueIds.size === teamNames.length;
+    const sane = teamNames.length >= 14 && uniqueIds.size === resolved.length;
+    const complete = sane && unresolved.length === 0;
 
-    // Only accepted compositions are audited; a partial join must never leak
-    // into the public data, so it is recorded as a refusal instead.
-    if (!complete) {
+    // A club that resolves uniquely is safe to attribute whatever happened to
+    // its league-mates, so a season is no longer discarded whole because a few
+    // names are missing. Clubs that have since left a covered competition are
+    // absent from the maintained export entirely (Sheffield Wednesday, Vitesse):
+    // refusing their whole season cost every other club of that season too.
+    // Their own movements stay excluded, and the names are reported below.
+    // The current season is still held to a full join, since the site's
+    // freshness claims rest on it.
+    const usable = sane && resolved.length >= Math.ceil(teamNames.length * 0.75);
+    if (!usable || (season === latestMembershipSeason && !complete)) {
       membershipRefused.push({ leagueId: target.id, season, teamCount: teamNames.length, unresolved });
       continue;
     }
@@ -455,6 +464,11 @@ for (const audit of membershipAudit) {
 }
 for (const season of [...bySeason.keys()].sort((a, b) => a - b)) {
   console.log(`  compositions ${season}/${season + 1} : ${bySeason.get(season).join(' ')}`);
+}
+for (const audit of membershipAudit) {
+  if (audit.complete) continue;
+  const missing = audit.unresolved.map((item) => item.teamName).join(', ');
+  console.log(`  ${audit.leagueId} ${audit.season}/${audit.season + 1} : ${audit.resolvedCount}/${audit.teamCount} clubs, hors périmètre — ${missing}`);
 }
 for (const refused of membershipRefused) {
   const why = refused.unresolved
