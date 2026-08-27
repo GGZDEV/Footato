@@ -180,7 +180,7 @@ function feeLabels(raw) {
   };
 }
 
-function normaliseClubName(value) {
+function normaliseTokens(value) {
   const ignored = new Set([
     'fc', 'afc', 'cf', 'sc', 'ac', 'as', 'ss', 'fk', 'pfk', 'rfk', 'ao',
     'club', 'football', 'futbol', 'futebol', 'calcio', 'spa', '1909',
@@ -189,7 +189,11 @@ function normaliseClubName(value) {
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .toLowerCase().replace(/&/g, ' and ').replace(/\([^)]*\)/g, ' ')
     .replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/)
-    .filter((token) => token && !ignored.has(token)).join('');
+    .filter((token) => token && !ignored.has(token));
+}
+
+function normaliseClubName(value) {
+  return normaliseTokens(value).join('');
 }
 
 const competitions = new Map(readTable('competitions.csv').map((c) => [c.competition_id, c]));
@@ -225,19 +229,66 @@ for (const game of games) {
 // the public data.
 const candidateNames = new Map();
 const candidateIndex = new Map();
-const registerCandidate = (clubId, name) => {
+const relaxedIndex = new Map();
+/** Ids backed by a row in clubs.csv, as opposed to names seen only as a counterparty. */
+const registeredClubs = new Set();
+
+/**
+ * A second, more forgiving key: it also drops founding years and the particles
+ * the two sources disagree on ("Stade de Reims" / "Stade Reims",
+ * "VfL Bochum 1848" / "VfL Bochum"). Only ever used when the strict key finds
+ * nothing, and still required to match a single club.
+ */
+const relaxClubName = (value) => {
+  const dropped = new Set(['de', 'do', 'da', 'of', 'the']);
+  return normaliseTokens(value).filter((token) => !/^\d+$/.test(token) && !dropped.has(token)).join('');
+};
+
+const registerCandidate = (clubId, name, authoritative = false) => {
   if (!clubId || !name || clubId === '0') return;
   if (!candidateNames.has(clubId)) candidateNames.set(clubId, new Set());
   candidateNames.get(clubId).add(name);
+  if (authoritative) registeredClubs.add(clubId);
   const key = normaliseClubName(name);
-  if (!key) return;
-  if (!candidateIndex.has(key)) candidateIndex.set(key, new Set());
-  candidateIndex.get(key).add(clubId);
+  if (key) {
+    if (!candidateIndex.has(key)) candidateIndex.set(key, new Set());
+    candidateIndex.get(key).add(clubId);
+  }
+  const relaxed = relaxClubName(name);
+  if (relaxed) {
+    if (!relaxedIndex.has(relaxed)) relaxedIndex.set(relaxed, new Set());
+    relaxedIndex.get(relaxed).add(clubId);
+  }
 };
-for (const [clubId, club] of clubs) registerCandidate(clubId, club.name);
+for (const [clubId, club] of clubs) registerCandidate(clubId, club.name, true);
 for (const transfer of transfers) {
   registerCandidate(transfer.from_club_id, transfer.from_club_name);
   registerCandidate(transfer.to_club_id, transfer.to_club_name);
+}
+
+/** Several ids under one name means variants of the same club; clubs.csv arbitrates. */
+const narrow = (ids) => {
+  if (ids.length <= 1) return ids;
+  const registered = ids.filter((id) => registeredClubs.has(id));
+  return registered.length ? registered : ids;
+};
+
+/**
+ * Resolves a fixture-list team name to a single Transfermarkt club id, or
+ * explains why it could not. A name that stays ambiguous is never guessed.
+ */
+function resolveMembershipClub(teamName) {
+  const overrideId = MEMBERSHIP_CLUB_IDS.get(teamName);
+  if (overrideId && candidateNames.has(overrideId)) return { clubId: overrideId };
+
+  const strict = narrow([...(candidateIndex.get(normaliseClubName(teamName)) ?? [])]);
+  if (strict.length === 1) return { clubId: strict[0] };
+  if (strict.length === 0) {
+    const relaxed = narrow([...(relaxedIndex.get(relaxClubName(teamName)) ?? [])]);
+    if (relaxed.length === 1) return { clubId: relaxed[0] };
+    return { unresolved: { teamName, candidateIds: relaxed, reason: relaxed.length ? 'ambigu' : 'inconnu' } };
+  }
+  return { unresolved: { teamName, candidateIds: strict, reason: 'ambigu' } };
 }
 
 // Fixture lists are read for every season the acquisition step downloaded, not
@@ -260,12 +311,9 @@ for (const season of membershipSeasons) {
     const resolved = [];
     const unresolved = [];
     for (const teamName of teamNames) {
-      const overrideId = MEMBERSHIP_CLUB_IDS.get(teamName);
-      const ids = overrideId && candidateNames.has(overrideId)
-        ? [overrideId]
-        : [...(candidateIndex.get(normaliseClubName(teamName)) ?? [])];
-      if (ids.length === 1) resolved.push({ teamName, clubId: ids[0] });
-      else unresolved.push({ teamName, candidateIds: ids });
+      const outcome = resolveMembershipClub(teamName);
+      if (outcome.clubId) resolved.push({ teamName, clubId: outcome.clubId });
+      else unresolved.push(outcome.unresolved);
     }
     const uniqueIds = new Set(resolved.map((team) => team.clubId));
     const complete = teamNames.length >= 14 && unresolved.length === 0 && uniqueIds.size === teamNames.length;
@@ -409,7 +457,9 @@ for (const season of [...bySeason.keys()].sort((a, b) => a - b)) {
   console.log(`  compositions ${season}/${season + 1} : ${bySeason.get(season).join(' ')}`);
 }
 for (const refused of membershipRefused) {
-  const why = refused.unresolved.map((item) => item.teamName).join(', ') || 'doublon de club';
+  const why = refused.unresolved
+    .map((item) => `${item.teamName} [${item.reason}${item.candidateIds.length ? ` ×${item.candidateIds.length}` : ''}]`)
+    .join(', ') || 'doublon de club';
   console.warn(`! composition ${refused.leagueId} ${refused.season}/${refused.season + 1} refusée (${refused.teamCount} équipes) : ${why}`);
 }
 if (membershipConflicts) {
