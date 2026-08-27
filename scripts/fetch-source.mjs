@@ -21,8 +21,16 @@ const LEGACY_BASE = 'https://raw.githubusercontent.com/ewenme/transfers/master/d
 const OPEN_BASE = 'https://pub-e682421888d945d684bcae8890b0ec20.r2.dev/data';
 const now = new Date();
 const currentSeasonYear = now.getUTCMonth() >= 6 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
-const currentSeasonSlug = `${currentSeasonYear}-${String((currentSeasonYear + 1) % 100).padStart(2, '0')}`;
-const OPENFOOTBALL_BASE = `https://raw.githubusercontent.com/openfootball/football.json/master/${currentSeasonSlug}`;
+const OPENFOOTBALL_BASE = 'https://raw.githubusercontent.com/openfootball/football.json/master';
+const seasonSlug = (year) => `${year}-${String((year + 1) % 100).padStart(2, '0')}`;
+
+// The maintained games export lags by a season or more on some competitions, so
+// fixture lists are pulled for every season the recent import covers, not just
+// the current one. Without this the Championship has no membership after 2022
+// and its transfers are dropped.
+const MEMBERSHIP_SINCE = 2023;
+const membershipSeasons = [];
+for (let year = MEMBERSHIP_SINCE; year <= currentSeasonYear; year++) membershipSeasons.push(year);
 
 const LEGACY_FILES = [
   'premier-league.csv', 'primera-division.csv', 'serie-a.csv', '1-bundesliga.csv',
@@ -75,6 +83,7 @@ const manifest = {
     memberships: {
       dataset: 'github.com/openfootball/football.json',
       season: currentSeasonYear,
+      seasons: membershipSeasons,
       files: {},
     },
   },
@@ -94,12 +103,26 @@ for (const file of OPEN_FILES) {
   console.log(`${(info.bytes / 1e6).toFixed(1)} Mo · ${info.lastModified ?? 'date inconnue'}`);
 }
 
-for (const [leagueId, file] of Object.entries(MEMBERSHIP_FILES)) {
-  process.stdout.write(`  effectifs   ${leagueId.padEnd(24)}`);
-  const info = await download(`${OPENFOOTBALL_BASE}/${file}`, join(MEMBERSHIPS, `${leagueId}_${currentSeasonYear}.json`));
-  manifest.sources.memberships.files[leagueId] = info;
-  console.log(`${(info.bytes / 1e6).toFixed(2)} Mo`);
+let membershipCount = 0;
+for (const year of membershipSeasons) {
+  const acquired = [];
+  for (const [leagueId, file] of Object.entries(MEMBERSHIP_FILES)) {
+    try {
+      // A missing fixture list is normal for a season a league has not published
+      // yet; the import simply falls back to the games export for that slot.
+      const info = await download(
+        `${OPENFOOTBALL_BASE}/${seasonSlug(year)}/${file}`,
+        join(MEMBERSHIPS, `${leagueId}_${year}.json`),
+      );
+      manifest.sources.memberships.files[`${leagueId}_${year}`] = info;
+      acquired.push(leagueId);
+      membershipCount++;
+    } catch {
+      rmSync(join(MEMBERSHIPS, `${leagueId}_${year}.json`), { force: true });
+    }
+  }
+  console.log(`  effectifs   ${seasonSlug(year).padEnd(24)}${acquired.length}/${Object.keys(MEMBERSHIP_FILES).length} · ${acquired.join(' ') || 'aucun'}`);
 }
 
 writeFileSync(join(RAW, 'acquisition.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-console.log(`\n✓ ${LEGACY_FILES.length + OPEN_FILES.length + Object.keys(MEMBERSHIP_FILES).length} fichiers acquis avec empreintes SHA-256.`);
+console.log(`\n✓ ${LEGACY_FILES.length + OPEN_FILES.length + membershipCount} fichiers acquis avec empreintes SHA-256.`);

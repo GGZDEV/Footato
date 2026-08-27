@@ -240,11 +240,20 @@ for (const transfer of transfers) {
   registerCandidate(transfer.to_club_id, transfer.to_club_name);
 }
 
-const currentMembershipSeason = Number.parseInt(acquisition?.sources?.memberships?.season, 10);
+// Fixture lists are read for every season the acquisition step downloaded, not
+// only the current one: the games export lags on some competitions (the English
+// Championship has none after 2022), which silently dropped their transfers.
+const membershipSeasons = Array.isArray(acquisition?.sources?.memberships?.seasons)
+  ? acquisition.sources.memberships.seasons.map(Number).filter(Number.isFinite)
+  : [Number.parseInt(acquisition?.sources?.memberships?.season, 10)].filter(Number.isFinite);
+
 const membershipAudit = [];
-if (Number.isFinite(currentMembershipSeason)) {
+const membershipRefused = [];
+let membershipConflicts = 0;
+
+for (const season of membershipSeasons) {
   for (const [sourceCompetitionId, target] of Object.entries(COMPETITIONS)) {
-    const path = join(OPENFOOTBALL, `${target.id}_${currentMembershipSeason}.json`);
+    const path = join(OPENFOOTBALL, `${target.id}_${season}.json`);
     if (!existsSync(path)) continue;
     const schedule = JSON.parse(readFileSync(path, 'utf8'));
     const teamNames = [...new Set((schedule.matches ?? []).flatMap((match) => [match.team1, match.team2]).filter(Boolean))];
@@ -260,20 +269,30 @@ if (Number.isFinite(currentMembershipSeason)) {
     }
     const uniqueIds = new Set(resolved.map((team) => team.clubId));
     const complete = teamNames.length >= 14 && unresolved.length === 0 && uniqueIds.size === teamNames.length;
+
+    // Only accepted compositions are audited; a partial join must never leak
+    // into the public data, so it is recorded as a refusal instead.
+    if (!complete) {
+      membershipRefused.push({ leagueId: target.id, season, teamCount: teamNames.length, unresolved });
+      continue;
+    }
     membershipAudit.push({
       leagueId: target.id,
-      season: currentMembershipSeason,
+      season,
       teamCount: teamNames.length,
       resolvedCount: resolved.length,
       complete,
       unresolved,
     });
-    if (!complete) continue;
+
     for (const { teamName, clubId } of resolved) {
-      const key = `${currentMembershipSeason}|${clubId}`;
+      const key = `${season}|${clubId}`;
       const previous = memberships.get(key);
-      if (previous && previous !== sourceCompetitionId) {
-        throw new Error(`Club ${clubId} présent dans ${previous} et ${sourceCompetitionId} en ${currentMembershipSeason}`);
+      // The games export carries Transfermarkt's own club ids, so it wins any
+      // disagreement with these name-joined lists; they only fill its gaps.
+      if (previous) {
+        if (previous !== sourceCompetitionId) membershipConflicts++;
+        continue;
       }
       memberships.set(key, sourceCompetitionId);
       membershipNames.set(key, teamName);
@@ -370,7 +389,10 @@ const manifest = {
   movementCount: kept,
   memberships: {
     source: 'github.com/openfootball/football.json',
+    seasons: membershipSeasons,
     leagues: membershipAudit,
+    refused: membershipRefused,
+    conflicts: membershipConflicts,
   },
   quality: { duplicatesRemoved: duplicates, skippedFuture, skippedBadDate, skippedNoMembership },
 };
@@ -378,9 +400,20 @@ writeFileSync(join(OUT, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\
 
 console.log(`\n✓ ${kept} mouvements récents normalisés · saisons ${manifest.yearMin ?? '—'}-${manifest.yearMax ?? '—'}.`);
 console.log(`  exclus : ${skippedFuture} futurs, ${skippedBadDate} dates incohérentes, ${skippedNoMembership} côtés sans championnat saisonnier.`);
+const bySeason = new Map();
 for (const audit of membershipAudit) {
-  const status = audit.complete ? 'validée' : `refusée (${audit.unresolved.map((item) => item.teamName).join(', ') || 'doublon de club'})`;
-  console.log(`  composition ${audit.leagueId} ${audit.season}/${audit.season + 1} : ${audit.resolvedCount}/${audit.teamCount}, ${status}`);
+  if (!bySeason.has(audit.season)) bySeason.set(audit.season, []);
+  bySeason.get(audit.season).push(audit.leagueId);
+}
+for (const season of [...bySeason.keys()].sort((a, b) => a - b)) {
+  console.log(`  compositions ${season}/${season + 1} : ${bySeason.get(season).join(' ')}`);
+}
+for (const refused of membershipRefused) {
+  const why = refused.unresolved.map((item) => item.teamName).join(', ') || 'doublon de club';
+  console.warn(`! composition ${refused.leagueId} ${refused.season}/${refused.season + 1} refusée (${refused.teamCount} équipes) : ${why}`);
+}
+if (membershipConflicts) {
+  console.log(`  ${membershipConflicts} attributions déjà fournies par l'export des matchs, conservées telles quelles.`);
 }
 if (!files.get('championship.csv').length) {
   console.warn('! Championship récent indisponible dans cette source : historique conservé, aucune attribution inventée.');
