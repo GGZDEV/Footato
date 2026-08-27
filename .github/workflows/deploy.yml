@@ -2,7 +2,7 @@ name: Déployer sur GitHub Pages
 
 on:
   push:
-    branches: [main, 'claude/**']
+    branches: [main, 'claude/**', 'codex/**']
   workflow_dispatch:
   schedule:
     # Relevé léger des effectifs quatre fois par jour, décalé des heures pleines.

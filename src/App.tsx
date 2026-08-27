@@ -169,6 +169,14 @@ export default function App() {
     if (next !== window.location.hash) window.history.replaceState(null, '', next);
   }, [ready, filters, grouping, sort, selectedKey, section]);
 
+  useEffect(() => {
+    if (!ready) return;
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+    });
+  }, [ready, section]);
+
   const patchFilters = useCallback((patch: Partial<F>) => {
     setFilters((current) => ({ ...current, ...patch }));
     setQuickView(null);
@@ -331,10 +339,12 @@ export default function App() {
 
   return (
     <div className="app">
+      <a className="skip-link" href="#main-content">Aller au contenu</a>
+      <div className="page-grid" aria-hidden="true" />
       <header className="app-header">
         <button className="brand-button" onClick={resetAll} title="Réinitialiser et revenir au marché" aria-label="Footato — réinitialiser toute la vue">
           <BrandMark />
-          <span><b>Footato</b><small>Transfer intelligence</small></span>
+          <span><b>Footato</b><small>Le marché, en chiffres</small></span>
         </button>
 
         <nav className="primary-nav" aria-label="Sections principales">
@@ -350,23 +360,39 @@ export default function App() {
         </button>
       </header>
 
-      <main>
+      <main id="main-content">
         {section === 'market' && (
-          <section className="content-section market-section">
+          <section className="content-section market-section" aria-labelledby="market-heading">
             <div className="section-title market-title">
-              <div>
-                <span className="eyebrow-label">Analyse des transferts</span>
-                <h1>Explorer le marché</h1>
-                <p>{season(filters.yearFrom)} — {season(filters.yearTo)} · {quickViewLabel}</p>
+              <div className="market-title-copy">
+                <span className="eyebrow-label"><i aria-hidden="true" /> Observatoire des transferts</span>
+                <h1 id="market-heading">Lire le<br /><em>marché.</em></h1>
+                <p>Achats, ventes et équilibre financier des clubs européens — sans estimer les montants non publiés.</p>
               </div>
+              <aside className="market-brief" aria-label="Périmètre actif">
+                <span className="brief-kicker">Périmètre actif</span>
+                <strong>{season(filters.yearFrom)} <i>→</i> {season(filters.yearTo)}</strong>
+                <p>{quickViewLabel}</p>
+                <dl>
+                  <div><dt>Base</dt><dd>{meta.movementCount.toLocaleString('fr-FR')} mouvements</dd></div>
+                  <div><dt>Couverture</dt><dd>{dataset.leagues.length} championnats</dd></div>
+                </dl>
+              </aside>
             </div>
 
-            <Kpis t={summary} />
+            <div className="market-overview">
+              <Kpis t={summary} />
+
+              <details className="panel trend-disclosure" open>
+                <summary><span><span className="eyebrow-label">Chronologie</span><b>Évolution saison par saison</b><small>Cliquer sur le graphique pour isoler une saison</small></span><span aria-hidden="true">⌄</span></summary>
+                <SeasonChart points={points} onSelect={(point) => patchFilters({ yearFrom: point.year, yearTo: point.year })} />
+              </details>
+            </div>
 
             <section className="panel results-panel">
               <div className="results-header">
                 <div>
-                  <span className="eyebrow-label">Résultats</span>
+                  <span className="eyebrow-label">Classement dynamique</span>
                   <h2>{currentGrouping.label}</h2>
                   <p>{currentGrouping.hint}</p>
                 </div>
@@ -400,11 +426,6 @@ export default function App() {
                 selectedKey={selectedKey ?? undefined}
               />
             </section>
-
-            <details className="panel trend-disclosure">
-              <summary><span><b>Évolution dans le temps</b><small>Achats et ventes réunis par saison</small></span><span aria-hidden="true">⌄</span></summary>
-              <SeasonChart points={points} onSelect={(point) => patchFilters({ yearFrom: point.year, yearTo: point.year })} />
-            </details>
           </section>
         )}
 
