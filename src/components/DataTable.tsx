@@ -125,7 +125,6 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                 </td>
                 <td className="left cell-sub">
                   {group.sublabel}
-                  {grouping === 'mercato' && <small>{group.count === 2 ? 'Été + hiver' : group.mercatos?.[0]?.window === 1 ? 'Hiver' : 'Été'}</small>}
                 </td>
                 {grouping !== 'mercato' && <td className="num muted">{count(group.count)}</td>}
                 <td className="num neg">{money(group.spend)}</td>
@@ -159,7 +158,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             <span className="result-rank">{String(index + 1).padStart(2, '0')}</span>
             <span className="result-identity">
               <span className="result-name"><Flag code={group.flag} /><b>{group.label}</b></span>
-              <span>{group.sublabel}{grouping === 'mercato' ? ` · ${group.count === 2 ? 'Été + hiver' : '1 fenêtre'}` : ` · ${count(group.count)} fenêtres`}</span>
+              <span>{group.sublabel}{grouping !== 'mercato' && ` · ${count(group.count)} fenêtres`}</span>
             </span>
             <span className="result-money">
               <span><small>Achats</small><b className="num neg">{money(group.spend)}</b></span>
