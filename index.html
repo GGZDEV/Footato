@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Footato — Mercatos européens</title>
     <meta name="description" content="Achats, ventes et bilan de chaque mercato du football européen depuis 1992. Filtrez par championnat, club, saison et fenêtre de transfert." />
+    <meta name="theme-color" content="#071319" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('footato-theme');
+          document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
+        } catch {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
     <link rel="icon" href="%BASE_URL%favicon.svg" />
   </head>
   <body>

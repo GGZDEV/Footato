@@ -7,6 +7,7 @@ import { HonoursView } from './components/HonoursView';
 import { Kpis } from './components/Kpis';
 import { MercatoDetail } from './components/MercatoDetail';
 import { SeasonChart } from './components/SeasonChart';
+import { ThemeToggle } from './components/ThemeToggle';
 import {
   bySeason,
   filterMercatos,
@@ -355,9 +356,12 @@ export default function App() {
           ))}
         </nav>
 
-        <button className="data-pill" onClick={() => setSection('coverage')} title="Voir la qualité et les sources" aria-label="Voir la complétude et les sources">
-          <i aria-hidden="true" /><span>Données · {sourceDate}</span>
-        </button>
+        <div className="header-actions">
+          <ThemeToggle />
+          <button className="data-pill" onClick={() => setSection('coverage')} title="Voir la qualité et les sources" aria-label="Voir la complétude et les sources">
+            <i aria-hidden="true" /><span>Données · {sourceDate}</span>
+          </button>
+        </div>
       </header>
 
       <main id="main-content">
