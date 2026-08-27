@@ -71,8 +71,10 @@ export interface Group {
   };
   spendPerTitle?: number;
   count: number;
-  /** Present only when grouping by mercato — enables the detail drill-down. */
+  /** Present on the legacy per-window grouping. */
   mercato?: Mercato;
+  /** Present on the annual mercato view — one or two windows for a club and season. */
+  mercatos?: Mercato[];
 }
 
 const empty = (key: string, label: string, sublabel: string, flag: string): Group => ({
@@ -219,6 +221,45 @@ export interface SeasonPoint {
   spend: number;
   income: number;
   balance: number;
+}
+
+/**
+ * The product-facing mercato view: one row per club and season. Summer and
+ * winter stay available in `mercatos` for drill-down, but no longer compete as
+ * separate rows in the main table.
+ */
+export function groupAnnualMercatos(rows: Mercato[], includeLoanFees: boolean): Group[] {
+  const out = new Map<string, Group>();
+  for (const m of rows) {
+    const key = `${m.clubId}-${m.year}`;
+    let g = out.get(key);
+    if (!g) {
+      g = empty(key, m.club, season(m.year), m.league.code);
+      g.mercatos = [];
+      out.set(key, g);
+    }
+
+    const r = resolve(m, includeLoanFees);
+    g.spend += r.spend;
+    g.income += r.income;
+    g.volume += r.volume;
+    g.arrivals += m.arrivals.total;
+    g.departures += m.departures.total;
+    g.knownFees += m.arrivals.paid + m.departures.paid
+      + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0);
+    g.unknownFees += m.arrivals.undisclosed + m.departures.undisclosed;
+    g.count += 1;
+    g.mercatos!.push(m);
+    // Prefer the winter membership when a club changed league during a season.
+    if (m.window === 1) g.flag = m.league.code;
+  }
+
+  for (const g of out.values()) {
+    g.balance = g.income - g.spend;
+    g.coverage = feeCoverage(g.knownFees, g.unknownFees);
+    g.mercatos!.sort((a, b) => a.window - b.window);
+  }
+  return [...out.values()];
 }
 
 export type ChartMode = 'annual' | 'summer' | 'winter' | 'split';

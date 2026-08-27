@@ -12,9 +12,9 @@ interface Props {
 }
 
 const WINDOWS: { value: F['window']; label: string }[] = [
-  { value: 'all', label: 'Tous' },
-  { value: 0, label: 'Été' },
-  { value: 1, label: 'Hiver' },
+  { value: 'all', label: 'Année complète' },
+  { value: 0, label: 'Été seulement' },
+  { value: 1, label: 'Hiver seulement' },
 ];
 
 const BALANCES: { value: F['balance']; label: string }[] = [
@@ -26,16 +26,15 @@ const BALANCES: { value: F['balance']; label: string }[] = [
 export function Filters({ dataset, filters, onChange, onReset }: Props) {
   const { meta, leagues } = dataset;
   const [query, setQuery] = useState('');
-  const [open, setOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
+  const [advancedOpen, setAdvancedOpen] = useState(false);
   const blurTimer = useRef<number>();
 
-  /** Club id -> the league it most recently played in, for the autocomplete hint. */
   const clubIndex = useMemo(() => {
     const map = new Map<number, { id: number; name: string; league: string; year: number }>();
     for (const m of dataset.mercatos) {
-      const prev = map.get(m.clubId);
-      if (!prev || m.year >= prev.year) {
+      const previous = map.get(m.clubId);
+      if (!previous || m.year >= previous.year) {
         map.set(m.clubId, { id: m.clubId, name: m.club, league: m.league.name, year: m.year });
       }
     }
@@ -43,194 +42,201 @@ export function Filters({ dataset, filters, onChange, onReset }: Props) {
   }, [dataset]);
 
   const suggestions = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return [];
+    const search = query.trim().toLowerCase();
+    if (!search) return [];
     const chosen = new Set(filters.clubs);
-    return clubIndex.filter((c) => !chosen.has(c.id) && c.name.toLowerCase().includes(q)).slice(0, 40);
+    return clubIndex
+      .filter((club) => !chosen.has(club.id) && club.name.toLowerCase().includes(search))
+      .slice(0, 24);
   }, [query, clubIndex, filters.clubs]);
 
-  const years: number[] = [];
-  for (let y = meta.yearMin; y <= meta.yearMax; y++) years.push(y);
+  const years = useMemo(() => {
+    const result: number[] = [];
+    for (let year = meta.yearMin; year <= meta.yearMax; year += 1) result.push(year);
+    return result;
+  }, [meta.yearMin, meta.yearMax]);
 
-  const toggleLeague = (id: string) => {
-    const next = filters.leagues.includes(id)
-      ? filters.leagues.filter((l) => l !== id)
-      : [...filters.leagues, id];
-    onChange({ leagues: next });
-  };
+  const advancedCount = filters.leagues.length
+    + (filters.window === 'all' ? 0 : 1)
+    + (filters.balance === 'all' ? 0 : 1)
+    + (filters.minVolume > 0 ? 1 : 0)
+    + (filters.includeLoanFees ? 1 : 0);
+  const activeCount = advancedCount
+    + filters.clubs.length
+    + (filters.yearFrom !== 2000 || filters.yearTo !== meta.yearMax ? 1 : 0);
+
+  const toggleLeague = (id: string) => onChange({
+    leagues: filters.leagues.includes(id)
+      ? filters.leagues.filter((league) => league !== id)
+      : [...filters.leagues, id],
+  });
 
   const addClub = (id: number) => {
     onChange({ clubs: [...filters.clubs, id] });
     setQuery('');
-    setOpen(false);
+    setSuggestionsOpen(false);
   };
 
-  const activeCount =
-    filters.leagues.length + filters.clubs.length +
-    (filters.window === 'all' ? 0 : 1) + (filters.balance === 'all' ? 0 : 1) +
-    (filters.minVolume > 0 ? 1 : 0) +
-    (filters.includeLoanFees ? 1 : 0) +
-    (filters.yearFrom !== 2000 || filters.yearTo !== meta.yearMax ? 1 : 0);
-
   return (
-    <section className="panel filter-panel" data-open={mobileOpen}>
-      <div className="panel-head filter-panel-head">
-        <div>
-          <h2>Explorer les données</h2>
-          <p>{activeCount > 0
-            ? `${activeCount} filtre${activeCount > 1 ? 's' : ''} actif${activeCount > 1 ? 's' : ''}`
-            : 'Affinez par saison, championnat ou club'}</p>
+    <div className="filter-builder">
+      <div className="filter-bar">
+        <span className="control-label">Affiner</span>
+
+        <div className="filter-period" aria-label="Période">
+          <select
+            className="select compact-select"
+            aria-label="Saison de début"
+            value={filters.yearFrom}
+            onChange={(event) => {
+              const value = Number(event.target.value);
+              onChange({ yearFrom: value, yearTo: Math.max(value, filters.yearTo) });
+            }}
+          >
+            {years.map((year) => <option key={year} value={year}>{season(year)}</option>)}
+          </select>
+          <span aria-hidden="true">—</span>
+          <select
+            className="select compact-select"
+            aria-label="Saison de fin"
+            value={filters.yearTo}
+            onChange={(event) => {
+              const value = Number(event.target.value);
+              onChange({ yearTo: value, yearFrom: Math.min(value, filters.yearFrom) });
+            }}
+          >
+            {years.map((year) => <option key={year} value={year}>{season(year)}</option>)}
+          </select>
         </div>
-        <div className="spacer" style={{ flex: 1 }} />
-        {activeCount > 0 && <button className="link-btn" onClick={onReset}>Réinitialiser</button>}
+
+        <div className="autocomplete club-filter">
+          <input
+            className="input"
+            type="search"
+            autoComplete="off"
+            aria-label="Rechercher un club"
+            placeholder="Rechercher un club"
+            value={query}
+            onChange={(event) => { setQuery(event.target.value); setSuggestionsOpen(true); }}
+            onFocus={() => setSuggestionsOpen(true)}
+            onBlur={() => { blurTimer.current = window.setTimeout(() => setSuggestionsOpen(false), 120); }}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' && suggestions.length) { event.preventDefault(); addClub(suggestions[0].id); }
+              if (event.key === 'Escape') setSuggestionsOpen(false);
+            }}
+          />
+          {suggestionsOpen && suggestions.length > 0 && (
+            <ul onMouseDown={() => window.clearTimeout(blurTimer.current)}>
+              {suggestions.map((club) => (
+                <li key={club.id}>
+                  <button onClick={() => addClub(club.id)}>{club.name}<small>{club.league}</small></button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
         <button
-          className="mobile-filter-toggle"
-          onClick={() => setMobileOpen((value) => !value)}
-          aria-expanded={mobileOpen}
-          aria-controls="filter-controls"
+          className={`filter-more${advancedOpen ? ' open' : ''}`}
+          onClick={() => setAdvancedOpen((value) => !value)}
+          aria-expanded={advancedOpen}
         >
-          {mobileOpen ? 'Masquer' : 'Afficher'}
+          Filtres avancés{advancedCount ? <b>{advancedCount}</b> : null}
           <span aria-hidden="true">⌄</span>
         </button>
+
+        {activeCount > 0 && <button className="filter-reset" onClick={onReset}>Tout effacer</button>}
       </div>
 
-      <div className="filters" id="filter-controls">
-        <div className="filter-toolbar">
-          <label className="switch" title="Inclure les indemnités de prêt dans les montants.">
-            <input
-              type="checkbox"
-              checked={filters.includeLoanFees}
-              onChange={(e) => onChange({ includeLoanFees: e.target.checked })}
-            />
-            <span className="track" />
-            Inclure les indemnités de prêt
-          </label>
-          {activeCount > 0 && <button className="link-btn mobile-reset" onClick={onReset}>Réinitialiser</button>}
+      {filters.clubs.length > 0 && (
+        <div className="selected-filters" aria-label="Clubs sélectionnés">
+          {filters.clubs.map((id) => (
+            <button
+              key={id}
+              onClick={() => onChange({ clubs: filters.clubs.filter((clubId) => clubId !== id) })}
+              title="Retirer ce club"
+            >
+              {dataset.clubs[id]} <span aria-hidden="true">×</span>
+            </button>
+          ))}
         </div>
-        <div className="filter-row">
-          <div className="field">
-            <span className="field-label">Saisons</span>
-            <div className="range">
-              <select
-                className="select" aria-label="Saison de début" value={filters.yearFrom}
-                onChange={(e) => {
-                  const v = Number(e.target.value);
-                  onChange({ yearFrom: v, yearTo: Math.max(v, filters.yearTo) });
-                }}
-              >
-                {years.map((y) => <option key={y} value={y}>{season(y)}</option>)}
-              </select>
-              <span>→</span>
-              <select
-                className="select" aria-label="Saison de fin" value={filters.yearTo}
-                onChange={(e) => {
-                  const v = Number(e.target.value);
-                  onChange({ yearTo: v, yearFrom: Math.min(v, filters.yearFrom) });
-                }}
-              >
-                {years.map((y) => <option key={y} value={y}>{season(y)}</option>)}
-              </select>
+      )}
+
+      {advancedOpen && (
+        <div className="advanced-filters">
+          <div className="advanced-grid">
+            <div className="field">
+              <span className="field-label">Fenêtre</span>
+              <div className="segmented" role="group" aria-label="Fenêtre de transfert">
+                {WINDOWS.map((item) => (
+                  <button
+                    key={String(item.value)}
+                    aria-pressed={filters.window === item.value}
+                    onClick={() => onChange({ window: item.value })}
+                  >{item.label}</button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <span className="field-label">Fenêtre</span>
-            <div className="segmented" role="group" aria-label="Fenêtre de transfert">
-              {WINDOWS.map((w) => (
-                <button
-                  key={String(w.value)} aria-pressed={filters.window === w.value}
-                  onClick={() => onChange({ window: w.value })}
-                >{w.label}</button>
-              ))}
+            <div className="field">
+              <span className="field-label">Bilan</span>
+              <div className="segmented" role="group" aria-label="Bilan financier">
+                {BALANCES.map((item) => (
+                  <button
+                    key={item.value}
+                    aria-pressed={filters.balance === item.value}
+                    onClick={() => onChange({ balance: item.value })}
+                  >{item.label}</button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <span className="field-label">Bilan</span>
-            <div className="segmented" role="group" aria-label="Bilan">
-              {BALANCES.map((b) => (
-                <button
-                  key={b.value} aria-pressed={filters.balance === b.value}
-                  onClick={() => onChange({ balance: b.value })}
-                >{b.label}</button>
-              ))}
+            <div className="field volume-filter">
+              <label htmlFor="min-volume" className="field-label">Volume minimum</label>
+              <div className="input-suffix">
+                <input
+                  id="min-volume"
+                  className="input"
+                  type="number"
+                  min={0}
+                  step={5}
+                  value={filters.minVolume ? filters.minVolume / 1000 : ''}
+                  placeholder="0"
+                  onChange={(event) => onChange({ minVolume: Math.max(0, Number(event.target.value) || 0) * 1000 })}
+                />
+                <span>M€</span>
+              </div>
             </div>
+
+            <label className="switch loan-switch" title="Ajouter les indemnités de prêt publiées aux montants.">
+              <input
+                type="checkbox"
+                checked={filters.includeLoanFees}
+                onChange={(event) => onChange({ includeLoanFees: event.target.checked })}
+              />
+              <span className="track" />
+              Indemnités de prêt
+            </label>
           </div>
 
-          <div className="field">
-            <label htmlFor="minvol" className="field-label">Volume min. (M€)</label>
-            <input
-              id="minvol" className="input" type="number" min={0} step={5} style={{ width: 100 }}
-              value={filters.minVolume ? filters.minVolume / 1000 : ''}
-              placeholder="0"
-              onChange={(e) => onChange({ minVolume: Math.max(0, Number(e.target.value) || 0) * 1000 })}
-            />
-          </div>
-        </div>
-
-        <div className="filter-row">
-          <div className="field" style={{ flex: 1, minWidth: 280 }}>
+          <div className="field league-filter">
             <span className="field-label">Championnats</span>
-            <div className="chips">
-              {leagues.map((l) => (
+            <div className="league-grid">
+              {leagues.map((league) => (
                 <button
-                  key={l.id} className="chip" aria-pressed={filters.leagues.includes(l.id)}
-                  onClick={() => toggleLeague(l.id)}
-                  title={`${l.name} — ${l.country}`}
+                  key={league.id}
+                  className="league-chip"
+                  aria-pressed={filters.leagues.includes(league.id)}
+                  onClick={() => toggleLeague(league.id)}
                 >
-                  <Flag code={l.code} label={l.country} />{l.name}
+                  <Flag code={league.code} label={league.country} />
+                  <span>{league.name}</span>
+                  <i aria-hidden="true">✓</i>
                 </button>
               ))}
             </div>
           </div>
         </div>
-
-        <div className="filter-row">
-          <div className="field autocomplete" style={{ minWidth: 260 }}>
-            <label htmlFor="club-search" className="field-label">Club</label>
-            <input
-              id="club-search" className="input" type="search" autoComplete="off"
-              placeholder="Rechercher un club…"
-              value={query}
-              onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
-              onFocus={() => setOpen(true)}
-              onBlur={() => { blurTimer.current = window.setTimeout(() => setOpen(false), 120); }}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' && suggestions.length) { e.preventDefault(); addClub(suggestions[0].id); }
-                if (e.key === 'Escape') setOpen(false);
-              }}
-            />
-            {open && suggestions.length > 0 && (
-              <ul onMouseDown={() => window.clearTimeout(blurTimer.current)}>
-                {suggestions.map((c) => (
-                  <li key={c.id}>
-                    <button onClick={() => addClub(c.id)}>
-                      {c.name}<small>{c.league}</small>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          {filters.clubs.length > 0 && (
-            <div className="field" style={{ flex: 1 }}>
-              <span className="field-label">Clubs sélectionnés</span>
-              <div className="chips">
-                {filters.clubs.map((id) => (
-                  <button
-                    key={id} className="chip removable"
-                    onClick={() => onChange({ clubs: filters.clubs.filter((c) => c !== id) })}
-                    title="Retirer ce club"
-                  >
-                    <b>{dataset.clubs[id]}</b><span className="x">×</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
+      )}
+    </div>
   );
 }

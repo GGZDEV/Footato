@@ -56,7 +56,7 @@ export function SeasonChart({ points, onSelect }: Props) {
       <div ref={ref} style={{ position: 'relative' }}>
         {width > 0 && (
           <svg className="chart-svg" width={width} height={height} role="img"
-            aria-label={`Achats et ventes par fenêtre de transfert, de ${points[0].label} à ${points[last].label}`}>
+            aria-label={`Achats et ventes ${annual ? 'par saison' : 'par fenêtre de transfert'}, de ${points[0].label} à ${points[last].label}`}>
             <g transform={`translate(${margin.left},${margin.top})`}>
               {ticks.map((t) => (
                 <g key={t}>

@@ -1,48 +1,43 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { DataTable } from './components/DataTable';
 import { BrandMark } from './components/BrandMark';
+import { CompletenessView } from './components/CompletenessView';
+import { DataTable } from './components/DataTable';
 import { Filters } from './components/Filters';
+import { HonoursView, type TrophyScope } from './components/HonoursView';
 import { Kpis } from './components/Kpis';
 import { MercatoDetail } from './components/MercatoDetail';
 import { SeasonChart } from './components/SeasonChart';
 import {
-  bySeason, filterMercatos, group, sortGroups, totals,
-  type ChartMode, type Filters as F, type Grouping, type SortKey,
+  bySeason,
+  filterMercatos,
+  group,
+  groupAnnualMercatos,
+  sortGroups,
+  totals,
+  type Filters as F,
+  type Group,
+  type Grouping,
+  type SortKey,
 } from './lib/aggregate';
 import { loadDataset, loadFreshness } from './lib/data';
 import { season } from './lib/format';
-import type { Dataset, FreshnessData, FreshnessSignal } from './lib/types';
+import type { Dataset, FreshnessData } from './lib/types';
 
-const TABS: { value: Grouping; label: string; hint: string }[] = [
-  { value: 'mercato', label: 'Mercatos', hint: 'Une ligne par club et par fenêtre de transfert' },
-  { value: 'club', label: 'Clubs', hint: 'Cumul sur toute la période filtrée' },
+type AppSection = 'market' | 'honours' | 'coverage';
+type QuickView = 'overview' | 'spend-decade' | 'profit' | 'income' | null;
+
+const GROUPINGS: { value: Grouping; label: string; hint: string }[] = [
+  { value: 'mercato', label: 'Mercatos', hint: 'Un club et une saison par ligne' },
+  { value: 'club', label: 'Clubs', hint: 'Cumul sur la période' },
   { value: 'league', label: 'Championnats', hint: 'Cumul par championnat' },
-  { value: 'season', label: 'Saisons', hint: 'Cumul par fenêtre de transfert' },
+  { value: 'season', label: 'Saisons', hint: 'Été et hiver séparés' },
 ];
 
-const CHART_MODES: { value: ChartMode; label: string; title: string }[] = [
-  { value: 'annual', label: 'Année', title: 'Fusionner été et hiver par saison' },
-  { value: 'summer', label: 'Été', title: 'Afficher uniquement les mercatos d’été' },
-  { value: 'winter', label: 'Hiver', title: 'Afficher uniquement les mercatos d’hiver' },
-  { value: 'split', label: 'Séparés', title: 'Afficher été et hiver séparément' },
+const SECTIONS: { value: AppSection; label: string }[] = [
+  { value: 'market', label: 'Marché' },
+  { value: 'honours', label: 'Palmarès' },
+  { value: 'coverage', label: 'Complétude' },
 ];
-
-type TrophyScope = 'all' | 'league' | 'domesticCup' | 'leagueCup' | 'europe' | 'supercup' | 'world';
-
-const TROPHY_SCOPES: { value: TrophyScope; label: string; shortLabel: string }[] = [
-  { value: 'all', label: 'Tous les trophées', shortLabel: 'Tous' },
-  { value: 'league', label: 'Championnats', shortLabel: 'Champ.' },
-  { value: 'domesticCup', label: 'Coupes nationales', shortLabel: 'Coupes' },
-  { value: 'leagueCup', label: 'Coupes de la Ligue', shortLabel: 'C. Ligue' },
-  { value: 'europe', label: 'Europe : LDC, Europa, Conference', shortLabel: 'Europe' },
-  { value: 'supercup', label: 'Supercoupes nationales et UEFA', shortLabel: 'Supercoupes' },
-  { value: 'world', label: 'Titres mondiaux FIFA', shortLabel: 'Monde' },
-];
-
-const categoryMatchesScope = (category: string, scope: TrophyScope) => scope === 'all'
-  || category === scope
-  || (scope === 'europe' && ['championsLeague', 'europaLeague', 'conferenceLeague'].includes(category))
-  || (scope === 'supercup' && ['domesticSupercup', 'uefaSupercup'].includes(category));
 
 const defaults = (yearMax: number): F => ({
   yearFrom: 2000,
@@ -58,66 +53,52 @@ const defaults = (yearMax: number): F => ({
 interface UrlState {
   filters: F;
   grouping: Grouping;
-  chartMode: ChartMode;
   sort: { key: SortKey; dir: 1 | -1 };
   selected: string | null;
-  limit: number | null;
-  titleFilter: 'all' | 'with' | 'without';
-  trophyScope: TrophyScope;
+  section: AppSection;
 }
 
-function encode(s: UrlState): string {
-  const p = new URLSearchParams();
-  const f = s.filters;
-  p.set('y', `${f.yearFrom}-${f.yearTo}`);
-  if (f.window !== 'all') p.set('w', String(f.window));
-  if (f.leagues.length) p.set('l', f.leagues.join(','));
-  if (f.clubs.length) p.set('c', f.clubs.join(','));
-  if (f.balance !== 'all') p.set('b', f.balance);
-  if (f.minVolume) p.set('v', String(f.minVolume));
-  if (f.includeLoanFees) p.set('lf', '1');
-  if (s.grouping !== 'mercato') p.set('g', s.grouping);
-  if (s.chartMode !== 'split') p.set('cm', s.chartMode);
-  p.set('s', `${s.sort.key}:${s.sort.dir}`);
-  if (s.selected) p.set('m', s.selected);
-  if (s.limit) p.set('top', String(s.limit));
-  if (s.titleFilter !== 'all') p.set('tf', s.titleFilter);
-  if (s.trophyScope !== 'all') p.set('ts', s.trophyScope);
-  return p.toString();
+function encode(state: UrlState): string {
+  const params = new URLSearchParams();
+  const { filters } = state;
+  params.set('y', `${filters.yearFrom}-${filters.yearTo}`);
+  if (filters.window !== 'all') params.set('w', String(filters.window));
+  if (filters.leagues.length) params.set('l', filters.leagues.join(','));
+  if (filters.clubs.length) params.set('c', filters.clubs.join(','));
+  if (filters.balance !== 'all') params.set('b', filters.balance);
+  if (filters.minVolume) params.set('v', String(filters.minVolume));
+  if (filters.includeLoanFees) params.set('lf', '1');
+  if (state.grouping !== 'mercato') params.set('g', state.grouping);
+  if (state.section !== 'market') params.set('p', state.section);
+  params.set('s', `${state.sort.key}:${state.sort.dir}`);
+  if (state.selected) params.set('m', state.selected);
+  return params.toString();
 }
 
 function decode(hash: string, yearMax: number): UrlState | null {
   if (!hash || hash.length < 2) return null;
   try {
-    const p = new URLSearchParams(hash.slice(1));
-    const f = defaults(yearMax);
-    const y = p.get('y')?.split('-').map(Number);
-    if (y?.length === 2 && y.every(Number.isFinite)) { f.yearFrom = y[0]; f.yearTo = y[1]; }
-    const w = p.get('w');
-    if (w === '0' || w === '1') f.window = Number(w) as 0 | 1;
-    if (p.get('l')) f.leagues = p.get('l')!.split(',').filter(Boolean);
-    if (p.get('c')) f.clubs = p.get('c')!.split(',').map(Number).filter(Number.isFinite);
-    const b = p.get('b');
-    if (b === 'positive' || b === 'negative') f.balance = b;
-    f.minVolume = Number(p.get('v')) || 0;
-    f.includeLoanFees = p.get('lf') === '1';
-
-    const g = p.get('g') as Grouping | null;
-    const requestedChartMode = p.get('cm') as ChartMode | null;
-    const chartMode = requestedChartMode && CHART_MODES.some((mode) => mode.value === requestedChartMode)
-      ? requestedChartMode
-      : f.window === 0 ? 'summer' : f.window === 1 ? 'winter' : 'split';
-    f.window = chartMode === 'summer' ? 0 : chartMode === 'winter' ? 1 : 'all';
-    const [sk, sd] = (p.get('s') ?? 'volume:-1').split(':');
+    const params = new URLSearchParams(hash.slice(1));
+    const filters = defaults(yearMax);
+    const range = params.get('y')?.split('-').map(Number);
+    if (range?.length === 2 && range.every(Number.isFinite)) [filters.yearFrom, filters.yearTo] = range;
+    const window = params.get('w');
+    if (window === '0' || window === '1') filters.window = Number(window) as 0 | 1;
+    if (params.get('l')) filters.leagues = params.get('l')!.split(',').filter(Boolean);
+    if (params.get('c')) filters.clubs = params.get('c')!.split(',').map(Number).filter(Number.isFinite);
+    const balance = params.get('b');
+    if (balance === 'positive' || balance === 'negative') filters.balance = balance;
+    filters.minVolume = Number(params.get('v')) || 0;
+    filters.includeLoanFees = params.get('lf') === '1';
+    const requestedGrouping = params.get('g') as Grouping | null;
+    const requestedSection = params.get('p') as AppSection | null;
+    const [sortKey, sortDirection] = (params.get('s') ?? 'volume:-1').split(':');
     return {
-      filters: f,
-      grouping: g && TABS.some((t) => t.value === g) ? g : 'mercato',
-      chartMode,
-      sort: { key: (sk || 'volume') as SortKey, dir: sd === '1' ? 1 : -1 },
-      selected: p.get('m'),
-      limit: [10, 20].includes(Number(p.get('top'))) ? Number(p.get('top')) : null,
-      titleFilter: p.get('tf') === 'with' || p.get('tf') === 'without' ? p.get('tf') as 'with' | 'without' : 'all',
-      trophyScope: TROPHY_SCOPES.some((scope) => scope.value === p.get('ts')) ? p.get('ts') as TrophyScope : 'all',
+      filters,
+      grouping: requestedGrouping && GROUPINGS.some((item) => item.value === requestedGrouping) ? requestedGrouping : 'mercato',
+      section: requestedSection && SECTIONS.some((item) => item.value === requestedSection) ? requestedSection : 'market',
+      sort: { key: (sortKey || 'volume') as SortKey, dir: sortDirection === '1' ? 1 : -1 },
+      selected: params.get('m'),
     };
   } catch {
     return null;
@@ -135,397 +116,322 @@ function restoreClubAliases(state: UrlState, dataset: Dataset): UrlState {
   return state;
 }
 
+const categoryMatchesScope = (category: string, scope: TrophyScope) => scope === 'all'
+  || category === scope
+  || (scope === 'europe' && ['championsLeague', 'europaLeague', 'conferenceLeague'].includes(category))
+  || (scope === 'supercup' && ['domesticSupercup', 'uefaSupercup'].includes(category));
+
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [freshness, setFreshness] = useState<FreshnessData | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
 
+  const [section, setSection] = useState<AppSection>('market');
   const [filters, setFilters] = useState<F>(defaults(2026));
   const [grouping, setGrouping] = useState<Grouping>('mercato');
-  const [chartMode, setChartMode] = useState<ChartMode>('split');
   const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({ key: 'volume', dir: -1 });
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
-  const [rankingLimit, setRankingLimit] = useState<number | null>(null);
-  const [titleFilter, setTitleFilter] = useState<'all' | 'with' | 'without'>('all');
+  const [quickView, setQuickView] = useState<QuickView>('overview');
   const [trophyScope, setTrophyScope] = useState<TrophyScope>('all');
-  const [ready, setReady] = useState(false);
+  const [honourFrom, setHonourFrom] = useState(2000);
+  const [honourTo, setHonourTo] = useState(2024);
+  const [honourPeriodReady, setHonourPeriodReady] = useState(false);
 
   useEffect(() => {
     loadFreshness().then(setFreshness);
     loadDataset()
-      .then((d) => {
-        const decoded = decode(window.location.hash, d.meta.yearMax);
-        const restored = decoded ? restoreClubAliases(decoded, d) : null;
-        setDataset(d);
+      .then((loaded) => {
+        const restored = decode(window.location.hash, loaded.meta.yearMax);
+        setDataset(loaded);
         if (restored) {
-          setFilters(restored.filters);
-          setGrouping(restored.grouping);
-          setChartMode(restored.chartMode);
-          setSort(restored.sort);
-          setSelectedKey(restored.selected);
-          setRankingLimit(restored.limit);
-          setTitleFilter(restored.titleFilter);
-          setTrophyScope(restored.trophyScope);
+          const state = restoreClubAliases(restored, loaded);
+          setFilters(state.filters);
+          setGrouping(state.grouping);
+          setSort(state.sort);
+          setSelectedKey(state.selected);
+          setSection(state.section);
+          setQuickView(null);
         } else {
-          setFilters(defaults(d.meta.yearMax));
+          setFilters(defaults(loaded.meta.yearMax));
         }
         setReady(true);
       })
-      .catch((e: Error) => setError(e.message));
+      .catch((caught: Error) => setError(caught.message));
   }, []);
 
-  // Keep the address bar in sync so any view can be bookmarked or shared.
+  useEffect(() => {
+    if (honourPeriodReady || freshness?.honours?.meta.status !== 'ready') return;
+    setHonourFrom(Math.max(2000, freshness.honours.meta.commonYearMin ?? 2000));
+    setHonourTo(freshness.honours.meta.commonYearMax ?? 2024);
+    setHonourPeriodReady(true);
+  }, [freshness, honourPeriodReady]);
+
   useEffect(() => {
     if (!ready) return;
-    const next = `#${encode({ filters, grouping, chartMode, sort, selected: selectedKey, limit: rankingLimit, titleFilter, trophyScope })}`;
-    if (next !== window.location.hash) {
-      window.history.replaceState(null, '', next);
-    }
-  }, [ready, filters, grouping, chartMode, sort, selectedKey, rankingLimit, titleFilter, trophyScope]);
+    const next = `#${encode({ filters, grouping, sort, selected: selectedKey, section })}`;
+    if (next !== window.location.hash) window.history.replaceState(null, '', next);
+  }, [ready, filters, grouping, sort, selectedKey, section]);
 
-  const patch = useCallback((p: Partial<F>) => {
-    setRankingLimit(null);
-    setTitleFilter('all');
-    setFilters((f) => ({ ...f, ...p }));
-    if (p.window === 0) setChartMode('summer');
-    else if (p.window === 1) setChartMode('winter');
-    else if (p.window === 'all') setChartMode((mode) => (mode === 'summer' || mode === 'winter' ? 'split' : mode));
+  const patchFilters = useCallback((patch: Partial<F>) => {
+    setFilters((current) => ({ ...current, ...patch }));
+    setQuickView(null);
+    setSelectedKey(null);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    if (!dataset) return;
+    setFilters(defaults(dataset.meta.yearMax));
+    setQuickView(grouping === 'mercato' ? 'overview' : null);
+    setSelectedKey(null);
+  }, [dataset, grouping]);
+
+  const resetAll = useCallback(() => {
+    if (!dataset) return;
+    setSection('market');
+    setFilters(defaults(dataset.meta.yearMax));
+    setGrouping('mercato');
+    setSort({ key: 'volume', dir: -1 });
+    setSelectedKey(null);
+    setQuickView('overview');
+    setTrophyScope('all');
+    if (freshness?.honours?.meta.status === 'ready') {
+      setHonourFrom(Math.max(2000, freshness.honours.meta.commonYearMin ?? 2000));
+      setHonourTo(freshness.honours.meta.commonYearMax ?? 2024);
+    }
+  }, [dataset, freshness]);
+
+  const applyQuickView = useCallback((view: Exclude<QuickView, null>) => {
+    if (!dataset) return;
+    const base = defaults(dataset.meta.yearMax);
+    setQuickView(view);
+    setSelectedKey(null);
+    if (view === 'overview') {
+      setFilters(base);
+      setGrouping('mercato');
+      setSort({ key: 'volume', dir: -1 });
+    } else if (view === 'spend-decade') {
+      setFilters({ ...base, yearFrom: Math.floor(dataset.meta.yearMax / 10) * 10 });
+      setGrouping('club');
+      setSort({ key: 'spend', dir: -1 });
+    } else if (view === 'profit') {
+      setFilters({ ...base, balance: 'positive' });
+      setGrouping('club');
+      setSort({ key: 'balance', dir: -1 });
+    } else {
+      setFilters(base);
+      setGrouping('club');
+      setSort({ key: 'income', dir: -1 });
+    }
+  }, [dataset]);
+
+  const onGrouping = useCallback((next: Grouping) => {
+    setGrouping(next);
+    setQuickView(null);
+    setSelectedKey(null);
+    setSort((current) => next === 'mercato' && current.key === 'count' ? { key: 'volume', dir: -1 } : current);
+  }, []);
+
+  const onSort = useCallback((key: SortKey) => {
+    setQuickView(null);
+    setSort((current) => current.key === key
+      ? { key, dir: (current.dir * -1) as 1 | -1 }
+      : { key, dir: key === 'label' || key === 'sublabel' ? 1 : -1 });
   }, []);
 
   const refreshFreshness = useCallback(async () => {
     setRefreshing(true);
-    setFreshness(await loadFreshness(true));
-    setRefreshing(false);
+    try { setFreshness(await loadFreshness(true)); } finally { setRefreshing(false); }
   }, []);
-  const reset = useCallback(() => {
-    if (dataset) {
-      setFilters(defaults(dataset.meta.yearMax));
-      setChartMode('split');
-      setRankingLimit(null);
-      setTitleFilter('all');
-      setTrophyScope('all');
+
+  const rows = useMemo(() => dataset ? filterMercatos(dataset.mercatos, filters) : [], [dataset, filters]);
+  const summary = useMemo(() => totals(rows, filters.includeLoanFees), [rows, filters.includeLoanFees]);
+  const points = useMemo(() => bySeason(rows, filters.includeLoanFees, 'annual'), [rows, filters.includeLoanFees]);
+  const marketGroups = useMemo(() => {
+    const grouped = grouping === 'mercato'
+      ? groupAnnualMercatos(rows, filters.includeLoanFees)
+      : group(rows, grouping, filters.includeLoanFees);
+    return sortGroups(grouped, sort.key, sort.dir);
+  }, [rows, grouping, filters.includeLoanFees, sort]);
+  const selectedMercatos = useMemo(
+    () => marketGroups.find((item) => item.key === selectedKey)?.mercatos ?? null,
+    [marketGroups, selectedKey],
+  );
+
+  const honourGroups = useMemo(() => {
+    if (!dataset || freshness?.honours?.meta.status !== 'ready') return [];
+    const honourRows = dataset.mercatos.filter((item) => item.year >= honourFrom && item.year <= honourTo);
+    const clubs = group(honourRows, 'club', false);
+    const titles = new Map<number, NonNullable<Group['titleBreakdown']>>();
+    for (const title of freshness.honours.titles) {
+      const clubId = title.winner.clubId;
+      if (clubId == null || title.season < honourFrom || title.season > honourTo) continue;
+      const current = titles.get(clubId) ?? {
+        league: 0,
+        domesticCup: 0,
+        leagueCup: 0,
+        championsLeague: 0,
+        europaLeague: 0,
+        conferenceLeague: 0,
+        domesticSupercup: 0,
+        uefaSupercup: 0,
+        world: 0,
+      };
+      current[title.category] += 1;
+      titles.set(clubId, current);
     }
-  }, [dataset]);
-
-  const rows = useMemo(
-    () => (dataset ? filterMercatos(dataset.mercatos, filters) : []),
-    [dataset, filters],
-  );
-  const t = useMemo(() => totals(rows, filters.includeLoanFees), [rows, filters.includeLoanFees]);
-  const points = useMemo(
-    () => bySeason(rows, filters.includeLoanFees, chartMode),
-    [rows, filters.includeLoanFees, chartMode],
-  );
-  const honoursReady = freshness?.honours?.meta.status === 'ready';
-  const honoursComparable = honoursReady
-    && freshness.honours.meta.commonYearMin != null
-    && freshness.honours.meta.commonYearMax != null
-    && filters.yearFrom >= freshness.honours.meta.commonYearMin
-    && filters.yearTo <= freshness.honours.meta.commonYearMax;
-  const groups = useMemo(() => {
-    const baseGroups = group(rows, grouping, filters.includeLoanFees);
-    if (grouping === 'club' && honoursComparable) {
-      const titles = new Map<number, NonNullable<(typeof baseGroups)[number]['titleBreakdown']>>();
-      for (const title of freshness.honours.titles) {
-        const clubId = title.winner.clubId;
-        if (clubId == null || title.season < filters.yearFrom || title.season > filters.yearTo) continue;
-        const current = titles.get(clubId) ?? {
-          league: 0, domesticCup: 0, leagueCup: 0, championsLeague: 0,
-          europaLeague: 0, conferenceLeague: 0, domesticSupercup: 0, uefaSupercup: 0, world: 0,
-        };
-        current[title.category] += 1;
-        titles.set(clubId, current);
-      }
-      for (const item of baseGroups) {
-        const titleCounts = titles.get(Number(item.key)) ?? {
-          league: 0, domesticCup: 0, leagueCup: 0, championsLeague: 0,
-          europaLeague: 0, conferenceLeague: 0, domesticSupercup: 0, uefaSupercup: 0, world: 0,
-        };
-        item.titleBreakdown = titleCounts;
-        item.titles = Object.entries(titleCounts)
-          .filter(([category]) => categoryMatchesScope(category, trophyScope))
-          .reduce((sum, [, value]) => sum + value, 0);
-        item.spendPerTitle = item.titles ? item.spend / item.titles : Number.POSITIVE_INFINITY;
-      }
+    for (const club of clubs) {
+      club.titleBreakdown = titles.get(Number(club.key)) ?? {
+        league: 0,
+        domesticCup: 0,
+        leagueCup: 0,
+        championsLeague: 0,
+        europaLeague: 0,
+        conferenceLeague: 0,
+        domesticSupercup: 0,
+        uefaSupercup: 0,
+        world: 0,
+      };
+      club.titles = Object.entries(club.titleBreakdown)
+        .filter(([category]) => categoryMatchesScope(category, trophyScope))
+        .reduce((sum, [, value]) => sum + value, 0);
+      club.spendPerTitle = club.titles ? club.spend / club.titles : Number.POSITIVE_INFINITY;
     }
-    return sortGroups(baseGroups, sort.key, sort.dir);
-  }, [rows, grouping, filters.includeLoanFees, filters.yearFrom, filters.yearTo, sort, freshness, honoursComparable, trophyScope]);
-  const titleFilteredGroups = useMemo(
-    () => titleFilter === 'all' ? groups : groups.filter((item) => titleFilter === 'with' ? (item.titles ?? 0) > 0 : (item.titles ?? 0) === 0),
-    [groups, titleFilter],
+    return clubs;
+  }, [dataset, freshness, honourFrom, honourTo, trophyScope]);
+
+  const coverageGroups = useMemo(
+    () => dataset ? group(dataset.mercatos, 'league', false) : [],
+    [dataset],
   );
-
-  const selected = useMemo(
-    () => (dataset && selectedKey ? dataset.mercatos.find((m) => m.key === selectedKey) ?? null : null),
-    [dataset, selectedKey],
-  );
-
-  const onSort = useCallback((key: SortKey) => {
-    setRankingLimit(null);
-    setSort((s) => (s.key === key ? { key, dir: (s.dir * -1) as 1 | -1 } : { key, dir: key === 'label' || key === 'sublabel' ? 1 : -1 }));
-  }, []);
-
-  const onGrouping = useCallback((g: Grouping) => {
-    setRankingLimit(null);
-    setTitleFilter('all');
-    setGrouping(g);
-    setSort((s) => (g === 'mercato' && s.key === 'count' ? { key: 'volume', dir: -1 } : s));
-  }, []);
-
-  const onChartMode = useCallback((mode: ChartMode) => {
-    setRankingLimit(null);
-    setChartMode(mode);
-    setFilters((f) => ({
-      ...f,
-      window: mode === 'summer' ? 0 : mode === 'winter' ? 1 : 'all',
-    }));
-  }, []);
-
-  const applyRanking = useCallback((preset: 'spend-decade' | 'profit' | 'income' | 'coverage' | 'titles' | 'efficient' | 'no-title') => {
-    if (!dataset) return;
-    const base = defaults(dataset.meta.yearMax);
-    setTitleFilter('all');
-    setTrophyScope('all');
-    if (preset === 'spend-decade') {
-      setFilters({ ...base, yearFrom: Math.floor(dataset.meta.yearMax / 10) * 10 });
-      setGrouping('club'); setSort({ key: 'spend', dir: -1 }); setRankingLimit(10);
-    } else if (preset === 'profit') {
-      setFilters({ ...base, balance: 'positive' });
-      setGrouping('club'); setSort({ key: 'balance', dir: -1 }); setRankingLimit(20);
-    } else if (preset === 'income') {
-      setFilters(base);
-      setGrouping('club'); setSort({ key: 'income', dir: -1 }); setRankingLimit(10);
-    } else if (preset === 'coverage') {
-      setFilters(base);
-      setGrouping('league'); setSort({ key: 'coverage', dir: -1 }); setRankingLimit(null);
-    } else {
-      const honourStart = Math.max(2000, freshness?.honours?.meta.commonYearMin ?? 2000);
-      const honourEnd = freshness?.honours?.meta.commonYearMax ?? base.yearTo;
-      setFilters({ ...base, yearFrom: honourStart, yearTo: honourEnd });
-      setGrouping('club');
-      if (preset === 'titles') setSort({ key: 'titles', dir: -1 });
-      else if (preset === 'efficient') { setSort({ key: 'spendPerTitle', dir: 1 }); setTitleFilter('with'); }
-      else { setSort({ key: 'spend', dir: -1 }); setTitleFilter('without'); }
-      setRankingLimit(20);
-    }
-    setChartMode('split');
-    setSelectedKey(null);
-  }, [dataset, freshness]);
 
   if (error) {
-    return (
-      <div className="center-state">
-        <div className="error-box">
-          <strong>Les données n’ont pas pu être chargées.</strong>
-          <p style={{ marginBottom: 0 }}>{error}</p>
-          <code>npm run data</code>
-        </div>
-      </div>
-    );
+    return <div className="center-state"><div className="error-box"><strong>Les données n’ont pas pu être chargées.</strong><p>{error}</p><code>npm run data</code></div></div>;
   }
-
-  if (!dataset) {
-    return <div className="center-state"><span className="ball">⚽</span>Chargement des mercatos…</div>;
-  }
+  if (!dataset) return <div className="center-state"><BrandMark /><span>Chargement des mercatos…</span></div>;
 
   const { meta } = dataset;
-  const tab = TABS.find((x) => x.value === grouping)!;
-  const currentDate = new Date();
-  const currentSeasonYear = currentDate.getMonth() >= 6 ? currentDate.getFullYear() : currentDate.getFullYear() - 1;
-  const laggingLeagues = dataset.leagues.filter(
-    (league) => (meta.coverageByLeague[league.id]?.yearMax ?? -Infinity) < meta.yearMax,
-  );
   const sourceDate = meta.sourceUpdatedAt
-    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })
-        .format(new Date(`${meta.sourceUpdatedAt}T12:00:00Z`))
+    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(`${meta.sourceUpdatedAt}T12:00:00Z`))
     : 'date inconnue';
-  const rosterDate = freshness?.meta.status === 'ready' && freshness.meta.fetchedAt
-    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
-        .format(new Date(freshness.meta.fetchedAt))
-    : 'en attente';
-  const rosterTitle = freshness?.meta.status === 'ready'
-    ? `Effectifs football-data.org contrôlés le ${new Date(freshness.meta.fetchedAt!).toLocaleString('fr-FR')} · ${freshness.meta.teamCount} équipes · ${freshness.meta.playerCount.toLocaleString('fr-FR')} joueurs. Ce bouton recharge le dernier relevé publié.`
-    : 'Le premier relevé football-data.org sera créé par le prochain déploiement GitHub Actions.';
-  const visibleSignals = freshness?.signals.slice(0, 8) ?? [];
-  const decadeStart = Math.floor(meta.yearMax / 10) * 10;
+  const currentGrouping = GROUPINGS.find((item) => item.value === grouping)!;
+  const quickViewLabel = quickView === 'overview' ? 'Vue globale'
+    : quickView === 'spend-decade' ? 'Plus gros acheteurs'
+      : quickView === 'profit' ? 'Plus gros bénéfices'
+        : quickView === 'income' ? 'Meilleures ventes'
+          : 'Vue personnalisée';
+  const honourMin = Math.max(2000, freshness?.honours?.meta.commonYearMin ?? 2000);
+  const honourMax = freshness?.honours?.meta.commonYearMax ?? 2024;
 
   return (
     <div className="app">
-      <header className="hero-header">
-        <div className="brand-row">
-          <div className="brand">
-            <BrandMark />
-            <div>
-              <h1>Footato</h1>
-              <span>Football transfer intelligence</span>
-            </div>
-          </div>
-          <div className="data-status" aria-label="État des sources">
-            <div className="freshness source-money" title={`Dernière modification de la source des montants : ${meta.sourceUpdatedAt ?? 'inconnue'}`}>
-              <i aria-hidden="true" />
-              <span><span className="freshness-label">Montants · </span>{sourceDate}</span>
-            </div>
-            <button
-              className="freshness source-rosters"
-              title={rosterTitle}
-              onClick={refreshFreshness}
-              disabled={refreshing}
-              aria-label={`${rosterTitle} Recharger maintenant.`}
-            >
-              <i aria-hidden="true" />
-              <span><span className="freshness-label">Effectifs · </span>{refreshing ? 'vérification…' : rosterDate}</span>
-              <b aria-hidden="true">↻</b>
-            </button>
-          </div>
-        </div>
+      <header className="app-header">
+        <button className="brand-button" onClick={resetAll} title="Réinitialiser et revenir au marché" aria-label="Footato — réinitialiser toute la vue">
+          <BrandMark />
+          <span><b>Footato</b><small>Transfer intelligence</small></span>
+        </button>
 
-        <div className="hero-metrics" aria-label="Périmètre des données">
-          <div><strong>{meta.movementCount.toLocaleString('fr-FR')}</strong><span>mouvements</span></div>
-          <div><strong>{meta.clubCount}</strong><span>clubs</span></div>
-          <div><strong>{dataset.leagues.length}</strong><span>championnats</span></div>
-          <div><strong>{season(meta.yearMin)} — {season(meta.yearMax)}</strong><span>couverture</span></div>
-        </div>
+        <nav className="primary-nav" aria-label="Sections principales">
+          {SECTIONS.map((item) => (
+            <button key={item.value} aria-current={section === item.value ? 'page' : undefined} onClick={() => { setSection(item.value); setSelectedKey(null); }}>
+              {item.label}
+            </button>
+          ))}
+        </nav>
+
+        <button className="data-pill" onClick={() => setSection('coverage')} title="Voir la qualité et les sources" aria-label="Voir la complétude et les sources">
+          <i aria-hidden="true" /><span>Données · {sourceDate}</span>
+        </button>
       </header>
 
-      <Filters dataset={dataset} filters={filters} onChange={patch} onReset={reset} />
-
-      {freshness?.meta.status === 'ready' && visibleSignals.length > 0 && (
-        <section className="panel roster-signals" aria-labelledby="roster-signals-title">
-          <div className="panel-head">
-            <div>
-              <h2 id="roster-signals-title">Changements d’effectif détectés</h2>
-              <p>Signaux football-data.org à confirmer — exclus des montants et agrégats</p>
-            </div>
-            <span className="signal-count">{freshness.meta.signalCount} sur 30 jours</span>
-          </div>
-          <div className="signal-grid">
-            {visibleSignals.map((signal: FreshnessSignal) => (
-              <article className={`signal-card signal-${signal.kind}`} key={`${signal.kind}-${signal.playerId}-${signal.fromTeam?.id ?? 0}-${signal.toTeam?.id ?? 0}`}>
-                <strong>{signal.playerName}</strong>
-                <span>{signal.fromTeam?.name ?? 'Nouveau dans le périmètre'} <b aria-hidden="true">→</b> {signal.toTeam?.name ?? 'Sorti du périmètre'}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <Kpis t={t} />
-
-      <section className="panel">
-        <div className="panel-head chart-panel-head">
-          <h2>Achats et ventes dans le temps</h2>
-          <p>Cliquez un point pour filtrer la vue</p>
-          <div className="spacer" />
-          <div className="segmented chart-modes" role="group" aria-label="Affichage du graphique">
-            {CHART_MODES.map((mode) => (
-              <button
-                key={mode.value}
-                aria-pressed={chartMode === mode.value}
-                onClick={() => onChartMode(mode.value)}
-                title={mode.title}
-              >
-                {mode.label}
-              </button>
-            ))}
-          </div>
-        </div>
-        <SeasonChart
-          points={points}
-          onSelect={(p) => patch({ yearFrom: p.year, yearTo: p.year, window: p.window })}
-        />
-      </section>
-
-      <section className="panel">
-        <div className="panel-head">
-          <div className="segmented view-tabs" role="group" aria-label="Regroupement">
-            {TABS.map((x) => (
-              <button key={x.value} aria-pressed={grouping === x.value} onClick={() => onGrouping(x.value)}>
-                {x.label}
-              </button>
-            ))}
-          </div>
-          <p>{tab.hint}</p>
-        </div>
-        <nav className="ranking-shortcuts" aria-label="Vues rapides">
-          <span>Vues rapides</span>
-          <button onClick={() => applyRanking('spend-decade')}>Dépenses {decadeStart}–{meta.yearMax}</button>
-          <button onClick={() => applyRanking('profit')}>Top bénéfices</button>
-          <button onClick={() => applyRanking('income')}>Top ventes</button>
-          <button onClick={() => applyRanking('coverage')}>Complétude</button>
-          {honoursReady && <>
-            <button onClick={() => applyRanking('titles')}>Plus de trophées</button>
-            <button onClick={() => applyRanking('efficient')}>Coût / trophée</button>
-            <button onClick={() => applyRanking('no-title')}>Dépensiers sans trophée</button>
-          </>}
-        </nav>
-        {grouping === 'club' && honoursComparable && (
-          <div className="honours-toolbar">
-            <label htmlFor="trophy-scope">Trophées comptés</label>
-            <select
-              id="trophy-scope"
-              className="select trophy-select"
-              value={trophyScope}
-              onChange={(event) => {
-                setRankingLimit(null);
-                setTitleFilter('all');
-                setTrophyScope(event.target.value as TrophyScope);
-              }}
-            >
-              {TROPHY_SCOPES.map((scope) => <option key={scope.value} value={scope.value}>{scope.label}</option>)}
-            </select>
-            <details className="trophy-legend">
-              <summary>Légende</summary>
+      <main>
+        {section === 'market' && (
+          <section className="content-section market-section">
+            <div className="section-title market-title">
               <div>
-                <b>CH</b> championnat · <b>CN</b> coupe nationale · <b>CL</b> coupe de la Ligue ·
-                <b> LDC</b> Champions League · <b>UEL</b> Europa · <b>UECL</b> Conference ·
-                <b> SCN</b> supercoupe nationale · <b>SCU</b> Supercoupe UEFA · <b>MON</b> monde FIFA
+                <span className="eyebrow-label">Analyse des transferts</span>
+                <h1>Explorer le marché</h1>
+                <p>{season(filters.yearFrom)} — {season(filters.yearTo)} · {quickViewLabel}</p>
               </div>
-            </details>
-            <span title={`${freshness.honours.meta.competitionCount} compétitions · ${freshness.honours.meta.matchedTitleCount} trophées rattachés · ${freshness.honours.meta.outsideScopeTitleCount ?? 0} remportés hors des sept pays`}>
-              2000/01–2024/25 · {freshness.honours.meta.competitionCount} compétitions · chaque trophée compte pour 1
-            </span>
-          </div>
-        )}
-        <DataTable
-          groups={rankingLimit ? titleFilteredGroups.slice(0, rankingLimit) : titleFilteredGroups}
-          grouping={grouping}
-          sort={sort}
-          onSort={onSort}
-          onSelect={(g) => g.mercato && setSelectedKey(g.mercato.key)}
-          selectedKey={selectedKey ?? undefined}
-          showHonours={grouping === 'club' && honoursComparable}
-          trophyScope={trophyScope}
-          trophyScopeLabel={TROPHY_SCOPES.find((scope) => scope.value === trophyScope)?.shortLabel ?? 'Tous'}
-        />
-      </section>
+            </div>
 
-      <footer className="source-note" style={{ textAlign: 'left', paddingTop: 8 }}>
-        Montants en euros, tels que publiés par Transfermarkt. Les transferts dont le montant n’a pas été
-        divulgué comptent comme 0 € : le total réel est donc un plancher, pas une valeur exacte.
-        {laggingLeagues.length > 0 && (
-          <> Couverture récente indisponible pour {laggingLeagues.map((league) => league.name).join(', ')} ;
-          leur historique est conservé sans extrapolation.</>
-        )}{' '}
-        {meta.yearMax < currentSeasonYear && (
-          <>La saison {season(currentSeasonYear)} n’est pas publiée tant que l’amont ne permet pas
-          de rattacher les clubs à leur championnat avec fiabilité.</>
-        )}{' '}
-        Les effectifs de sept championnats et de la Ligue des champions sont contrôlés automatiquement via{' '}
-        <a href="https://www.football-data.org/" target="_blank" rel="noreferrer">football-data.org</a> ;
-        leurs écarts restent séparés des statistiques financières jusqu’à confirmation. Le palmarès comparable
-        couvre les trophées officiels majeurs des sept pays, les compétitions UEFA et les titres mondiaux FIFA ;
-        les éditions non disputées sont explicitement exclues et chaque trophée a le même poids.
+            <Kpis t={summary} />
+
+            <section className="panel results-panel">
+              <div className="results-header">
+                <div>
+                  <span className="eyebrow-label">Résultats</span>
+                  <h2>{currentGrouping.label}</h2>
+                  <p>{currentGrouping.hint}</p>
+                </div>
+                <div className="view-control">
+                  <span className="control-label">Regrouper par</span>
+                  <div className="segmented view-tabs" role="group" aria-label="Regroupement du tableau">
+                    {GROUPINGS.map((item) => (
+                      <button key={item.value} aria-pressed={grouping === item.value} onClick={() => onGrouping(item.value)}>{item.label}</button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="quick-views" aria-label="Raccourcis d’analyse">
+                <span><b>Raccourcis</b><small>Ils préremplissent la vue et les filtres</small></span>
+                <button aria-pressed={quickView === 'overview'} onClick={() => applyQuickView('overview')}>Vue globale</button>
+                <button aria-pressed={quickView === 'spend-decade'} onClick={() => applyQuickView('spend-decade')}>Plus gros acheteurs</button>
+                <button aria-pressed={quickView === 'income'} onClick={() => applyQuickView('income')}>Meilleures ventes</button>
+                <button aria-pressed={quickView === 'profit'} onClick={() => applyQuickView('profit')}>Plus gros bénéfices</button>
+                {quickView === null && <span className="custom-view">Personnalisée</span>}
+              </div>
+
+              <Filters dataset={dataset} filters={filters} onChange={patchFilters} onReset={resetFilters} />
+
+              <DataTable
+                groups={marketGroups}
+                grouping={grouping}
+                sort={sort}
+                onSort={onSort}
+                onSelect={(item) => item.mercatos && setSelectedKey(item.key)}
+                selectedKey={selectedKey ?? undefined}
+              />
+            </section>
+
+            <details className="panel trend-disclosure">
+              <summary><span><b>Évolution dans le temps</b><small>Achats et ventes réunis par saison</small></span><span aria-hidden="true">⌄</span></summary>
+              <SeasonChart points={points} onSelect={(point) => patchFilters({ yearFrom: point.year, yearTo: point.year })} />
+            </details>
+          </section>
+        )}
+
+        {section === 'honours' && freshness?.honours?.meta.status === 'ready' && (
+          <HonoursView
+            groups={honourGroups}
+            yearMin={honourFrom}
+            yearMax={honourTo}
+            availableYearMin={honourMin}
+            availableYearMax={honourMax}
+            scope={trophyScope}
+            onPeriodChange={(from, to) => { setHonourFrom(from); setHonourTo(to); }}
+            onScopeChange={setTrophyScope}
+          />
+        )}
+
+        {section === 'honours' && freshness?.honours?.meta.status !== 'ready' && (
+          <div className="center-state"><span>Le palmarès est en cours de préparation.</span></div>
+        )}
+
+        {section === 'coverage' && (
+          <CompletenessView groups={coverageGroups} freshness={freshness} sourceDate={sourceDate} refreshing={refreshing} onRefresh={refreshFreshness} />
+        )}
+      </main>
+
+      <footer className="app-footer">
+        <span>{meta.movementCount.toLocaleString('fr-FR')} mouvements · {meta.clubCount} clubs · {dataset.leagues.length} championnats</span>
+        <span>Montants publiés par Transfermarkt · les valeurs non divulguées ne sont pas estimées</span>
       </footer>
 
-      {selected && (
-        <MercatoDetail
-          mercato={selected}
-          dataset={dataset}
-          includeLoanFees={filters.includeLoanFees}
-          onSelect={(m) => setSelectedKey(m.key)}
-          onClose={() => setSelectedKey(null)}
-        />
+      {selectedMercatos && (
+        <MercatoDetail mercatos={selectedMercatos} dataset={dataset} includeLoanFees={filters.includeLoanFees} onClose={() => setSelectedKey(null)} />
       )}
     </div>
   );

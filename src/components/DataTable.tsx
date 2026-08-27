@@ -11,7 +11,7 @@ interface Column {
 }
 
 const HEADS: Record<Grouping, [string, string]> = {
-  mercato: ['Club', 'Mercato'],
+  mercato: ['Club', 'Saison'],
   club: ['Club', 'Championnat'],
   league: ['Championnat', 'Pays'],
   season: ['Saison', 'Fenêtre'],
@@ -22,109 +22,64 @@ interface Props {
   grouping: Grouping;
   sort: { key: SortKey; dir: 1 | -1 };
   onSort: (key: SortKey) => void;
-  onSelect: (g: Group) => void;
+  onSelect: (group: Group) => void;
   selectedKey?: string;
-  showHonours?: boolean;
-  trophyScope?: string;
-  trophyScopeLabel?: string;
 }
 
-const TROPHY_BADGES = [
-  { key: 'league', label: 'CH', title: 'Championnats' },
-  { key: 'domesticCup', label: 'CN', title: 'Coupes nationales' },
-  { key: 'leagueCup', label: 'CL', title: 'Coupes de la Ligue' },
-  { key: 'championsLeague', label: 'LDC', title: 'Ligues des champions' },
-  { key: 'europaLeague', label: 'UEL', title: 'Coupes UEFA / Europa League' },
-  { key: 'conferenceLeague', label: 'UECL', title: 'Conference League' },
-  { key: 'domesticSupercup', label: 'SCN', title: 'Supercoupes nationales' },
-  { key: 'uefaSupercup', label: 'SCU', title: 'Supercoupes UEFA' },
-  { key: 'world', label: 'MON', title: 'Titres mondiaux FIFA' },
-] as const;
+const PAGE = 25;
 
-const trophyDetails = (g: Group) => TROPHY_BADGES
-  .map((badge) => `${badge.title} : ${g.titleBreakdown?.[badge.key] ?? 0}`)
-  .join(' · ');
-
-function TrophyBadges({ group }: { group: Group }) {
-  return (
-    <span className="trophy-badges" aria-label={trophyDetails(group)}>
-      {TROPHY_BADGES.map((badge) => {
-        const value = group.titleBreakdown?.[badge.key] ?? 0;
-        return value > 0 ? <span key={badge.key} title={`${badge.title} : ${value}`}><i>{badge.label}</i>{value}</span> : null;
-      })}
-    </span>
-  );
-}
-
-const PAGE = 100;
-
-export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey, showHonours = false, trophyScope = 'all', trophyScopeLabel = 'Tous' }: Props) {
+export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKey }: Props) {
   const [limit, setLimit] = useState(PAGE);
+  const interactive = grouping === 'mercato';
 
   const columns = useMemo<Column[]>(() => {
-    const [labelHead, subHead] = HEADS[grouping];
-    const cols: Column[] = [
+    const [labelHead, sublabelHead] = HEADS[grouping];
+    const result: Column[] = [
       { key: 'label', label: labelHead, align: 'left' },
-      { key: 'sublabel', label: subHead, align: 'left' },
+      { key: 'sublabel', label: sublabelHead, align: 'left' },
     ];
-    if (grouping !== 'mercato') cols.push({ key: 'count', label: 'Mercatos' });
-    if (grouping === 'club' && showHonours) cols.push(
-      { key: 'titles', label: trophyScope === 'all' ? 'Trophées' : `Trophées · ${trophyScopeLabel}`, title: 'Trophées officiels remportés sur la période et dans la famille sélectionnée' },
-      { key: 'spendPerTitle', label: 'Coût / trophée', title: 'Achats documentés divisés par le nombre de trophées sélectionnés' },
-    );
-    cols.push(
-      { key: 'arrivals', label: 'Arr.', title: 'Nombre d’arrivées' },
+    if (grouping !== 'mercato') result.push({ key: 'count', label: 'Fenêtres' });
+    result.push(
       { key: 'spend', label: 'Achats' },
-      { key: 'departures', label: 'Dép.', title: 'Nombre de départs' },
       { key: 'income', label: 'Ventes' },
       { key: 'balance', label: 'Bilan' },
       { key: 'volume', label: 'Volume', title: 'Achats + ventes' },
-      { key: 'coverage', label: 'Complétude', title: 'Indemnités publiques ÷ (publiques + explicitement indisponibles)' },
     );
-    return cols;
-  }, [grouping, showHonours, trophyScope, trophyScopeLabel]);
+    return result;
+  }, [grouping]);
 
   const maxBalance = useMemo(
-    () => groups.slice(0, limit).reduce((n, g) => Math.max(n, Math.abs(g.balance)), 0) || 1,
+    () => groups.slice(0, limit).reduce((value, group) => Math.max(value, Math.abs(group.balance)), 0) || 1,
     [groups, limit],
   );
-
   const visible = groups.slice(0, limit);
 
   const exportCsv = () => {
-    const monetary = new Set<SortKey>(['spend', 'income', 'balance', 'volume', 'spendPerTitle']);
-    const percentage = new Set<SortKey>(['coverage']);
-    const csvCell = (value: string | number) => {
+    const monetary = new Set<SortKey>(['spend', 'income', 'balance', 'volume']);
+    const cell = (value: string | number) => {
       const text = String(value);
       return /[;"\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
     };
-    const trophyHeads = grouping === 'club' && showHonours ? TROPHY_BADGES.map((badge) => badge.title) : [];
-    const head = ['rang', ...columns.map((c) => monetary.has(c.key) ? `${c.label} (M€)` : percentage.has(c.key) ? `${c.label} (%)` : c.label), ...trophyHeads];
-    const lines = [head.map(csvCell).join(';')];
-    groups.forEach((g, i) => {
-      const cells = columns.map((c) => {
-        const v = g[c.key];
-        if (typeof v === 'number' && monetary.has(c.key)) return (v / 1000).toFixed(3).replace('.', ',');
-        if (typeof v === 'number' && percentage.has(c.key)) return (v * 100).toFixed(1).replace('.', ',');
-        return String(v);
+    const lines = [["rang", ...columns.map((column) => monetary.has(column.key) ? `${column.label} (M€)` : column.label)].map(cell).join(';')];
+    groups.forEach((group, index) => {
+      const values = columns.map((column) => {
+        const value = group[column.key];
+        return typeof value === 'number' && monetary.has(column.key)
+          ? (value / 1000).toFixed(3).replace('.', ',')
+          : String(value);
       });
-      const trophyCells = grouping === 'club' && showHonours
-        ? TROPHY_BADGES.map((badge) => g.titleBreakdown?.[badge.key] ?? 0)
-        : [];
-      lines.push([i + 1, ...cells, ...trophyCells].map(csvCell).join(';'));
+      lines.push([index + 1, ...values].map(cell).join(';'));
     });
     const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `footato-${grouping}.csv`;
-    a.click();
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `footato-${grouping}.csv`;
+    anchor.click();
     URL.revokeObjectURL(url);
   };
 
-  if (groups.length === 0) {
-    return <div className="empty">Aucun mercato ne correspond à ces filtres.</div>;
-  }
+  if (groups.length === 0) return <div className="empty">Aucun résultat pour cette sélection.</div>;
 
   return (
     <>
@@ -132,17 +87,18 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
         <table>
           <thead>
             <tr>
-              <th className="left" scope="col"><button style={{ cursor: 'default' }} tabIndex={-1}>#</button></th>
-              {columns.map((c) => {
-                const isSorted = sort.key === c.key;
+              <th className="left rank-head" scope="col">#</th>
+              {columns.map((column) => {
+                const active = sort.key === column.key;
                 return (
                   <th
-                    key={c.key} scope="col" className={c.align === 'left' ? 'left' : undefined}
-                    aria-sort={isSorted ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined}
+                    key={column.key}
+                    scope="col"
+                    className={column.align === 'left' ? 'left' : undefined}
+                    aria-sort={active ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined}
                   >
-                    <button onClick={() => onSort(c.key)} title={c.title ?? `Trier par ${c.label.toLowerCase()}`}>
-                      {c.label}
-                      <span className="arrow">{isSorted ? (sort.dir === 1 ? '▲' : '▼') : '↕'}</span>
+                    <button onClick={() => onSort(column.key)} title={column.title ?? `Trier par ${column.label.toLowerCase()}`}>
+                      {column.label}<span className="arrow">{active ? (sort.dir === 1 ? '↑' : '↓') : ''}</span>
                     </button>
                   </th>
                 );
@@ -150,51 +106,42 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             </tr>
           </thead>
           <tbody>
-            {visible.map((g, i) => (
+            {visible.map((group, index) => (
               <tr
-                key={g.key}
-                className={`clickable${selectedKey === g.key ? ' active' : ''}`}
-                onClick={() => onSelect(g)}
-                tabIndex={0}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect(g); } }}
+                key={group.key}
+                className={`${interactive ? 'clickable' : ''}${selectedKey === group.key ? ' active' : ''}`}
+                onClick={() => interactive && onSelect(group)}
+                tabIndex={interactive ? 0 : undefined}
+                onKeyDown={(event) => {
+                  if (interactive && (event.key === 'Enter' || event.key === ' ')) {
+                    event.preventDefault();
+                    onSelect(group);
+                  }
+                }}
               >
-                <td className="left rank">{i + 1}</td>
+                <td className="left rank">{index + 1}</td>
                 <td className="left">
-                  <span className="cell-name">
-                    <Flag code={g.flag} />
-                    <b>{g.label}</b>
-                  </span>
+                  <span className="cell-name"><Flag code={group.flag} /><b>{group.label}</b></span>
                 </td>
-                <td className="left cell-sub">{g.sublabel}</td>
-                {grouping !== 'mercato' && <td className="num">{count(g.count)}</td>}
-                {grouping === 'club' && showHonours && <>
-                  <td className="num honours-cell" title={`${count(g.titles ?? 0)} dans la sélection · ${trophyDetails(g)}`}>
-                    <span className="trophy-total">{count(g.titles ?? 0)}</span>
-                    <TrophyBadges group={g} />
-                  </td>
-                  <td className="num muted">{g.titles ? money(g.spendPerTitle ?? 0) : '—'}</td>
-                </>}
-                <td className="num muted">{count(g.arrivals)}</td>
-                <td className="num neg">{money(g.spend)}</td>
-                <td className="num muted">{count(g.departures)}</td>
-                <td className="num pos">{money(g.income)}</td>
+                <td className="left cell-sub">
+                  {group.sublabel}
+                  {grouping === 'mercato' && <small>{group.count === 2 ? 'Été + hiver' : group.mercatos?.[0]?.window === 1 ? 'Hiver' : 'Été'}</small>}
+                </td>
+                {grouping !== 'mercato' && <td className="num muted">{count(group.count)}</td>}
+                <td className="num neg">{money(group.spend)}</td>
+                <td className="num pos">{money(group.income)}</td>
                 <td className="num bar-cell">
                   <span
                     className="bar"
                     style={{
-                      right: 6,
-                      width: `${(Math.abs(g.balance) / maxBalance) * 78}%`,
-                      background: g.balance >= 0 ? 'var(--in)' : 'var(--out)',
+                      right: 8,
+                      width: `${(Math.abs(group.balance) / maxBalance) * 72}%`,
+                      background: group.balance >= 0 ? 'var(--in)' : 'var(--out)',
                     }}
                   />
-                  <span className={`v ${g.balance >= 0 ? 'pos' : 'neg'}`}>{money(g.balance, { sign: true })}</span>
+                  <span className={`v ${group.balance >= 0 ? 'pos' : 'neg'}`}>{money(group.balance, { sign: true })}</span>
                 </td>
-                <td className="num muted">{money(g.volume)}</td>
-                <td className="num">
-                  <span className={`coverage-badge ${g.coverage >= .8 ? 'high' : g.coverage >= .6 ? 'medium' : 'low'}`}>
-                    {Math.round(g.coverage * 100)}%
-                  </span>
-                </td>
+                <td className="num muted">{money(group.volume)}</td>
               </tr>
             ))}
           </tbody>
@@ -202,48 +149,37 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       </div>
 
       <div className="mobile-results">
-        {visible.map((g, i) => (
+        {visible.map((group, index) => (
           <button
-            className={`result-card${selectedKey === g.key ? ' active' : ''}`}
-            key={g.key}
-            onClick={() => onSelect(g)}
-            disabled={!g.mercato}
+            className={`result-card${selectedKey === group.key ? ' active' : ''}`}
+            key={group.key}
+            onClick={() => onSelect(group)}
+            disabled={!interactive}
           >
-            <span className="result-rank">#{i + 1}</span>
+            <span className="result-rank">{String(index + 1).padStart(2, '0')}</span>
             <span className="result-identity">
-              <span className="result-name"><Flag code={g.flag} /><b>{g.label}</b></span>
-              <span>{g.sublabel}{grouping !== 'mercato' ? ` · ${count(g.count)} mercatos` : ''}</span>
-              {grouping === 'club' && showHonours && (
-                <span className="mobile-trophies">
-                  <b>{count(g.titles ?? 0)} trophée{g.titles === 1 ? '' : 's'} {trophyScope === 'all' ? '' : `· ${trophyScopeLabel}`}</b>
-                  <TrophyBadges group={g} />
-                  {g.titles ? <small>{money(g.spendPerTitle ?? 0)} / trophée</small> : null}
-                </span>
-              )}
+              <span className="result-name"><Flag code={group.flag} /><b>{group.label}</b></span>
+              <span>{group.sublabel}{grouping === 'mercato' ? ` · ${group.count === 2 ? 'Été + hiver' : '1 fenêtre'}` : ` · ${count(group.count)} fenêtres`}</span>
             </span>
             <span className="result-money">
-              <span><small>Achats</small><b className="num neg">{money(g.spend)}</b></span>
-              <span><small>Ventes</small><b className="num pos">{money(g.income)}</b></span>
-              <span><small>Bilan</small><b className={`num ${g.balance >= 0 ? 'pos' : 'neg'}`}>{money(g.balance, { sign: true })}</b></span>
+              <span><small>Achats</small><b className="num neg">{money(group.spend)}</b></span>
+              <span><small>Ventes</small><b className="num pos">{money(group.income)}</b></span>
+              <span><small>Bilan</small><b className={`num ${group.balance >= 0 ? 'pos' : 'neg'}`}>{money(group.balance, { sign: true })}</b></span>
             </span>
             <span className="result-meta">
-              <span>{count(g.arrivals)} arrivées · {count(g.departures)} départs</span>
-              <span>Volume {money(g.volume)} · Complétude {Math.round(g.coverage * 100)}%</span>
+              <span>{count(group.arrivals)} arrivées · {count(group.departures)} départs</span>
+              <span>{interactive ? 'Voir le détail →' : `Volume ${money(group.volume)}`}</span>
             </span>
           </button>
         ))}
       </div>
 
       <div className="table-foot">
-        <span>
-          {count(Math.min(limit, groups.length))} sur {count(groups.length)} ligne{groups.length > 1 ? 's' : ''}
-        </span>
-        {limit < groups.length && (
-          <button className="btn" onClick={() => setLimit((l) => l + PAGE * 4)}>Afficher plus</button>
-        )}
+        <span>{count(Math.min(limit, groups.length))} sur {count(groups.length)}</span>
+        {limit < groups.length && <button className="btn" onClick={() => setLimit((value) => value + PAGE * 4)}>Afficher plus</button>}
         <div className="spacer" />
-        {grouping === 'mercato' && <span className="desktop-hint">Cliquez sur une ligne pour ouvrir le détail du mercato</span>}
-        <button className="btn" onClick={exportCsv}>Exporter en CSV</button>
+        {interactive && <span className="desktop-hint">Une ligne = été + hiver · cliquez pour séparer les fenêtres</span>}
+        <button className="btn" onClick={exportCsv}>CSV</button>
       </div>
     </>
   );
