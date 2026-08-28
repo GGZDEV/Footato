@@ -23,7 +23,10 @@
     "collector:verify": "node scripts/verify-collector.mjs",
     "test": "npm run data:validate && npm run collector:verify && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify && npm run typecheck",
     "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:collect && npm run data:latest && npm run data:build && npm run data:fresh && npm run data:validate && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify",
-    "data": "npm run data:refresh"
+    "data": "npm run data:refresh",
+    "refresh:site": "npm run data:collect && npm run data:latest && npm run data:build && npm run data:validate && npm run collector:verify && npm run analytics:verify && npm run build",
+    "refresh:site:full": "npm run data:fetch && npm run data:recent && npm run refresh:site",
+    "serve": "node server/serve.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

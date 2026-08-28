@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-08-28T06:53:23.948Z",
+  "collectedAt": "2026-08-28T08:35:19.330Z",
   "source": "transfermarkt.com",
   "method": "first-party collector (scripts/collect-transfermarkt.mjs)",
   "seasons": [
@@ -18,16 +18,25 @@
     "SA1"
   ],
   "lastRun": {
-    "at": "2026-08-28T06:53:23.948Z",
+    "at": "2026-08-28T08:35:19.330Z",
     "seasons": [
       2026
     ],
     "leagues": [
-      "GB1"
+      "GB1",
+      "ES1",
+      "IT1",
+      "DE1",
+      "FR1",
+      "PT1",
+      "NL1",
+      "RU1",
+      "GB2",
+      "SA1"
     ],
-    "movementCount": 469,
+    "movementCount": 4912,
     "duplicatesRemoved": 0,
-    "requestCount": 2,
+    "requestCount": 20,
     "unlockerRequestCount": 0
   },
   "compositions": [
@@ -36,7 +45,7 @@
       "season": 2026,
       "teamCount": 18,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:28:03.109Z",
+      "collectedAt": "2026-08-28T08:34:43.292Z",
       "clubs": [
         {
           "id": "3",
@@ -117,7 +126,7 @@
       "season": 2026,
       "teamCount": 20,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:27:50.868Z",
+      "collectedAt": "2026-08-28T08:34:31.526Z",
       "clubs": [
         {
           "id": "621",
@@ -206,7 +215,7 @@
       "season": 2026,
       "teamCount": 18,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:28:11.555Z",
+      "collectedAt": "2026-08-28T08:34:49.254Z",
       "clubs": [
         {
           "id": "290",
@@ -287,7 +296,7 @@
       "season": 2026,
       "teamCount": 20,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-28T06:53:23.895Z",
+      "collectedAt": "2026-08-28T08:34:25.236Z",
       "clubs": [
         {
           "id": "989",
@@ -376,7 +385,7 @@
       "season": 2026,
       "teamCount": 24,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:28:39.780Z",
+      "collectedAt": "2026-08-28T08:35:13.371Z",
       "clubs": [
         {
           "id": "337",
@@ -481,7 +490,7 @@
       "season": 2026,
       "teamCount": 20,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:27:55.324Z",
+      "collectedAt": "2026-08-28T08:34:37.327Z",
       "clubs": [
         {
           "id": "5",
@@ -570,7 +579,7 @@
       "season": 2026,
       "teamCount": 18,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:28:24.115Z",
+      "collectedAt": "2026-08-28T08:35:01.282Z",
       "clubs": [
         {
           "id": "1268",
@@ -651,7 +660,7 @@
       "season": 2026,
       "teamCount": 18,
       "membershipControl": "openfootball",
-      "collectedAt": "2026-08-27T22:28:17.136Z",
+      "collectedAt": "2026-08-28T08:34:55.292Z",
       "clubs": [
         {
           "id": "7788",
@@ -732,7 +741,7 @@
       "season": 2026,
       "teamCount": 16,
       "membershipControl": null,
-      "collectedAt": "2026-08-27T22:28:31.165Z",
+      "collectedAt": "2026-08-28T08:35:07.390Z",
       "clubs": [
         {
           "id": "3725",
@@ -805,7 +814,7 @@
       "season": 2026,
       "teamCount": 18,
       "membershipControl": null,
-      "collectedAt": "2026-08-27T22:28:46.461Z",
+      "collectedAt": "2026-08-28T08:35:19.308Z",
       "clubs": [
         {
           "id": "40039",

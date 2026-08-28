@@ -1,0 +1,43 @@
+services:
+  footato:
+    build: .
+    container_name: footato
+    restart: unless-stopped
+
+    # Exposé sur la boucle locale uniquement : Nginx Proxy Manager se charge du
+    # domaine et du TLS. Rien n'écoute directement sur le réseau.
+    ports:
+      - '127.0.0.1:8080:8080'
+
+    environment:
+      # Cadence de la collecte. 6 h suffit largement : Transfermarkt publie en
+      # continu, mais une passe coûte ~30 requêtes et rien ne presse.
+      REFRESH_INTERVAL_HOURS: '6'
+      # Une passe sur quatre retélécharge les instantanés tiers (20 Mo). Les
+      # trois autres se contentent de relire Transfermarkt.
+      REFRESH_FULL_EVERY: '4'
+      # Sans ce jeton, le bouton « Collecter maintenant » reste inactif et
+      # l'endpoint refuse tout — la collecte automatique, elle, continue.
+      # Générez-le avec :  openssl rand -hex 24
+      FOOTATO_ADMIN_TOKEN: ${FOOTATO_ADMIN_TOKEN:-}
+      # Facultatif : route les pages refusées via Bright Data. Inutile ici,
+      # puisque la collecte part déjà d'une adresse résidentielle.
+      BRIGHTDATA_API_KEY: ${BRIGHTDATA_API_KEY:-}
+      # Facultatif : active le contrôle d'effectifs football-data.org.
+      FOOTBALL_DATA_TOKEN: ${FOOTBALL_DATA_TOKEN:-}
+      TZ: ${TZ:-Europe/Paris}
+
+    volumes:
+      # Un seul volume pour tout data/ : les instantanés tiers (20 Mo qu'on
+      # évite de reprendre à chaque redémarrage), l'historique des exécutions,
+      # et surtout la collecte — qui n'est pas retéléchargeable, puisque c'est
+      # la lecture de pages qui changent chaque jour.
+      #
+      # Docker l'initialise au premier lancement avec le contenu de l'image,
+      # donc la collecte versionnée sert de point de départ. Ensuite le volume
+      # fait foi : une reconstruction d'image ne l'écrase pas, ce qui est voulu
+      # — l'instance qui tourne est plus à jour que le dépôt.
+      - footato-data:/app/data
+
+volumes:
+  footato-data:

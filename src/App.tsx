@@ -20,13 +20,19 @@ import {
   type Grouping,
   type SortKey,
 } from './lib/aggregate';
-import { loadDataset, loadFreshness, loadLatest } from './lib/data';
+import { loadDataset, loadFreshness, loadLatest, loadServerStatus, triggerRefresh } from './lib/data';
 import { season } from './lib/format';
 import { titleWeight, trophyFamily, type TitlePointBreakdown } from './lib/honours';
-import type { Dataset, FreshnessData, LatestData } from './lib/types';
+import type { Dataset, FreshnessData, LatestData, ServerStatus } from './lib/types';
 
 type AppSection = 'market' | 'honours' | 'coverage';
 type QuickView = 'overview' | 'spend-decade' | 'profit' | 'income' | null;
+
+/**
+ * Admin token of the self-hosted service, kept in this browser only. It is never
+ * part of the build, so the same bundle stays publishable on a static host.
+ */
+const TOKEN_KEY = 'footato.adminToken';
 
 const GROUPINGS: { value: Grouping; label: string; hint: string }[] = [
   { value: 'mercato', label: 'Mercatos', hint: 'Un club et une saison par ligne' },
@@ -122,6 +128,11 @@ export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [freshness, setFreshness] = useState<FreshnessData | null>(null);
   const [latest, setLatest] = useState<LatestData | null>(null);
+  // Null tant qu'aucun service de collecte ne répond : sur un hébergement
+  // statique les commandes correspondantes restent masquées.
+  const [server, setServer] = useState<ServerStatus | null>(null);
+  const [collecting, setCollecting] = useState(false);
+  const [collectMessage, setCollectMessage] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
@@ -139,6 +150,7 @@ export default function App() {
   useEffect(() => {
     loadFreshness().then(setFreshness);
     loadLatest().then(setLatest);
+    loadServerStatus().then(setServer);
     loadDataset()
       .then((loaded) => {
         const restored = decode(window.location.hash, loaded.meta.yearMax);
@@ -253,6 +265,59 @@ export default function App() {
    * up a newer publication without a full reload, so the button is labelled for
    * what it actually does rather than implying it fetches transfers.
    */
+  /**
+   * Asks the self-hosted service to collect now.
+   *
+   * The admin token is typed once and kept in this browser only. It is never
+   * part of the build, so the same bundle stays publishable on a static host
+   * where the whole control is hidden anyway.
+   */
+  const collectNow = useCallback(async () => {
+    if (!server?.refreshEnabled) {
+      setCollectMessage('Le serveur n’a pas de FOOTATO_ADMIN_TOKEN : déclenchement désactivé.');
+      return;
+    }
+    let token = '';
+    try { token = localStorage.getItem(TOKEN_KEY) ?? ''; } catch { /* stockage indisponible */ }
+    if (!token) {
+      token = window.prompt('Jeton d’administration (FOOTATO_ADMIN_TOKEN)') ?? '';
+      if (!token) return;
+      try { localStorage.setItem(TOKEN_KEY, token); } catch { /* non bloquant */ }
+    }
+
+    setCollecting(true);
+    setCollectMessage('Collecte demandée…');
+    const outcome = await triggerRefresh(token);
+    setCollectMessage(outcome.message);
+    // A rejected token is worth forgetting, otherwise every later attempt fails
+    // silently against a value the user can no longer see or correct.
+    if (!outcome.ok && /jeton/i.test(outcome.message)) {
+      try { localStorage.removeItem(TOKEN_KEY); } catch { /* non bloquant */ }
+    }
+    if (!outcome.ok) { setCollecting(false); return; }
+
+    // The build takes a couple of minutes; follow it rather than guessing.
+    const started = Date.now();
+    const poll = async () => {
+      const status = await loadServerStatus();
+      if (status) setServer(status);
+      if (status && !status.running && Date.now() - started > 5_000) {
+        setCollecting(false);
+        setCollectMessage(status.lastOutcome === 'success'
+          ? 'Collecte terminée — rechargez pour voir les nouveaux chiffres.'
+          : `Collecte échouée${status.lastError ? ` : ${status.lastError}` : ''}.`);
+        return;
+      }
+      if (Date.now() - started > 10 * 60_000) {
+        setCollecting(false);
+        setCollectMessage('Collecte toujours en cours après 10 minutes — voyez les journaux du conteneur.');
+        return;
+      }
+      setTimeout(poll, 4_000);
+    };
+    setTimeout(poll, 4_000);
+  }, [server]);
+
   const refreshChecks = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -484,7 +549,7 @@ export default function App() {
         )}
 
         {section === 'coverage' && (
-          <CompletenessView groups={coverageGroups} freshness={freshness} latest={latest} sourceDate={sourceDate} meta={meta} leagues={dataset.leagues} refreshing={refreshing} onRefresh={refreshChecks} />
+          <CompletenessView groups={coverageGroups} freshness={freshness} latest={latest} sourceDate={sourceDate} meta={meta} leagues={dataset.leagues} refreshing={refreshing} onRefresh={refreshChecks} server={server} collecting={collecting} collectMessage={collectMessage} onCollect={collectNow} />
         )}
       </main>
 

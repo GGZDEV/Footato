@@ -1,4 +1,4 @@
-import type { Dataset, FreshnessData, LatestData, League, Mercato, Meta, Movement, Window } from './types';
+import type { Dataset, FreshnessData, LatestData, League, Mercato, Meta, Movement, ServerStatus, Window } from './types';
 
 interface RawSummary {
   meta: Meta;
@@ -75,6 +75,37 @@ export async function loadLatest(cacheBust = false): Promise<LatestData | null> 
     return await res.json() as LatestData;
   } catch {
     return null;
+  }
+}
+
+/**
+ * Detects the self-hosted refresh service. Returns null on a static host, where
+ * /api/status simply does not exist — the page then hides the controls rather
+ * than offering a button nothing can answer.
+ */
+export async function loadServerStatus(): Promise<ServerStatus | null> {
+  try {
+    const res = await fetch('/api/status', { cache: 'no-store' });
+    if (!res.ok) return null;
+    const body = await res.json() as ServerStatus;
+    return typeof body?.refreshEnabled === 'boolean' ? body : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Asks the service for a collection. The token never leaves the browser except as a bearer. */
+export async function triggerRefresh(token: string, mode: 'light' | 'full' = 'light'): Promise<{ ok: boolean; message: string }> {
+  try {
+    const res = await fetch(`/api/refresh?mode=${mode}`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    const body = await res.json().catch(() => ({})) as { error?: string };
+    if (res.status === 202) return { ok: true, message: 'Collecte lancée' };
+    return { ok: false, message: body.error ?? `Refusé (HTTP ${res.status})` };
+  } catch (error) {
+    return { ok: false, message: (error as Error).message };
   }
 }
 

@@ -28,9 +28,7 @@ SSC Napoli,Vanja Milinković-Savić,29,Goalkeeper,Torino FC,€6.00m,in,Summer,6
 SSC Napoli,Benoît Badiashile,25,Centre-Back,Chelsea FC,Loan fee:€3.00m,in,Summer,3,Serie A,2026,2026/2027,Italy,transfermarkt.com,6526485,,6195,631
 SSC Napoli,Costantino Favasuli,22,Right Midfield,US Catanzaro,Loan fee:€1.00m,in,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6517172,,6195,4097
 SSC Napoli,Mattia Esposito,18,Second Striker,Sorrento 1945,€700Th.,in,Summer,0.7,Serie A,2026,2026/2027,Italy,transfermarkt.com,6481411,,6195,10118
-SSC Napoli,Gianluca Vigliotti,22,Centre-Forward,Pineto Calcio,End of loan 30/06/2027,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6435406,,6195,46337
 SSC Napoli,Lorenzo Sgarbi,25,Second Striker,US Avellino 1912,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6162336,,6195,2331
-SSC Napoli,Nosa Edward Obaretin,23,Centre-Back,FC Empoli,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5871529,,6195,749
 SSC Napoli,Emanuele Rao,20,Left Winger,SSC Bari,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5787145,,6195,332
 SSC Napoli,Lorenzo Russo,21,Defensive Midfield,Guidonia Montecelio 1937 FC,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5788869,,6195,45894
 SSC Napoli,Gennaro Iaccarino,22,Central Midfield,SS Arezzo,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5804480,,6195,4255
@@ -40,7 +38,7 @@ SSC Napoli,Alessio Zerbin,27,Right Midfield,US Cremonese,End of loan 30/06/2026,
 SSC Napoli,Claudio Turi,21,Goalkeeper,Altamura S.S.,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5826221,,6195,22408
 SSC Napoli,Jens Cajuste,26,Defensive Midfield,Ipswich Town,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5843921,,6195,677
 SSC Napoli,Giovanni Simeone,30,Centre-Forward,Torino FC,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5843940,,6195,416
-SSC Napoli,Antonio Cioffi,23,Left Winger,US Livorno 1915,End of loan 22/01/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5853490,,6195,1210
+SSC Napoli,Nosa Edward Obaretin,23,Centre-Back,FC Empoli,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5871529,,6195,749
 SSC Napoli,Rafa Marín,24,Centre-Back,Villarreal CF,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5747475,,6195,1050
 SSC Napoli,Alessandro Zanoli,25,Right-Back,Udinese Calcio,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5910385,,6195,410
 SSC Napoli,Luis Hasa,22,Central Midfield,Carrarese Calcio 1908,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5910476,,6195,4159
@@ -68,8 +66,8 @@ SSC Napoli,Mattia Esposito,18,Second Striker,SSC Bari,loan transfer,out,Summer,0
 SSC Napoli,Lorenzo Sgarbi,25,Second Striker,US Sambenedettese,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6491754,,6195,4330
 SSC Napoli,Juan Jesus,35,Centre-Back,Without Club,-,out,Summer,NA,Serie A,2026,2026/2027,Italy,transfermarkt.com,6337175,,6195,515
 SSC Napoli,Alisson Santos,23,Left Winger,Sporting CP,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6162546,,6195,336
-SSC Napoli,Vanja Milinković-Savić,29,Goalkeeper,Torino FC,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5813793,,6195,416
 SSC Napoli,Eljif Elmas,26,Attacking Midfield,RB Leipzig,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5909893,,6195,23826
+SSC Napoli,Vanja Milinković-Savić,29,Goalkeeper,Torino FC,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5813793,,6195,416
 SSC Napoli,Rasmus Højlund,23,Centre-Forward,Manchester United,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5910715,,6195,985
 AS Roma,Santiago Castro,21,Centre-Forward,Bologna FC 1909,€36.00m,in,Summer,36,Serie A,2026,2026/2027,Italy,transfermarkt.com,6469978,,12,1025
 AS Roma,Rodrigo Mora,19,Attacking Midfield,FC Porto,€25.00m,in,Summer,25,Serie A,2026,2026/2027,Italy,transfermarkt.com,6517054,,12,720
@@ -553,38 +551,38 @@ ACF Fiorentina,João Mário,26,Right-Back,Juventus FC,Loan fee:€1.80m,in,Summe
 ACF Fiorentina,Radu Drăgușin,24,Centre-Back,Tottenham Hotspur,Loan fee:€1.50m,in,Summer,1.5,Serie A,2026,2026/2027,Italy,transfermarkt.com,6412546,,430,148
 ACF Fiorentina,Álex Jiménez,21,Right-Back,AFC Bournemouth,loan transfer,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6424784,,430,989
 ACF Fiorentina,Franco Mastantuono,18,Right Winger,Real Madrid,loan transfer,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6489342,,430,418
+ACF Fiorentina,Alessandro Bianco,23,Central Midfield,PAOK Thessaloniki,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5909724,,430,1091
+ACF Fiorentina,Nicolás Valentini,25,Centre-Back,Hellas Verona,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5499549,,430,276
 ACF Fiorentina,Giulio Scuderi,20,Left-Back,Alcione Milano,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5760511,,430,52687
-ACF Fiorentina,Lorenzo Romani,21,Centre-Back,Calcio Lecco 1912,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5771364,,430,5514
-ACF Fiorentina,Jonas Harder,20,Central Midfield,Calcio Padova,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5769811,,430,3037
-ACF Fiorentina,Leonardo Baroncelli,20,Centre-Back,AS Gubbio 1910,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5769502,,430,4326
-ACF Fiorentina,Lapo Deli,21,Defensive Midfield,FC Empoli,End of loan 30/06/2027,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6488373,,430,749
-ACF Fiorentina,Matías Moreno,22,Centre-Back,Levante UD,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5768729,,430,3368
-ACF Fiorentina,Riccardo Spaggiari,21,Right Midfield,Arzignano Valchiampo,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5776644,,430,46619
 ACF Fiorentina,Mirko Elia,20,Centre-Back,Forlì FC,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5767639,,430,9816
+ACF Fiorentina,Matías Moreno,22,Centre-Back,Levante UD,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5768729,,430,3368
+ACF Fiorentina,Leonardo Baroncelli,20,Centre-Back,AS Gubbio 1910,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5769502,,430,4326
+ACF Fiorentina,Jonas Harder,20,Central Midfield,Calcio Padova,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5769811,,430,3037
+ACF Fiorentina,Lorenzo Romani,21,Centre-Back,Calcio Lecco 1912,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5771364,,430,5514
+ACF Fiorentina,Lapo Deli,21,Defensive Midfield,FC Empoli,End of loan 30/06/2027,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6488373,,430,749
+ACF Fiorentina,Riccardo Spaggiari,21,Right Midfield,Arzignano Valchiampo,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5776644,,430,46619
+ACF Fiorentina,Filippo Distefano,22,Second Striker,Carrarese Calcio 1908,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5778712,,430,4159
+ACF Fiorentina,Lorenzo Lucchesi,23,Centre-Back,AC Monza,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5790999,,430,2919
+ACF Fiorentina,Lorenzo Amatucci,22,Defensive Midfield,UD Las Palmas,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5795624,,430,472
+ACF Fiorentina,Maat Daniel Caprini,20,Left Winger,Mantova 1911,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5804055,,430,2581
+ACF Fiorentina,Riccardo Sottil,27,Left Winger,US Lecce,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5850623,,430,1005
 ACF Fiorentina,Lucas Beltrán,25,Centre-Forward,Valencia CF,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5911889,,430,1049
-ACF Fiorentina,M'Bala Nzola,29,Centre-Forward,US Sassuolo,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6155689,,430,6574
 ACF Fiorentina,Tommaso Martinelli,20,Goalkeeper,UC Sampdoria,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6102313,,430,1038
 ACF Fiorentina,Laerte Tognetti,21,Goalkeeper,US Follonica Gavorrano,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6128284,,430,27568
 ACF Fiorentina,Simon Sohm,25,Central Midfield,Bologna FC 1909,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6137380,,430,1025
 ACF Fiorentina,Amir Richardson,24,Central Midfield,FC Copenhagen,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6138188,,430,190
 ACF Fiorentina,Tommaso Vannucchi,19,Goalkeeper,Cosenza Calcio,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6155684,,430,4031
-ACF Fiorentina,Filippo Distefano,22,Second Striker,Carrarese Calcio 1908,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5778712,,430,4159
+ACF Fiorentina,M'Bala Nzola,29,Centre-Forward,US Sassuolo,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6155689,,430,6574
 ACF Fiorentina,Jacopo Tarantino,21,Centre-Forward,Audace Cerignola,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6162707,,430,22249
-ACF Fiorentina,Alessandro Bianco,23,Central Midfield,PAOK Thessaloniki,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5909724,,430,1091
-ACF Fiorentina,Riccardo Sottil,27,Left Winger,US Lecce,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5850623,,430,1005
 ACF Fiorentina,Antonín Barák,31,Attacking Midfield,UC Sampdoria,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6331260,,430,1038
-ACF Fiorentina,Maat Daniel Caprini,20,Left Winger,Mantova 1911,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5804055,,430,2581
-ACF Fiorentina,Nicolás Valentini,25,Centre-Back,Hellas Verona,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5499549,,430,276
-ACF Fiorentina,Lorenzo Amatucci,22,Defensive Midfield,UD Las Palmas,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5795624,,430,472
-ACF Fiorentina,Lorenzo Lucchesi,23,Centre-Back,AC Monza,End of loan 30/06/2026,in,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,5790999,,430,2919
 ACF Fiorentina,Nicolás Valentini,25,Centre-Back,Deportivo Alavés,€3.00m,out,Summer,3,Serie A,2026,2026/2027,Italy,transfermarkt.com,6489390,,430,1108
 ACF Fiorentina,Lorenzo Amatucci,22,Defensive Midfield,Deportivo A Coruña,€2.50m,out,Summer,2.5,Serie A,2026,2026/2027,Italy,transfermarkt.com,6413535,,430,897
 ACF Fiorentina,Jonas Harder,20,Central Midfield,FC Basel 1893,€2.00m,out,Summer,2,Serie A,2026,2026/2027,Italy,transfermarkt.com,6427728,,430,26
 ACF Fiorentina,Luis Balbo,20,Left-Back,SK Sturm Graz,€1.50m,out,Summer,1.5,Serie A,2026,2026/2027,Italy,transfermarkt.com,6467865,,430,122
 ACF Fiorentina,Niccolò Fortini,20,Left-Back,Torino FC,Loan fee:€1.50m,out,Summer,1.5,Serie A,2026,2026/2027,Italy,transfermarkt.com,6523459,,430,416
 ACF Fiorentina,Riccardo Braschi,19,Centre-Forward,FC Thun,€1.00m,out,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6495664,,430,938
-ACF Fiorentina,Lorenzo Lucchesi,23,Centre-Back,AC Monza,€1.00m,out,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6331149,,430,2919
 ACF Fiorentina,Alessandro Bianco,23,Central Midfield,Modena FC,€1.00m,out,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6444633,,430,1385
+ACF Fiorentina,Lorenzo Lucchesi,23,Centre-Back,AC Monza,€1.00m,out,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6331149,,430,2919
 ACF Fiorentina,Pietro Comuzzo,21,Centre-Back,Torino FC,Loan fee:€1.00m,out,Summer,1,Serie A,2026,2026/2027,Italy,transfermarkt.com,6468060,,430,416
 ACF Fiorentina,Jacopo Fazzini,23,Central Midfield,Cagliari Calcio,Loan fee:€800Th.,out,Summer,0.8,Serie A,2026,2026/2027,Italy,transfermarkt.com,6425634,,430,1390
 ACF Fiorentina,Matías Moreno,22,Centre-Back,Venezia FC,Loan fee:€500Th.,out,Summer,0.5,Serie A,2026,2026/2027,Italy,transfermarkt.com,6471544,,430,607
@@ -594,16 +592,17 @@ ACF Fiorentina,Tariq Lamptey,25,Right-Back,Queens Park Rangers,free transfer,out
 ACF Fiorentina,Abdelhamid Sabiri,29,Attacking Midfield,Eyüpspor,free transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6474629,,430,7160
 ACF Fiorentina,Robin Gosens,32,Left-Back,FC Schalke 04,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6435242,,430,33
 ACF Fiorentina,Leonardo Baroncelli,20,Centre-Back,AS Gubbio 1910,?,out,Summer,NA,Serie A,2026,2026/2027,Italy,transfermarkt.com,6401995,,430,4326
+ACF Fiorentina,Roberto Piccoli,25,Centre-Forward,Bologna FC 1909,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6501819,,430,1025
+ACF Fiorentina,Eddy Kouadio,20,Centre-Back,AC Monza,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6412816,,430,2919
 ACF Fiorentina,Tommaso Martinelli,20,Goalkeeper,US Avellino 1912,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6416522,,430,2331
 ACF Fiorentina,Lorenzo Romani,21,Centre-Back,Carrarese Calcio 1908,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6418012,,430,4159
+ACF Fiorentina,Simon Sohm,25,Central Midfield,Venezia FC,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6478495,,430,607
+ACF Fiorentina,Tommaso Vannucchi,19,Goalkeeper,Arzignano Valchiampo,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6460593,,430,46619
 ACF Fiorentina,Maat Daniel Caprini,20,Left Winger,Cesena FC,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6427700,,430,1429
-ACF Fiorentina,Eddy Kouadio,20,Centre-Back,AC Monza,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6412816,,430,2919
 ACF Fiorentina,Amir Richardson,24,Central Midfield,Le Havre AC,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6438346,,430,738
 ACF Fiorentina,Mirko Elia,20,Centre-Back,SSC Bari,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6439485,,430,332
 ACF Fiorentina,Giulio Scuderi,20,Left-Back,SS Juve Stabia,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6455782,,430,5587
-ACF Fiorentina,Tommaso Vannucchi,19,Goalkeeper,Arzignano Valchiampo,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6460593,,430,46619
-ACF Fiorentina,Simon Sohm,25,Central Midfield,Venezia FC,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6478495,,430,607
-ACF Fiorentina,Roberto Piccoli,25,Centre-Forward,Bologna FC 1909,loan transfer,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6501819,,430,1025
+ACF Fiorentina,Riccardo Spaggiari,21,Right Midfield,Without Club,-,out,Summer,NA,Serie A,2026,2026/2027,Italy,transfermarkt.com,6541409,,430,515
 ACF Fiorentina,Laerte Tognetti,21,Goalkeeper,Without Club,-,out,Summer,NA,Serie A,2026,2026/2027,Italy,transfermarkt.com,6417363,,430,515
 ACF Fiorentina,Manor Solomon,26,Left Winger,Tottenham Hotspur,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6090982,,430,148
 ACF Fiorentina,Marco Brescianini,26,Central Midfield,Atalanta BC,End of loan 30/06/2026,out,Summer,0,Serie A,2026,2026/2027,Italy,transfermarkt.com,6107363,,430,800

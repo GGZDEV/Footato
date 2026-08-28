@@ -364,6 +364,63 @@ src/components/             filtres, tuiles, graphiques, tableau, panneau de dé
 `summary.json` est chargé au démarrage (tout le tri et le filtrage se font côté client, sans
 requête réseau) ; les fichiers `windows/` ne sont téléchargés qu'à l'ouverture d'un mercato.
 
+## Auto-hébergement — la seule façon d'être vraiment à jour
+
+Transfermarkt refuse les adresses de centre de données. C'est pour ça que GitHub
+Actions ne peut pas collecter, et que le site publié se fige jusqu'à ce que quelqu'un
+relance le pipeline à la main. Une connexion résidentielle n'a pas ce problème.
+
+Servir le site **depuis chez soi** supprime la contrainte au lieu de la contourner :
+la collecte tourne là où elle fonctionne déjà, toute seule, toutes les six heures.
+
+```bash
+cp .env.example .env        # puis renseignez FOOTATO_ADMIN_TOKEN
+docker compose up -d --build
+```
+
+Le conteneur sert le site sur `127.0.0.1:8080` et se met à jour seul. Faites-le
+pointer par Nginx Proxy Manager vers le sous-domaine de votre choix — c'est lui
+qui gère le certificat.
+
+| Réglage | Défaut | Rôle |
+|---|---|---|
+| `REFRESH_INTERVAL_HOURS` | `6` | Intervalle entre deux collectes. `0` désactive le minuteur. |
+| `REFRESH_FULL_EVERY` | `4` | Une passe sur quatre retélécharge les instantanés tiers (20 Mo). |
+| `FOOTATO_ADMIN_TOKEN` | *(vide)* | Sans lui, le bouton « Collecter » et l'endpoint restent inertes. |
+| `FOOTBALL_DATA_TOKEN` | *(vide)* | Facultatif : active le contrôle d'effectifs. |
+
+Une passe légère prend environ **100 secondes** et coûte **30 requêtes** : 20 pages
+de championnat, 10 relevés de derniers transferts. À raison de quatre passes par
+jour, 120 requêtes quotidiennes — sans commune mesure avec le crawl mondial qui se
+fait bloquer.
+
+### Le bouton
+
+La page Complétude affiche « Collecter » et un panneau d'état — dernière collecte,
+résultat, prochaine échéance — **uniquement quand un service répond**. Sur un
+hébergement statique, `/api/status` n'existe pas et les commandes restent masquées :
+le même build reste publiable sur GitHub Pages sans proposer un bouton que rien
+n'honorerait.
+
+Le jeton se saisit une fois et reste dans le navigateur. Il ne fait jamais partie
+du build.
+
+### Points d'attention
+
+- **Un échec de collecte ne dégrade pas le site** : la version précédente reste
+  servie, et l'échec est visible dans le panneau plutôt qu'avalé. C'est le bon
+  arbitrage — un mercato à moitié collecté ne doit pas être publié — mais il ne
+  doit pas passer inaperçu.
+- **Le volume `footato-data` fait foi.** Docker l'initialise avec le contenu de
+  l'image au premier lancement, puis ne l'écrase plus : l'instance qui tourne est
+  plus à jour que le dépôt. Pour repartir de la collecte versionnée,
+  `docker compose down -v`.
+- **N'exposez pas `/api/refresh` sans jeton.** Sans `FOOTATO_ADMIN_TOKEN`
+  l'endpoint répond 503 et refuse tout, ce qui est le défaut sûr ; avec un jeton,
+  laissez Nginx Proxy Manager gérer le TLS devant.
+- GitHub Pages continue de fonctionner en parallèle, avec la fraîcheur de ce qui
+  a été committé. Les deux hébergements coexistent sans se gêner.
+
 ## Déploiement
 
 `.github/workflows/deploy.yml` construit le site et le publie sur GitHub Pages à chaque push

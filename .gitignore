@@ -18,3 +18,9 @@ data/raw/collected/*.part
 
 # TypeScript incremental build info
 tsconfig.tsbuildinfo
+
+# Jetons de l'instance auto-hébergée. Jamais versionnés.
+.env
+
+# Historique des exécutions du service auto-hébergé, propre à chaque instance.
+data/state/

@@ -141,6 +141,9 @@ const details = new Map(); // leagueId_year_window -> movement list
 const movementKeys = new Set();
 let skipped = 0, movements = 0, duplicates = 0;
 const movementsByOrigin = { legacy: 0, recent: 0, collected: 0 };
+// Quelles origines ont effectivement fourni un fichier, indépendamment du
+// nombre de mouvements : une source présente mais vide reste une source lue.
+const originsSeen = { legacy: false, recent: false, collected: false };
 
 /**
  * Reads one canonical CSV and folds its movements into the aggregates.
@@ -257,6 +260,9 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
     ? ingest(collected, leagueIdx, league, 'collected', (year) => collectedSeasons.has(year))
     : 0;
 
+  originsSeen.legacy ||= hasBase;
+  originsSeen.recent ||= hasRecent;
+  originsSeen.collected ||= hasCollected;
   movementsByOrigin.legacy += n;
   movementsByOrigin.recent += extra;
   movementsByOrigin.collected += own;
@@ -265,6 +271,27 @@ for (const [leagueIdx, league] of LEAGUES.entries()) {
   if (extra) parts.push(`+${extra} récents`);
   if (own) parts.push(`+${own} collectés`);
   console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${n} movements${parts.length ? ` (${parts.join(', ')})` : ''}`);
+}
+
+/**
+ * Refuse to publish history-less data.
+ *
+ * The collected layer only covers the season in progress. On a machine where
+ * the upstream snapshots have not been downloaded — a freshly built container,
+ * a clone that skipped `npm run data:fetch` — every league would still build,
+ * quietly, from the collection alone: one season instead of thirty-four, with
+ * summary.json overwritten. Nothing downstream would catch it, because the
+ * relative-completeness check needs a previous season to compare against and
+ * there would not be one.
+ *
+ * Losing a build is recoverable. Overwriting the published dataset with a
+ * single season is not.
+ */
+if (!originsSeen.legacy && !originsSeen.recent) {
+  throw new Error(
+    'aucune source historique trouvée dans data/raw/ : le jeu de données serait réduit à la saison collectée.\n'
+    + '  Lancez d\'abord `npm run data:fetch && npm run data:recent`, ou `npm run refresh:site:full`.',
+  );
 }
 
 const rows = [...agg.values()].sort((a, b) => a[2] - b[2] || a[3] - b[3] || a[1] - b[1] || a[0] - b[0]);

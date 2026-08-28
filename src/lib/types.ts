@@ -187,6 +187,28 @@ export interface LatestData {
   transfers: LatestTransfer[];
 }
 
+/**
+ * State of the self-hosted refresh service, when one is serving the site.
+ *
+ * Absent on a static host (GitHub Pages): the page then hides the controls that
+ * only a server can honour, rather than offering a button that cannot work.
+ */
+export interface ServerStatus {
+  running: boolean;
+  nextRunAt: string | null;
+  intervalHours: number;
+  /** False when no admin token is configured; the trigger endpoint is closed. */
+  refreshEnabled: boolean;
+  lastStartedAt: string | null;
+  lastFinishedAt: string | null;
+  lastOutcome: 'success' | 'failure' | null;
+  lastMode: 'light' | 'full' | null;
+  lastError: string | null;
+  lastLog: string[];
+  runCount: number;
+  consecutiveFailures: number;
+}
+
 export interface FreshnessData {
   meta: {
     status: FreshnessStatus;

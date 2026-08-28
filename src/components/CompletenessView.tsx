@@ -1,6 +1,6 @@
 import type { Group } from '../lib/aggregate';
 import { count } from '../lib/format';
-import type { FreshnessData, FreshnessSignal, LatestData, LatestTransfer, League, Meta } from '../lib/types';
+import type { FreshnessData, FreshnessSignal, LatestData, LatestTransfer, League, Meta, ServerStatus } from '../lib/types';
 import { Flag } from './Flag';
 
 interface Props {
@@ -12,6 +12,11 @@ interface Props {
   leagues: League[];
   refreshing: boolean;
   onRefresh: () => void;
+  /** Null when the site is served statically: the collection controls stay hidden. */
+  server: ServerStatus | null;
+  collecting: boolean;
+  collectMessage: string | null;
+  onCollect: () => void;
 }
 
 const shortDate = (iso: string) => new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short' })
@@ -50,7 +55,7 @@ const ORIGIN_LABEL: Record<string, string> = {
   collected: 'Collecte Footato',
 };
 
-export function CompletenessView({ groups, freshness, latest, sourceDate, meta, leagues, refreshing, onRefresh }: Props) {
+export function CompletenessView({ groups, freshness, latest, sourceDate, meta, leagues, refreshing, onRefresh, server, collecting, collectMessage, onCollect }: Props) {
   const known = groups.reduce((sum, group) => sum + group.knownFees, 0);
   const unknown = groups.reduce((sum, group) => sum + group.unknownFees, 0);
   const overall = rate(known, unknown);
@@ -100,7 +105,23 @@ export function CompletenessView({ groups, freshness, latest, sourceDate, meta, 
                 : `Source mise à jour le ${sourceDate}`}
             </span>
           </div>
-          <i className="status-dot" aria-label="Source disponible" />
+          {/* Le bouton n'apparaît que si un service de collecte répond. Sur un
+              hébergement statique il n'y a rien pour l'honorer, donc rien à
+              montrer. */}
+          {server
+            ? (
+              <button
+                className="btn"
+                onClick={onCollect}
+                disabled={collecting || server.running}
+                title={server.refreshEnabled
+                  ? 'Relance une collecte Transfermarkt sur le serveur, puis reconstruit le site'
+                  : 'FOOTATO_ADMIN_TOKEN absent sur le serveur : déclenchement désactivé'}
+              >
+                {server.running || collecting ? 'Collecte…' : 'Collecter'}
+              </button>
+            )
+            : <i className="status-dot" aria-label="Source disponible" />}
         </article>
 
         <article className="panel source-card">
@@ -123,6 +144,64 @@ export function CompletenessView({ groups, freshness, latest, sourceDate, meta, 
           </button>
         </article>
       </div>
+
+      {server && (
+        <div className="panel coverage-panel">
+          <div className="panel-title-row">
+            <div>
+              <h3>Collecte automatique</h3>
+              <p>
+                Ce site est servi depuis une connexion qui n’est pas refusée par la source :
+                il se remet à jour tout seul, sans intervention.
+              </p>
+            </div>
+            <span>
+              {server.intervalHours > 0 ? `toutes les ${server.intervalHours} h` : 'minuteur désactivé'}
+            </span>
+          </div>
+
+          <div className="latest-lag">
+            <div>
+              <span className="eyebrow-label">Dernière collecte</span>
+              <strong>
+                {server.lastFinishedAt
+                  ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+                    .format(new Date(server.lastFinishedAt))
+                  : 'jamais'}
+              </strong>
+            </div>
+            <div>
+              <span className="eyebrow-label">Résultat</span>
+              <strong className={server.lastOutcome === 'failure' ? 'num neg' : undefined}>
+                {server.running ? 'en cours'
+                  : server.lastOutcome === 'success' ? 'réussie'
+                    : server.lastOutcome === 'failure' ? 'échouée'
+                      : '—'}
+              </strong>
+            </div>
+            <div>
+              <span className="eyebrow-label">Prochaine</span>
+              <strong>
+                {server.nextRunAt
+                  ? new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit' }).format(new Date(server.nextRunAt))
+                  : '—'}
+              </strong>
+            </div>
+          </div>
+
+          {/* Un échec laisse en place la version précédente — c'est voulu, un
+              mercato à moitié collecté ne doit pas être publié — mais il ne doit
+              pas pour autant passer inaperçu. */}
+          {server.lastOutcome === 'failure' && (
+            <p className="coverage-note">
+              Dernière collecte en échec{server.lastError ? ` : ${server.lastError}` : ''}.
+              Le site continue d’afficher la version précédente
+              {server.consecutiveFailures > 1 ? ` (${server.consecutiveFailures} échecs de suite)` : ''}.
+            </p>
+          )}
+          {collectMessage && <p className="coverage-note">{collectMessage}</p>}
+        </div>
+      )}
 
       {(meta.origins?.length ?? 0) > 0 && (
         <div className="panel coverage-panel">

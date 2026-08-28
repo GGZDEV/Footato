@@ -1,0 +1,23 @@
+# Réinstallé dans l'image pour la plateforme du conteneur.
+node_modules
+
+# Reconstruit au build de l'image.
+dist
+tsconfig.tsbuildinfo
+
+# Les instantanés tiers sont retéléchargés par la première passe complète ;
+# les inclure alourdirait l'image de 20 Mo pour rien. data/raw/collected et
+# data/fixtures ne sont pas exclus : le premier n'est pas retéléchargeable,
+# le second sert au test de non-régression du parseur.
+data/raw/transfermarkt-datasets
+data/raw/openfootball
+data/raw/recent
+data/raw/state
+data/raw/*.csv
+data/raw/*.json
+
+.git
+.github
+.claude
+*.local
+.DS_Store
