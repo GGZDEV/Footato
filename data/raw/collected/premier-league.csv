@@ -1,0 +1,470 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+Arsenal FC,Bruno Guimarães,28,Central Midfield,Newcastle United,€87.50m,in,Summer,87.5,Premier League,2026,2026/2027,England,transfermarkt.com,6489341,,11,762
+Arsenal FC,Ezri Konsa,28,Centre-Back,Aston Villa,€59.60m,in,Summer,59.6,Premier League,2026,2026/2027,England,transfermarkt.com,6524539,,11,405
+Arsenal FC,Piero Hincapié,24,Centre-Back,Bayer 04 Leverkusen,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,5911394,,11,15
+Arsenal FC,Christos Tzolis,24,Left Winger,Club Brugge KV,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6450186,,11,2282
+Arsenal FC,Illan Meslier,26,Goalkeeper,Leeds United,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6414278,,11,399
+Arsenal FC,Karl Hein,24,Goalkeeper,SV Werder Bremen,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5885468,,11,86
+Arsenal FC,Fábio Vieira,26,Attacking Midfield,Hamburger SV,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911291,,11,41
+Arsenal FC,Jakub Kiwior,26,Centre-Back,FC Porto,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911456,,11,720
+Arsenal FC,Reiss Nelson,26,Left Winger,Brentford FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5912104,,11,1148
+Arsenal FC,Ethan Nwaneri,19,Attacking Midfield,Olympique Marseille,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6139048,,11,244
+Arsenal FC,Leandro Trossard,31,Left Winger,Besiktas JK,€18.00m,out,Summer,18,Premier League,2026,2026/2027,England,transfermarkt.com,6427048,,11,114
+Arsenal FC,Jakub Kiwior,26,Centre-Back,FC Porto,€17.00m,out,Summer,17,Premier League,2026,2026/2027,England,transfermarkt.com,6298647,,11,720
+Arsenal FC,Christian Nørgaard,32,Defensive Midfield,Everton FC,€8.15m,out,Summer,8.15,Premier League,2026,2026/2027,England,transfermarkt.com,6489077,,11,29
+Arsenal FC,Karl Hein,24,Goalkeeper,SV Werder Bremen,€3.00m,out,Summer,3,Premier League,2026,2026/2027,England,transfermarkt.com,6322723,,11,86
+Arsenal FC,Reiss Nelson,26,Left Winger,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6540227,,11,515
+Arsenal FC,Piero Hincapié,24,Centre-Back,Bayer 04 Leverkusen,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911362,,11,15
+Aston Villa,Johan Manzambi,20,Attacking Midfield,SC Freiburg,€60.00m,in,Summer,60,Premier League,2026,2026/2027,England,transfermarkt.com,6435571,,405,60
+Aston Villa,João Gomes,25,Central Midfield,Wolverhampton Wanderers,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6441221,,405,543
+Aston Villa,Zion Suzuki,23,Goalkeeper,Parma Calcio 1913,€30.00m,in,Summer,30,Premier League,2026,2026/2027,England,transfermarkt.com,6516994,,405,130
+Aston Villa,Matteo Ruggeri,24,Left-Back,Atlético de Madrid,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6516983,,405,13
+Aston Villa,Modou Kéba Cissé,20,Centre-Back,LASK,€5.50m,in,Summer,5.5,Premier League,2026,2026/2027,England,transfermarkt.com,5793022,,405,413
+Aston Villa,Leon Goretzka,31,Central Midfield,Bayern Munich,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6540092,,405,27
+Aston Villa,Alejandro Garnacho,22,Left Winger,Chelsea FC,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6450342,,405,631
+Aston Villa,Aaron Wan-Bissaka,28,Right-Back,West Ham United,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6523736,,405,379
+Aston Villa,Kosta Nedeljkovic,20,Right-Back,RB Leipzig,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5498294,,405,23826
+Aston Villa,Samuel Iling-Junior,22,Left Winger,Pisa Sporting Club,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6162660,,405,4172
+Aston Villa,Donyell Malen,27,Centre-Forward,AS Roma,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6122347,,405,12
+Aston Villa,Lewis Dobbin,23,Left Winger,Preston North End,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5885967,,405,466
+Aston Villa,Joe Gauci,25,Goalkeeper,Port Vale FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5854583,,405,1211
+Aston Villa,Enzo Barrenechea,25,Defensive Midfield,SL Benfica,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5791413,,405,294
+Aston Villa,Oliwier Zych,22,Goalkeeper,Raków Częstochowa,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5778701,,405,9644
+Aston Villa,Morgan Rogers,23,Attacking Midfield,Chelsea FC,€138.00m,out,Summer,138,Premier League,2026,2026/2027,England,transfermarkt.com,6445546,,405,631
+Aston Villa,Ezri Konsa,28,Centre-Back,Arsenal FC,€59.60m,out,Summer,59.6,Premier League,2026,2026/2027,England,transfermarkt.com,6524539,,405,11
+Aston Villa,Youri Tielemans,29,Central Midfield,Manchester United,€41.00m,out,Summer,41,Premier League,2026,2026/2027,England,transfermarkt.com,6427758,,405,985
+Aston Villa,Donyell Malen,27,Centre-Forward,AS Roma,€25.00m,out,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6309716,,405,12
+Aston Villa,Enzo Barrenechea,25,Defensive Midfield,SL Benfica,€12.00m,out,Summer,12,Premier League,2026,2026/2027,England,transfermarkt.com,6392669,,405,294
+Aston Villa,Lewis Dobbin,23,Left Winger,Southampton FC,€10.50m,out,Summer,10.5,Premier League,2026,2026/2027,England,transfermarkt.com,6429210,,405,180
+Aston Villa,Lucas Digne,33,Left-Back,Paris Saint-Germain,€7.00m,out,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6491085,,405,583
+Aston Villa,Joe Gauci,26,Goalkeeper,Lincoln City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6464931,,405,1198
+Aston Villa,Oliwier Zych,22,Goalkeeper,Vitória Guimarães SC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6430551,,405,2420
+Aston Villa,Samuel Iling-Junior,22,Left Winger,Bolton Wanderers,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6505097,,405,355
+Aston Villa,Kosta Nedeljkovic,20,Right-Back,Rangers FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6517155,,405,124
+Aston Villa,Andrés García,23,Right-Back,Getafe CF,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6431883,,405,3709
+Aston Villa,Douglas Luiz,28,Central Midfield,Juventus FC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6148452,,405,506
+Aston Villa,Harvey Elliott,23,Attacking Midfield,Liverpool FC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911914,,405,31
+Aston Villa,Jadon Sancho,26,Left Winger,Manchester United,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911815,,405,985
+AFC Bournemouth,António Silva,22,Centre-Back,SL Benfica,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6476070,,989,294
+AFC Bournemouth,Álvaro Rodríguez,22,Centre-Forward,Elche CF,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6427485,,989,1531
+AFC Bournemouth,Álex Jiménez,21,Right-Back,AC Milan,€18.50m,in,Summer,18.5,Premier League,2026,2026/2027,England,transfermarkt.com,6175692,,989,5
+AFC Bournemouth,Juanlu Sánchez,22,Right-Back,Sevilla FC,€11.00m,in,Summer,11,Premier League,2026,2026/2027,England,transfermarkt.com,6489456,,989,368
+AFC Bournemouth,Michele Di Gregorio,29,Goalkeeper,Juventus FC,Loan fee:€1.30m,in,Summer,1.3,Premier League,2026,2026/2027,England,transfermarkt.com,6532681,,989,506
+AFC Bournemouth,Matai Akinmboni,20,Centre-Back,Dundee FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6540732,,989,511
+AFC Bournemouth,Daniel Jebbison,22,Centre-Forward,Preston North End,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5718043,,989,466
+AFC Bournemouth,Alex Paulsen,24,Goalkeeper,Motherwell FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6426881,,989,987
+AFC Bournemouth,Will Dennis,25,Goalkeeper,Leyton Orient,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6163768,,989,1150
+AFC Bournemouth,Julián Araujo,24,Right-Back,Celtic FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6090154,,989,371
+AFC Bournemouth,Ben Winterburn,21,Defensive Midfield,Barnet FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5909618,,989,2804
+AFC Bournemouth,Hamed Traoré,26,Left Winger,Olympique Marseille,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5901583,,989,244
+AFC Bournemouth,Alex Paulsen,23,Goalkeeper,Lechia Gdansk,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5893698,,989,4000
+AFC Bournemouth,Luis Sinisterra,27,Left Winger,Cruzeiro Esporte Clube,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5884530,,989,609
+AFC Bournemouth,Max Aarons,26,Right-Back,Rangers FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5731359,,989,124
+AFC Bournemouth,Hamed Traoré,26,Left Winger,Olympique Marseille,€7.70m,out,Summer,7.7,Premier League,2026,2026/2027,England,transfermarkt.com,6308959,,989,244
+AFC Bournemouth,Luis Sinisterra,27,Left Winger,Cruzeiro Esporte Clube,€3.70m,out,Summer,3.7,Premier League,2026,2026/2027,England,transfermarkt.com,6331154,,989,609
+AFC Bournemouth,Enes Ünal,29,Centre-Forward,Getafe CF,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6501744,,989,3709
+AFC Bournemouth,Marcos Senesi,29,Centre-Back,Tottenham Hotspur,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6348008,,989,148
+AFC Bournemouth,Will Dennis,26,Goalkeeper,Milton Keynes Dons,?,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6536482,,989,991
+AFC Bournemouth,Matai Akinmboni,19,Centre-Back,Dundee FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6540731,,989,511
+AFC Bournemouth,Álex Jiménez,21,Right-Back,ACF Fiorentina,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6424784,,989,430
+AFC Bournemouth,Alex Paulsen,24,Goalkeeper,Motherwell FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6426880,,989,987
+AFC Bournemouth,Christos Mandas,24,Goalkeeper,SS Lazio,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6145615,,989,398
+AFC Bournemouth,Álex Jiménez,21,Right-Back,AC Milan,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5908687,,989,5
+Brentford FC,Mamadou Sangaré,24,Central Midfield,RC Lens,€48.00m,in,Summer,48,Premier League,2026,2026/2027,England,transfermarkt.com,6476403,,1148,826
+Brentford FC,Jannik Schuster,20,Centre-Back,Red Bull Salzburg,€18.00m,in,Summer,18,Premier League,2026,2026/2027,England,transfermarkt.com,6312162,,1148,409
+Brentford FC,Jaidon Anthony,26,Left Winger,Burnley FC,€17.50m,in,Summer,17.5,Premier League,2026,2026/2027,England,transfermarkt.com,6409562,,1148,1132
+Brentford FC,Callum Wilson,34,Centre-Forward,West Ham United,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6414691,,1148,379
+Brentford FC,Romelle Donovan,20,Right Winger,Sheffield United,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6411183,,1148,350
+Brentford FC,Ji-soo Kim,21,Centre-Back,1.FC Kaiserslautern,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5801823,,1148,2
+Brentford FC,Benjamin Arthur,20,Centre-Back,Celtic FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6164127,,1148,371
+Brentford FC,Matthew Cox,24,Goalkeeper,Barnet FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6457004,,1148,2804
+Brentford FC,Gustavo Nunes,20,Left Winger,Swansea City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6137905,,1148,2288
+Brentford FC,Yunus Konak,20,Defensive Midfield,Oxford United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6121141,,1148,988
+Brentford FC,Frank Onyeka,28,Central Midfield,Coventry City,€7.00m,out,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6388842,,1148,990
+Brentford FC,Ethan Pinnock,33,Centre-Back,Coventry City,€5.85m,out,Summer,5.85,Premier League,2026,2026/2027,England,transfermarkt.com,6536895,,1148,990
+Brentford FC,Jordan Henderson,36,Central Midfield,Chelsea FC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6481567,,1148,631
+Brentford FC,Ryan Trevitt,23,Central Midfield,Wigan Athletic,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6445242,,1148,1071
+Brentford FC,Romelle Donovan,19,Right Winger,Sheffield United,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6411182,,1148,350
+Brentford FC,Matthew Cox,23,Goalkeeper,Barnet FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6457003,,1148,2804
+Brentford FC,Julian Eyestone,20,Goalkeeper,Rotherham United,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6496371,,1148,1194
+Brentford FC,Benjamin Arthur,20,Centre-Back,Portsmouth FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6502425,,1148,1020
+Brentford FC,Yunus Konak,20,Defensive Midfield,Lincoln City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6515786,,1148,1198
+Brentford FC,Josh Stephenson,20,Centre-Back,Crewe Alexandra,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6523908,,1148,1042
+Brentford FC,Reiss Nelson,26,Left Winger,Arsenal FC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5912104,,1148,11
+Brighton & Hove Albion,Luka Vuskovic,19,Centre-Back,Tottenham Hotspur,€54.00m,in,Summer,54,Premier League,2026,2026/2027,England,transfermarkt.com,6426452,,1237,148
+Brighton & Hove Albion,Zadok Yohanna,19,Right Winger,AIK,€28.00m,in,Summer,28,Premier League,2026,2026/2027,England,transfermarkt.com,6341188,,1237,272
+Brighton & Hove Albion,Pascal Struijk,26,Centre-Back,Leeds United,€23.20m,in,Summer,23.2,Premier League,2026,2026/2027,England,transfermarkt.com,6391050,,1237,399
+Brighton & Hove Albion,Jaouen Hadjam,23,Left-Back,BSC Young Boys,€13.00m,in,Summer,13,Premier League,2026,2026/2027,England,transfermarkt.com,6533864,,1237,452
+Brighton & Hove Albion,Costinha,26,Right-Back,Olympiacos Piraeus,€12.70m,in,Summer,12.7,Premier League,2026,2026/2027,England,transfermarkt.com,6361375,,1237,683
+Brighton & Hove Albion,Michael Svoboda,27,Centre-Back,Venezia FC,€5.00m,in,Summer,5,Premier League,2026,2026/2027,England,transfermarkt.com,6396427,,1237,607
+Brighton & Hove Albion,Rodrigo Rêgo,21,Right Winger,SL Benfica B,€3.50m,in,Summer,3.5,Premier League,2026,2026/2027,England,transfermarkt.com,6392692,,1237,10330
+Brighton & Hove Albion,Promise David,25,Centre-Forward,Union Saint-Gilloise,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6515927,,1237,3948
+Brighton & Hove Albion,Tommy Watson,21,Left Winger,Leicester City,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6476701,,1237,1003
+Brighton & Hove Albion,James Beadle,22,Goalkeeper,Birmingham City,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6436938,,1237,337
+Brighton & Hove Albion,Evan Ferguson,21,Centre-Forward,AS Roma,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5803395,,1237,12
+Brighton & Hove Albion,Diego Coppola,22,Centre-Back,Paris FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6150612,,1237,10004
+Brighton & Hove Albion,Jeremy Sarmiento,24,Left Winger,Middlesbrough FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6145742,,1237,641
+Brighton & Hove Albion,Facundo Buonanotte,21,Attacking Midfield,Leeds United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6120917,,1237,399
+Brighton & Hove Albion,Do-young Yoon,19,Right Winger,FC Dordrecht,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6108102,,1237,1455
+Brighton & Hove Albion,Carlos Baleba,22,Defensive Midfield,Manchester United,€75.90m,out,Summer,75.9,Premier League,2026,2026/2027,England,transfermarkt.com,6533389,,1237,985
+Brighton & Hove Albion,Jan Paul van Hecke,26,Centre-Back,Tottenham Hotspur,€60.00m,out,Summer,60,Premier League,2026,2026/2027,England,transfermarkt.com,6367893,,1237,148
+Brighton & Hove Albion,Carl Rushworth,25,Goalkeeper,Coventry City,€25.70m,out,Summer,25.7,Premier League,2026,2026/2027,England,transfermarkt.com,6484586,,1237,990
+Brighton & Hove Albion,Diego Coppola,22,Centre-Back,Paris FC,€17.50m,out,Summer,17.5,Premier League,2026,2026/2027,England,transfermarkt.com,6431484,,1237,10004
+Brighton & Hove Albion,Danny Welbeck,35,Centre-Forward,Chelsea FC,€5.85m,out,Summer,5.85,Premier League,2026,2026/2027,England,transfermarkt.com,6476339,,1237,631
+Brighton & Hove Albion,Jeremy Sarmiento,24,Left Winger,Middlesbrough FC,€3.70m,out,Summer,3.7,Premier League,2026,2026/2027,England,transfermarkt.com,6328944,,1237,641
+Brighton & Hove Albion,Joël Veltman,34,Right-Back,West Ham United,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6489466,,1237,379
+Brighton & Hove Albion,Tommy Watson,20,Left Winger,Leicester City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6476700,,1237,1003
+Brighton & Hove Albion,Facundo Buonanotte,21,Attacking Midfield,Elche CF,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6489457,,1237,1531
+Brighton & Hove Albion,Do-young Yoon,19,Right Winger,1.FC Magdeburg,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6404472,,1237,187
+Brighton & Hove Albion,Rodrigo Rêgo,21,Right Winger,CD Castellón,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6437243,,1237,2502
+Brighton & Hove Albion,James Beadle,22,Goalkeeper,Birmingham City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6436937,,1237,337
+Brighton & Hove Albion,James Milner,40,Central Midfield,Retired,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6332882,,1237,
+Brighton & Hove Albion,Adam Webster,31,Centre-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6330342,,1237,515
+Brighton & Hove Albion,Solly March,31,Right Winger,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6326181,,1237,515
+Chelsea FC,Morgan Rogers,23,Attacking Midfield,Aston Villa,€138.00m,in,Summer,138,Premier League,2026,2026/2027,England,transfermarkt.com,6445546,,631,405
+Chelsea FC,Maxence Lacroix,26,Centre-Back,Crystal Palace,€60.70m,in,Summer,60.7,Premier League,2026,2026/2027,England,transfermarkt.com,6469882,,631,873
+Chelsea FC,Marco Palestra,21,Right-Back,Atalanta BC,€57.00m,in,Summer,57,Premier League,2026,2026/2027,England,transfermarkt.com,6393400,,631,800
+Chelsea FC,Geovany Quenda,19,Right Winger,Sporting CP,€50.00m,in,Summer,50,Premier League,2026,2026/2027,England,transfermarkt.com,5577631,,631,336
+Chelsea FC,Valentín Barco,22,Central Midfield,RC Strasbourg Alsace,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6479058,,631,667
+Chelsea FC,Emmanuel Emegha,23,Centre-Forward,RC Strasbourg Alsace,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,5938315,,631,667
+Chelsea FC,Pep Chavarría,28,Left-Back,Rayo Vallecano,€19.00m,in,Summer,19,Premier League,2026,2026/2027,England,transfermarkt.com,6496638,,631,367
+Chelsea FC,Danny Welbeck,35,Centre-Forward,Brighton & Hove Albion,€5.85m,in,Summer,5.85,Premier League,2026,2026/2027,England,transfermarkt.com,6476339,,631,1237
+Chelsea FC,Dastan Satpaev,18,Centre-Forward,Kairat Almaty,€2.40m,in,Summer,2.4,Premier League,2026,2026/2027,England,transfermarkt.com,5513918,,631,10482
+Chelsea FC,Jordan Henderson,36,Central Midfield,Brentford FC,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6481567,,631,1148
+Chelsea FC,Mike Penders,20,Goalkeeper,RC Strasbourg Alsace,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5816644,,631,667
+Chelsea FC,Nicolas Jackson,25,Centre-Forward,Bayern Munich,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911929,,631,27
+Chelsea FC,Aarón Anselmino,21,Centre-Back,RC Strasbourg Alsace,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6162941,,631,667
+Chelsea FC,David Datro Fofana,23,Centre-Forward,RC Strasbourg Alsace,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6163150,,631,667
+Chelsea FC,Dastan Satpaev,18,Centre-Forward,Burnley FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6505545,,631,1132
+Chelsea FC,Axel Disasi,28,Centre-Back,West Ham United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6164153,,631,379
+Chelsea FC,Axel Disasi,29,Centre-Back,Crystal Palace,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536349,,631,873
+Chelsea FC,Tyrique George,20,Left Winger,Everton FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6163790,,631,29
+Chelsea FC,Andrey Santos,22,Defensive Midfield,Manchester United,€56.30m,out,Summer,56.3,Premier League,2026,2026/2027,England,transfermarkt.com,6424261,,631,985
+Chelsea FC,Marc Cucurella,27,Left-Back,Real Madrid,€55.00m,out,Summer,55,Premier League,2026,2026/2027,England,transfermarkt.com,6358360,,631,418
+Chelsea FC,Liam Delap,23,Centre-Forward,Nottingham Forest,€52.50m,out,Summer,52.5,Premier League,2026,2026/2027,England,transfermarkt.com,6538946,,631,703
+Chelsea FC,Trevoh Chalobah,27,Centre-Back,Como 1907,€30.00m,out,Summer,30,Premier League,2026,2026/2027,England,transfermarkt.com,6491093,,631,1047
+Chelsea FC,Tyrique George,20,Left Winger,Everton FC,€21.00m,out,Summer,21,Premier League,2026,2026/2027,England,transfermarkt.com,6406391,,631,29
+Chelsea FC,Benoît Badiashile,25,Centre-Back,SSC Napoli,Loan fee:€3.00m,out,Summer,3,Premier League,2026,2026/2027,England,transfermarkt.com,6526485,,631,6195
+Chelsea FC,Dastan Satpaev,18,Centre-Forward,Burnley FC,Loan fee:€350Th.,out,Summer,0.35,Premier League,2026,2026/2027,England,transfermarkt.com,6505544,,631,1132
+Chelsea FC,Alejandro Garnacho,22,Left Winger,Aston Villa,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6450342,,631,405
+Chelsea FC,Axel Disasi,28,Centre-Back,Crystal Palace,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536348,,631,873
+Chelsea FC,Filip Jørgensen,24,Goalkeeper,RC Strasbourg Alsace,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6494576,,631,667
+Coventry City,Caleb Yirenkyi,20,Central Midfield,FC Nordsjaelland,€27.00m,in,Summer,27,Premier League,2026,2026/2027,England,transfermarkt.com,6490356,,990,2778
+Coventry City,Carl Rushworth,25,Goalkeeper,Brighton & Hove Albion,€25.70m,in,Summer,25.7,Premier League,2026,2026/2027,England,transfermarkt.com,6484586,,990,1237
+Coventry City,Sidiki Chérif,19,Centre-Forward,Fenerbahce,€24.50m,in,Summer,24.5,Premier League,2026,2026/2027,England,transfermarkt.com,6517484,,990,36
+Coventry City,Loum Tchaouna,22,Right Winger,Burnley FC,€23.00m,in,Summer,23,Premier League,2026,2026/2027,England,transfermarkt.com,6420279,,990,1132
+Coventry City,Aurèle Amenda,22,Centre-Back,Eintracht Frankfurt,€18.00m,in,Summer,18,Premier League,2026,2026/2027,England,transfermarkt.com,6432878,,990,24
+Coventry City,Taiwo Awoniyi,29,Centre-Forward,Nottingham Forest,€10.50m,in,Summer,10.5,Premier League,2026,2026/2027,England,transfermarkt.com,6512359,,990,703
+Coventry City,Frank Onyeka,28,Central Midfield,Brentford FC,€7.00m,in,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6388842,,990,1148
+Coventry City,Gustavo Hamer,29,Central Midfield,Sheffield United,€7.00m,in,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6496879,,990,350
+Coventry City,Ethan Pinnock,33,Centre-Back,Brentford FC,€5.85m,in,Summer,5.85,Premier League,2026,2026/2027,England,transfermarkt.com,6536895,,990,1148
+Coventry City,Daniel Bentley,33,Goalkeeper,Wolverhampton Wanderers,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6523682,,990,543
+Coventry City,Norman Bassette,21,Centre-Forward,1.FC Kaiserslautern,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6100581,,990,2
+Coventry City,Jahnoah Markelo,23,Right Winger,Shabab Al-Ahli Club,€5.15m,out,Summer,5.15,Premier League,2026,2026/2027,England,transfermarkt.com,6490365,,990,60529
+Coventry City,Brad Collins,29,Goalkeeper,Bristol City,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6421129,,990,698
+Coventry City,Norman Bassette,21,Centre-Forward,KVC Westerlo,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6448560,,990,968
+Coventry City,Jamie Allen,31,Central Midfield,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6313615,,990,515
+Coventry City,Min-hyeok Yang,20,Right Winger,Tottenham Hotspur,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6100870,,990,148
+Crystal Palace,Dwight McNeil,26,Left Winger,Everton FC,€25.80m,in,Summer,25.8,Premier League,2026,2026/2027,England,transfermarkt.com,6494979,,873,29
+Crystal Palace,Anan Khalaili,21,Right-Back,Union Saint-Gilloise,€24.50m,in,Summer,24.5,Premier League,2026,2026/2027,England,transfermarkt.com,6506148,,873,3948
+Crystal Palace,Zavier Gozo,19,Right Winger,Real Salt Lake City,€13.00m,in,Summer,13,Premier League,2026,2026/2027,England,transfermarkt.com,6516185,,873,6643
+Crystal Palace,Óscar Mingueza,27,Right-Back,Celta de Vigo,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6414760,,873,940
+Crystal Palace,Takehiro Tomiyasu,27,Centre-Back,Ajax Amsterdam,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6489474,,873,610
+Crystal Palace,Axel Disasi,28,Centre-Back,Chelsea FC,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536348,,873,631
+Crystal Palace,Matheus França,22,Second Striker,Clube de Regatas Vasco da Gama,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5896337,,873,978
+Crystal Palace,Rio Cardines,20,Left-Back,Bristol City,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6495643,,873,698
+Crystal Palace,Owen Goodman,22,Goalkeeper,Barnsley FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6121613,,873,349
+Crystal Palace,Maxence Lacroix,26,Centre-Back,Chelsea FC,€60.70m,out,Summer,60.7,Premier League,2026,2026/2027,England,transfermarkt.com,6469882,,873,631
+Crystal Palace,Brennan Johnson,25,Right Winger,Everton FC,€25.80m,out,Summer,25.8,Premier League,2026,2026/2027,England,transfermarkt.com,6494981,,873,29
+Crystal Palace,Danny Imray,23,Right-Back,Wrexham AFC,€6.60m,out,Summer,6.6,Premier League,2026,2026/2027,England,transfermarkt.com,6468774,,873,1112
+Crystal Palace,Owen Goodman,22,Goalkeeper,Dundee FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6457008,,873,511
+Crystal Palace,Rio Cardines,20,Left-Back,Bristol City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6495642,,873,698
+Crystal Palace,Nathaniel Clyne,35,Right-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6468550,,873,515
+Crystal Palace,Axel Disasi,29,Centre-Back,Chelsea FC,End of loan 31/05/2027,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536349,,873,631
+Crystal Palace,Christantus Uche,23,Centre-Forward,Getafe CF,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911874,,873,3709
+Everton FC,Brennan Johnson,25,Right Winger,Crystal Palace,€25.80m,in,Summer,25.8,Premier League,2026,2026/2027,England,transfermarkt.com,6494981,,29,873
+Everton FC,Merlin Röhl,23,Attacking Midfield,SC Freiburg,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6282884,,29,60
+Everton FC,Tyrique George,20,Left Winger,Chelsea FC,€21.00m,in,Summer,21,Premier League,2026,2026/2027,England,transfermarkt.com,6406391,,29,631
+Everton FC,Hayden Hackney,24,Defensive Midfield,Middlesbrough FC,€19.30m,in,Summer,19.3,Premier League,2026,2026/2027,England,transfermarkt.com,6396312,,29,641
+Everton FC,Christian Nørgaard,32,Defensive Midfield,Arsenal FC,€8.15m,in,Summer,8.15,Premier League,2026,2026/2027,England,transfermarkt.com,6489077,,29,11
+Everton FC,Tyler Onyango,23,Central Midfield,Stockport County,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5910343,,29,1098
+Everton FC,Dwight McNeil,26,Left Winger,Crystal Palace,€25.80m,out,Summer,25.8,Premier League,2026,2026/2027,England,transfermarkt.com,6494979,,29,873
+Everton FC,Tyler Onyango,23,Central Midfield,Sheffield Wednesday,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6347335,,29,1035
+Everton FC,Idrissa Gueye,36,Defensive Midfield,Al-Diriyah FC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6352335,,29,52358
+Everton FC,Séamus Coleman,37,Right-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6312234,,29,515
+Everton FC,Merlin Röhl,23,Attacking Midfield,SC Freiburg,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911680,,29,60
+Everton FC,Tyrique George,20,Left Winger,Chelsea FC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6163790,,29,631
+Fulham FC,Gonzalo García,22,Centre-Forward,Real Madrid,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6482768,,931,418
+Fulham FC,Shea Charles,22,Defensive Midfield,Southampton FC,€30.40m,in,Summer,30.4,Premier League,2026,2026/2027,England,transfermarkt.com,6495034,,931,180
+Fulham FC,César Palacios,21,Attacking Midfield,Real Madrid,€10.00m,in,Summer,10,Premier League,2026,2026/2027,England,transfermarkt.com,6482982,,931,418
+Fulham FC,Jonah Kusi-Asare,18,Centre-Forward,Bayern Munich,€6.00m,in,Summer,6,Premier League,2026,2026/2027,England,transfermarkt.com,6384502,,931,27
+Fulham FC,Steven Benda,27,Goalkeeper,Feyenoord Rotterdam,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6166142,,931,234
+Fulham FC,Saša Lukić,29,Central Midfield,Ipswich Town,€10.50m,out,Summer,10.5,Premier League,2026,2026/2027,England,transfermarkt.com,6489963,,931,677
+Fulham FC,Issa Diop,29,Centre-Back,Ipswich Town,€10.00m,out,Summer,10,Premier League,2026,2026/2027,England,transfermarkt.com,6447201,,931,677
+Fulham FC,Raúl Jiménez,35,Centre-Forward,Wolverhampton Wanderers,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6343489,,931,543
+Fulham FC,Harry Wilson,29,Right Winger,Leeds United,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6412644,,931,399
+Fulham FC,Steven Benda,27,Goalkeeper,Nottingham Forest,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6506500,,931,703
+Fulham FC,Samuel Chukwueze,27,Right Winger,AC Milan,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911599,,931,5
+Fulham FC,Jonah Kusi-Asare,18,Centre-Forward,Bayern Munich,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5912846,,931,27
+Hull City,Nobel Mendy,21,Centre-Back,Rayo Vallecano,€23.40m,in,Summer,23.4,Premier League,2026,2026/2027,England,transfermarkt.com,6499002,,3008,367
+Hull City,Konstantinos Tzolakis,23,Goalkeeper,Olympiacos Piraeus,€23.30m,in,Summer,23.3,Premier League,2026,2026/2027,England,transfermarkt.com,6487061,,3008,683
+Hull City,Mohamed-Ali Cho,22,Right Winger,OGC Nice,€15.15m,in,Summer,15.15,Premier League,2026,2026/2027,England,transfermarkt.com,6540110,,3008,417
+Hull City,Lucas Herrington,18,Centre-Back,Colorado Rapids,€14.80m,in,Summer,14.8,Premier League,2026,2026/2027,England,transfermarkt.com,6499315,,3008,1247
+Hull City,Jens Hjertø-Dahl,20,Central Midfield,Tromsø IL,€9.50m,in,Summer,9.5,Premier League,2026,2026/2027,England,transfermarkt.com,6489431,,3008,1293
+Hull City,Joe Gelhardt,24,Centre-Forward,Leeds United,€7.60m,in,Summer,7.6,Premier League,2026,2026/2027,England,transfermarkt.com,6506635,,3008,399
+Hull City,Lucas Gourna-Douath,23,Defensive Midfield,Red Bull Salzburg,€4.00m,in,Summer,4,Premier League,2026,2026/2027,England,transfermarkt.com,6506306,,3008,409
+Hull City,Jack Butland,33,Goalkeeper,Rangers FC,€3.50m,in,Summer,3.5,Premier League,2026,2026/2027,England,transfermarkt.com,6396852,,3008,124
+Hull City,Elliot Stroud,24,Left Midfield,Mjällby AIF,€2.50m,in,Summer,2.5,Premier League,2026,2026/2027,England,transfermarkt.com,6490924,,3008,2719
+Hull City,Matt Targett,30,Left-Back,Newcastle United,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6335898,,3008,762
+Hull City,Hidemasa Morita,31,Central Midfield,Sporting CP,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6454607,,3008,336
+Hull City,Óscar Zambrano,22,Defensive Midfield,NK Maribor,?,in,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6445220,,3008,790
+Hull City,Harvey Cartwright,24,Goalkeeper,Hartlepool United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5843875,,3008,2577
+Hull City,Mason Burstow,22,Centre-Forward,Bolton Wanderers,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5817576,,3008,355
+Hull City,Kasey Palmer,29,Attacking Midfield,Luton Town,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6137141,,3008,1031
+Hull City,Abdülkadir Ömür,27,Right Midfield,Antalyaspor,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5813547,,3008,589
+Hull City,Abu Kamara,22,Right Winger,Getafe CF,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911621,,3008,3709
+Hull City,Harry Vaughan,22,Attacking Midfield,Bohemian Football Club,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6105090,,3008,9211
+Hull City,Thimothée Lo-Tutala,23,Goalkeeper,Doncaster Rovers,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5709411,,3008,2454
+Hull City,Enis Destan,24,Centre-Forward,KVC Westerlo,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6153103,,3008,968
+Hull City,Ivor Pandur,26,Goalkeeper,Rangers FC,€7.00m,out,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6391744,,3008,124
+Hull City,Kyle Joseph,24,Centre-Forward,Middlesbrough FC,€4.70m,out,Summer,4.7,Premier League,2026,2026/2027,England,transfermarkt.com,6418213,,3008,641
+Hull City,Abu Kamara,23,Right Winger,Portsmouth FC,€2.90m,out,Summer,2.9,Premier League,2026,2026/2027,England,transfermarkt.com,6493055,,3008,1020
+Hull City,Akin Famewo,27,Centre-Back,Bolton Wanderers,€585Th.,out,Summer,0.585,Premier League,2026,2026/2027,England,transfermarkt.com,6392757,,3008,355
+Hull City,Kasey Palmer,29,Attacking Midfield,Luton Town,€580Th.,out,Summer,0.58,Premier League,2026,2026/2027,England,transfermarkt.com,6402330,,3008,1031
+Hull City,Harry Vaughan,22,Attacking Midfield,Bohemian Football Club,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6347149,,3008,9211
+Hull City,Enis Destan,24,Centre-Forward,Konyaspor,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6504838,,3008,2293
+Hull City,Thimothée Lo-Tutala,23,Goalkeeper,Colchester United,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6489886,,3008,1060
+Hull City,Mason Burstow,22,Centre-Forward,Sheffield Wednesday,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6474619,,3008,1035
+Hull City,Harvey Cartwright,24,Goalkeeper,Grimsby Town,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6464957,,3008,1034
+Hull City,Joe Gelhardt,24,Centre-Forward,Leeds United,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5849265,,3008,399
+Hull City,John Lundstram,32,Defensive Midfield,Trabzonspor,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5825848,,3008,449
+Hull City,Amir Hadziahmetovic,29,Defensive Midfield,Besiktas JK,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5909002,,3008,114
+Hull City,Yu Hirakawa,25,Right Winger,Bristol City,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6131205,,3008,698
+Hull City,Toby Collyer,22,Defensive Midfield,Manchester United,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6154304,,3008,985
+Hull City,Lewis Koumas,20,Left Winger,Liverpool FC U21,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6153873,,3008,9252
+Ipswich Town,Julio Enciso,22,Attacking Midfield,RC Strasbourg Alsace,€30.50m,in,Summer,30.5,Premier League,2026,2026/2027,England,transfermarkt.com,6511932,,677,667
+Ipswich Town,Emersonn,21,Centre-Forward,FC Toulouse,€28.00m,in,Summer,28,Premier League,2026,2026/2027,England,transfermarkt.com,6412213,,677,415
+Ipswich Town,Abdul Fatawu,22,Right Winger,Leicester City,€23.45m,in,Summer,23.45,Premier League,2026,2026/2027,England,transfermarkt.com,6445018,,677,1003
+Ipswich Town,Exequiel Palacios,27,Central Midfield,Bayer 04 Leverkusen,€22.50m,in,Summer,22.5,Premier League,2026,2026/2027,England,transfermarkt.com,6540609,,677,15
+Ipswich Town,Abdoul Ouattara,20,Right-Back,RC Strasbourg Alsace,€20.00m,in,Summer,20,Premier League,2026,2026/2027,England,transfermarkt.com,6511816,,677,667
+Ipswich Town,Florentino,26,Defensive Midfield,Burnley FC,€18.70m,in,Summer,18.7,Premier League,2026,2026/2027,England,transfermarkt.com,6485411,,677,1132
+Ipswich Town,Saša Lukić,29,Central Midfield,Fulham FC,€10.50m,in,Summer,10.5,Premier League,2026,2026/2027,England,transfermarkt.com,6489963,,677,931
+Ipswich Town,Kjell Scherpen,26,Goalkeeper,Union Saint-Gilloise,€10.00m,in,Summer,10,Premier League,2026,2026/2027,England,transfermarkt.com,6464532,,677,3948
+Ipswich Town,Issa Diop,29,Centre-Back,Fulham FC,€10.00m,in,Summer,10,Premier League,2026,2026/2027,England,transfermarkt.com,6447201,,677,931
+Ipswich Town,Daizen Maeda,28,Left Winger,Celtic FC,€9.40m,in,Summer,9.4,Premier League,2026,2026/2027,England,transfermarkt.com,6456334,,677,371
+Ipswich Town,Chuba Akpom,30,Centre-Forward,Ajax Amsterdam,€9.30m,in,Summer,9.3,Premier League,2026,2026/2027,England,transfermarkt.com,6298287,,677,610
+Ipswich Town,Cédric Kipré,29,Centre-Back,Stade Reims,€4.50m,in,Summer,4.5,Premier League,2026,2026/2027,England,transfermarkt.com,6295462,,677,1421
+Ipswich Town,Kayne van Oevelen,22,Goalkeeper,FC Volendam,€4.00m,in,Summer,4,Premier League,2026,2026/2027,England,transfermarkt.com,6444386,,677,724
+Ipswich Town,Ben Johnson,27,Right-Back,Stoke City,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6524040,,677,512
+Ipswich Town,Ali Al-Hamadi,25,Centre-Forward,Sheffield Wednesday,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536376,,677,1035
+Ipswich Town,Somto Boniface,21,Left-Back,Leyton Orient,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6465934,,677,1150
+Ipswich Town,Cieran Slicker,24,Goalkeeper,Barnsley FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6423645,,677,349
+Ipswich Town,Arijanet Murić,27,Goalkeeper,US Sassuolo,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5859125,,677,6574
+Ipswich Town,Conor Chaplin,29,Second Striker,Portsmouth FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911984,,677,1020
+Ipswich Town,Ali Al-Hamadi,24,Centre-Forward,Luton Town,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911836,,677,1031
+Ipswich Town,Arijanet Murić,27,Goalkeeper,US Sassuolo,€7.00m,out,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6333134,,677,6574
+Ipswich Town,George Hirst,27,Centre-Forward,Stoke City,€7.00m,out,Summer,7,Premier League,2026,2026/2027,England,transfermarkt.com,6522566,,677,512
+Ipswich Town,Harry Clarke,25,Right-Back,Preston North End,€4.10m,out,Summer,4.1,Premier League,2026,2026/2027,England,transfermarkt.com,6505347,,677,466
+Ipswich Town,Elkan Baggott,23,Centre-Back,Millwall FC,€1.17m,out,Summer,1.17,Premier League,2026,2026/2027,England,transfermarkt.com,6430211,,677,1028
+Ipswich Town,Wes Burns,31,Right Winger,Leicester City,€90Th.,out,Summer,0.09,Premier League,2026,2026/2027,England,transfermarkt.com,6489899,,677,1003
+Ipswich Town,Conor Chaplin,29,Second Striker,Leicester City,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6432702,,677,1003
+Ipswich Town,Conor Townsend,33,Left-Back,West Bromwich Albion,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6455312,,677,984
+Ipswich Town,Ben Johnson,26,Right-Back,Stoke City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6524039,,677,512
+Ipswich Town,Cieran Slicker,23,Goalkeeper,Barnsley FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6423644,,677,349
+Ipswich Town,Kayne van Oevelen,23,Goalkeeper,Valencia CF,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6531023,,677,1049
+Ipswich Town,Ali Al-Hamadi,24,Centre-Forward,Sheffield Wednesday,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536375,,677,1035
+Ipswich Town,Ashley Young,40,Right-Back,Retired,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6291797,,677,
+Ipswich Town,Cédric Kipré,29,Centre-Back,Stade Reims,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5774014,,677,1421
+Ipswich Town,Iván Azón,23,Centre-Forward,Como 1907,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5900340,,677,1047
+Ipswich Town,Jens Cajuste,26,Defensive Midfield,SSC Napoli,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5843921,,677,6195
+Ipswich Town,Chuba Akpom,30,Centre-Forward,Ajax Amsterdam,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5852004,,677,610
+Ipswich Town,Dan Neil,24,Central Midfield,Sunderland AFC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6145787,,677,289
+Leeds United,James Trafford,23,Goalkeeper,Manchester City,€46.70m,in,Summer,46.7,Premier League,2026,2026/2027,England,transfermarkt.com,6489346,,399,281
+Leeds United,Tarik Muharemović,23,Centre-Back,US Sassuolo,€37.00m,in,Summer,37,Premier League,2026,2026/2027,England,transfermarkt.com,6435379,,399,6574
+Leeds United,Nico Elvedi,29,Centre-Back,Borussia Mönchengladbach,€8.00m,in,Summer,8,Premier League,2026,2026/2027,England,transfermarkt.com,6517370,,399,18
+Leeds United,Harry Wilson,29,Right Winger,Fulham FC,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6412644,,399,931
+Leeds United,Maximilian Wöber,28,Centre-Back,SV Werder Bremen,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5751434,,399,86
+Leeds United,Jack Harrison,29,Left Winger,ACF Fiorentina,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6129602,,399,430
+Leeds United,Largie Ramazani,25,Left Winger,Valencia CF,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5900187,,399,1049
+Leeds United,Isaac Schmidt,26,Right-Back,SV Werder Bremen,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5900041,,399,86
+Leeds United,Joe Gelhardt,24,Centre-Forward,Hull City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5849265,,399,3008
+Leeds United,Mateo Joseph,22,Centre-Forward,RCD Mallorca,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5848149,,399,237
+Leeds United,Pascal Struijk,26,Centre-Back,Brighton & Hove Albion,€23.20m,out,Summer,23.2,Premier League,2026,2026/2027,England,transfermarkt.com,6391050,,399,1237
+Leeds United,Joe Gelhardt,24,Centre-Forward,Hull City,€7.60m,out,Summer,7.6,Premier League,2026,2026/2027,England,transfermarkt.com,6506635,,399,3008
+Leeds United,Isaac Schmidt,26,Right-Back,BSC Young Boys,€1.30m,out,Summer,1.3,Premier League,2026,2026/2027,England,transfermarkt.com,6431455,,399,452
+Leeds United,Jack Harrison,29,Left Winger,New England Revolution,€1.00m,out,Summer,1,Premier League,2026,2026/2027,England,transfermarkt.com,6458491,,399,626
+Leeds United,Illan Meslier,26,Goalkeeper,Arsenal FC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6414278,,399,11
+Leeds United,Sam Byram,32,Left-Back,Middlesbrough FC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6529878,,399,641
+Leeds United,Maximilian Wöber,28,Centre-Back,FC Schalke 04,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6447692,,399,33
+Leeds United,Karl Darlow,35,Goalkeeper,Manchester United,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6401535,,399,985
+Leeds United,Joël Piroe,27,Centre-Forward,West Ham United,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6516919,,399,379
+Leeds United,Sebastiaan Bornauw,27,Centre-Back,Hamburger SV,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6517271,,399,41
+Leeds United,Facundo Buonanotte,21,Attacking Midfield,Brighton & Hove Albion,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6120917,,399,1237
+Liverpool FC,Jérémy Jacquet,20,Centre-Back,Stade Rennais FC,€63.60m,in,Summer,63.6,Premier League,2026,2026/2027,England,transfermarkt.com,6164065,,31,273
+Liverpool FC,Víctor Muñoz,22,Left Winger,CA Osasuna,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6367850,,31,331
+Liverpool FC,Ifeanyi Ndukwe,18,Centre-Back,Austria Vienna,€3.00m,in,Summer,3,Premier League,2026,2026/2027,England,transfermarkt.com,6406741,,31,14
+Liverpool FC,Ronald Araujo,27,Centre-Back,FC Barcelona,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6492985,,31,131
+Liverpool FC,Vitezslav Jaros,24,Goalkeeper,Ajax Amsterdam,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5713023,,31,610
+Liverpool FC,Konstantinos Tsimikas,30,Left-Back,AS Roma,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5907657,,31,12
+Liverpool FC,Harvey Elliott,23,Attacking Midfield,Aston Villa,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911914,,31,405
+Liverpool FC,Calvin Ramsay,23,Right-Back,St. Mirren FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6533079,,31,465
+Liverpool FC,Curtis Jones,25,Central Midfield,Inter Milan,€30.00m,out,Summer,30,Premier League,2026,2026/2027,England,transfermarkt.com,6524834,,31,46
+Liverpool FC,Andrew Robertson,32,Left-Back,Tottenham Hotspur,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6266690,,31,148
+Liverpool FC,Ibrahima Konaté,27,Centre-Back,Real Madrid,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6366872,,31,418
+Liverpool FC,Mohamed Salah,34,Right Winger,Trabzonspor,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6486206,,31,449
+Liverpool FC,Ármin Pécsi,21,Goalkeeper,TSV Hartberg,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6450039,,31,4467
+Liverpool FC,Ifeanyi Ndukwe,18,Centre-Back,Levante UD,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6525505,,31,3368
+Liverpool FC,Rhys Williams,25,Centre-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6316125,,31,515
+Liverpool FC,Calvin Ramsay,23,Right-Back,St. Mirren FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6533078,,31,465
+Manchester City,Elliot Anderson,23,Central Midfield,Nottingham Forest,€135.00m,in,Summer,135,Premier League,2026,2026/2027,England,transfermarkt.com,6396999,,281,703
+Manchester City,Ayyoub Bouaddi,18,Central Midfield,LOSC Lille,€95.00m,in,Summer,95,Premier League,2026,2026/2027,England,transfermarkt.com,6536198,,281,1082
+Manchester City,Mathys Detourbet,19,Left Winger,ESTAC Troyes,€25.00m,in,Summer,25,Premier League,2026,2026/2027,England,transfermarkt.com,6385068,,281,1095
+Manchester City,Jeremy Monga,17,Left Winger,Leicester City,€11.70m,in,Summer,11.7,Premier League,2026,2026/2027,England,transfermarkt.com,6419260,,281,1003
+Manchester City,Pierce Charles,20,Goalkeeper,Sheffield Wednesday,€3.50m,in,Summer,3.5,Premier League,2026,2026/2027,England,transfermarkt.com,6417382,,281,1035
+Manchester City,Gerónimo Rulli,34,Goalkeeper,Olympique Marseille,€3.50m,in,Summer,3.5,Premier League,2026,2026/2027,England,transfermarkt.com,6497109,,281,244
+Manchester City,Pierce Charles,21,Goalkeeper,Queens Park Rangers,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6417369,,281,1039
+Manchester City,Max Alleyne,21,Centre-Back,Burnley FC,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6504952,,281,1132
+Manchester City,Claudio Echeverri,20,Attacking Midfield,Girona FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6127555,,281,12321
+Manchester City,Josh Wilson-Esbrand,23,Left-Back,Radomiak Radom,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5927942,,281,7154
+Manchester City,Issa Kaboré,25,Right-Back,Wrexham AFC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5912015,,281,1112
+Manchester City,Manuel Akanji,30,Centre-Back,Inter Milan,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5910950,,281,46
+Manchester City,Vitor Reis,20,Centre-Back,Girona FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5845449,,281,12321
+Manchester City,Juma Bah,20,Centre-Back,OGC Nice,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5729380,,281,417
+Manchester City,Savinho,22,Left Winger,Tottenham Hotspur,€87.70m,out,Summer,87.7,Premier League,2026,2026/2027,England,transfermarkt.com,6532593,,281,148
+Manchester City,Tijjani Reijnders,28,Central Midfield,Al-Qadsiah FC,€61.00m,out,Summer,61,Premier League,2026,2026/2027,England,transfermarkt.com,6518125,,281,26069
+Manchester City,Rodri,30,Defensive Midfield,FC Barcelona,€60.00m,out,Summer,60,Premier League,2026,2026/2027,England,transfermarkt.com,6515728,,281,131
+Manchester City,Nico González,24,Defensive Midfield,Newcastle United,€56.00m,out,Summer,56,Premier League,2026,2026/2027,England,transfermarkt.com,6537702,,281,762
+Manchester City,James Trafford,23,Goalkeeper,Leeds United,€46.70m,out,Summer,46.7,Premier League,2026,2026/2027,England,transfermarkt.com,6489346,,281,399
+Manchester City,Manuel Akanji,30,Centre-Back,Inter Milan,€15.00m,out,Summer,15,Premier League,2026,2026/2027,England,transfermarkt.com,6296046,,281,46
+Manchester City,Nathan Aké,31,Centre-Back,Fenerbahce,€8.17m,out,Summer,8.17,Premier League,2026,2026/2027,England,transfermarkt.com,6400447,,281,36
+Manchester City,Issa Kaboré,25,Right-Back,Wrexham AFC,€2.35m,out,Summer,2.35,Premier League,2026,2026/2027,England,transfermarkt.com,6538974,,281,1112
+Manchester City,Bernardo Silva,31,Attacking Midfield,Real Madrid,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6364899,,281,418
+Manchester City,John Stones,32,Centre-Back,Inter Milan,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6471300,,281,46
+Manchester City,Max Alleyne,21,Centre-Back,Burnley FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6504951,,281,1132
+Manchester City,Omar Marmoush,27,Centre-Forward,Tottenham Hotspur,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6539879,,281,148
+Manchester City,Sverre Nypan,19,Central Midfield,Lommel SK,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6419112,,281,5026
+Manchester City,Mathys Detourbet,19,Left Winger,AS Monaco,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6397510,,281,162
+Manchester City,Pierce Charles,20,Goalkeeper,Queens Park Rangers,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6417368,,281,1039
+Manchester United,Carlos Baleba,22,Defensive Midfield,Brighton & Hove Albion,€75.90m,in,Summer,75.9,Premier League,2026,2026/2027,England,transfermarkt.com,6533389,,985,1237
+Manchester United,Andrey Santos,22,Defensive Midfield,Chelsea FC,€56.30m,in,Summer,56.3,Premier League,2026,2026/2027,England,transfermarkt.com,6424261,,985,631
+Manchester United,Youri Tielemans,29,Central Midfield,Aston Villa,€41.00m,in,Summer,41,Premier League,2026,2026/2027,England,transfermarkt.com,6427758,,985,405
+Manchester United,Karl Darlow,35,Goalkeeper,Leeds United,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6401535,,985,399
+Manchester United,Marcus Rashford,28,Left Winger,FC Barcelona,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5805086,,985,131
+Manchester United,Toby Collyer,22,Defensive Midfield,Hull City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6154304,,985,3008
+Manchester United,Harry Amass,19,Left-Back,Norwich City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6141118,,985,1123
+Manchester United,Jadon Sancho,26,Left Winger,Aston Villa,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911815,,985,405
+Manchester United,Rasmus Højlund,23,Centre-Forward,SSC Napoli,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5910715,,985,6195
+Manchester United,Radek Vítek,22,Goalkeeper,Bristol City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5817262,,985,698
+Manchester United,Rasmus Højlund,23,Centre-Forward,SSC Napoli,€44.00m,out,Summer,44,Premier League,2026,2026/2027,England,transfermarkt.com,6315502,,985,6195
+Manchester United,Radek Vítek,22,Goalkeeper,Middlesbrough FC,€8.15m,out,Summer,8.15,Premier League,2026,2026/2027,England,transfermarkt.com,6489407,,985,641
+Manchester United,Casemiro,34,Defensive Midfield,Inter Miami CF,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6447979,,985,69261
+Manchester United,Tyler Fredricson,21,Centre-Back,FC Lausanne-Sport,?,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6470242,,985,527
+Manchester United,Altay Bayındır,28,Goalkeeper,Celta de Vigo,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6489388,,985,940
+Manchester United,Jadon Sancho,26,Left Winger,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6347111,,985,515
+Manchester United,Tyrell Malacia,26,Left-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6315834,,985,515
+Newcastle United,Nico González,24,Defensive Midfield,Manchester City,€56.00m,in,Summer,56,Premier League,2026,2026/2027,England,transfermarkt.com,6537702,,762,281
+Newcastle United,Bazoumana Touré,20,Left Winger,TSG 1899 Hoffenheim,€50.00m,in,Summer,50,Premier League,2026,2026/2027,England,transfermarkt.com,6404414,,762,533
+Newcastle United,Amar Dedic,24,Right-Back,SL Benfica,€35.90m,in,Summer,35.9,Premier League,2026,2026/2027,England,transfermarkt.com,6514557,,762,294
+Newcastle United,Aladji Bamba,20,Defensive Midfield,AS Monaco,€35.50m,in,Summer,35.5,Premier League,2026,2026/2027,England,transfermarkt.com,6453434,,762,162
+Newcastle United,Lukas Hornicek,24,Goalkeeper,SC Braga,€30.60m,in,Summer,30.6,Premier League,2026,2026/2027,England,transfermarkt.com,6480821,,762,1075
+Newcastle United,Sean Steur,18,Central Midfield,Ajax Amsterdam,€23.50m,in,Summer,23.5,Premier League,2026,2026/2027,England,transfermarkt.com,6414088,,762,610
+Newcastle United,Ewen Jaouen,20,Goalkeeper,Stade Reims,€21.50m,in,Summer,21.5,Premier League,2026,2026/2027,England,transfermarkt.com,6347553,,762,1421
+Newcastle United,Harrison Ashby,25,Right-Back,Luton Town,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6413820,,762,1031
+Newcastle United,Joe White,23,Attacking Midfield,Bradford City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6116471,,762,1027
+Newcastle United,Sandro Tonali,26,Defensive Midfield,Tottenham Hotspur,€108.00m,out,Summer,108,Premier League,2026,2026/2027,England,transfermarkt.com,6405567,,762,148
+Newcastle United,Bruno Guimarães,28,Central Midfield,Arsenal FC,€87.50m,out,Summer,87.5,Premier League,2026,2026/2027,England,transfermarkt.com,6489341,,762,11
+Newcastle United,Anthony Gordon,25,Left Winger,FC Barcelona,€80.00m,out,Summer,80,Premier League,2026,2026/2027,England,transfermarkt.com,6330442,,762,131
+Newcastle United,John Ruddy,39,Goalkeeper,Wolverhampton Wanderers,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6539017,,762,543
+Newcastle United,Kieran Trippier,35,Right-Back,Wolverhampton Wanderers,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6344311,,762,543
+Newcastle United,Matt Targett,30,Left-Back,Hull City,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6335898,,762,3008
+Newcastle United,Joe White,23,Attacking Midfield,Crewe Alexandra,?,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6432710,,762,1042
+Newcastle United,Harrison Ashby,24,Right-Back,Luton Town,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6413819,,762,1031
+Newcastle United,Alex Murphy,22,Left-Back,1.FC Kaiserslautern,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6494918,,762,2
+Newcastle United,Emil Krafth,31,Right-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6314753,,762,515
+Newcastle United,Aaron Ramsdale,28,Goalkeeper,Southampton FC,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5830182,,762,180
+Nottingham Forest,Liam Delap,23,Centre-Forward,Chelsea FC,€52.50m,in,Summer,52.5,Premier League,2026,2026/2027,England,transfermarkt.com,6538946,,703,631
+Nottingham Forest,Ousmane Diomande,22,Centre-Back,Sporting CP,€40.00m,in,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6495053,,703,336
+Nottingham Forest,Gustavo Sá,21,Attacking Midfield,FC Famalicão,€20.00m,in,Summer,20,Premier League,2026,2026/2027,England,transfermarkt.com,6469895,,703,3329
+Nottingham Forest,Xaver Schlager,28,Central Midfield,RB Leipzig,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6450271,,703,23826
+Nottingham Forest,Steven Benda,27,Goalkeeper,Fulham FC,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6506500,,703,931
+Nottingham Forest,Tyler Bindon,21,Centre-Back,Sheffield United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5752157,,703,350
+Nottingham Forest,Arnaud Kalimuendo,24,Centre-Forward,Eintracht Frankfurt,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6103323,,703,24
+Nottingham Forest,Jota Silva,26,Left Winger,Besiktas JK,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5938531,,703,114
+Nottingham Forest,Omar Richards,28,Left-Back,Rio Ave FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5912138,,703,2425
+Nottingham Forest,David Carmo,26,Centre-Back,Real Oviedo,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5900969,,703,2497
+Nottingham Forest,Elliot Anderson,23,Central Midfield,Manchester City,€135.00m,out,Summer,135,Premier League,2026,2026/2027,England,transfermarkt.com,6396999,,703,281
+Nottingham Forest,Taiwo Awoniyi,29,Centre-Forward,Coventry City,€10.50m,out,Summer,10.5,Premier League,2026,2026/2027,England,transfermarkt.com,6512359,,703,990
+Nottingham Forest,David Carmo,26,Centre-Back,Olympiacos Piraeus,€9.00m,out,Summer,9,Premier League,2026,2026/2027,England,transfermarkt.com,6389830,,703,683
+Nottingham Forest,Omar Richards,28,Left-Back,Aris Thessaloniki,€2.00m,out,Summer,2,Premier League,2026,2026/2027,England,transfermarkt.com,6524901,,703,605
+Nottingham Forest,Stefan Ortega,33,Goalkeeper,Olympiacos Piraeus,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6467902,,703,683
+Nottingham Forest,Angus Gunn,30,Goalkeeper,San Jose Earthquakes,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6347071,,703,218
+Nottingham Forest,Jota Silva,26,Left Winger,Olympiacos Piraeus,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6413617,,703,683
+Nottingham Forest,Gustavo Sá,21,Attacking Midfield,Olympiacos Piraeus,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6469896,,703,683
+Nottingham Forest,Eric da Silva Moreira,20,Right-Back,Excelsior Rotterdam,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536246,,703,798
+Nottingham Forest,Dilane Bakwa,24,Right Winger,LOSC Lille,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6536614,,703,1082
+Nottingham Forest,Willy Boly,35,Centre-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6347069,,703,515
+Nottingham Forest,Lorenzo Lucca,25,Centre-Forward,SSC Napoli,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6139612,,703,6195
+Sunderland AFC,Dayann Méthalie,20,Left-Back,FC Toulouse,€28.00m,in,Summer,28,Premier League,2026,2026/2027,England,transfermarkt.com,6524503,,289,415
+Sunderland AFC,Jules Ahoka,20,Defensive Midfield,Royal Antwerp FC,€10.00m,in,Summer,10,Premier League,2026,2026/2027,England,transfermarkt.com,6530123,,289,1096
+Sunderland AFC,Thomas Meunier,34,Right-Back,LOSC Lille,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6429106,,289,1082
+Sunderland AFC,Luís Semedo,22,Centre-Forward,Moreirense FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5897229,,289,979
+Sunderland AFC,Jenson Seelt,24,Centre-Back,Swansea City,End of loan 31/05/2027,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6540104,,289,2288
+Sunderland AFC,Simon Adingra,24,Left Winger,AS Monaco,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6163310,,289,162
+Sunderland AFC,Leo Hjelde,22,Centre-Back,Sheffield United,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6161750,,289,350
+Sunderland AFC,Anthony Patterson,26,Goalkeeper,Millwall FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6158316,,289,1028
+Sunderland AFC,Aji Alese,25,Centre-Back,Portsmouth FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6151372,,289,1020
+Sunderland AFC,Arthur Masuaku,32,Left-Back,RC Lens,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6146333,,289,826
+Sunderland AFC,Dan Neil,24,Central Midfield,Ipswich Town,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6145787,,289,677
+Sunderland AFC,Timothée Pembélé,23,Right-Back,Le Havre AC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6099129,,289,738
+Sunderland AFC,Nazariy Rusyn,27,Centre-Forward,Arka Gdynia,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5914429,,289,6107
+Sunderland AFC,Niall Huggins,25,Right-Back,Wycombe Wanderers,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911595,,289,2805
+Sunderland AFC,Jenson Seelt,23,Centre-Back,VfL Wolfsburg,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911118,,289,82
+Sunderland AFC,Alan Browne,31,Central Midfield,Middlesbrough FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5910782,,289,641
+Sunderland AFC,Eliezer Mayenda,21,Centre-Forward,Stade Rennais FC,€22.00m,out,Summer,22,Premier League,2026,2026/2027,England,transfermarkt.com,6404692,,289,273
+Sunderland AFC,Anthony Patterson,26,Goalkeeper,Wrexham AFC,€9.35m,out,Summer,9.35,Premier League,2026,2026/2027,England,transfermarkt.com,6496375,,289,1112
+Sunderland AFC,Ahmed Abdullahi,22,Centre-Forward,Eyüpspor,€1.40m,out,Summer,1.4,Premier League,2026,2026/2027,England,transfermarkt.com,6484742,,289,7160
+Sunderland AFC,Harrison Jones,21,Attacking Midfield,Peterborough United,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6367945,,289,1072
+Sunderland AFC,Dennis Cirkin,24,Left-Back,Queens Park Rangers,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6347081,,289,1039
+Sunderland AFC,Nazariy Rusyn,27,Centre-Forward,Karpaty Lviv,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6393984,,289,85465
+Sunderland AFC,Timothée Pembélé,23,Right-Back,Le Havre AC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6431835,,289,738
+Sunderland AFC,Dan Neil,24,Central Midfield,Rangers FC,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6145788,,289,124
+Sunderland AFC,Arthur Masuaku,32,Left-Back,Konyaspor,free transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6493068,,289,2293
+Sunderland AFC,Leo Hjelde,22,Centre-Back,KV Mechelen,?,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6495887,,289,354
+Sunderland AFC,Jenson Seelt,23,Centre-Back,Swansea City,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6540103,,289,2288
+Sunderland AFC,Milan Aleksic,20,Attacking Midfield,FK Partizan Belgrade,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6367941,,289,669
+Sunderland AFC,Bertrand Traoré,30,Right Winger,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6347098,,289,515
+Sunderland AFC,Niall Huggins,25,Right-Back,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6347099,,289,515
+Sunderland AFC,Lutsharel Geertruida,25,Right-Back,RB Leipzig,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911244,,289,23826
+Tottenham Hotspur,Sandro Tonali,26,Defensive Midfield,Newcastle United,€108.00m,in,Summer,108,Premier League,2026,2026/2027,England,transfermarkt.com,6405567,,148,762
+Tottenham Hotspur,Mateus Fernandes,21,Central Midfield,West Ham United,€99.00m,in,Summer,99,Premier League,2026,2026/2027,England,transfermarkt.com,6396319,,148,379
+Tottenham Hotspur,Savinho,22,Left Winger,Manchester City,€87.70m,in,Summer,87.7,Premier League,2026,2026/2027,England,transfermarkt.com,6532593,,148,281
+Tottenham Hotspur,Jan Paul van Hecke,26,Centre-Back,Brighton & Hove Albion,€60.00m,in,Summer,60,Premier League,2026,2026/2027,England,transfermarkt.com,6367893,,148,1237
+Tottenham Hotspur,Andrew Robertson,32,Left-Back,Liverpool FC,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6266690,,148,31
+Tottenham Hotspur,Marcos Senesi,29,Centre-Back,AFC Bournemouth,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6348008,,148,989
+Tottenham Hotspur,Martin Dúbravka,37,Goalkeeper,Burnley FC,free transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6379418,,148,1132
+Tottenham Hotspur,Omar Marmoush,27,Centre-Forward,Manchester City,loan transfer,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6539879,,148,281
+Tottenham Hotspur,Min-hyeok Yang,20,Right Winger,Coventry City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6100870,,148,990
+Tottenham Hotspur,Manor Solomon,26,Left Winger,ACF Fiorentina,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6090982,,148,430
+Tottenham Hotspur,Kota Takai,21,Centre-Back,Borussia Mönchengladbach,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6090094,,148,18
+Tottenham Hotspur,Luka Vuskovic,19,Centre-Back,Hamburger SV,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5900805,,148,41
+Tottenham Hotspur,Alfie Devine,21,Attacking Midfield,Preston North End,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5845971,,148,466
+Tottenham Hotspur,Mikey Moore,18,Right Winger,Rangers FC,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5827111,,148,124
+Tottenham Hotspur,Alejo Veliz,22,Centre-Forward,CA Rosario Central,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5760658,,148,1418
+Tottenham Hotspur,Ashley Phillips,21,Centre-Back,Stoke City,End of loan 30/06/2026,in,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5218602,,148,512
+Tottenham Hotspur,Luka Vuskovic,19,Centre-Back,Brighton & Hove Albion,€54.00m,out,Summer,54,Premier League,2026,2026/2027,England,transfermarkt.com,6426452,,148,1237
+Tottenham Hotspur,Cristian Romero,28,Centre-Back,Atlético de Madrid,€40.00m,out,Summer,40,Premier League,2026,2026/2027,England,transfermarkt.com,6506058,,148,13
+Tottenham Hotspur,Djed Spence,26,Right-Back,Inter Milan,€30.00m,out,Summer,30,Premier League,2026,2026/2027,England,transfermarkt.com,6507250,,148,46
+Tottenham Hotspur,Will Lankshear,21,Centre-Forward,Middlesbrough FC,€11.70m,out,Summer,11.7,Premier League,2026,2026/2027,England,transfermarkt.com,6447034,,148,641
+Tottenham Hotspur,Alejo Veliz,22,Centre-Forward,Esporte Clube Bahia,€9.00m,out,Summer,9,Premier League,2026,2026/2027,England,transfermarkt.com,6384376,,148,10010
+Tottenham Hotspur,Ashley Phillips,21,Centre-Back,Middlesbrough FC,€8.20m,out,Summer,8.2,Premier League,2026,2026/2027,England,transfermarkt.com,6506883,,148,641
+Tottenham Hotspur,Manor Solomon,27,Left Winger,West Ham United,€5.85m,out,Summer,5.85,Premier League,2026,2026/2027,England,transfermarkt.com,6493011,,148,379
+Tottenham Hotspur,Alfie Devine,21,Attacking Midfield,Preston North End,€5.30m,out,Summer,5.3,Premier League,2026,2026/2027,England,transfermarkt.com,6410075,,148,466
+Tottenham Hotspur,Radu Drăgușin,24,Centre-Back,ACF Fiorentina,Loan fee:€1.50m,out,Summer,1.5,Premier League,2026,2026/2027,England,transfermarkt.com,6412546,,148,430
+Tottenham Hotspur,Guglielmo Vicario,29,Goalkeeper,Juventus FC,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6515412,,148,506
+Tottenham Hotspur,Min-hyeok Yang,20,Right Winger,KVC Westerlo,loan transfer,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,6496912,,148,968
+Tottenham Hotspur,Yves Bissouma,29,Defensive Midfield,Without Club,-,out,Summer,NA,Premier League,2026,2026/2027,England,transfermarkt.com,6347017,,148,515
+Tottenham Hotspur,Randal Kolo Muani,27,Centre-Forward,Paris Saint-Germain,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5911450,,148,583
+Tottenham Hotspur,João Palhinha,30,Defensive Midfield,Bayern Munich,End of loan 30/06/2026,out,Summer,0,Premier League,2026,2026/2027,England,transfermarkt.com,5832810,,148,27
+Aston Villa,Yasin Özcan,20,Centre-Back,Besiktas JK,End of loan 27/01/2027,in,Winter,0,Premier League,2026,2026/2027,England,transfermarkt.com,6148506,,405,114
+Brentford FC,Josh Stephenson,20,Centre-Back,Crewe Alexandra,End of loan 01/01/2027,in,Winter,0,Premier League,2026,2026/2027,England,transfermarkt.com,6523909,,1148,1042
+Nottingham Forest,Cuiabano,23,Left-Back,Clube de Regatas Vasco da Gama,End of loan 31/12/2026,in,Winter,0,Premier League,2026,2026/2027,England,transfermarkt.com,6169839,,703,978

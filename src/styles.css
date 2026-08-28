@@ -328,6 +328,36 @@ tbody tr.active td { background: rgb(200 255 98 / .055); }
 .coverage-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
 .coverage-row > strong { color: var(--text-2); font-size: 11px; text-align: right; }
 .coverage-row > small { grid-column: 2 / -1; margin-top: -8px; color: var(--text-3); font-size: 8px; }
+.coverage-note { margin: 0; padding: 11px 18px; border-top: 1px solid var(--line); color: var(--text-3); font-size: 9px; line-height: 1.5; }
+
+/* Derniers transferts : le retard entre ce que publie la source et ce que nous avons. */
+.latest-lag { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.latest-lag > div { display: grid; gap: 3px; padding: 12px 18px; }
+.latest-lag > div + div { border-left: 1px solid var(--line); }
+.latest-lag strong { color: var(--text-1); font: 600 13px var(--mono, inherit); }
+.latest-subhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 18px 8px; border-top: 1px solid var(--line); }
+.latest-subhead b { font-size: 11px; }
+.latest-subhead span { color: var(--text-3); font-size: 9px; }
+.latest-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.latest-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto 18px; align-items: center; gap: 10px; padding: 9px 18px; border-bottom: 1px solid var(--line); }
+.latest-row:nth-child(odd) { border-right: 1px solid var(--line); }
+.latest-date { color: var(--text-3); font-size: 9px; white-space: nowrap; }
+.latest-player { display: grid; min-width: 0; }
+.latest-player b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10.5px; }
+.latest-player small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-3); font-size: 8.5px; }
+.latest-player small i { font-style: normal; opacity: .6; }
+.latest-fee { color: var(--text-2); font-size: 9.5px; white-space: nowrap; }
+.latest-state { color: var(--accent); font-size: 11px; text-align: center; }
+/* Un transfert publié mais pas encore collecté est atténué, jamais masqué. */
+.latest-row--missing { background: color-mix(in srgb, var(--out) 6%, transparent); }
+.latest-row--missing .latest-state { color: var(--text-3); }
+
+@media (max-width: 900px) {
+  .latest-list { grid-template-columns: minmax(0, 1fr); }
+  .latest-row:nth-child(n) { border-right: 0; }
+  .latest-lag { grid-template-columns: minmax(0, 1fr); }
+  .latest-lag > div + div { border-left: 0; border-top: 1px solid var(--line); }
+}
 .signals-disclosure { overflow: hidden; }
 .signals-disclosure summary strong { display: grid; place-items: center; min-width: 28px; height: 28px; border-radius: 999px; color: var(--accent); background: rgb(200 255 98 / .08); font: 700 10px var(--mono); }
 .signal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; padding: 10px; border-top: 1px solid var(--line); }

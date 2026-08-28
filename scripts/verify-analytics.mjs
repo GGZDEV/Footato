@@ -67,11 +67,15 @@ const independentFilter = (filters) => mercatos.filter((mercato) => {
 
 const independentTotals = (rows, includeLoanFees) => {
   const result = {
-    spend: 0, income: 0, balance: 0, mercatos: rows.length, clubs: 0,
+    spend: 0, income: 0, balance: 0, mercatos: 0, clubMercatos: rows.length, clubs: 0,
     arrivals: 0, departures: 0, paidDeals: 0, undisclosed: 0,
   };
   const clubs = new Set();
+  // A mercato is a window, not a club-in-a-window: counted the same way here,
+  // independently, so a regression in either implementation shows up.
+  const windows = new Set();
   for (const mercato of rows) {
+    windows.add(`${mercato.year}-${mercato.window}`);
     const resolved = independentResolve(mercato, includeLoanFees);
     result.spend += resolved.spend;
     result.income += resolved.income;
@@ -84,6 +88,7 @@ const independentTotals = (rows, includeLoanFees) => {
   }
   result.balance = result.income - result.spend;
   result.clubs = clubs.size;
+  result.mercatos = windows.size;
   return result;
 };
 
@@ -114,7 +119,7 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
     } else {
       key = `${mercato.year}-${mercato.window}`;
       label = seasonLabel(mercato.year);
-      sublabel = `Mercato d'${mercato.window === 0 ? 'été' : 'hiver'}`;
+      sublabel = mercato.window === 0 ? 'Été' : 'Hiver';
       flag = mercato.window === 0 ? 'summer' : 'winter';
     }
     if (!result.has(key)) {

@@ -1,0 +1,89 @@
+name: Collecter le mercato en cours
+
+# Refreshes the first-party collection and commits it, so the deploy workflow
+# always finds a recent reading of the season in progress.
+#
+# This is expected to fail on GitHub-hosted runners: Transfermarkt serves them a
+# DataDome challenge, which is precisely what froze the upstream dataset that
+# Footato used to depend on. The job is therefore best-effort — it commits when
+# it works and stays silent when it does not. It is not the guarantee of
+# freshness; validate-dataset is, by failing the build when the current season
+# ages past the open-window limit.
+#
+# Two ways to make it actually succeed:
+#   - set BRIGHTDATA_API_KEY, and blocked pages are retried through the unlocker
+#   - or run `npm run data:collect` locally and commit, which needs nothing
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: Saisons à collecter (ex. 2026 ou 2025,2026)
+        required: false
+      leagues:
+        description: Championnats à collecter (ex. GB1,SA1), vide = tous
+        required: false
+  schedule:
+    # Deux fois par jour, décalé des heures pleines. Une passe coûte ~20 requêtes.
+    - cron: '41 5,17 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Collecter
+        id: collect
+        continue-on-error: true
+        env:
+          BRIGHTDATA_API_KEY: ${{ secrets.BRIGHTDATA_API_KEY }}
+        run: |
+          npm run data:collect -- \
+            ${{ inputs.seasons && format('--seasons {0}', inputs.seasons) || '' }} \
+            ${{ inputs.leagues && format('--leagues {0}', inputs.leagues) || '' }}
+          # Runs after the collection so the cross-check reflects what was just
+          # written, not the previous run.
+          npm run data:latest
+
+      # Rebuilding and validating before committing means a collection that
+      # parses but makes no sense never reaches the repository.
+      - name: Contrôler avant de committer
+        if: steps.collect.outcome == 'success'
+        run: |
+          npm run data:fetch
+          npm run data:recent
+          npm run data:build
+          npm run data:validate
+
+      - name: Committer la collecte
+        if: steps.collect.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/raw/collected public/data/latest.json
+          if git diff --staged --quiet; then
+            echo 'Aucun changement dans la collecte.'
+          else
+            git commit -m 'Actualiser la collecte du mercato en cours'
+            git push
+          fi
+
+      - name: Signaler un blocage
+        if: steps.collect.outcome != 'success'
+        run: |
+          echo "::warning::Collecte impossible depuis ce runner (blocage probable)."
+          echo "La collecte versionnée reste en place. Relancez \`npm run data:collect\`"
+          echo "depuis une adresse résidentielle, ou définissez BRIGHTDATA_API_KEY."

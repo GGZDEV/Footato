@@ -99,8 +99,8 @@ export function MercatoDetail({ mercatos, dataset, includeLoanFees, onClose }: P
           </section>
 
           <section className="window-section">
-            <div className="drawer-section-title"><div><span className="eyebrow-label">Détail par fenêtre</span><h3>Choisir un mercato</h3></div></div>
-            <div className="window-switch" role="tablist" aria-label="Fenêtre du mercato">
+            <div className="drawer-section-title"><div><span className="eyebrow-label">Détail par mercato</span><h3>Choisir un mercato</h3></div></div>
+            <div className="window-switch" role="tablist" aria-label="Choisir le mercato">
               {ordered.map((item) => {
                 const resolved = resolve(item, includeLoanFees);
                 return (
@@ -117,14 +117,14 @@ export function MercatoDetail({ mercatos, dataset, includeLoanFees, onClose }: P
                 );
               })}
               {ordered.length === 1 && (
-                <div className="missing-window">L’autre fenêtre n’est pas disponible pour cette sélection.</div>
+                <div className="missing-window">L’autre mercato n’est pas disponible pour cette sélection.</div>
               )}
             </div>
           </section>
 
           <section className="active-window-summary">
             <div className="drawer-section-title">
-              <div><span className="eyebrow-label">{windowLabel(active.window)} {windowYear(active.year, active.window)}</span><h3>Structure de la fenêtre</h3></div>
+              <div><span className="eyebrow-label">{windowLabel(active.window)} {windowYear(active.year, active.window)}</span><h3>Structure du mercato</h3></div>
               <strong className={`num ${activeResolved.balance >= 0 ? 'pos' : 'neg'}`}>{money(activeResolved.balance, { sign: true })}</strong>
             </div>
             <div className="breakdown">

@@ -1,0 +1,470 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+Abha Club,Alimami Gory,29,Left Winger,Paris FC,€2.00m,in,Summer,2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6485974,,40039,10004
+Abha Club,Basil Al-Sayyali,25,Central Midfield,Al-Shabab FC,Loan fee:€275Th.,in,Summer,0.275,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499046,,40039,9840
+Abha Club,Nawaf Al-Ghulaimish,21,Right-Back,NEOM SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6521491,,40039,34911
+Abha Club,Abdulbasit Hindi,29,Centre-Back,Al-Ettifaq FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499917,,40039,7732
+Abha Club,Loreintz Rosier,27,Defensive Midfield,Al-Hazem SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6466149,,40039,9131
+Abha Club,Majed Dawran,22,Central Midfield,Al-Ettifaq FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6460931,,40039,7732
+Abha Club,Feras Al-Ghamdi,26,Central Midfield,Al-Ahli SFC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6446042,,40039,18487
+Abha Club,Donovan Léon,33,Goalkeeper,AJ Auxerre,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6445449,,40039,290
+Abha Club,Safwan Al-Johani,23,Left-Back,Al-Tai FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6438706,,40039,40079
+Abha Club,Nasser Al-Daajani,29,Central Midfield,Al-Ula FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6433903,,40039,107818
+Abha Club,Mustafa Malayekah,40,Goalkeeper,NEOM SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335245,,40039,34911
+Abha Club,Nabil Fekir,33,Attacking Midfield,Al-Jazira Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6385037,,40039,2524
+Abha Club,Abdou Diallo,30,Centre-Back,Al-Arabi SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393369,,40039,1230
+Abha Club,Mohammed Al-Dawsari,27,Right-Back,Al-Raed SFC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6394498,,40039,22381
+Abha Club,Michy Batshuayi,32,Centre-Forward,Eintracht Frankfurt,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6512075,,40039,24
+Abha Club,Mohammed Al-Zaid,22,Right Winger,Al-Hilal SFC U21,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493042,,40039,132482
+Abha Club,Khaled Al-Shamrani,26,Left-Back,Al-Ula FC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6521565,,40039,107818
+Abha Club,Abdulkarim Darisi,23,Left Winger,Al-Hilal SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6445677,,40039,1114
+Abha Club,Faisal Al-Subiani,23,Defensive Midfield,Al-Shabab FC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6464757,,40039,9840
+Abha Club,Keshim Al-Qahtani,26,Centre-Forward,Al-Taawoun FC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493039,,40039,28844
+Abha Club,Dawood Al-Tarif,26,Right-Back,Al-Saqer FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6121455,,40039,95443
+Abha Club,Abdullah Al-Jadani,35,Goalkeeper,Al-Taawoun FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6436425,,40039,28844
+Abha Club,Hamed Al-Mousa,26,Right-Back,Al-Saqer FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6522325,,40039,95443
+Abha Club,Hamoud Al-Shammari,26,Centre-Forward,Al-Raed SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510276,,40039,22381
+Abha Club,Hassan Al-Salis,26,Centre-Forward,Al-Adalah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499116,,40039,55544
+Abha Club,Dawood Al-Tarif,26,Right-Back,Al-Saqer FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405049,,40039,95443
+Abha Club,Motaz Akjah,28,Goalkeeper,Al-Bukiryah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405045,,40039,68748
+Abha Club,Meshal Al-Mutairi,27,Left Winger,Al-Ahli SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6382822,,40039,18487
+Abha Club,Afonso Taira,34,Defensive Midfield,Al-Najma SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6404841,,40039,32328
+Abha Club,Muralha,33,Attacking Midfield,Al-Wehda FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6404941,,40039,17209
+Abha Club,Agi Dambelley,32,Right Winger,Al-Okhdood Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405047,,40039,71665
+Abha Club,Sylla Sow,30,Centre-Forward,Al-Ula FC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6513701,,40039,107818
+Abha Club,Yasser Yaqoub,26,Right-Back,Al-Ula FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6436424,,40039,107818
+Abha Club,Keshim Al-Qahtani,27,Centre-Forward,Al-Taawoun FC,End of loan 30/06/2027,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493040,,40039,28844
+Abha Club,Mohammed Al-Oufi,23,Left-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396985,,40039,515
+Abha Club,Waleed Asiri,23,Attacking Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405050,,40039,515
+Abha Club,Manaf Abuyabes,25,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405052,,40039,515
+Abha Club,Suleiman Bello,20,Defensive Midfield,Al-Ahli SFC U21,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6176735,,40039,132476
+Abha Club,Feras Al-Ghamdi,26,Central Midfield,Al-Ahli SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933878,,40039,18487
+Abha Club,Suwailem Al-Manhali,22,Centre-Back,Al-Riyadh SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5917048,,40039,31008
+Abha Club,Nasser Al-Daajani,29,Central Midfield,Al-Ula FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5868950,,40039,107818
+Abha Club,Fahad Al-Jayzani,22,Defensive Midfield,Al-Riyadh SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5917044,,40039,31008
+Al-Ahli SFC,Francisco Trincão,26,Right Winger,Sporting CP,€39.35m,in,Summer,39.35,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6437777,,18487,336
+Al-Ahli SFC,Eduard Spertsyan,26,Attacking Midfield,FC Krasnodar,€21.90m,in,Summer,21.9,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6409009,,18487,16704
+Al-Ahli SFC,Abubacarr Sedi Kinteh,19,Centre-Back,Tromsø IL,€6.50m,in,Summer,6.5,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6369741,,18487,1293
+Al-Ahli SFC,Naif Masoud,25,Central Midfield,Al-Fateh SC,€3.51m,in,Summer,3.51,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6448308,,18487,27221
+Al-Ahli SFC,Artem Bondarenko,26,Attacking Midfield,Shakhtar Donetsk,Loan fee:€1.00m,in,Summer,1,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6524968,,18487,660
+Al-Ahli SFC,Meshal Al-Mutairi,27,Left Winger,Abha Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6382822,,18487,40039
+Al-Ahli SFC,Abdullah Radif,23,Centre-Forward,Al-Hilal SFC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393007,,18487,1114
+Al-Ahli SFC,Abdulelah Al-Khaibri,29,Left-Back,Al-Riyadh SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6133912,,18487,31008
+Al-Ahli SFC,Ayman Fallatah,22,Central Midfield,NEOM SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6117292,,18487,34911
+Al-Ahli SFC,Feras Al-Ghamdi,26,Central Midfield,Abha Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933878,,18487,40039
+Al-Ahli SFC,Saad Balobaid,26,Left-Back,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933426,,18487,9840
+Al-Ahli SFC,Matteo Dams,22,Left-Back,Club Brugge KV,€4.00m,out,Summer,4,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525520,,18487,2282
+Al-Ahli SFC,Feras Al-Ghamdi,26,Central Midfield,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6446042,,18487,40039
+Al-Ahli SFC,Enzo Millot,24,Attacking Midfield,Al-Diriyah FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6526726,,18487,52358
+Al-Ahli SFC,Yazan Madani,21,Left-Back,Al-Kholood Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6505332,,18487,91427
+Al-Ahli SFC,Ayman Fallatah,22,Central Midfield,Al-Faisaly FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504857,,18487,28848
+Al-Ahli SFC,Yaseen Al-Zubaidi,23,Right Winger,Al-Kholood Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490936,,18487,91427
+Al-Ahli SFC,Abdulelah Al-Khaibri,29,Left-Back,Al-Fateh SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491887,,18487,27221
+Al-Ahli SFC,Eid Al-Muwallad,24,Defensive Midfield,Al-Faisaly FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6503629,,18487,28848
+Al-Ahli SFC,Abdullah Otayf,33,Defensive Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6529116,,18487,515
+Al-Ahli SFC,Riyad Mahrez,35,Right Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6402596,,18487,515
+Al-Ahli SFC,Franck Kessié,29,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392953,,18487,515
+Al-Diriyah FC,Adil Boulbina,23,Left Winger,Al-Duhail SC,€12.00m,in,Summer,12,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6527027,,52358,26091
+Al-Diriyah FC,Clayton Diandy,19,Right Winger,Aris Thessaloniki,€4.60m,in,Summer,4.6,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6448722,,52358,605
+Al-Diriyah FC,Berat Djimsiti,33,Centre-Back,Atalanta BC,€3.00m,in,Summer,3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493977,,52358,800
+Al-Diriyah FC,Hattan Bahebri,34,Left Winger,Al-Kholood Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6395396,,52358,91427
+Al-Diriyah FC,Amin Al-Bukhari,29,Goalkeeper,Al-Fateh SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6416579,,52358,27221
+Al-Diriyah FC,Saeed Al-Rubaie,32,Centre-Back,Al-Okhdood Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6412370,,52358,71665
+Al-Diriyah FC,Chancel Mbemba,31,Centre-Back,LOSC Lille,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405562,,52358,1082
+Al-Diriyah FC,Qasem Lajami,30,Centre-Back,Al-Qadsiah FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393014,,52358,26069
+Al-Diriyah FC,Idrissa Gueye,36,Defensive Midfield,Everton FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6352335,,52358,29
+Al-Diriyah FC,Nikola Vasilj,30,Goalkeeper,FC St. Pauli,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6314824,,52358,35
+Al-Diriyah FC,Enzo Millot,24,Attacking Midfield,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6526726,,52358,18487
+Al-Diriyah FC,Darwin Núñez,27,Centre-Forward,Al-Hilal SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6527012,,52358,1114
+Al-Diriyah FC,Abdullah Al-Zaid,22,Left Winger,Al-Hilal SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6496107,,52358,1114
+Al-Diriyah FC,Mutab Sharahili,33,Goalkeeper,Al-Jandal SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5925822,,52358,78886
+Al-Diriyah FC,Jaber Qarradi,24,Centre-Forward,Al-Adalah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5935662,,52358,55544
+Al-Diriyah FC,Abduallah Al-Dossari,32,Left Winger,Al-Tai FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510284,,52358,40079
+Al-Diriyah FC,Abdulaziz Al-Shahrani,31,Attacking Midfield,Damac FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6401806,,52358,50532
+Al-Diriyah FC,Moussa Marega,35,Centre-Forward,FC Palm City,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392991,,52358,122768
+Al-Diriyah FC,Issam Al-Qarni,31,Central Midfield,Damac FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6513057,,52358,50532
+Al-Diriyah FC,Jaber Qarradi,24,Centre-Forward,Al-Tai FC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510298,,52358,40079
+Al-Diriyah FC,Nawaf Al-Otaibi,32,Goalkeeper,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6401813,,52358,515
+Al-Diriyah FC,Nawaf Al-Zaaqi,31,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6401812,,52358,515
+Al-Diriyah FC,Abdullah Bin Subayt,22,Centre-Back,Al-Faisaly FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6116890,,52358,28848
+Al-Diriyah FC,Clayton Diandy,19,Right Winger,Aris Thessaloniki,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5954887,,52358,605
+Al-Diriyah FC,Ahmad Al-Rehaili,31,Goalkeeper,Al-Ettifaq FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931637,,52358,7732
+Al-Ettifaq FC,Jordan Larsson,29,Right Winger,FC Copenhagen,€1.30m,in,Summer,1.3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6531265,,7732,190
+Al-Ettifaq FC,Bersant Celina,29,Attacking Midfield,AIK,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6400734,,7732,272
+Al-Ettifaq FC,Rayane Messi,19,Left Winger,RC Strasbourg Alsace,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504793,,7732,667
+Al-Ettifaq FC,Nawaf Hazazi,24,Right Winger,Al-Jubail Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931635,,7732,91559
+Al-Ettifaq FC,Majed Dawran,22,Central Midfield,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6156057,,7732,32328
+Al-Ettifaq FC,Mishal Al-Alaeli,22,Left-Back,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933434,,7732,28844
+Al-Ettifaq FC,Wissem Chaouali,19,Centre-Back,Al-Jubail Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931780,,7732,91559
+Al-Ettifaq FC,Ahmad Al-Rehaili,31,Goalkeeper,Al-Diriyah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931637,,7732,52358
+Al-Ettifaq FC,Nawaf Hazazi,24,Right Winger,Al-Raed SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510275,,7732,22381
+Al-Ettifaq FC,Abdulbasit Hindi,29,Centre-Back,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499917,,7732,40039
+Al-Ettifaq FC,Majed Dawran,22,Central Midfield,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6460931,,7732,40039
+Al-Ettifaq FC,Francisco Calvo,34,Centre-Back,Club Nacional,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392996,,7732,866
+Al-Ettifaq FC,Wissem Chaouali,19,Centre-Back,Stade Tunisien,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6433372,,7732,4812
+Al-Ettifaq FC,Mukhtar Ali,28,Defensive Midfield,Al-Ittihad Club,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6508017,,7732,8023
+Al-Ettifaq FC,João Costa,21,Right Winger,Cruzeiro Esporte Clube,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490563,,7732,609
+Al-Ettifaq FC,Ahmed Hassan,33,Centre-Forward,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6332970,,7732,515
+Al-Ettifaq FC,Georginio Wijnaldum,35,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6333762,,7732,515
+Al-Ettifaq FC,Fawaz Al-Sqoor,30,Right-Back,Al-Ittihad Club,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6156059,,7732,8023
+Al-Faisaly FC,Yousef Al-Shammari,28,Left Winger,Al-Hazem SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490938,,28848,9131
+Al-Faisaly FC,Fernando Pacheco,34,Goalkeeper,Al-Fateh SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6465505,,28848,27221
+Al-Faisaly FC,Abdoulaye Seck,34,Centre-Back,Maccabi Haifa,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6449209,,28848,1064
+Al-Faisaly FC,André-Jordy Ella,21,Left Winger,Enosis Neon Paralimni,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6448084,,28848,840
+Al-Faisaly FC,Alexandre Mendy,32,Centre-Forward,Montpellier HSC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6431508,,28848,969
+Al-Faisaly FC,Abdullah Al-Muqrin,29,Centre-Forward,Al-Fateh SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6429359,,28848,27221
+Al-Faisaly FC,Khaled Al-Harbi,23,Right-Back,Jeddah SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6406183,,28848,58858
+Al-Faisaly FC,Fawaz Rabie,30,Centre-Back,Al-Orobah FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6406182,,28848,39536
+Al-Faisaly FC,Christian Bassogog,30,Right Winger,Al-Okhdood Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6394327,,28848,71665
+Al-Faisaly FC,Andrei Girotto,34,Centre-Back,Al-Taawoun FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392973,,28848,28844
+Al-Faisaly FC,Jaime Seoane,29,Central Midfield,SD Huesca,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6363883,,28848,5358
+Al-Faisaly FC,Ahmed Abdu,29,Centre-Forward,NEOM SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6334717,,28848,34911
+Al-Faisaly FC,Théo Bongonda,30,Right Winger,Spartak Moscow,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6314837,,28848,232
+Al-Faisaly FC,Abdullah Mansour Al-Rashidi,21,Right-Back,Al-Ittihad Club U21,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6512156,,28848,132477
+Al-Faisaly FC,Ayman Fallatah,22,Central Midfield,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504857,,28848,18487
+Al-Faisaly FC,Eid Al-Muwallad,24,Defensive Midfield,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6503629,,28848,18487
+Al-Faisaly FC,Ahmed Al-Badah,23,Attacking Midfield,Al-Najma SC,End of loan 30/06/2027,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504961,,28848,32328
+Al-Faisaly FC,Abdullah Ibrahim Al-Dossary,27,Left-Back,Al-Anwar Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6164484,,28848,75312
+Al-Faisaly FC,Abdullah Bin Subayt,22,Centre-Back,Al-Diriyah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6116890,,28848,52358
+Al-Faisaly FC,Mohammed Al-Ghamdi,32,Right-Back,Al-Anwar Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5951314,,28848,75312
+Al-Faisaly FC,Hassan Al-Solan,29,Left Winger,Al-Orobah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525254,,28848,39536
+Al-Faisaly FC,Munif Doshy,29,Left-Back,Al-Raed SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510272,,28848,22381
+Al-Faisaly FC,Luvannor,36,Centre-Forward,Al-Jabalain FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499918,,28848,68028
+Al-Faisaly FC,Hassan Al-Harbi,31,Centre-Back,Al-Okhdood Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490940,,28848,71665
+Al-Faisaly FC,Morato,33,Right Winger,Al-Wehda FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6471730,,28848,17209
+Al-Faisaly FC,Mohammed Al-Fuhaid,36,Defensive Midfield,Al-Jeel Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6425666,,28848,55761
+Al-Faisaly FC,Romell Quioto,34,Centre-Forward,Al-Ula FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6420896,,28848,107818
+Al-Faisaly FC,Abdullah Ibrahim Al-Dossary,28,Left-Back,Al-Tai FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510287,,28848,40079
+Al-Faisaly FC,Eduardo Henrique,31,Defensive Midfield,Al-Tai FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393005,,28848,40079
+Al-Faisaly FC,Fahad Al-Dossari,24,Right Winger,Al-Jeel Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525193,,28848,55761
+Al-Faisaly FC,Abdullah Mansour Al-Rashidi,21,Right-Back,Al-Anwar Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6512402,,28848,75312
+Al-Faisaly FC,Rayan Fallatah,22,Left-Back,Jeddah SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6518619,,28848,58858
+Al-Faisaly FC,Mishal Haddad,22,Centre-Back,Al-Jandal SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525256,,28848,78886
+Al-Faisaly FC,Malik Hamza,21,Attacking Midfield,Al-Saqer FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6507971,,28848,95443
+Al-Faisaly FC,Ahmed Al-Badah,22,Attacking Midfield,Al-Najma SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504960,,28848,32328
+Al-Faisaly FC,Raphael Silva,34,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6505348,,28848,515
+Al-Faisaly FC,Ayman Al-Sahli,22,Attacking Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6411053,,28848,515
+Al-Faisaly FC,Ibrahima Ndiaye,27,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6514645,,28848,515
+Al-Faisaly FC,Abdullah Al-Muqrin,29,Centre-Forward,Al-Fateh SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5951311,,28848,27221
+Al-Faisaly FC,Mohammed Abbas Al-Nakhli,25,Right Winger,Al-Ula FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5867153,,28848,107818
+Al-Faisaly FC,Salim Gabous,29,Goalkeeper,Al-Ula FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5867151,,28848,107818
+Al-Fateh SC,Lukas Haraslin,30,Left Winger,AC Sparta Prague,€6.00m,in,Summer,6,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6498807,,27221,197
+Al-Fateh SC,Wilfried Kanga,28,Centre-Forward,KAA Gent,€4.10m,in,Summer,4.1,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502051,,27221,157
+Al-Fateh SC,Mihai Lixandru,25,Central Midfield,FCSB,€600Th.,in,Summer,0.6,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6479248,,27221,301
+Al-Fateh SC,Walid Al-Enezi,30,Goalkeeper,Al-Najma SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6486987,,27221,32328
+Al-Fateh SC,Kennedy Boateng,29,Centre-Back,FC Dinamo 1948,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6330964,,27221,312
+Al-Fateh SC,Abdulrahman Talal Al-Khaibari,26,Right-Back,Al-Ula FC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6482026,,27221,107818
+Al-Fateh SC,Robin Kelder,21,Centre-Back,FC Groningen U21,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6483228,,27221,14725
+Al-Fateh SC,Sorriso,21,Left Winger,Sociedade Esportiva Palmeiras,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6513986,,27221,1023
+Al-Fateh SC,Abdulelah Al-Khaibri,29,Left-Back,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491887,,27221,18487
+Al-Fateh SC,Abdullah Al-Muqrin,29,Centre-Forward,Al-Faisaly FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5951311,,27221,28848
+Al-Fateh SC,Matheus Machado,23,Centre-Forward,Ludogorets Razgrad,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5824199,,27221,31614
+Al-Fateh SC,Naif Masoud,25,Central Midfield,Al-Ahli SFC,€3.51m,out,Summer,3.51,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6448308,,27221,18487
+Al-Fateh SC,Mohamed Al-Sarnukh,19,Right-Back,Al-Hilal SFC,€3.00m,out,Summer,3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6442458,,27221,1114
+Al-Fateh SC,Abdullah Al-Anazi,23,Left Winger,Al-Hilal SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396926,,27221,1114
+Al-Fateh SC,Fernando Pacheco,34,Goalkeeper,Al-Faisaly FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6465505,,27221,28848
+Al-Fateh SC,Abdullah Al-Muqrin,29,Centre-Forward,Al-Faisaly FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6429359,,27221,28848
+Al-Fateh SC,Amin Al-Bukhari,29,Goalkeeper,Al-Diriyah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6416579,,27221,52358
+Al-Fateh SC,Sofiane Bendebka,33,Central Midfield,Al-Hazem SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392994,,27221,9131
+Al-Fateh SC,Matías Vargas,29,Left Winger,Gimnasia y Esgrima de Mendoza,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392957,,27221,14687
+Al-Fateh SC,Wesley Delgado,22,Right Winger,Al-Nasr SC (UAE),free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6377215,,27221,5432
+Al-Fateh SC,Jorge Fernandes,29,Centre-Back,Shabab Al-Ahli Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6332878,,27221,60529
+Al-Fateh SC,Othman Al-Othman,23,Right Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396972,,27221,515
+Al-Fateh SC,Matheus Machado,23,Centre-Forward,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6511067,,27221,515
+Al-Fateh SC,Ahmed Gabal,20,Centre-Forward,Nogoom FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6324162,,27221,41759
+Al-Fateh SC,Majed Qasheesh,24,Left-Back,Al-Nassr FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5899387,,27221,18544
+Al-Fayha FC,Paulo Oliveira,34,Centre-Back,SC Braga,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490847,,50531,1075
+Al-Fayha FC,Hugo Moura,28,Defensive Midfield,Clube de Regatas Vasco da Gama,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6430414,,50531,978
+Al-Fayha FC,Abdullah Al-Qahtani,27,Attacking Midfield,Damac FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6416578,,50531,50532
+Al-Fayha FC,Lázaro,24,Centre-Forward,Al-Najma SC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490211,,50531,32328
+Al-Fayha FC,Ali Al-Hussain,21,Attacking Midfield,Al-Ula FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6161540,,50531,107818
+Al-Fayha FC,Abdulhadi Al-Harajin,31,Attacking Midfield,Al-Hazem SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5921338,,50531,9131
+Al-Fayha FC,Sabri Dahal,18,Right Winger,Al-Hilal SFC,€2.30m,out,Summer,2.3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6402597,,50531,1114
+Al-Fayha FC,Khaled Al-Rammah,21,Right-Back,NEOM SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396988,,50531,34911
+Al-Fayha FC,Sattam Al-Roqi,24,Right Winger,Al-Jabalain FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6505841,,50531,68028
+Al-Fayha FC,Rakan Kaabi,23,Defensive Midfield,Al-Ittihad Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6407445,,50531,8023
+Al-Fayha FC,Abdulrahman Al-Anazi,28,Left-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396987,,50531,515
+Al-Fayha FC,Abdullah Al-Jawaey,30,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396996,,50531,515
+Al-Fayha FC,Chris Smalling,36,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393492,,50531,515
+Al-Fayha FC,Mikel Villanueva,33,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392990,,50531,515
+Al-Fayha FC,Yassine Benzia,31,Attacking Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392985,,50531,515
+Al-Fayha FC,Abdullah Radif,23,Centre-Forward,Al-Hilal SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163296,,50531,1114
+Al-Fayha FC,Stylianos Vrontis,21,Central Midfield,APOEL Nicosia,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933515,,50531,2784
+Al-Hazem SC,Elton Acolatse,31,Left Winger,Ferencvárosi TC,€2.50m,in,Summer,2.5,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6540566,,9131,279
+Al-Hazem SC,Aboubacar Diakité,19,Centre-Forward,Esperance Tunis,€300Th.,in,Summer,0.3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6522638,,9131,3342
+Al-Hazem SC,Mohammed Al-Hamdani,24,Right Winger,Al-Anwar Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6442191,,9131,75312
+Al-Hazem SC,Afimico Pululu,27,Centre-Forward,Jagiellonia Bialystok,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6485394,,9131,2300
+Al-Hazem SC,Ayman Al-Hujaili,28,Attacking Midfield,Al-Orobah FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6479960,,9131,39536
+Al-Hazem SC,Mohamed Amine Ben Hamida,30,Left-Back,Esperance Tunis,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6448108,,9131,3342
+Al-Hazem SC,Waleed Al-Shanqiti,32,Centre-Forward,Al-Raed SFC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6425300,,9131,22381
+Al-Hazem SC,Sofiane Bendebka,33,Central Midfield,Al-Fateh SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392994,,9131,27221
+Al-Hazem SC,Mory Konaté,32,Defensive Midfield,KV Mechelen,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6320320,,9131,354
+Al-Hazem SC,Bonheur Mugisha,26,Defensive Midfield,El Masry SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6479352,,9131,9094
+Al-Hazem SC,Farhan Al-Aazmi,31,Left-Back,Without Club,-,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502332,,9131,515
+Al-Hazem SC,Khalid Al-Subaie,26,Left-Back,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6146824,,9131,32328
+Al-Hazem SC,Yousef Al-Shammari,28,Left Winger,Al-Faisaly FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490938,,9131,28848
+Al-Hazem SC,Loreintz Rosier,27,Defensive Midfield,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6466149,,9131,40039
+Al-Hazem SC,Mohammed Al-Saedi,20,Central Midfield,Al-Taawoun FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6385421,,9131,28844
+Al-Hazem SC,Nawaf Al-Habashi,28,Left Winger,Al-Hilal SFC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6443299,,9131,1114
+Al-Hazem SC,Abdullah Al-Ammar,32,Left-Back,Al-Khaleej FC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6361280,,9131,6070
+Al-Hazem SC,Omar Al-Somah,37,Centre-Forward,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393006,,9131,515
+Al-Hazem SC,Fábio Martins,32,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392977,,9131,515
+Al-Hazem SC,Abdelmounaim Boutouil,28,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6458522,,9131,515
+Al-Hazem SC,Elias Mokwana,26,Right Winger,Esperance Tunis,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5897680,,9131,3342
+Al-Hazem SC,Miguel Carvalho,21,Attacking Midfield,Al-Qadsiah FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5928703,,9131,26069
+Al-Hazem SC,Abdulhadi Al-Harajin,31,Attacking Midfield,Al-Fayha FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5921338,,9131,50531
+Al-Hilal SFC,Crysencio Summerville,24,Left Winger,West Ham United,€64.50m,in,Summer,64.5,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6455009,,1114,379
+Al-Hilal SFC,Mohammed Mahzari,24,Right-Back,Al-Taawoun FC,€7.67m,in,Summer,7.67,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6463561,,1114,28844
+Al-Hilal SFC,Mohamed Al-Sarnukh,19,Right-Back,Al-Fateh SC,€3.00m,in,Summer,3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6442458,,1114,27221
+Al-Hilal SFC,Sabri Dahal,18,Right Winger,Al-Fayha FC,€2.30m,in,Summer,2.3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6402597,,1114,50531
+Al-Hilal SFC,Abdullah Al-Anazi,23,Left Winger,Al-Fateh SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396926,,1114,27221
+Al-Hilal SFC,Mohammed Al-Owais,34,Goalkeeper,Al-Ula FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6438705,,1114,107818
+Al-Hilal SFC,Nawaf Al-Habashi,28,Left Winger,Al-Hazem SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6443299,,1114,9131
+Al-Hilal SFC,Abdullah Radif,23,Centre-Forward,Al-Fayha FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163296,,1114,50531
+Al-Hilal SFC,Ali Al-Bulayhi,36,Centre-Back,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6161356,,1114,9840
+Al-Hilal SFC,João Cancelo,32,Right-Back,FC Barcelona,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6116548,,1114,131
+Al-Hilal SFC,Mohammed Al-Qahtani,23,Right Winger,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6113596,,1114,28844
+Al-Hilal SFC,Marcos Leonardo,23,Centre-Forward,Ajax Amsterdam,€19.90m,out,Summer,19.9,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6435617,,1114,610
+Al-Hilal SFC,Mohammed Al-Qahtani,23,Right Winger,Al-Qadsiah FC,€935Th.,out,Summer,0.935,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6407190,,1114,26069
+Al-Hilal SFC,Malcom,29,Right Winger,Al-Jazira Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525091,,1114,2524
+Al-Hilal SFC,Pablo Marí,32,Centre-Back,Al-Shamal SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6524172,,1114,10775
+Al-Hilal SFC,Mathieu Patouillet,22,Goalkeeper,Stade Brestois 29,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6522639,,1114,3911
+Al-Hilal SFC,Abdullah Radif,23,Centre-Forward,Al-Ahli SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393007,,1114,18487
+Al-Hilal SFC,João Cancelo,32,Right-Back,FC Barcelona,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6521353,,1114,131
+Al-Hilal SFC,Ahmad Abu Rasen,22,Goalkeeper,Sint-Truidense VV,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6512013,,1114,475
+Al-Hilal SFC,Darwin Núñez,27,Centre-Forward,Al-Diriyah FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6527012,,1114,52358
+Al-Hilal SFC,Abdullah Al-Zaid,22,Left Winger,Al-Diriyah FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6496107,,1114,52358
+Al-Hilal SFC,Abdulkarim Darisi,23,Left Winger,Abha Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6445677,,1114,40039
+Al-Ittihad Club,Jan-Carlo Simić,21,Centre-Back,RSC Anderlecht,€15.00m,in,Summer,15,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5935394,,8023,58
+Al-Ittihad Club,Dion Lopy,24,Defensive Midfield,UD Almería,€13.00m,in,Summer,13,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6488725,,8023,3302
+Al-Ittihad Club,Stephane Keller,24,Centre-Back,AEL Limassol,€1.00m,in,Summer,1,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6341422,,8023,786
+Al-Ittihad Club,Rakan Kaabi,23,Defensive Midfield,Al-Fayha FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6407445,,8023,50531
+Al-Ittihad Club,Mukhtar Ali,28,Defensive Midfield,Al-Ettifaq FC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6508017,,8023,7732
+Al-Ittihad Club,Faris Abdi,27,Left-Back,NEOM SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6482935,,8023,34911
+Al-Ittihad Club,Mateo Borrell,19,Defensive Midfield,Al-Okhdood Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5920870,,8023,71665
+Al-Ittihad Club,Marwan Al-Sahafi,22,Left Winger,Royal Antwerp FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5881875,,8023,1096
+Al-Ittihad Club,Ricardo Caraballo,22,Centre-Forward,Al-Anwar Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5882925,,8023,75312
+Al-Ittihad Club,Unai Hernández,21,Central Midfield,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931608,,8023,9840
+Al-Ittihad Club,Muath Faqihi,24,Left-Back,Al-Okhdood Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6156055,,8023,71665
+Al-Ittihad Club,Farhah Al-Shamrani,19,Attacking Midfield,Al-Riyadh SC,End of loan 07/01/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5938692,,8023,31008
+Al-Ittihad Club,Bryant Ortega,23,Central Midfield,Khor Fakkan SSC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5967572,,8023,26351
+Al-Ittihad Club,Abdalellah Hawsawi,25,Central Midfield,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5855153,,8023,28844
+Al-Ittihad Club,Isaías Rodríguez,21,Left-Back,Al-Batin FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5986544,,8023,28597
+Al-Ittihad Club,Fawaz Al-Sqoor,30,Right-Back,Al-Ettifaq FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6156059,,8023,7732
+Al-Ittihad Club,Mario Mitaj,22,Left-Back,Genoa CFC,Loan fee:€2.00m,out,Summer,2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6474614,,8023,252
+Al-Ittihad Club,Ricardo Caraballo,22,Centre-Forward,FK Sarajevo,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6382819,,8023,282
+Al-Ittihad Club,Isaías Rodríguez,21,Left-Back,UD Almería B,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6536460,,8023,11986
+Al-Ittihad Club,Abdulrahman Al-Oboud,31,Right Winger,Al-Shabab FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6534056,,8023,9840
+Al-Ittihad Club,Fabinho,32,Defensive Midfield,Trabzonspor,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6530531,,8023,449
+Al-Ittihad Club,Awad Al-Nashri,24,Defensive Midfield,Al-Shabab FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393040,,8023,9840
+Al-Ittihad Club,Unai Hernández,21,Central Midfield,Girona FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6505327,,8023,12321
+Al-Ittihad Club,Faisal Al-Ghamdi,24,Central Midfield,NEOM SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499915,,8023,34911
+Al-Ittihad Club,Hamed Al-Shanqity,21,Goalkeeper,Al-Kholood Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6461502,,8023,91427
+Al-Ittihad Club,Abdulaziz Al-Bishi,32,Right Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393013,,8023,515
+Al-Ittihad Club,Jan-Carlo Simić,21,Centre-Back,RSC Anderlecht,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933524,,8023,58
+Al-Ittihad Club,Stephane Keller,24,Centre-Back,AEL Limassol,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6171254,,8023,786
+Al-Khaleej FC,Angelo Fulgini,29,Attacking Midfield,RC Lens,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6414579,,6070,826
+Al-Khaleej FC,Miguel Crespo,29,Central Midfield,Basaksehir FK,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6407230,,6070,6890
+Al-Khaleej FC,Nawaf Al-Saadi,25,Right Winger,Al-Shabab FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405044,,6070,9840
+Al-Khaleej FC,Kiki Kouyaté,29,Centre-Back,Royal Antwerp FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6357783,,6070,1096
+Al-Khaleej FC,Musa Barrow,27,Left Winger,Al-Taawoun FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392956,,6070,28844
+Al-Khaleej FC,Omar Mascarell,33,Defensive Midfield,RCD Mallorca,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6383381,,6070,237
+Al-Khaleej FC,Abdullah Al-Ammar,32,Left-Back,Al-Hazem SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6361280,,6070,9131
+Al-Khaleej FC,Mohammed Al-Ibrahim,21,Goalkeeper,Al-Qadsiah FC U21,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6401815,,6070,132478
+Al-Khaleej FC,Ali Al-Shaafi,24,Left-Back,Al-Zulfi SFC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6127899,,6070,85118
+Al-Khaleej FC,Hussain Al-Sultan,22,Centre-Forward,Al-Jabalain FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163542,,6070,68028
+Al-Khaleej FC,Dimitrios Kourbelis,32,Defensive Midfield,Asteras Aktor,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6429982,,6070,6676
+Al-Khaleej FC,Konstantinos Fortounis,33,Attacking Midfield,Olympiacos Piraeus,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335006,,6070,683
+Al-Khaleej FC,Bart Schenkeveld,34,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6366265,,6070,515
+Al-Khaleej FC,Paolo Fernandes,27,Right Winger,AEK Athens,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5834557,,6070,2441
+Al-Khaleej FC,Ali Al-Salem,27,Centre-Back,Al-Wehda FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6166157,,6070,17209
+Al-Khaleej FC,Thamer Al-Khaibri,20,Centre-Forward,NEOM SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163271,,6070,34911
+Al-Khaleej FC,Georgios Masouras,32,Left Winger,Olympiacos Piraeus,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5861629,,6070,683
+Al-Kholood Club,Coba da Costa,23,Left Winger,Getafe CF,€2.00m,in,Summer,2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6415796,,91427,3709
+Al-Kholood Club,Julien Domingues,30,Centre-Forward,Dijon FCO,€250Th.,in,Summer,0.25,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502330,,91427,2969
+Al-Kholood Club,Seydouba Cissé,25,Central Midfield,CD Leganés,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6240433,,91427,1244
+Al-Kholood Club,Abdulrahman Obaid Al-Obaid,22,Centre-Back,Al-Ittihad Club U21,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6430417,,91427,132477
+Al-Kholood Club,Mohammed Al-Rashidi,24,Central Midfield,Patro Eisden Maasmechelen,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6453805,,91427,3225
+Al-Kholood Club,Hamed Al-Shanqity,21,Goalkeeper,Al-Ittihad Club,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6461502,,91427,8023
+Al-Kholood Club,Yaseen Al-Zubaidi,23,Right Winger,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490936,,91427,18487
+Al-Kholood Club,Yazan Madani,21,Left-Back,Al-Ahli SFC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6505332,,91427,18487
+Al-Kholood Club,Mohammed Mazyad Al-Shammari,34,Goalkeeper,Al-Jandal SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6513693,,91427,78886
+Al-Kholood Club,Hassan Al-Asmari,23,Right-Back,Al-Raed SFC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510280,,91427,22381
+Al-Kholood Club,Jamaan Al-Dosari,32,Centre-Back,Al-Jandal SC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499096,,91427,78886
+Al-Kholood Club,Hattan Bahebri,34,Left Winger,Al-Diriyah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6395396,,91427,52358
+Al-Kholood Club,Majed Khalifa,22,Centre-Forward,Al-Jabalain FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6338777,,91427,68028
+Al-Kholood Club,Rashid Al-Mutairi,23,Left-Back,Al-Anwar Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510255,,91427,75312
+Al-Kholood Club,Juan Pablo Cozzani,27,Goalkeeper,Club Atlético Platense,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5875893,,91427,928
+Al-Kholood Club,Abdullah Masoud,23,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335248,,91427,515
+Al-Kholood Club,Myziane Maolida,27,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6341477,,91427,515
+Al-Kholood Club,Kévin N'Doram,30,Defensive Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335246,,91427,515
+Al-Kholood Club,Norbert Gyömbér,33,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6333642,,91427,515
+Al-Kholood Club,Abdulrahman Al-Safari,33,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6332972,,91427,515
+Al-Kholood Club,Yousef Al-Honaifesh,20,Central Midfield,Al-Ula FC U21,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6207818,,91427,137341
+Al-Nassr FC,Samú Costa,25,Defensive Midfield,RCD Mallorca,€22.00m,in,Summer,22,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490820,,18544,237
+Al-Nassr FC,Abdulmajeed Al-Sulayhim,32,Central Midfield,Al-Ula FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5869557,,18544,107818
+Al-Nassr FC,Majed Qasheesh,24,Left-Back,Al-Fateh SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5899387,,18544,27221
+Al-Nassr FC,Asser Housawi,24,Centre-Back,Al-Arabi SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5922102,,18544,68834
+Al-Nassr FC,Wesley,21,Left Winger,Real Sociedad,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6154449,,18544,681
+Al-Nassr FC,Haroune Camara,28,Centre-Forward,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163547,,18544,9840
+Al-Nassr FC,Jhon Durán,22,Centre-Forward,Zenit St. Petersburg,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6175709,,18544,964
+Al-Nassr FC,Abdulmajeed Al-Sulayhim,32,Central Midfield,Al-Ula FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6460143,,18544,107818
+Al-Nassr FC,Mansour Al-Shammari,26,Left-Back,Al-Jandal SC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6530518,,18544,78886
+Al-Nassr FC,Jhon Durán,22,Centre-Forward,SL Benfica,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6442780,,18544,294
+Al-Nassr FC,Wesley,21,Left Winger,Cruzeiro Esporte Clube,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6489096,,18544,609
+Al-Nassr FC,Haroune Camara,28,Centre-Forward,NEOM SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502340,,18544,34911
+Al-Nassr FC,Marcelo Brozović,33,Defensive Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392955,,18544,515
+Al-Nassr FC,Abdulrahman Ghareeb,29,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392988,,18544,515
+Al-Nassr FC,Raghed Al-Najjar,29,Goalkeeper,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396900,,18544,515
+Al-Qadsiah FC,Tijjani Reijnders,28,Central Midfield,Manchester City,€61.00m,in,Summer,61,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6518125,,26069,281
+Al-Qadsiah FC,Ahmed Al-Siyahi,21,Defensive Midfield,Al-Riyadh SC,€3.83m,in,Summer,3.83,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6471363,,26069,31008
+Al-Qadsiah FC,Sultan Harun,20,Centre-Forward,Al-Riyadh SC,€3.83m,in,Summer,3.83,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6471357,,26069,31008
+Al-Qadsiah FC,Mohammed Al-Qahtani,23,Right Winger,Al-Hilal SFC,€935Th.,in,Summer,0.935,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6407190,,26069,1114
+Al-Qadsiah FC,Souffian El Karouani,25,Left-Back,FC Utrecht,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6295624,,26069,200
+Al-Qadsiah FC,Qasem Lajami,30,Centre-Back,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163824,,26069,28844
+Al-Qadsiah FC,Carlos Jiménez,19,Centre-Back,UD Almería B,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6141445,,26069,11986
+Al-Qadsiah FC,Abdulaziz Al-Othman,22,Centre-Forward,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5937992,,26069,9840
+Al-Qadsiah FC,Miguel Carvalho,21,Attacking Midfield,Al-Hazem SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5928703,,26069,9131
+Al-Qadsiah FC,Iker Almena,22,Right Winger,HNK Hajduk Split,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5922193,,26069,447
+Al-Qadsiah FC,Cameron Puertas,27,Central Midfield,SV Werder Bremen,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5918009,,26069,86
+Al-Qadsiah FC,Jerry Afriyie,19,Centre-Forward,RAAL La Louvière,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5890820,,26069,3901
+Al-Qadsiah FC,Mousa Al-Hamidi Al-Harbi,23,Centre-Back,Al-Bukiryah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5857660,,26069,68748
+Al-Qadsiah FC,Aarón Martin,19,Central Midfield,CD Mirandés,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5833943,,26069,13222
+Al-Qadsiah FC,Jerry Afriyie,19,Centre-Forward,KRC Genk,€5.00m,out,Summer,5,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6515748,,26069,1184
+Al-Qadsiah FC,Gabriel Carvalho,19,Right Winger,Shakhtar Donetsk,Loan fee:€1.00m,out,Summer,1,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6521162,,26069,660
+Al-Qadsiah FC,Abdulaziz Al-Othman,22,Centre-Forward,NEOM SC,€925Th.,out,Summer,0.925,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493041,,26069,34911
+Al-Qadsiah FC,Mousa Al-Hamidi Al-Harbi,23,Centre-Back,Al-Bukiryah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6445675,,26069,68748
+Al-Qadsiah FC,Qasem Lajami,30,Centre-Back,Al-Diriyah FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393014,,26069,52358
+Al-Qadsiah FC,Aarón Martin,19,Central Midfield,Kalamata FC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6540343,,26069,9
+Al-Qadsiah FC,Miguel Carvalho,21,Attacking Midfield,Associação Chapecoense de Futebol,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6516899,,26069,17776
+Al-Qadsiah FC,Ahmed Kaabi,21,Right-Back,Al-Jeel Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525195,,26069,55761
+Al-Riyadh SC,Hussain Al-Shurafa,24,Attacking Midfield,Al-Tai FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6190542,,31008,40079
+Al-Riyadh SC,Bernard Mensah,31,Attacking Midfield,Al-Nasr SC (UAE),free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6306675,,31008,5432
+Al-Riyadh SC,Trezeguet,31,Left Winger,Al Ahly FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6427762,,31008,7
+Al-Riyadh SC,Abdul Kader Keita,25,Defensive Midfield,FC Rapid 1923,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6413780,,31008,455
+Al-Riyadh SC,Hussam Majrashi,22,Centre-Back,Al-Anwar Club,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6504962,,31008,75312
+Al-Riyadh SC,Rodrigo Abascal,32,Centre-Back,Vitória Guimarães SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491517,,31008,2420
+Al-Riyadh SC,Hassan Al-Ali,25,Centre-Forward,NEOM SC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502043,,31008,34911
+Al-Riyadh SC,Sultan Al-Essa,21,Right-Back,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6180385,,31008,32328
+Al-Riyadh SC,Fahad Al-Jayzani,22,Defensive Midfield,Abha Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5917044,,31008,40039
+Al-Riyadh SC,Suwailem Al-Manhali,22,Centre-Back,Abha Club,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5917048,,31008,40039
+Al-Riyadh SC,Nawaf Al-Hawsawi,25,Left-Back,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5917228,,31008,32328
+Al-Riyadh SC,Saud bin Zaydan,26,Central Midfield,Al-Jabalain FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6149997,,31008,68028
+Al-Riyadh SC,Ryan Al-Bloushi,25,Centre-Forward,Al-Zulfi SFC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6177854,,31008,85118
+Al-Riyadh SC,Mohammed Al-Saeed,29,Left-Back,Al-Adalah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6197868,,31008,55544
+Al-Riyadh SC,Ahmed Al-Siyahi,21,Defensive Midfield,Al-Qadsiah FC,€3.83m,out,Summer,3.83,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6471363,,31008,26069
+Al-Riyadh SC,Sultan Harun,20,Centre-Forward,Al-Qadsiah FC,€3.83m,out,Summer,3.83,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6471357,,31008,26069
+Al-Riyadh SC,Talal Al-Shubili,21,Defensive Midfield,Al-Shabab FC U21,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6517225,,31008,132483
+Al-Riyadh SC,Sergio González,34,Centre-Back,Nea Salamina Famagusta,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490117,,31008,18945
+Al-Riyadh SC,Yoann Barbet,33,Centre-Back,Al-Ula FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6433365,,31008,107818
+Al-Riyadh SC,Ryan Al-Bloushi,25,Centre-Forward,Hajer Club,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6527015,,31008,32343
+Al-Riyadh SC,Saud Al-Tumbukti,21,Centre-Back,Al-Zulfi SFC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6510294,,31008,85118
+Al-Riyadh SC,Khalil Al-Absi,25,Left Winger,NEOM SC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491852,,31008,34911
+Al-Riyadh SC,Suwailem Al-Manhali,22,Centre-Back,Al-Zulfi SFC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6433373,,31008,85118
+Al-Riyadh SC,Mohammed Al-Saeed,29,Left-Back,Al-Adalah FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6525251,,31008,55544
+Al-Riyadh SC,Nawaf Al-Hawsawi,25,Left-Back,Al-Okhdood Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6508012,,31008,71665
+Al-Riyadh SC,Nasser Al-Bishi,24,Central Midfield,Al-Okhdood Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6507992,,31008,71665
+Al-Riyadh SC,Tozé,33,Attacking Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6470411,,31008,515
+Al-Riyadh SC,Khaled Al-Asbahi,22,Left Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396989,,31008,515
+Al-Riyadh SC,Farhah Al-Shamrani,19,Attacking Midfield,Al-Ittihad Club,End of loan 07/01/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5938692,,31008,8023
+Al-Riyadh SC,Ammar Al-Harfi,25,Right-Back,Al-Ula FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5897781,,31008,107818
+Al-Riyadh SC,Abdulelah Al-Khaibri,29,Left-Back,Al-Ahli SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6133912,,31008,18487
+Al-Shabab FC,Dhari Al-Anazi,26,Left-Back,Damac FC,€1.75m,in,Summer,1.75,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502361,,9840,50532
+Al-Shabab FC,Awad Al-Nashri,24,Defensive Midfield,Al-Ittihad Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393040,,9840,8023
+Al-Shabab FC,Abdulrahman Al-Oboud,31,Right Winger,Al-Ittihad Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6534056,,9840,8023
+Al-Shabab FC,Thomas Partey,33,Defensive Midfield,Villarreal CF,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6524171,,9840,1050
+Al-Shabab FC,Abdulaziz Al-Hadhood,21,Attacking Midfield,Al-Hilal SFC U21,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491903,,9840,132482
+Al-Shabab FC,Tin Jedvaj,30,Centre-Back,Panathinaikos,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6458687,,9840,265
+Al-Shabab FC,Roger Martínez,32,Centre-Forward,Al-Taawoun FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392976,,9840,28844
+Al-Shabab FC,Mory Diaw,33,Goalkeeper,Le Havre AC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6530345,,9840,738
+Al-Shabab FC,Ali Al-Asmari,29,Defensive Midfield,NEOM SC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6451777,,9840,34911
+Al-Shabab FC,Mamadou Thierno Barry,21,Centre-Back,Union Saint-Gilloise,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6477249,,9840,3948
+Al-Shabab FC,Lazar Stojanovic,21,Centre-Back,FK Cukaricki,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6501804,,9840,6621
+Al-Shabab FC,Georgiy Bushchan,32,Goalkeeper,Polissya Zhytomyr,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5922289,,9840,53646
+Al-Shabab FC,Hisham Al-Dubais,24,Centre-Forward,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933886,,9840,32328
+Al-Shabab FC,Daniel Podence,30,Left Winger,Olympiacos Piraeus,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5911864,,9840,683
+Al-Shabab FC,Nawaf Al-Saadi,25,Right Winger,Damac FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163514,,9840,50532
+Al-Shabab FC,Basil Al-Sayyali,25,Central Midfield,Abha Club,Loan fee:€275Th.,out,Summer,0.275,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499046,,9840,40039
+Al-Shabab FC,Nawaf Al-Saadi,25,Right Winger,Al-Khaleej FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6405044,,9840,6070
+Al-Shabab FC,Abderrazak Hamdallah,35,Centre-Forward,Al-Taawoun FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6384782,,9840,28844
+Al-Shabab FC,Georgiy Bushchan,32,Goalkeeper,Polissya Zhytomyr,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6379673,,9840,53646
+Al-Shabab FC,Faisal Al-Subiani,23,Defensive Midfield,Abha Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6464757,,9840,40039
+Al-Shabab FC,Marcelo Grohe,39,Goalkeeper,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393038,,9840,515
+Al-Shabab FC,Vincent Sierro,30,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6523445,,9840,515
+Al-Shabab FC,Carlos Júnior,31,Right Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6523003,,9840,515
+Al-Shabab FC,Wesley Hoedt,32,Centre-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6461046,,9840,515
+Al-Shabab FC,Haroune Camara,28,Centre-Forward,Al-Nassr FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163547,,9840,18544
+Al-Shabab FC,Unai Hernández,21,Central Midfield,Al-Ittihad Club,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931608,,9840,8023
+Al-Shabab FC,Saad Balobaid,26,Left-Back,Al-Ahli SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933426,,9840,18487
+Al-Shabab FC,Abdulaziz Al-Othman,22,Centre-Forward,Al-Qadsiah FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5937992,,9840,26069
+Al-Shabab FC,Ali Al-Asmari,29,Defensive Midfield,NEOM SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6146831,,9840,34911
+Al-Shabab FC,Ali Azaizeh,22,Right Winger,Kazma SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6150795,,9840,13959
+Al-Shabab FC,Ali Al-Bulayhi,36,Centre-Back,Al-Hilal SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6161356,,9840,1114
+Al-Taawoun FC,Parfait Guiagon,25,Left Winger,Royal Charleroi SC,€4.30m,in,Summer,4.3,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6536543,,28844,172
+Al-Taawoun FC,Oscar,28,Central Midfield,SK Slavia Prague,€2.00m,in,Summer,2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6524952,,28844,62
+Al-Taawoun FC,Zineddine Belaid,27,Centre-Back,JS Kabylie,€1.20m,in,Summer,1.2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6482594,,28844,13366
+Al-Taawoun FC,Abdulrahman Hindi,23,Central Midfield,Al-Orobah FC,€1.15m,in,Summer,1.15,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6433307,,28844,39536
+Al-Taawoun FC,Younes El Bahraoui,21,Centre-Forward,Renaissance de Berkane,€1.00m,in,Summer,1,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6420850,,28844,37176
+Al-Taawoun FC,Nedim Bajrami,27,Attacking Midfield,Rangers FC,Loan fee:€200Th.,in,Summer,0.2,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6482881,,28844,124
+Al-Taawoun FC,Abdullah Al-Jadani,35,Goalkeeper,Abha Club,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6436425,,28844,40039
+Al-Taawoun FC,Abderrazak Hamdallah,35,Centre-Forward,Al-Shabab FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6384782,,28844,9840
+Al-Taawoun FC,Mohammed Al-Saedi,20,Central Midfield,Al-Hazem SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6385421,,28844,9131
+Al-Taawoun FC,Turki Al-Jaadi,23,Left-Back,Al-Arabi SC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6388015,,28844,68834
+Al-Taawoun FC,Keshim Al-Qahtani,27,Centre-Forward,Abha Club,End of loan 30/06/2027,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493040,,28844,40039
+Al-Taawoun FC,Awn Al-Saluli,27,Centre-Back,NEOM SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931610,,28844,34911
+Al-Taawoun FC,Jair Collahuazo,20,Centre-Back,FC Kudrivka,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6536732,,28844,87883
+Al-Taawoun FC,Rakan Al-Tulayhi,23,Attacking Midfield,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6348974,,28844,32328
+Al-Taawoun FC,Abdulrahman Al-Ghamdi,20,Goalkeeper,Al-Arabi SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6164073,,28844,68834
+Al-Taawoun FC,Mohammed Al-Aqel,26,Right Winger,Al-Najma SC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163682,,28844,32328
+Al-Taawoun FC,Renne Rivas,23,Left-Back,Kalba FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5926924,,28844,38040
+Al-Taawoun FC,Mohammed Mahzari,24,Right-Back,Al-Hilal SFC,€7.67m,out,Summer,7.67,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6463561,,28844,1114
+Al-Taawoun FC,Abdulquddus Atiah,29,Goalkeeper,Al-Ula FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6466198,,28844,107818
+Al-Taawoun FC,Musa Barrow,27,Left Winger,Al-Khaleej FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392956,,28844,6070
+Al-Taawoun FC,Andrei Girotto,34,Centre-Back,Al-Faisaly FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392973,,28844,28848
+Al-Taawoun FC,Roger Martínez,32,Centre-Forward,Al-Shabab FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392976,,28844,9840
+Al-Taawoun FC,Victor Hugo,22,Central Midfield,Ajman Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6393031,,28844,24724
+Al-Taawoun FC,Renne Rivas,23,Left-Back,Al-Wahda FC,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6413531,,28844,161
+Al-Taawoun FC,Abdulmalik Al-Marwani,21,Central Midfield,Al-Jabalain FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6506955,,28844,68028
+Al-Taawoun FC,Keshim Al-Qahtani,26,Centre-Forward,Abha Club,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493039,,28844,40039
+Al-Taawoun FC,Turki Al-Shaifan,21,Right Winger,Al-Saqer FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6507973,,28844,95443
+Al-Taawoun FC,Ahmed Bahusayn,25,Left Winger,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396919,,28844,515
+Al-Taawoun FC,Ibrahim Al-Shuail,31,Left-Back,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396924,,28844,515
+Al-Taawoun FC,Flávio,30,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6392972,,28844,515
+Al-Taawoun FC,Qasem Lajami,30,Centre-Back,Al-Qadsiah FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163824,,28844,26069
+Al-Taawoun FC,Biel,25,Left Winger,Sporting CP,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6151189,,28844,336
+Al-Taawoun FC,Mohammed Al-Qahtani,23,Right Winger,Al-Hilal SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6113596,,28844,1114
+Al-Taawoun FC,Mishal Al-Alaeli,22,Left-Back,Al-Ettifaq FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933434,,28844,7732
+Al-Taawoun FC,Mohammed Waleed Al-Dossary,25,Centre-Back,NEOM SC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933432,,28844,34911
+Al-Taawoun FC,Cristhoper Zambrano,21,Centre-Forward,SD Aucas,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5932888,,28844,6362
+Al-Taawoun FC,Angelo Fulgini,29,Attacking Midfield,RC Lens,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5907729,,28844,826
+Al-Taawoun FC,Abdalellah Hawsawi,25,Central Midfield,Al-Ittihad Club,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5855153,,28844,8023
+NEOM SC,Abdulaziz Al-Othman,22,Centre-Forward,Al-Qadsiah FC,€925Th.,in,Summer,0.925,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6493041,,34911,26069
+NEOM SC,Khaled Al-Rammah,21,Right-Back,Al-Fayha FC,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6396988,,34911,50531
+NEOM SC,Mohannad Abu Taha,23,Left-Back,Al-Quwa Al-Jawiya,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6489968,,34911,23805
+NEOM SC,Malang Sarr,27,Centre-Back,RC Lens,free transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6446028,,34911,826
+NEOM SC,Georgios Masouras,32,Left Winger,Olympiacos Piraeus,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490787,,34911,683
+NEOM SC,Khalil Al-Absi,25,Left Winger,Al-Riyadh SC,?,in,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6491852,,34911,31008
+NEOM SC,Haroune Camara,28,Centre-Forward,Al-Nassr FC,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502340,,34911,18544
+NEOM SC,Faisal Al-Ghamdi,24,Central Midfield,Al-Ittihad Club,loan transfer,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6499915,,34911,8023
+NEOM SC,Osama Al-Khalaf,29,Defensive Midfield,Al-Adalah FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933864,,34911,55544
+NEOM SC,Mohammed Waleed Al-Dossary,25,Centre-Back,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933432,,34911,28844
+NEOM SC,Abdulrahman Dagriri,36,Goalkeeper,Al-Tai FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5933860,,34911,40079
+NEOM SC,Thamer Al-Khaibri,20,Centre-Forward,Al-Khaleej FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6163271,,34911,6070
+NEOM SC,Mohammed Dakhilallah Al-Dawsari,23,Centre-Back,Al-Raed SFC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5961217,,34911,22381
+NEOM SC,Riyadh Sharahili,33,Defensive Midfield,Damac FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5916052,,34911,50532
+NEOM SC,Ali Al-Asmari,29,Defensive Midfield,Al-Shabab FC,End of loan 30/06/2026,in,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6146831,,34911,9840
+NEOM SC,Nawaf Al-Ghulaimish,21,Right-Back,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6521491,,34911,40039
+NEOM SC,Osama Al-Khalaf,29,Defensive Midfield,Damac FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6511803,,34911,50532
+NEOM SC,Mustafa Malayekah,40,Goalkeeper,Abha Club,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335245,,34911,40039
+NEOM SC,Ahmed Abdu,29,Centre-Forward,Al-Faisaly FC,free transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6334717,,34911,28848
+NEOM SC,Faris Abdi,27,Left-Back,Al-Ittihad Club,?,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6482935,,34911,8023
+NEOM SC,Saad Al-Rashed,20,Centre-Forward,Jeddah SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6518623,,34911,58858
+NEOM SC,Hassan Al-Ali,25,Centre-Forward,Al-Riyadh SC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6502043,,34911,31008
+NEOM SC,Ali Al-Asmari,29,Defensive Midfield,Al-Shabab FC,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6451777,,34911,9840
+NEOM SC,Luciano Rodríguez,23,Centre-Forward,Cruzeiro Esporte Clube,loan transfer,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6490263,,34911,609
+NEOM SC,Awn Al-Saluli,27,Centre-Back,Al-Taawoun FC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,5931610,,34911,28844
+NEOM SC,Ahmed Hegazy,35,Centre-Back,Retired,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6332971,,34911,
+NEOM SC,Salman Al-Faraj,36,Central Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6334168,,34911,515
+NEOM SC,Abdoulaye Doucouré,33,Attacking Midfield,Without Club,-,out,Summer,NA,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6335244,,34911,515
+NEOM SC,Ayman Fallatah,22,Central Midfield,Al-Ahli SFC,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6117292,,34911,18487
+NEOM SC,Rayane Messi,19,Left Winger,RC Strasbourg Alsace,End of loan 30/06/2026,out,Summer,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6173175,,34911,667
+Al-Hilal SFC,Kaio César,22,Right Winger,Sport Club Corinthians Paulista,End of loan 31/12/2026,in,Winter,0,Saudi Pro League,2026,2026/2027,Saudi Arabia,transfermarkt.com,6152103,,1114,199

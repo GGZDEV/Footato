@@ -1,0 +1,429 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+FC Barcelona,Anthony Gordon,25,Left Winger,Newcastle United,€80.00m,in,Summer,80,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6330442,,131,762
+FC Barcelona,Rodri,30,Defensive Midfield,Manchester City,€60.00m,in,Summer,60,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6515728,,131,281
+FC Barcelona,Karim Adeyemi,24,Right Winger,Borussia Dortmund,€22.00m,in,Summer,22,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6449963,,131,16
+FC Barcelona,Jesse Bisiwu,18,Left Winger,Club NXT,€8.50m,in,Summer,8.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6474601,,131,43560
+FC Barcelona,Dominik Livakovic,31,Goalkeeper,Fenerbahce,€2.00m,in,Summer,2,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6539093,,131,36
+FC Barcelona,Hamza Abdelkarim,18,Centre-Forward,Al Ahly FC,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6348454,,131,7
+FC Barcelona,João Cancelo,32,Right-Back,Al-Hilal SFC,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6521353,,131,1114
+FC Barcelona,Ansu Fati,23,Left Winger,AS Monaco,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5741202,,131,162
+FC Barcelona,Marc ter Stegen,34,Goalkeeper,Girona FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6133899,,131,12321
+FC Barcelona,Héctor Fort,19,Right-Back,Elche CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911895,,131,1531
+FC Barcelona,Iñaki Peña,27,Goalkeeper,Elche CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5897693,,131,1531
+FC Barcelona,Áron Yaakobishvili,20,Goalkeeper,FC Andorra,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5780119,,131,10718
+FC Barcelona,Ferran Torres,26,Centre-Forward,Paris Saint-Germain,€48.50m,out,Summer,48.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6506285,,131,583
+FC Barcelona,Tommy Marqués,19,Defensive Midfield,SC Braga,€11.00m,out,Summer,11,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6524416,,131,1075
+FC Barcelona,Ansu Fati,23,Left Winger,AS Monaco,€11.00m,out,Summer,11,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390435,,131,162
+FC Barcelona,Iñaki Peña,27,Goalkeeper,Panathinaikos,€3.00m,out,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6377601,,131,265
+FC Barcelona,Jofre Torrents,19,Left-Back,Ajax Amsterdam,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6513030,,131,610
+FC Barcelona,Robert Lewandowski,37,Centre-Forward,Chicago Fire FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6314336,,131,432
+FC Barcelona,Diego Kochen,20,Goalkeeper,Lyngby Boldklub,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6400853,,131,369
+FC Barcelona,Áron Yaakobishvili,20,Goalkeeper,UD Almería,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6520963,,131,3302
+FC Barcelona,Ronald Araujo,27,Centre-Back,Liverpool FC,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6492985,,131,31
+FC Barcelona,Marc ter Stegen,34,Goalkeeper,Ajax Amsterdam,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6483706,,131,610
+FC Barcelona,João Cancelo,32,Right-Back,Al-Hilal SFC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6116548,,131,1114
+FC Barcelona,Marcus Rashford,28,Left Winger,Manchester United,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5805086,,131,985
+Real Madrid,Yan Diomande,19,Right Winger,RB Leipzig,€125.00m,in,Summer,125,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489340,,418,23826
+Real Madrid,Marc Cucurella,27,Left-Back,Chelsea FC,€55.00m,in,Summer,55,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6358360,,418,631
+Real Madrid,Carlos Espí,21,Centre-Forward,Levante UD,€25.00m,in,Summer,25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6471556,,418,3368
+Real Madrid,Denzel Dumfries,30,Right-Back,Inter Milan,€20.00m,in,Summer,20,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6403434,,418,46
+Real Madrid,Bernardo Silva,31,Attacking Midfield,Manchester City,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6364899,,418,281
+Real Madrid,Ibrahima Konaté,27,Centre-Back,Liverpool FC,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6366872,,418,31
+Real Madrid,Mario Martín,22,Defensive Midfield,Getafe CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5820900,,418,3709
+Real Madrid,Endrick,19,Centre-Forward,Olympique Lyon,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6071217,,418,1041
+Real Madrid,Gonzalo García,22,Centre-Forward,Fulham FC,€40.00m,out,Summer,40,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6482768,,418,931
+Real Madrid,César Palacios,21,Attacking Midfield,Fulham FC,€10.00m,out,Summer,10,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6482982,,418,931
+Real Madrid,Fran García,26,Left-Back,Real Betis Balompié,€4.00m,out,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412790,,418,150
+Real Madrid,Mario Martín,22,Defensive Midfield,Getafe CF,€3.50m,out,Summer,3.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6328599,,418,3709
+Real Madrid,Fran González,21,Goalkeeper,Sevilla FC,€1.00m,out,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6480215,,418,368
+Real Madrid,Franco Mastantuono,18,Right Winger,ACF Fiorentina,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489342,,418,430
+Real Madrid,Dani Ceballos,29,Central Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6384016,,418,515
+Real Madrid,David Alaba,34,Centre-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6321944,,418,515
+Real Madrid,Daniel Carvajal,34,Right-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6316323,,418,515
+Villarreal CF,Nathan Saliba,22,Central Midfield,RSC Anderlecht,€15.00m,in,Summer,15,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6534126,,1050,58
+Villarreal CF,Péter Gulácsi,36,Goalkeeper,RB Leipzig,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6481832,,1050,23826
+Villarreal CF,Thiago Fernández,22,Left Winger,Real Oviedo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6138046,,1050,2497
+Villarreal CF,Ilias Akhomach,22,Right Winger,Rayo Vallecano,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6135845,,1050,367
+Villarreal CF,Álex Forés,25,Centre-Forward,Real Oviedo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5807921,,1050,2497
+Villarreal CF,Dani Requena,22,Central Midfield,Córdoba CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5802214,,1050,993
+Villarreal CF,Ramón Terrats,25,Central Midfield,RCD Espanyol Barcelona,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5740894,,1050,714
+Villarreal CF,Carlos Romero,24,Left-Back,RCD Espanyol Barcelona,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5105593,,1050,714
+Villarreal CF,Ramón Terrats,25,Central Midfield,Getafe CF,€2.50m,out,Summer,2.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412535,,1050,3709
+Villarreal CF,Álex Forés,25,Centre-Forward,Burgos CF,€400Th.,out,Summer,0.4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490374,,1050,1536
+Villarreal CF,Thomas Partey,33,Defensive Midfield,Al-Shabab FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6524171,,1050,9840
+Villarreal CF,Alfonso Pedraza,30,Left-Back,SS Lazio,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6171258,,1050,398
+Villarreal CF,Daniel Budesca,20,Right-Back,Córdoba CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6519168,,1050,993
+Villarreal CF,Hugo López,19,Centre-Forward,FC Andorra,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6495593,,1050,10718
+Villarreal CF,Arnau Tenas,25,Goalkeeper,RCD Mallorca,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6456460,,1050,237
+Villarreal CF,Diego Conde,27,Goalkeeper,Real Betis Balompié,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6441582,,1050,150
+Villarreal CF,Willy Kambwala,22,Centre-Back,Como 1907,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6535871,,1050,1047
+Villarreal CF,Thiago Fernández,22,Left Winger,Levante UD,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6495691,,1050,3368
+Villarreal CF,Dani Requena,22,Central Midfield,Levante UD,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6435276,,1050,3368
+Villarreal CF,Jean Ives Valou,20,Centre-Back,Getafe CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409764,,1050,3709
+Villarreal CF,Dani Parejo,37,Central Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6320281,,1050,515
+Villarreal CF,Alfon González,27,Left Winger,Sevilla FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146445,,1050,368
+Villarreal CF,Rafa Marín,24,Centre-Back,SSC Napoli,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5747475,,1050,6195
+Atlético de Madrid,Morten Hjulmand,27,Defensive Midfield,Sporting CP,€40.00m,in,Summer,40,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6419261,,13,336
+Atlético de Madrid,Cristian Romero,28,Centre-Back,Tottenham Hotspur,€40.00m,in,Summer,40,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6506058,,13,148
+Atlético de Madrid,Kang-in Lee,25,Attacking Midfield,Paris Saint-Germain,€35.00m,in,Summer,35,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6456004,,13,583
+Atlético de Madrid,Alejandro Grimaldo,30,Left-Back,Bayer 04 Leverkusen,€15.00m,in,Summer,15,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390311,,13,15
+Atlético de Madrid,Horațiu Moldovan,28,Goalkeeper,Real Oviedo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5790887,,13,2497
+Atlético de Madrid,Thomas Lemar,30,Attacking Midfield,Girona FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5823874,,13,12321
+Atlético de Madrid,Carlos Martín,24,Left Winger,Rayo Vallecano,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6092122,,13,367
+Atlético de Madrid,Matteo Ruggeri,24,Left-Back,Aston Villa,€25.00m,out,Summer,25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6516983,,13,405
+Atlético de Madrid,Thiago Almada,25,Attacking Midfield,CA River Plate,€20.00m,out,Summer,20,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489488,,13,209
+Atlético de Madrid,Nahuel Molina,28,Right-Back,AS Roma,€13.00m,out,Summer,13,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6496928,,13,12
+Atlético de Madrid,Julio Díaz,21,Left-Back,Sevilla FC,€1.00m,out,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6465796,,13,368
+Atlético de Madrid,Antoine Griezmann,35,Second Striker,Orlando City SC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6243247,,13,45604
+Atlético de Madrid,Clément Lenglet,31,Centre-Back,SL Benfica,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6391097,,13,294
+Atlético de Madrid,Horațiu Moldovan,28,Goalkeeper,Eyüpspor,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6427978,,13,7160
+Atlético de Madrid,Nico González,28,Left Winger,Juventus FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5910218,,13,506
+Real Betis Balompié,Troy Parrott,24,Centre-Forward,AZ Alkmaar,€16.00m,in,Summer,16,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6522470,,150,1090
+Real Betis Balompié,Facundo Bernal,22,Defensive Midfield,Fluminense Football Club,€10.50m,in,Summer,10.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6406724,,150,2462
+Real Betis Balompié,Fran García,26,Left-Back,Real Madrid,€4.00m,in,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412790,,150,418
+Real Betis Balompié,Diego Conde,27,Goalkeeper,Villarreal CF,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6441582,,150,1050
+Real Betis Balompié,Sergio Arribas,22,Centre-Back,SD Huesca,End of loan 28/01/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5758430,,150,5358
+Real Betis Balompié,Gonzalo Petit,19,Centre-Forward,Granada CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6123558,,150,16795
+Real Betis Balompié,Iker Losada,24,Second Striker,Levante UD,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5880374,,150,3368
+Real Betis Balompié,Nobel Mendy,21,Centre-Back,Rayo Vallecano,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5877633,,150,367
+Real Betis Balompié,Mateo Flores,22,Central Midfield,FC Arouca,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5812833,,150,8024
+Real Betis Balompié,Guilherme Fernandes,25,Goalkeeper,Real Valladolid CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5763745,,150,366
+Real Betis Balompié,Sergi Altimira,24,Defensive Midfield,Sporting CP,€18.25m,out,Summer,18.25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6391118,,150,336
+Real Betis Balompié,Nobel Mendy,21,Centre-Back,Rayo Vallecano,€8.18m,out,Summer,8.18,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146331,,150,367
+Real Betis Balompié,Mateo Flores,22,Central Midfield,FC Arouca,€1.40m,out,Summer,1.4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6369657,,150,8024
+Real Betis Balompié,Pau López,31,Goalkeeper,FC Andorra,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6433998,,150,10718
+Real Betis Balompié,Chimy Ávila,32,Centre-Forward,CA Independiente,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6389706,,150,1234
+Real Betis Balompié,Guilherme Fernandes,25,Goalkeeper,Córdoba CF,?,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6442257,,150,993
+Real Betis Balompié,Cédric Bakambu,35,Centre-Forward,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363598,,150,515
+Real Betis Balompié,Ricardo Rodríguez,33,Left-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363597,,150,515
+Real Betis Balompié,Adrián San Miguel,39,Goalkeeper,Retired,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6322348,,150,
+Real Betis Balompié,Sofyan Amrabat,29,Defensive Midfield,Fenerbahce,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911966,,150,36
+Celta de Vigo,Couhaib Driouech,24,Left Winger,PSV Eindhoven,€7.00m,in,Summer,7,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6534353,,940,383
+Celta de Vigo,Abdoulaye Faye,21,Centre-Back,Bayer 04 Leverkusen,Loan fee:€300Th.,in,Summer,0.3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6481355,,940,15
+Celta de Vigo,Aleix Febas,30,Central Midfield,Elche CF,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6328178,,940,1531
+Celta de Vigo,Javi Galán,31,Left-Back,CA Osasuna,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390994,,940,331
+Celta de Vigo,Altay Bayındır,28,Goalkeeper,Manchester United,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489388,,940,985
+Celta de Vigo,Carles Pérez,28,Right Winger,Aris Thessaloniki,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5767197,,940,605
+Celta de Vigo,Unai Núñez,29,Centre-Back,Valencia CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6140686,,940,1049
+Celta de Vigo,Damián Rodríguez,23,Defensive Midfield,Racing Santander,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6103325,,940,630
+Celta de Vigo,Unai Núñez,29,Centre-Back,RCD Espanyol Barcelona,Loan fee:€250Th.,out,Summer,0.25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490523,,940,714
+Celta de Vigo,Hugo Sotelo,22,Central Midfield,Levante UD,Loan fee:€100Th.,out,Summer,0.1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6442279,,940,3368
+Celta de Vigo,Franco Cervi,32,Left Winger,CA Rosario Central,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363604,,940,1418
+Celta de Vigo,Óscar Mingueza,27,Right-Back,Crystal Palace,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6414760,,940,873
+Celta de Vigo,Manu Fernández,25,Centre-Back,Cádiz CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6525725,,940,2687
+Celta de Vigo,Mihailo Ristic,30,Left-Back,Red Star Belgrade,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6526844,,940,159
+Celta de Vigo,Damián Rodríguez,23,Defensive Midfield,Cádiz CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6476063,,940,2687
+Celta de Vigo,Carlos Domínguez,25,Centre-Back,Real Oviedo,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6494966,,940,2497
+Celta de Vigo,Joseph Aidoo,30,Centre-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363606,,940,515
+Celta de Vigo,Marc Vidal,26,Goalkeeper,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390135,,940,515
+Celta de Vigo,Matías Vecino,34,Central Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6524741,,940,515
+Celta de Vigo,Fer López,22,Attacking Midfield,Wolverhampton Wanderers,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6144533,,940,543
+Getafe CF,Martín Satriano,25,Centre-Forward,Olympique Lyon,€6.50m,in,Summer,6.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6252414,,3709,1041
+Getafe CF,Zaid Romero,26,Centre-Back,Club Brugge KV,€5.00m,in,Summer,5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6406745,,3709,2282
+Getafe CF,Mario Martín,22,Defensive Midfield,Real Madrid,€3.50m,in,Summer,3.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6328599,,3709,418
+Getafe CF,Ramón Terrats,25,Central Midfield,Villarreal CF,€2.50m,in,Summer,2.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412535,,3709,1050
+Getafe CF,Sebastián Boselli,22,Centre-Back,CA River Plate,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6329858,,3709,209
+Getafe CF,Johan Mojica,33,Left-Back,RCD Mallorca,€500Th.,in,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6501870,,3709,237
+Getafe CF,Saba Sazonov,24,Centre-Back,Torino FC,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6484434,,3709,416
+Getafe CF,Enes Ünal,29,Centre-Forward,AFC Bournemouth,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6501744,,3709,989
+Getafe CF,Francho Serrano,24,Central Midfield,Real Zaragoza,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6515493,,3709,142
+Getafe CF,Andrés García,23,Right-Back,Aston Villa,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6431883,,3709,405
+Getafe CF,Jean Ives Valou,20,Centre-Back,Villarreal CF,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409764,,3709,1050
+Getafe CF,Orel Mangala,28,Defensive Midfield,Olympique Lyon,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489479,,3709,1041
+Getafe CF,Coba da Costa,23,Left Winger,RSC Anderlecht,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6163809,,3709,58
+Getafe CF,Yvan Neyou,29,Defensive Midfield,Al-Okhdood Club,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6157193,,3709,71665
+Getafe CF,Peter Federico,23,Right Winger,Real Valladolid CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5912045,,3709,366
+Getafe CF,Christantus Uche,23,Centre-Forward,Crystal Palace,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911874,,3709,873
+Getafe CF,Juan Berrocal,27,Centre-Back,Atlanta United FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5811203,,3709,51663
+Getafe CF,Mauro Arambarri,30,Central Midfield,CA River Plate,€6.10m,out,Summer,6.1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6366205,,3709,209
+Getafe CF,Luis Milla,31,Central Midfield,Como 1907,€6.00m,out,Summer,6,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6396320,,3709,1047
+Getafe CF,Coba da Costa,23,Left Winger,Al-Kholood Club,€2.00m,out,Summer,2,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6415796,,3709,91427
+Getafe CF,Peter Federico,23,Right Winger,Górnik Zabrze,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6420411,,3709,428
+Getafe CF,Diego Rico,33,Left-Back,CA Osasuna,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6498684,,3709,331
+Getafe CF,Juan Iglesias,27,Right-Back,Sevilla FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6349365,,3709,368
+Getafe CF,Domingos Duarte,31,Centre-Back,São Paulo Futebol Clube,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363629,,3709,585
+Getafe CF,Álex Sancris,29,Right Winger,CD Leganés,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6533387,,3709,1244
+Getafe CF,Allan Nyom,38,Right-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6391794,,3709,515
+Getafe CF,Veljko Birmancevic,28,Left Winger,AC Sparta Prague,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6164050,,3709,197
+Getafe CF,Luis Vázquez,25,Centre-Forward,RSC Anderlecht,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6135420,,3709,58
+Getafe CF,Zaid Romero,26,Centre-Back,Club Brugge KV,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6125354,,3709,2282
+Getafe CF,Sebastián Boselli,22,Centre-Back,CA River Plate,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6124551,,3709,209
+Getafe CF,Martín Satriano,25,Centre-Forward,Olympique Lyon,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6124018,,3709,1041
+Getafe CF,Abu Kamara,22,Right Winger,Hull City,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911621,,3709,3008
+Getafe CF,Mario Martín,22,Defensive Midfield,Real Madrid,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5820900,,3709,418
+Getafe CF,Adrián Liso,21,Left Winger,Real Zaragoza,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5744018,,3709,142
+Rayo Vallecano,Nobel Mendy,21,Centre-Back,Real Betis Balompié,€8.18m,in,Summer,8.18,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146331,,367,150
+Rayo Vallecano,Jozhua Vertrouwd,21,Centre-Back,CD Castellón,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5857468,,367,2502
+Rayo Vallecano,Gnangoro Bouare,22,Central Midfield,Betis Deportivo Balompié,€600Th.,in,Summer,0.6,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6539962,,367,2865
+Rayo Vallecano,Giorgi Tsitaishvili,25,Left Winger,Dynamo Kyiv,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6500561,,367,338
+Rayo Vallecano,Marash Kumbulla,26,Centre-Back,AS Roma,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490376,,367,12
+Rayo Vallecano,Adrià Pedrosa,28,Left-Back,Sevilla FC,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6540728,,367,368
+Rayo Vallecano,Etienne Eto'o,23,Centre-Forward,Villarreal CF B,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6123209,,367,11972
+Rayo Vallecano,Pelayo Fernández,23,Centre-Back,Cádiz CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5910032,,367,2687
+Rayo Vallecano,Raúl de Tomás,31,Centre-Forward,Al-Wakrah SC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5795743,,367,13509
+Rayo Vallecano,Miguel Ángel Morro,25,Goalkeeper,Leixões SC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5778289,,367,3345
+Rayo Vallecano,Nobel Mendy,21,Centre-Back,Hull City,€23.40m,out,Summer,23.4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6499002,,367,3008
+Rayo Vallecano,Pep Chavarría,28,Left-Back,Chelsea FC,€19.00m,out,Summer,19,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6496638,,367,631
+Rayo Vallecano,Abdul Mumin,28,Centre-Back,Girona FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6515564,,367,12321
+Rayo Vallecano,Alfonso Espino,34,Left-Back,Racing Club,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6391796,,367,1444
+Rayo Vallecano,Óscar Trejo,38,Attacking Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6210142,,367,515
+Rayo Vallecano,Miguel Ángel Morro,25,Goalkeeper,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6229897,,367,515
+Rayo Vallecano,Ilias Akhomach,22,Right Winger,Villarreal CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6135845,,367,1050
+Rayo Vallecano,Carlos Martín,24,Left Winger,Atlético de Madrid,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6092122,,367,13
+Rayo Vallecano,Nobel Mendy,21,Centre-Back,Real Betis Balompié,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5877633,,367,150
+Rayo Vallecano,Jozhua Vertrouwd,21,Centre-Back,CD Castellón,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5862389,,367,2502
+Rayo Vallecano,Gerard Gumbau,31,Defensive Midfield,Granada CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5786507,,367,16795
+Valencia CF,Arnau Martínez,23,Right-Back,Girona FC,€5.00m,in,Summer,5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6537928,,1049,12321
+Valencia CF,Ryunosuke Sato,19,Left Winger,FC Tokyo,€4.00m,in,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409275,,1049,6631
+Valencia CF,Justin de Haas,26,Centre-Back,FC Famalicão,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6330235,,1049,3329
+Valencia CF,Aliou Dieng,28,Defensive Midfield,Al Ahly FC,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409934,,1049,7
+Valencia CF,Kayne van Oevelen,23,Goalkeeper,Ipswich Town,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6531023,,1049,677
+Valencia CF,Pablo Maffeo,29,Right-Back,Olympiacos Piraeus,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6522079,,1049,683
+Valencia CF,Sergi Canós,29,Left Winger,Real Valladolid CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5912246,,1049,366
+Valencia CF,Alberto Marí,24,Centre-Forward,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5909295,,1049,13222
+Valencia CF,Cenk Özkacar,25,Centre-Back,1.FC Köln,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5847812,,1049,3
+Valencia CF,Iker Córdoba,20,Centre-Back,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5751601,,1049,13222
+Valencia CF,Cenk Özkacar,25,Centre-Back,Trabzonspor,€1.75m,out,Summer,1.75,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6437242,,1049,449
+Valencia CF,Eray Cömert,28,Centre-Back,Torino FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6468069,,1049,416
+Valencia CF,Baptiste Santamaria,31,Defensive Midfield,PAOK Thessaloniki,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6425405,,1049,1091
+Valencia CF,Thierry Correia,27,Right-Back,Venezia FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6397150,,1049,607
+Valencia CF,Mario Domínguez,22,Centre-Forward,Excelsior Rotterdam,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490283,,1049,798
+Valencia CF,Lucas Núñez,20,Central Midfield,SD Eibar,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6459743,,1049,1533
+Valencia CF,Alberto Marí,25,Centre-Forward,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6540405,,1049,515
+Valencia CF,Renzo Saravia,33,Right-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363599,,1049,515
+Valencia CF,Unai Núñez,29,Centre-Back,Celta de Vigo,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6140686,,1049,940
+Valencia CF,Lucas Beltrán,25,Centre-Forward,ACF Fiorentina,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911889,,1049,430
+Valencia CF,Largie Ramazani,25,Left Winger,Leeds United,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5900187,,1049,399
+Valencia CF,Julen Agirrezabala,25,Goalkeeper,Athletic Bilbao,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5769466,,1049,621
+Real Sociedad,Carlos Fernández,30,Centre-Forward,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5875204,,681,13222
+Real Sociedad,Jon Pacheco,25,Centre-Back,Deportivo Alavés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5892203,,681,1108
+Real Sociedad,Javi López,24,Left-Back,Real Oviedo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5905426,,681,2497
+Real Sociedad,Mikel Goti,24,Attacking Midfield,Córdoba CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6145851,,681,993
+Real Sociedad,Brais Méndez,29,Attacking Midfield,Columbus Crew,€6.00m,out,Summer,6,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6398083,,681,813
+Real Sociedad,Aritz Elustondo,32,Centre-Back,PAOK Thessaloniki,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6298334,,681,1091
+Real Sociedad,Carlos Fernández,30,Centre-Forward,Real Oviedo,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6456083,,681,2497
+Real Sociedad,Javi López,24,Left-Back,Feyenoord Rotterdam,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6513033,,681,234
+Real Sociedad,Duje Caleta-Car,29,Centre-Back,Olympique Lyon,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5828642,,681,1041
+Real Sociedad,Wesley,21,Left Winger,Al-Nassr FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6154449,,681,18544
+RCD Espanyol Barcelona,Álex Calatrava,26,Attacking Midfield,CD Castellón,€5.00m,in,Summer,5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6396514,,714,2502
+RCD Espanyol Barcelona,Vanja Drkusic,26,Centre-Back,Zenit St. Petersburg,Loan fee:€300Th.,in,Summer,0.3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6505321,,714,964
+RCD Espanyol Barcelona,Unai Núñez,29,Centre-Back,Celta de Vigo,Loan fee:€250Th.,in,Summer,0.25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490523,,714,940
+RCD Espanyol Barcelona,Bryan Zaragoza,24,Left Winger,Bayern Munich,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6540166,,714,27
+RCD Espanyol Barcelona,Gabriel Moscardo,20,Defensive Midfield,Paris Saint-Germain,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412098,,714,583
+RCD Espanyol Barcelona,Quilindschy Hartman,24,Left-Back,Burnley FC,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6408368,,714,1132
+RCD Espanyol Barcelona,Pablo Ramón,25,Centre-Back,Racing Santander,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5899736,,714,630
+RCD Espanyol Barcelona,Hugo Pérez,23,Centre-Back,Gimnàstic de Tarragona,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6132883,,714,5648
+RCD Espanyol Barcelona,Javi Hernández,22,Attacking Midfield,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6106011,,714,13222
+RCD Espanyol Barcelona,Marcos Fernández,23,Centre-Forward,AD Ceuta FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5901330,,714,8568
+RCD Espanyol Barcelona,Roger Hinojo,21,Left-Back,Cultural Leonesa,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5895426,,714,4542
+RCD Espanyol Barcelona,Rafel Bauzà,21,Central Midfield,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5893168,,714,13222
+RCD Espanyol Barcelona,José Salinas,26,Left-Back,Málaga CF,End of loan 30/06/2027,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6462816,,714,1084
+RCD Espanyol Barcelona,José Gragera,26,Central Midfield,Deportivo A Coruña,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5823213,,714,897
+RCD Espanyol Barcelona,Justin Smith,23,Central Midfield,Sporting Gijón,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5791490,,714,2448
+RCD Espanyol Barcelona,Omar Sadik,22,Centre-Forward,Pau FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5763171,,714,3166
+RCD Espanyol Barcelona,Miguel Rubio,28,Centre-Back,Real Valladolid CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6526042,,714,366
+RCD Espanyol Barcelona,Justin Smith,23,Central Midfield,CD Eldense,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412255,,714,12567
+RCD Espanyol Barcelona,Fernando Calero,30,Centre-Back,Málaga CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6330122,,714,1084
+RCD Espanyol Barcelona,Hugo Pérez,23,Centre-Back,SC União Torreense,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390347,,714,2432
+RCD Espanyol Barcelona,Charles Pickel,29,Defensive Midfield,Sharjah FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6406878,,714,13613
+RCD Espanyol Barcelona,José Salinas,25,Left-Back,Málaga CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6462815,,714,1084
+RCD Espanyol Barcelona,José Gragera,26,Central Midfield,Burgos CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6457161,,714,1536
+RCD Espanyol Barcelona,Omar Sadik,22,Centre-Forward,AD Ceuta FC,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412242,,714,8568
+RCD Espanyol Barcelona,Pablo Ramón,25,Centre-Back,Racing Santander,?,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6487150,,714,630
+RCD Espanyol Barcelona,Antoniu Roca,23,Right Winger,RCD Mallorca,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6453720,,714,237
+RCD Espanyol Barcelona,Pol Tristán,24,Goalkeeper,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6443993,,714,515
+RCD Espanyol Barcelona,Cyril Ngonge,26,Right Winger,SSC Napoli,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6154290,,714,6195
+RCD Espanyol Barcelona,Ramón Terrats,25,Central Midfield,Villarreal CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5740894,,714,1050
+RCD Espanyol Barcelona,Carlos Romero,24,Left-Back,Villarreal CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5105593,,714,1050
+Athletic Bilbao,Beñat Gerenabarrena,23,Central Midfield,CD Castellón,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5714980,,621,2502
+Athletic Bilbao,Julen Agirrezabala,25,Goalkeeper,Valencia CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5769466,,621,1049
+Athletic Bilbao,Álvaro Djaló,26,Left Winger,Al-Gharafa SC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5817203,,621,6297
+Athletic Bilbao,Hugo Rincón,23,Right-Back,Girona FC,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5821702,,621,12321
+Athletic Bilbao,Peio Canales,21,Attacking Midfield,Racing Santander,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5866601,,621,630
+Athletic Bilbao,Unai Vencedor,25,Central Midfield,Levante UD,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5912248,,621,3368
+Athletic Bilbao,Unai Gómez,23,Attacking Midfield,Udinese Calcio,€4.50m,out,Summer,4.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6411481,,621,410
+Athletic Bilbao,Julen Agirrezabala,25,Goalkeeper,Racing Santander,€4.50m,out,Summer,4.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6493054,,621,630
+Athletic Bilbao,Urko Izeta,26,Centre-Forward,Cádiz CF,€1.50m,out,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6420516,,621,2687
+Athletic Bilbao,Mikel Vesga,33,Defensive Midfield,UD Almería,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6477963,,621,3302
+Athletic Bilbao,Eder García,22,Central Midfield,Córdoba CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6410795,,621,993
+Athletic Bilbao,Iñigo Lekue,33,Right-Back,Retired,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6305376,,621,
+Sevilla FC,Robbie Ure,22,Centre-Forward,IK Sirius,€6.50m,in,Summer,6.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6494912,,368,7945
+Sevilla FC,Giorgi Kochorashvili,27,Central Midfield,Sporting CP,€4.50m,in,Summer,4.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6523941,,368,336
+Sevilla FC,Julio Díaz,21,Left-Back,Atlético de Madrid,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6465796,,368,13
+Sevilla FC,Fran González,21,Goalkeeper,Real Madrid,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6480215,,368,418
+Sevilla FC,Jon Guridi,31,Central Midfield,Deportivo Alavés,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6347752,,368,1108
+Sevilla FC,Juan Iglesias,27,Right-Back,Getafe CF,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6349365,,368,3709
+Sevilla FC,Arouna Sangante,24,Centre-Back,Le Havre AC,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6362624,,368,738
+Sevilla FC,Alfon González,27,Left Winger,Villarreal CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146445,,368,1050
+Sevilla FC,Adrià Pedrosa,28,Left-Back,Elche CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5910126,,368,1531
+Sevilla FC,Rafa Mir,29,Centre-Forward,Elche CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5871037,,368,1531
+Sevilla FC,Akor Adams,26,Centre-Forward,Venezia FC,€16.00m,out,Summer,16,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6448516,,368,607
+Sevilla FC,Juanlu Sánchez,22,Right-Back,AFC Bournemouth,€11.00m,out,Summer,11,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489456,,368,989
+Sevilla FC,Djibril Sow,29,Central Midfield,Genoa CFC,€4.00m,out,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489420,,368,252
+Sevilla FC,Alexis Sánchez,37,Second Striker,CF Montréal,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6495807,,368,4078
+Sevilla FC,Joan Jordán,32,Central Midfield,CF Estrela Amadora,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6493491,,368,2431
+Sevilla FC,Federico Gattoni,27,Centre-Back,Ascoli Calcio,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6497209,,368,408
+Sevilla FC,Tanguy Nianzou,24,Centre-Back,LOSC Lille,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6438363,,368,1082
+Sevilla FC,Ørjan Nyland,35,Goalkeeper,RB Leipzig,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6483875,,368,23826
+Sevilla FC,Rafa Mir,29,Centre-Forward,Aris Thessaloniki,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6485340,,368,605
+Sevilla FC,Adrià Pedrosa,28,Left-Back,Rayo Vallecano,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6540728,,368,367
+Sevilla FC,Adnan Januzaj,31,Right Winger,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363609,,368,515
+Sevilla FC,Nemanja Gudelj,34,Defensive Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6350470,,368,515
+Sevilla FC,César Azpilicueta,36,Right-Back,Retired,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6321489,,368,
+Sevilla FC,Neal Maupay,29,Centre-Forward,Olympique Marseille,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146534,,368,244
+Sevilla FC,Batista Mendy,26,Defensive Midfield,Trabzonspor,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5910413,,368,449
+Deportivo Alavés,Miguel Rodríguez,23,Right Winger,FC Utrecht,€5.00m,in,Summer,5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6460579,,1108,200
+Deportivo Alavés,Nicolás Valentini,25,Centre-Back,ACF Fiorentina,€3.00m,in,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489390,,1108,430
+Deportivo Alavés,Ville Koski,24,Centre-Back,NK Istra 1961,€3.00m,in,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6358765,,1108,999
+Deportivo Alavés,Mikel Rodriguez,24,Central Midfield,Real Sociedad B,€2.00m,in,Summer,2,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6432357,,1108,9899
+Deportivo Alavés,Unai Ropero,25,Right Winger,Racing Ferrol,End of loan 30/06/2027,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412560,,1108,1176
+Deportivo Alavés,Unai Ropero,24,Right Winger,Hércules CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5729498,,1108,7971
+Deportivo Alavés,Adrián Pica,24,Centre-Back,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5742462,,1108,13222
+Deportivo Alavés,Tomás Mendes,21,Defensive Midfield,FC Alverca,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5768112,,1108,2521
+Deportivo Alavés,Jesús Owono,25,Goalkeeper,FC Andorra,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5774741,,1108,10718
+Deportivo Alavés,Selu Diallo,22,Central Midfield,Cultural Leonesa,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5832383,,1108,4542
+Deportivo Alavés,Moussa Diarra,25,Centre-Back,RSC Anderlecht,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6145889,,1108,58
+Deportivo Alavés,Asier Villalibre,28,Centre-Forward,Racing Santander,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5848157,,1108,630
+Deportivo Alavés,Adrián Rodríguez,25,Goalkeeper,Real Zaragoza,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5854573,,1108,142
+Deportivo Alavés,Hugo Novoa,23,Right-Back,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5908610,,1108,13222
+Deportivo Alavés,Daouda Doumbia,24,Central Midfield,CD Feirense,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6226936,,1108,3349
+Deportivo Alavés,Nikola Maras,30,Centre-Back,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6152023,,1108,13222
+Deportivo Alavés,Victor Parada,24,Left-Back,Spartak Moscow,€5.00m,out,Summer,5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6427262,,1108,232
+Deportivo Alavés,Moussa Diarra,25,Centre-Back,Al-Wahda FC,€1.20m,out,Summer,1.2,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6518136,,1108,161
+Deportivo Alavés,Asier Villalibre,28,Centre-Forward,Racing Santander,€1.00m,out,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6316414,,1108,630
+Deportivo Alavés,Jesús Owono,25,Goalkeeper,FC Andorra,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6537707,,1108,10718
+Deportivo Alavés,Raúl Fernández,38,Goalkeeper,CD Leganés,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409936,,1108,1244
+Deportivo Alavés,Jon Guridi,31,Central Midfield,Sevilla FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6347752,,1108,368
+Deportivo Alavés,Egoitz Muñoz,22,Right-Back,Córdoba CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6369665,,1108,993
+Deportivo Alavés,Daouda Doumbia,24,Central Midfield,NK Istra 1961,?,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6436237,,1108,999
+Deportivo Alavés,Adrián Pica,24,Centre-Back,FC Penafiel,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6428012,,1108,3327
+Deportivo Alavés,Unai Ropero,24,Right Winger,Racing Ferrol,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6412561,,1108,1176
+Deportivo Alavés,Nikola Maras,30,Centre-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6501667,,1108,515
+Deportivo Alavés,Calebe,26,Attacking Midfield,Fortaleza Esporte Clube,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5801378,,1108,10870
+Deportivo Alavés,Jon Pacheco,25,Centre-Back,Real Sociedad,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5892203,,1108,681
+Deportivo Alavés,Ibrahim Diabate,26,Centre-Forward,GAIS,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6163989,,1108,7009
+Deportivo Alavés,Ville Koski,24,Centre-Back,NK Istra 1961,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6154429,,1108,999
+Elche CF,Buba Sangaré,18,Right-Back,AS Roma,€4.50m,in,Summer,4.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6336054,,1531,12
+Elche CF,Fer Niño,25,Centre-Forward,Burgos CF,€4.00m,in,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6468828,,1531,1536
+Elche CF,Tiziano Perrotta,19,Centre-Forward,CA Banfield,€3.50m,in,Summer,3.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6502167,,1531,830
+Elche CF,Javi Morcillo,20,Central Midfield,Atlético Madrileño,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6490495,,1531,3679
+Elche CF,Víctor Chust,26,Centre-Back,Cádiz CF,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6365713,,1531,2687
+Elche CF,Gonzalo Villar,28,Central Midfield,GNK Dinamo Zagreb,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6330821,,1531,419
+Elche CF,Ezequiel Ponce,29,Centre-Forward,Houston Dynamo FC,?,in,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6505665,,1531,9168
+Elche CF,Facundo Buonanotte,21,Attacking Midfield,Brighton & Hove Albion,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6489457,,1531,1237
+Elche CF,Bambo Diaby,28,Centre-Back,Granada CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6151383,,1531,16795
+Elche CF,Ali Houary,20,Second Striker,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6137685,,1531,13222
+Elche CF,Abiel Osorio,24,Centre-Forward,Defensa y Justicia,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6112585,,1531,2402
+Elche CF,Rafa Núñez,24,Left Winger,CD Eldense,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5912236,,1531,12567
+Elche CF,Axel Werner,30,Goalkeeper,CA Aldosivi,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6425135,,1531,12301
+Elche CF,Matia Barzic,22,Centre-Back,Cultural Leonesa,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5866597,,1531,4542
+Elche CF,Álvaro Rodríguez,22,Centre-Forward,AFC Bournemouth,€25.00m,out,Summer,25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6427485,,1531,989
+Elche CF,Léo Pétrot,29,Centre-Back,RSC Anderlecht,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6396464,,1531,58
+Elche CF,André Silva,30,Centre-Forward,FC Porto,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6352395,,1531,720
+Elche CF,Aleix Febas,30,Central Midfield,Celta de Vigo,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6328178,,1531,940
+Elche CF,Tiziano Perrotta,19,Centre-Forward,Defensa y Justicia,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6502168,,1531,2402
+Elche CF,Axel Werner,30,Goalkeeper,CA Rosario Central,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6422354,,1531,1418
+Elche CF,Víctor Chust,26,Centre-Back,Cádiz CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5843918,,1531,2687
+Elche CF,Buba Sangaré,18,Right-Back,AS Roma,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6164169,,1531,12
+Elche CF,Gonzalo Villar,28,Central Midfield,GNK Dinamo Zagreb,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6157117,,1531,419
+Elche CF,Héctor Fort,19,Right-Back,FC Barcelona,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911895,,1531,131
+Elche CF,Adrià Pedrosa,28,Left-Back,Sevilla FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5910126,,1531,368
+Elche CF,Iñaki Peña,27,Goalkeeper,FC Barcelona,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5897693,,1531,131
+Elche CF,Rafa Mir,29,Centre-Forward,Sevilla FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5871037,,1531,368
+Levante UD,Yanis Musuayi,19,Centre-Forward,Club NXT,€3.00m,in,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6477889,,3368,43560
+Levante UD,Hugo Sotelo,22,Central Midfield,Celta de Vigo,Loan fee:€100Th.,in,Summer,0.1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6442279,,3368,940
+Levante UD,Aïssa Mandi,34,Centre-Back,LOSC Lille,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6405564,,3368,1082
+Levante UD,Enzo Bardeli,25,Central Midfield,USL Dunkerque,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6350319,,3368,9202
+Levante UD,Dani Requena,22,Central Midfield,Villarreal CF,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6435276,,3368,1050
+Levante UD,Thiago Fernández,22,Left Winger,Villarreal CF,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6495691,,3368,1050
+Levante UD,Ifeanyi Ndukwe,18,Centre-Back,Liverpool FC,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6525505,,3368,31
+Levante UD,Jorge Cabello,22,Centre-Back,CD Mirandés,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6105324,,3368,13222
+Levante UD,Edgar Alcañiz,21,Central Midfield,FC Cartagena,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5799558,,3368,7077
+Levante UD,Dani Martín,20,Goalkeeper,SD Huesca,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5786416,,3368,5358
+Levante UD,Xavi Grande,21,Right-Back,CS Marítimo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5770215,,3368,1301
+Levante UD,Carlos Espí,21,Centre-Forward,Real Madrid,€25.00m,out,Summer,25,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6471556,,3368,418
+Levante UD,Kareem Tunde,21,Right Winger,West Bromwich Albion,€3.00m,out,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6540507,,3368,984
+Levante UD,Kervin Arriaga,28,Defensive Midfield,AEK Athens,€3.00m,out,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6513031,,3368,2441
+Levante UD,Pablo Martínez,28,Central Midfield,Málaga CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6525019,,3368,1084
+Levante UD,Unai Elgezabal,33,Centre-Back,SD Eibar,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6487101,,3368,1533
+Levante UD,Edgar Alcañiz,21,Central Midfield,Atlético Madrileño,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6485487,,3368,3679
+Levante UD,Diego Pampín,26,Left-Back,Granada CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6389704,,3368,16795
+Levante UD,José Luis Morales,38,Centre-Forward,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6328808,,3368,515
+Levante UD,Alan Matturro,21,Centre-Back,Genoa CFC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5762941,,3368,252
+Levante UD,Ugo Raghouber,22,Defensive Midfield,LOSC Lille,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6119084,,3368,1082
+Levante UD,Unai Vencedor,25,Central Midfield,Athletic Bilbao,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5912248,,3368,621
+Levante UD,Iker Losada,24,Second Striker,Real Betis Balompié,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5880374,,3368,150
+Levante UD,Matías Moreno,22,Centre-Back,ACF Fiorentina,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5768729,,3368,430
+CA Osasuna,Jonathan Dubasin,26,Right Winger,Sporting Gijón,€4.00m,in,Summer,4,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6461140,,331,2448
+CA Osasuna,Rockson Yeboah,22,Centre-Back,IFK Göteborg,€3.00m,in,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6498968,,331,801
+CA Osasuna,Diego Rico,33,Left-Back,Getafe CF,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6498684,,331,3709
+CA Osasuna,Sheraldo Becker,31,Left Winger,1.FSV Mainz 05,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6163524,,331,39
+CA Osasuna,Víctor Muñoz,22,Left Winger,Liverpool FC,€40.00m,out,Summer,40,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6367850,,331,31
+CA Osasuna,Iker Benito,24,Right Winger,Querétaro FC,€520Th.,out,Summer,0.52,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6505501,,331,4961
+CA Osasuna,Sheraldo Becker,31,Left Winger,1.FSV Mainz 05,€500Th.,out,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6301647,,331,39
+CA Osasuna,Javi Galán,31,Left-Back,Celta de Vigo,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6390994,,331,940
+CA Osasuna,Juan Cruz,33,Left-Back,Real Oviedo,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6453406,,331,2497
+Racing Santander,Julen Agirrezabala,25,Goalkeeper,Athletic Bilbao,€4.50m,in,Summer,4.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6493054,,630,621
+Racing Santander,Iván Martín,27,Central Midfield,Girona FC,€3.00m,in,Summer,3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6522670,,630,12321
+Racing Santander,Facundo González,23,Centre-Back,Juventus FC,€2.50m,in,Summer,2.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6316410,,630,506
+Racing Santander,Asier Villalibre,28,Centre-Forward,Deportivo Alavés,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6316414,,630,1108
+Racing Santander,Pedro Felipe,22,Centre-Back,Juventus Next Gen,€500Th.,in,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6485862,,630,41101
+Racing Santander,Matteo Prati,22,Defensive Midfield,Cagliari Calcio,Loan fee:€500Th.,in,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6536286,,630,1390
+Racing Santander,Sergio Canales,35,Attacking Midfield,CF Monterrey,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6290289,,630,2407
+Racing Santander,Yassir Zabiri,21,Centre-Forward,Stade Rennais FC,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6468640,,630,273
+Racing Santander,Pablo Ramón,25,Centre-Back,RCD Espanyol Barcelona,?,in,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6487150,,630,714
+Racing Santander,Neco Celorio,22,Attacking Midfield,CD Lugo,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5799007,,630,11000
+Racing Santander,Clément Michelin,29,Right-Back,Real Valladolid CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6162913,,630,366
+Racing Santander,Yeray Cabanzón,23,Right Winger,FC Andorra,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6108219,,630,10718
+Racing Santander,Suleiman Camara,24,Right Winger,Slovan Bratislava,€1.00m,out,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6481275,,630,540
+Racing Santander,Mario García,22,Left-Back,Widzew Lodz,€500Th.,out,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6417664,,630,88
+Racing Santander,Javi Castro,25,Centre-Back,Cádiz CF,€100Th.,out,Summer,0.1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6406698,,630,2687
+Racing Santander,Clément Michelin,29,Right-Back,Real Valladolid CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6322463,,630,366
+Racing Santander,Yeray Cabanzón,23,Right Winger,Real Valladolid CF,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6454250,,630,366
+Racing Santander,Aritz Aldasoro,27,Central Midfield,Real Oviedo,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6415143,,630,2497
+Racing Santander,Jokin Ezkieta,29,Goalkeeper,Cádiz CF,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6404670,,630,2687
+Racing Santander,Pablo Ramón,25,Centre-Back,RCD Espanyol Barcelona,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5899736,,630,714
+Racing Santander,Marco Sangalli,34,Right-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363724,,630,515
+Racing Santander,Neco Celorio,22,Attacking Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6384850,,630,515
+Racing Santander,Jaime Mata,37,Centre-Forward,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6363719,,630,515
+Racing Santander,Manex Lozano,19,Centre-Forward,CD Basconia,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6109797,,630,6665
+Racing Santander,Damián Rodríguez,23,Defensive Midfield,Celta de Vigo,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6103325,,630,940
+Racing Santander,Facundo González,23,Centre-Back,Juventus FC,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5911788,,630,506
+Racing Santander,Peio Canales,21,Attacking Midfield,Athletic Bilbao,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5866601,,630,621
+Racing Santander,Asier Villalibre,28,Centre-Forward,Deportivo Alavés,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5848157,,630,1108
+Deportivo A Coruña,Leo Román,25,Goalkeeper,RCD Mallorca,€9.00m,in,Summer,9,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6401024,,897,237
+Deportivo A Coruña,Jonathan Asp Jensen,20,Attacking Midfield,FC Bayern Munich II,€6.00m,in,Summer,6,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6425311,,897,28
+Deportivo A Coruña,Bright Ede,19,Centre-Back,Motor Lublin,€6.00m,in,Summer,6,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409230,,897,3527
+Deportivo A Coruña,Lorenzo Amatucci,22,Defensive Midfield,ACF Fiorentina,€2.50m,in,Summer,2.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6413535,,897,430
+Deportivo A Coruña,Pierre-Emerick Aubameyang,37,Centre-Forward,Olympique Marseille,€1.50m,in,Summer,1.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6436412,,897,244
+Deportivo A Coruña,Teun Gijselhart,21,Central Midfield,De Graafschap Doetinchem,€1.00m,in,Summer,1,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6370248,,897,642
+Deportivo A Coruña,Adama Traoré,30,Right Winger,West Ham United,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6347738,,897,379
+Deportivo A Coruña,Angeliño,29,Left-Back,AS Roma,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6488803,,897,12
+Deportivo A Coruña,Diego Gómez,21,Right Winger,Pontevedra CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6146596,,897,5650
+Deportivo A Coruña,Mohamed Bouldini,30,Centre-Forward,Granada CF,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5902600,,897,16795
+Deportivo A Coruña,Álex Petxarroman,29,Right-Back,FC Andorra,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5863577,,897,10718
+Deportivo A Coruña,Luis Chacón,26,Left Winger,Cultural Leonesa,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5857484,,897,4542
+Deportivo A Coruña,Kevin Sánchez,21,Centre-Forward,FC Cartagena,End of loan 30/06/2026,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5822833,,897,7077
+Deportivo A Coruña,Luis Chacón,26,Left Winger,Real Valladolid CF,€500Th.,out,Summer,0.5,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6409195,,897,366
+Deportivo A Coruña,Mohamed Bouldini,30,Centre-Forward,Académico Viseu FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6475032,,897,7788
+Deportivo A Coruña,Álex Petxarroman,29,Right-Back,AD Ceuta FC,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6417881,,897,8568
+Deportivo A Coruña,Sergio Escudero,36,Left-Back,Real Zaragoza,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6397107,,897,142
+Deportivo A Coruña,Diego Gómez,21,Right Winger,SD Huesca,loan transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6444084,,897,5358
+Deportivo A Coruña,Cristian Herrera,35,Centre-Forward,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6341192,,897,515
+Deportivo A Coruña,Stoichkov,32,Second Striker,Granada CF,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5902593,,897,16795
+Deportivo A Coruña,Samuele Mulattieri,25,Centre-Forward,US Sassuolo,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5896282,,897,6574
+Deportivo A Coruña,José Gragera,26,Central Midfield,RCD Espanyol Barcelona,End of loan 30/06/2026,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,5823213,,897,714
+Málaga CF,Juan Cruz,26,Left Winger,CD Leganés,Loan fee:€300Th.,in,Summer,0.3,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6439542,,1084,1244
+Málaga CF,Fernando Calero,30,Centre-Back,RCD Espanyol Barcelona,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6330122,,1084,714
+Málaga CF,Pablo Martínez,28,Central Midfield,Levante UD,free transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6525019,,1084,3368
+Málaga CF,José Salinas,25,Left-Back,RCD Espanyol Barcelona,loan transfer,in,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6462815,,1084,714
+Málaga CF,Víctor García,32,Left-Back,UD Ibiza,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6383616,,1084,13241
+Málaga CF,Josué Dorrio,32,Right Winger,CD Mirandés,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6386097,,1084,13222
+Málaga CF,Jokin Gabilondo,27,Right-Back,Real Zaragoza,free transfer,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6399920,,1084,142
+Málaga CF,Juanpe Jiménez,30,Central Midfield,Gamba Osaka,?,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6527596,,1084,596
+Málaga CF,Javi Montero,27,Centre-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6385229,,1084,515
+Málaga CF,Darko Brasanac,34,Central Midfield,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6388436,,1084,515
+Málaga CF,Luismi Sánchez,34,Defensive Midfield,Retired,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6418364,,1084,
+Málaga CF,Dani Sánchez,26,Left-Back,Without Club,-,out,Summer,NA,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6537118,,1084,515
+Málaga CF,José Salinas,26,Left-Back,RCD Espanyol Barcelona,End of loan 30/06/2027,out,Summer,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6462816,,1084,714
+Elche CF,Tiziano Perrotta,20,Centre-Forward,Defensa y Justicia,End of loan 31/12/2026,in,Winter,0,LaLiga,2026,2026/2027,Spain,transfermarkt.com,6502169,,1531,2402

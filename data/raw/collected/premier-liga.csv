@@ -1,0 +1,328 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+Zenit St. Petersburg,Felipe Augusto,22,Centre-Forward,Trabzonspor,€15.00m,in,Summer,15,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6388408,,964,449
+Zenit St. Petersburg,Artem Karpukas,24,Defensive Midfield,Lokomotiv Moscow,€5.20m,in,Summer,5.2,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6524598,,964,932
+Zenit St. Petersburg,Kevin Andrade,27,Centre-Back,Baltika Kaliningrad,€3.50m,in,Summer,3.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6322774,,964,2741
+Zenit St. Petersburg,Daniil Odoevskiy,23,Goalkeeper,FC Rostov,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5131521,,964,1083
+Zenit St. Petersburg,Strahinja Erakovic,25,Centre-Back,Red Star Belgrade,End of loan 31/08/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6167620,,964,159
+Zenit St. Petersburg,Du Queiroz,26,Central Midfield,FC Orenburg,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5874337,,964,14589
+Zenit St. Petersburg,Ilzat Akhmetov,28,Attacking Midfield,Krylya Sovetov Samara,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5840146,,964,2696
+Zenit St. Petersburg,Sergey Volkov,23,Right-Back,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5801660,,964,41231
+Zenit St. Petersburg,Dmitriy Vasiljev,22,Defensive Midfield,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5763287,,964,41231
+Zenit St. Petersburg,Evgeniy Latyshonok,28,Goalkeeper,FC Nizhniy Novgorod,€1.10m,out,Summer,1.1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6466779,,964,49702
+Zenit St. Petersburg,Dmitriy Vasiljev,22,Defensive Midfield,FC Orenburg,€660Th.,out,Summer,0.66,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6481320,,964,14589
+Zenit St. Petersburg,Vanja Drkusic,26,Centre-Back,RCD Espanyol Barcelona,Loan fee:€300Th.,out,Summer,0.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6505321,,964,714
+Zenit St. Petersburg,Yuriy Gorshkov,27,Left-Back,Krylya Sovetov Samara,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6506253,,964,2696
+Zenit St. Petersburg,Yaroslav Mikhailov,23,Central Midfield,FC Rostov,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6426347,,964,1083
+Zenit St. Petersburg,Arsen Adamov,26,Right-Back,Akhmat Grozny,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6324703,,964,3725
+Zenit St. Petersburg,Ilzat Akhmetov,28,Attacking Midfield,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6343456,,964,515
+Zenit St. Petersburg,Mikhail Kerzhakov,39,Goalkeeper,Retired,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6299390,,964,
+Zenit St. Petersburg,Andrey Kasadzhikov,18,Left Winger,FC Orenburg,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6419760,,964,14589
+Zenit St. Petersburg,Matvey Bardachev,20,Centre-Back,Fakel Voronezh,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6454390,,964,1124
+Zenit St. Petersburg,Jhon Durán,22,Centre-Forward,Al-Nassr FC,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6175709,,964,18544
+FC Krasnodar,Christian,25,Right Midfield,Cruzeiro Esporte Clube,€9.60m,in,Summer,9.6,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6417453,,16704,609
+FC Krasnodar,Dmitriy Vorobyov,28,Centre-Forward,Lokomotiv Moscow,€7.30m,in,Summer,7.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6437484,,16704,932
+FC Krasnodar,Ilya Vakhania,25,Right-Back,FC Rostov,€1.55m,in,Summer,1.55,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6188861,,16704,1083
+FC Krasnodar,Magomed Ozdoev,33,Defensive Midfield,PAOK Thessaloniki,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6390423,,16704,1091
+FC Krasnodar,Daniil Utkin,26,Central Midfield,FC Rostov,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6370553,,16704,1083
+FC Krasnodar,Mikhail Umnikov,20,Central Midfield,Volga Uljanovsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5386052,,16704,12439
+FC Krasnodar,Gustavo Furtado,25,Left Winger,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6193126,,16704,41231
+FC Krasnodar,Daniil Golikov,22,Goalkeeper,FK Chelyabinsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6116214,,16704,23110
+FC Krasnodar,Evgeniy Kovalevskiy,20,Left Winger,Kuban Krasnodar,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5937671,,16704,67241
+FC Krasnodar,Dmitriy Kuchugura,21,Attacking Midfield,Neftekhimik Nizhnekamsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5811865,,16704,3733
+FC Krasnodar,Olakunle Olusegun,24,Left Winger,FC Nizhniy Novgorod,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5805423,,16704,49702
+FC Krasnodar,Kirill Kistenev,19,Right-Back,Veles Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5780308,,16704,58065
+FC Krasnodar,Eduard Spertsyan,26,Attacking Midfield,Al-Ahli SFC,€21.90m,out,Summer,21.9,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6409009,,16704,18487
+FC Krasnodar,Olakunle Olusegun,24,Left Winger,FC Rostov,€450Th.,out,Summer,0.45,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6435355,,16704,1083
+FC Krasnodar,Giovanni González,31,Right-Back,CA River Plate,€300Th.,out,Summer,0.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6391436,,16704,209
+FC Krasnodar,Victor Sá,32,Left Winger,São Paulo Futebol Clube,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6385164,,16704,585
+FC Krasnodar,Dmitriy Kuchugura,21,Attacking Midfield,Veles Moscow,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6529367,,16704,58065
+FC Krasnodar,Kazbek Mukailov,19,Centre-Forward,Krylya Sovetov Samara,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6521029,,16704,2696
+FC Krasnodar,Danil Karpov,27,Centre-Forward,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392403,,16704,515
+FC Krasnodar,Mikhail Umnikov,20,Central Midfield,Rotor Volgograd,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6374788,,16704,3609
+FC Krasnodar,Daniil Golikov,22,Goalkeeper,FC Rostov,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6376391,,16704,1083
+FC Krasnodar,Evgeniy Kovalevskiy,20,Left Winger,Volgar Astrakhan,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6365664,,16704,6432
+FC Krasnodar,Gustavo Furtado,25,Left Winger,Volos FC,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6434980,,16704,60949
+FC Krasnodar,Moses David Cobnan,23,Right Winger,Levadiakos,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6473057,,16704,2672
+FC Krasnodar,Kirill Kistenev,19,Right-Back,Akhmat Grozny,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6497574,,16704,3725
+Lokomotiv Moscow,Sergey Babkin,23,Central Midfield,Krylya Sovetov Samara,€2.25m,in,Summer,2.25,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6524216,,932,2696
+Lokomotiv Moscow,Georgiy Dzhikiya,32,Centre-Back,Antalyaspor,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6379002,,932,589
+Lokomotiv Moscow,Aleksandr Kovalenko,22,Central Midfield,FC Sochi,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6377312,,932,41231
+Lokomotiv Moscow,Artem Korneev,20,Left Winger,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5791017,,932,41231
+Lokomotiv Moscow,Arseniy Ageev,22,Right-Back,Slavia Mozyr,End of loan 22/07/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6157468,,932,6423
+Lokomotiv Moscow,Mark Mampassi,23,Centre-Back,Turan-Tovuz IK,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6178031,,932,9526
+Lokomotiv Moscow,Aleksey Batrakov,21,Attacking Midfield,Galatasaray,€25.00m,out,Summer,25,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6520748,,932,141
+Lokomotiv Moscow,Dmitriy Vorobyov,28,Centre-Forward,FC Krasnodar,€7.30m,out,Summer,7.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6437484,,932,16704
+Lokomotiv Moscow,Artem Karpukas,24,Defensive Midfield,Zenit St. Petersburg,€5.20m,out,Summer,5.2,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6524598,,932,964
+Lokomotiv Moscow,Artem Timofeev,32,Defensive Midfield,FC Nizhniy Novgorod,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6363110,,932,49702
+Lokomotiv Moscow,Vladislav Sarveli,28,Centre-Forward,FC Nizhniy Novgorod,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6366996,,932,49702
+Lokomotiv Moscow,Mark Mampassi,23,Centre-Back,Rosenborg BK,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6472966,,932,195
+Lokomotiv Moscow,Artem Korneev,20,Left Winger,Tekstilshchik Ivanovo,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6421053,,932,11125
+Lokomotiv Moscow,Arseniy Ageev,22,Right-Back,Torpedo-BelAZ Zhodino,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6453306,,932,7964
+Lokomotiv Moscow,Danil Prutsev,26,Central Midfield,Spartak Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5899411,,932,232
+Spartak Moscow,Mirlind Daku,28,Centre-Forward,Rubin Kazan,€11.00m,in,Summer,11,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6489349,,232,2698
+Spartak Moscow,Victor Parada,24,Left-Back,Deportivo Alavés,€5.00m,in,Summer,5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6427262,,232,1108
+Spartak Moscow,Anton Zinkovskiy,30,Left Winger,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5758978,,232,41231
+Spartak Moscow,Nikita Chernov,30,Centre-Back,Krylya Sovetov Samara,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5843068,,232,2696
+Spartak Moscow,Danil Prutsev,26,Central Midfield,Lokomotiv Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5899411,,232,932
+Spartak Moscow,Egor Guziev,21,Centre-Back,Chayka Peschanokopskoye (-2026),End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6183827,,232,36972
+Spartak Moscow,Daniil Khlusevich,25,Right-Back,Akhmat Grozny,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6191878,,232,3725
+Spartak Moscow,Maksim Laykin,23,Defensive Midfield,KamAZ Naberezhnye Chelny,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6329644,,232,3243
+Spartak Moscow,Levi García,28,Centre-Forward,Panathinaikos,Loan fee:€1.25m,out,Summer,1.25,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6486154,,232,265
+Spartak Moscow,Théo Bongonda,30,Right Winger,Al-Faisaly FC,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6314837,,232,28848
+Spartak Moscow,Maksim Laykin,23,Defensive Midfield,KamAZ Naberezhnye Chelny,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6329645,,232,3243
+Spartak Moscow,Nikita Chernov,30,Centre-Back,Krylya Sovetov Samara,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6333710,,232,2696
+Spartak Moscow,Anton Zabolotnyi,35,Centre-Forward,SKA Rostov-na-Donu,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6389982,,232,6673
+Spartak Moscow,Oleg Reabciuk,28,Left-Back,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6326028,,232,515
+Spartak Moscow,Ilya Samoshnikov,28,Left-Back,Rubin Kazan,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6412569,,232,2698
+Spartak Moscow,Egor Guziev,21,Centre-Back,Tekstilshchik Ivanovo,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6421050,,232,11125
+CSKA Moscow,Maksim Borisko,26,Goalkeeper,Baltika Kaliningrad,€2.00m,in,Summer,2,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6465432,,2410,2741
+CSKA Moscow,Amirhossein Reyvandi,22,Left-Back,NK Jarun,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5534214,,2410,45478
+CSKA Moscow,Maksim Mukhin,24,Defensive Midfield,FC Sochi,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5825752,,2410,41231
+CSKA Moscow,Sékou Koïta,26,Centre-Forward,Genclerbirligi Ankara,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5877834,,2410,820
+CSKA Moscow,Gleb Popolitov,18,Right Winger,Chayka Peschanokopskoye (-2026),End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6149759,,2410,36972
+CSKA Moscow,Artem Shumanskiy,21,Centre-Forward,Krylya Sovetov Samara,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6150853,,2410,2696
+CSKA Moscow,Ilya Agapov,25,Centre-Back,FC Ufa,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6177802,,2410,28095
+CSKA Moscow,Dzhamalutdin Abdulkadyrov,21,Centre-Back,Akhmat Grozny,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6192816,,2410,3725
+CSKA Moscow,Sékou Koïta,26,Centre-Forward,Genclerbirligi Ankara,€1.60m,out,Summer,1.6,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5877874,,2410,820
+CSKA Moscow,Maksim Mukhin,24,Defensive Midfield,FC Rostov,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6374585,,2410,1083
+CSKA Moscow,Egor Ushakov,23,Right Winger,Rodina 2 Moscow,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6390145,,2410,82296
+CSKA Moscow,Ilya Agapov,25,Centre-Back,FC Ufa,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6399073,,2410,28095
+CSKA Moscow,Amirhossein Reyvandi,22,Left-Back,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6390142,,2410,515
+CSKA Moscow,Gleb Popolitov,18,Right Winger,FC Nizhniy Novgorod,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6367095,,2410,49702
+CSKA Moscow,Daniel Ruiz,24,Left Winger,Millonarios FC,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5867242,,2410,2350
+Baltika Kaliningrad,Loris Mouyokolo,25,Centre-Back,Grenoble Foot 38,€1.00m,in,Summer,1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6476705,,2741,1290
+Baltika Kaliningrad,Ilya Kirsh,21,Centre-Back,FC Nizhniy Novgorod,€700Th.,in,Summer,0.7,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6409564,,2741,49702
+Baltika Kaliningrad,Fahd Moufi,30,Right-Back,FC Orenburg,€500Th.,in,Summer,0.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6362772,,2741,14589
+Baltika Kaliningrad,Maksim Shnaptsev,22,Right-Back,FC Nizhniy Novgorod,€500Th.,in,Summer,0.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6365032,,2741,49702
+Baltika Kaliningrad,Eduardo Anderson,25,Centre-Back,Alianza FC Panama,€250Th.,in,Summer,0.25,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6331291,,2741,18820
+Baltika Kaliningrad,Konstantin Shiltsov,24,Attacking Midfield,Neftekhimik Nizhnekamsk,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6179720,,2741,3733
+Baltika Kaliningrad,Evgeniy Latyshonok,28,Goalkeeper,FC Nizhniy Novgorod,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6468662,,2741,49702
+Baltika Kaliningrad,Abu-Said Eldarushev,24,Centre-Forward,Rotor Volgograd,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6145745,,2741,3609
+Baltika Kaliningrad,Dmitriy Begun,23,Left-Back,FC Tyumen,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5845269,,2741,12054
+Baltika Kaliningrad,Mark Mokin,20,Left Winger,Arsenal Dzerzhinsk,End of loan 14/07/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5841678,,2741,72822
+Baltika Kaliningrad,Yaroslav Arbuzov,22,Attacking Midfield,Rotor Volgograd,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5743964,,2741,3609
+Baltika Kaliningrad,Nikita Bozov,21,Centre-Back,Shinnik Yaroslavl,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5715911,,2741,2374
+Baltika Kaliningrad,Kevin Andrade,27,Centre-Back,Zenit St. Petersburg,€3.50m,out,Summer,3.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6322774,,2741,964
+Baltika Kaliningrad,Maksim Borisko,26,Goalkeeper,CSKA Moscow,€2.00m,out,Summer,2,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6465432,,2741,2410
+Baltika Kaliningrad,Abu-Said Eldarushev,24,Centre-Forward,Rotor Volgograd,€120Th.,out,Summer,0.12,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6400175,,2741,3609
+Baltika Kaliningrad,Yuriy Kovalev,33,Right Midfield,BATE Borisov,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6426242,,2741,713
+Baltika Kaliningrad,Kirill Stepanov,20,Centre-Forward,Sibir Novosibirsk,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6524118,,2741,75068
+Baltika Kaliningrad,Yaroslav Arbuzov,22,Attacking Midfield,Shinnik Yaroslavl,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6498600,,2741,2374
+Baltika Kaliningrad,Kirill Stepanov,19,Centre-Forward,Volga Uljanovsk,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6394002,,2741,12439
+Baltika Kaliningrad,Nikita Bozov,21,Centre-Back,Torpedo Moscow,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6370558,,2741,1186
+Baltika Kaliningrad,Derik Lacerda,26,Centre-Forward,Cuiabá Esporte Clube (MT),End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6191369,,2741,28022
+Baltika Kaliningrad,Eduardo Anderson,25,Centre-Back,Alianza FC Panama,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6173634,,2741,18820
+Dynamo Moscow,Egor Nazarenko,20,Attacking Midfield,Spartak Kostroma,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5761469,,121,14590
+Dynamo Moscow,Ivan Lepskiy,21,Centre-Back,Krylya Sovetov Samara,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5762916,,121,2696
+Dynamo Moscow,Luka Gagnidze,23,Central Midfield,Granada CF,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5912479,,121,16795
+Dynamo Moscow,Egor Smelov,21,Attacking Midfield,FC Nizhniy Novgorod,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5930085,,121,49702
+Dynamo Moscow,Egor Smelov,21,Attacking Midfield,Dinamo Makhachkala,€385Th.,out,Summer,0.385,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6472703,,121,75231
+Dynamo Moscow,Ivan Lepskiy,21,Centre-Back,Krylya Sovetov Samara,€300Th.,out,Summer,0.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6350231,,121,2696
+Dynamo Moscow,Nicolas Moumi Ngamaleu,32,Left Winger,Pafos FC,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6374903,,121,45457
+Dynamo Moscow,Egor Nazarenko,20,Attacking Midfield,FC Orenburg,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6369660,,121,14589
+Dynamo Moscow,El Mehdi Maouhoub,23,Centre-Forward,United FC (UAE),loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6492303,,121,94732
+Dynamo Moscow,Dmitriy Aleksandrov,20,Defensive Midfield,Dinamo Makhachkala,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6539958,,121,75231
+Rubin Kazan,Ignacio Saavedra,27,Defensive Midfield,FC Sochi,€670Th.,in,Summer,0.67,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6432569,,2698,41231
+Rubin Kazan,Maksim Ignatjev,26,Left-Back,Spartak Kostroma,€150Th.,in,Summer,0.15,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6393572,,2698,14590
+Rubin Kazan,Jakhongir Urozov,22,Centre-Back,Dinamo Samarqand,Loan fee:€100Th.,in,Summer,0.1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6481357,,2698,15300
+Rubin Kazan,Ilya Samoshnikov,28,Left-Back,Spartak Moscow,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6412569,,2698,232
+Rubin Kazan,Daniil Rodin,23,Attacking Midfield,Neftekhimik Nizhnekamsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5068075,,2698,3733
+Rubin Kazan,Nikola Cumic,27,Right Winger,Real Zaragoza,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6157995,,2698,142
+Rubin Kazan,Marvin Cuni,24,Centre-Forward,SSC Bari,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6143880,,2698,332
+Rubin Kazan,Nikita Korets,21,Goalkeeper,Torpedo Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6129228,,2698,1186
+Rubin Kazan,Kasra Taheri,19,Centre-Forward,Paykan FC,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5828286,,2698,6078
+Rubin Kazan,Artem Ismagilov,22,Goalkeeper,Shinnik Yaroslavl,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5787032,,2698,2374
+Rubin Kazan,Mirlind Daku,28,Centre-Forward,Spartak Moscow,€11.00m,out,Summer,11,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6489349,,2698,232
+Rubin Kazan,Kasra Taheri,19,Centre-Forward,FC Nassaji Mazandaran,€705Th.,out,Summer,0.705,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6462594,,2698,26013
+Rubin Kazan,Nikola Cumic,27,Right Winger,FK Partizan Belgrade,€500Th.,out,Summer,0.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6515793,,2698,669
+Rubin Kazan,Marvin Cuni,24,Centre-Forward,NK Olimpija Ljubljana,Loan fee:€150Th.,out,Summer,0.15,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6368655,,2698,4772
+Rubin Kazan,Aleksandr Lomovitskiy,28,Right Winger,Torpedo-BelAZ Zhodino,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6332121,,2698,7964
+Rubin Kazan,Artem Ismagilov,22,Goalkeeper,Neftekhimik Nizhnekamsk,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392411,,2698,3733
+Rubin Kazan,Aleksey Kenyaykin,27,Goalkeeper,Turan-Tovuz IK,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6362818,,2698,9526
+Rubin Kazan,Daniil Rodin,23,Attacking Midfield,FC Leningradets,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6379351,,2698,67107
+Rubin Kazan,Aleksandr Zotov,35,Central Midfield,FC 10,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392409,,2698,143550
+Rubin Kazan,Daler Kuzyaev,33,Central Midfield,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6389745,,2698,515
+Rubin Kazan,Anton Shvets,33,Defensive Midfield,Retired,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6396941,,2698,
+Rubin Kazan,Oleg Ivanov,39,Attacking Midfield,Retired,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6315898,,2698,
+Rubin Kazan,Marat Apshatsev,25,Central Midfield,Dinamo Makhachkala,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392304,,2698,75231
+Rubin Kazan,Nikita Vasiljev,19,Defensive Midfield,Neftekhimik Nizhnekamsk,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6347888,,2698,3733
+Rubin Kazan,Enri Mukba,20,Right Winger,Neftekhimik Nizhnekamsk,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6398067,,2698,3733
+Rubin Kazan,Ignacio Saavedra,27,Defensive Midfield,FC Sochi,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6193122,,2698,41231
+Akhmat Grozny,Kirill Shchetinin,24,Attacking Midfield,FC Rostov,€2.40m,in,Summer,2.4,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6381589,,3725,1083
+Akhmat Grozny,Júlio Romão,28,Defensive Midfield,Ferencvárosi TC,€750Th.,in,Summer,0.75,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6412380,,3725,279
+Akhmat Grozny,Erald Maksuti,22,Left Winger,Flamurtari FC,€700Th.,in,Summer,0.7,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6324292,,3725,12460
+Akhmat Grozny,Rasul Mitsaev,23,Goalkeeper,Veles Moscow,€170Th.,in,Summer,0.17,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6421200,,3725,58065
+Akhmat Grozny,Aleksey Kasadzhikov,18,Centre-Forward,Zenit St. Petersburg II,€30Th.,in,Summer,0.03,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6417779,,3725,6082
+Akhmat Grozny,Arsen Adamov,26,Right-Back,Zenit St. Petersburg,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6324703,,3725,964
+Akhmat Grozny,Kalidou Sidibé,27,Defensive Midfield,EA Guingamp,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6362522,,3725,855
+Akhmat Grozny,Kirill Kistenev,19,Right-Back,FC Krasnodar,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6497574,,3725,16704
+Akhmat Grozny,Akhmed Davlitgereev,21,Right Midfield,Nart Cherkessk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6192773,,3725,15122
+Akhmat Grozny,Anas El Mahraoui,25,Left Winger,FC Orenburg,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6193213,,3725,14589
+Akhmat Grozny,Mauro Luna Diale,27,Attacking Midfield,Club Atlético Platense,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5808535,,3725,928
+Akhmat Grozny,Mohammadmehdi Zare,23,Centre-Back,Persepolis FC,€800Th.,out,Summer,0.8,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6431806,,3725,6079
+Akhmat Grozny,Anas El Mahraoui,25,Left Winger,MAS Fès,Loan fee:€100Th.,out,Summer,0.1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6499604,,3725,3282
+Akhmat Grozny,Rizvan Utsiev,38,Right-Back,Retired,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6356117,,3725,
+Akhmat Grozny,Rifat Zhemaletdinov,29,Attacking Midfield,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6348259,,3725,515
+Akhmat Grozny,Yakhya Magomedov,19,Goalkeeper,FC Tyumen,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6409239,,3725,12054
+Akhmat Grozny,Akhmed Davlitgereev,21,Right Midfield,FC Ufa,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6427399,,3725,28095
+Akhmat Grozny,Mauro Luna Diale,27,Attacking Midfield,CA Unión (Santa Fe),loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6436341,,3725,7097
+Akhmat Grozny,Papa Amady Gadio,24,Central Midfield,FK Novi Pazar,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6455840,,3725,4633
+Akhmat Grozny,Brian Mansilla,29,Left Winger,Rodina Moscow,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6489353,,3725,59024
+Akhmat Grozny,Dzhamalutdin Abdulkadyrov,21,Centre-Back,CSKA Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6192816,,3725,2410
+Akhmat Grozny,Daniil Khlusevich,25,Right-Back,Spartak Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6191878,,3725,232
+Akhmat Grozny,Valeriy Tsarukyan,24,Attacking Midfield,FC Nizhniy Novgorod,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6177084,,3725,49702
+FC Rostov,Olakunle Olusegun,24,Left Winger,FC Krasnodar,€450Th.,in,Summer,0.45,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6435355,,1083,16704
+FC Rostov,Yaroslav Mikhailov,23,Central Midfield,Zenit St. Petersburg,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6426347,,1083,964
+FC Rostov,Ygor Nogueira,31,Centre-Back,Sabah FK,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392413,,1083,63993
+FC Rostov,Maksim Mukhin,24,Defensive Midfield,CSKA Moscow,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6374585,,1083,2410
+FC Rostov,Daniil Golikov,22,Goalkeeper,FC Krasnodar,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6376391,,1083,16704
+FC Rostov,Daniil Utkin,26,Central Midfield,Torpedo Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6183240,,1083,1186
+FC Rostov,Aleksandr Mukhin,24,Centre-Back,SKA Khabarovsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5937265,,1083,3690
+FC Rostov,Dennis Hadzikadunic,27,Centre-Back,UC Sampdoria,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5910624,,1083,1038
+FC Rostov,Imran Aznaurov,21,Left Winger,Rotor Volgograd,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5845277,,1083,3609
+FC Rostov,Maksim Turishchev,24,Centre-Forward,Fakel Voronezh,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5715916,,1083,1124
+FC Rostov,Kirill Shchetinin,24,Attacking Midfield,Akhmat Grozny,€2.40m,out,Summer,2.4,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6381589,,1083,3725
+FC Rostov,Ilya Vakhania,25,Right-Back,FC Krasnodar,€1.55m,out,Summer,1.55,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6188861,,1083,16704
+FC Rostov,Maksim Turishchev,24,Centre-Forward,Fakel Voronezh,€120Th.,out,Summer,0.12,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6396366,,1083,1124
+FC Rostov,Dennis Hadzikadunic,28,Centre-Back,HNK Hajduk Split,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6182933,,1083,447
+FC Rostov,Aleksandr Mukhin,24,Centre-Back,SKA Khabarovsk,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6382680,,1083,3690
+FC Rostov,Khoren Bayramyan,34,Attacking Midfield,Ural Yekaterinburg,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6367692,,1083,11127
+FC Rostov,Daniil Utkin,26,Central Midfield,FC Krasnodar,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6370553,,1083,16704
+FC Rostov,Mohammad Mohebi,27,Left Winger,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6453253,,1083,515
+FC Rostov,Hidajet Hankic,32,Goalkeeper,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392436,,1083,515
+FC Rostov,Evgeniy Chernov,33,Left-Back,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6314596,,1083,515
+FC Rostov,Stepan Melnikov,24,Right Winger,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6314405,,1083,515
+FC Rostov,Aleksandr Tarasov,20,Left-Back,Spartak Kostroma,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6393659,,1083,14590
+FC Rostov,Eyad El Askalany,21,Centre-Back,Pyramids FC,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6434286,,1083,44664
+FC Rostov,Daniil Odoevskiy,23,Goalkeeper,Zenit St. Petersburg,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5131521,,1083,964
+Krylya Sovetov Samara,Ivan Lepskiy,21,Centre-Back,Dynamo Moscow,€300Th.,in,Summer,0.3,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6350231,,2696,121
+Krylya Sovetov Samara,Yuriy Gorshkov,27,Left-Back,Zenit St. Petersburg,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6506253,,2696,964
+Krylya Sovetov Samara,Denis Makarov,28,Right Winger,Kayserispor,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6368398,,2696,3205
+Krylya Sovetov Samara,Martin Kramaric,28,Left Winger,FC Sochi,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6354579,,2696,41231
+Krylya Sovetov Samara,Nikita Chernov,30,Centre-Back,Spartak Moscow,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6333710,,2696,232
+Krylya Sovetov Samara,Kazbek Mukailov,19,Centre-Forward,FC Krasnodar,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6521029,,2696,16704
+Krylya Sovetov Samara,Islam Chesnokov,26,Right Winger,Tobol Kostanay,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6515478,,2696,10481
+Krylya Sovetov Samara,Dmytro Ivanisenya,32,Defensive Midfield,Ural Yekaterinburg,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6181323,,2696,11127
+Krylya Sovetov Samara,Vladislav Shitov,23,Centre-Forward,Torpedo Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5935816,,2696,1186
+Krylya Sovetov Samara,Ivan Bober,20,Right Winger,Neftekhimik Nizhnekamsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5934841,,2696,3733
+Krylya Sovetov Samara,Pavel Popov,23,Centre-Forward,Veles Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5841834,,2696,58065
+Krylya Sovetov Samara,Nikita Pershin,24,Defensive Midfield,FK Chelyabinsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5818730,,2696,23110
+Krylya Sovetov Samara,Sergey Babkin,23,Central Midfield,Lokomotiv Moscow,€2.25m,out,Summer,2.25,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6524216,,2696,932
+Krylya Sovetov Samara,Ivan Bober,20,Right Winger,FC Nizhniy Novgorod,€1.00m,out,Summer,1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6453267,,2696,49702
+Krylya Sovetov Samara,Vladimir Khubulov,25,Left Winger,Dinamo Makhachkala,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6345529,,2696,75231
+Krylya Sovetov Samara,Roman Evgenjev,27,Centre-Back,FC Nizhniy Novgorod,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6379819,,2696,49702
+Krylya Sovetov Samara,Aleksey Sutormin,32,Right Winger,Fakel Voronezh,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6345528,,2696,1124
+Krylya Sovetov Samara,Nikita Pershin,24,Defensive Midfield,Tekstilshchik Ivanovo,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6421671,,2696,11125
+Krylya Sovetov Samara,Dmytro Ivanisenya,32,Defensive Midfield,Tekstilshchik Ivanovo,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6437490,,2696,11125
+Krylya Sovetov Samara,Gonzalo Requena,23,Centre-Back,Instituto ACC,End of loan 19/07/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6193037,,2696,1829
+Krylya Sovetov Samara,Ivan Lepskiy,21,Centre-Back,Dynamo Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5762916,,2696,121
+Krylya Sovetov Samara,Artem Shumanskiy,21,Centre-Forward,CSKA Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6150853,,2696,2410
+Krylya Sovetov Samara,Nikita Chernov,30,Centre-Back,Spartak Moscow,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5843068,,2696,232
+Krylya Sovetov Samara,Ilzat Akhmetov,28,Attacking Midfield,Zenit St. Petersburg,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5840146,,2696,964
+FC Orenburg,Robert Mejía,25,Defensive Midfield,Once Caldas,€800Th.,in,Summer,0.8,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6427035,,14589,6984
+FC Orenburg,Maxime Sivis,28,Right-Back,FC Dinamo 1948,€700Th.,in,Summer,0.7,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6453795,,14589,312
+FC Orenburg,Dmitriy Vasiljev,22,Defensive Midfield,Zenit St. Petersburg,€660Th.,in,Summer,0.66,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6481320,,14589,964
+FC Orenburg,Jersson González,24,Right Winger,Independiente Santa Fe,Loan fee:€120Th.,in,Summer,0.12,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6428049,,14589,11648
+FC Orenburg,Andrey Kasadzhikov,18,Left Winger,Zenit St. Petersburg,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6419760,,14589,964
+FC Orenburg,Benjamín Bosch,21,Right Winger,CA Vélez Sarsfield,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6409299,,14589,1029
+FC Orenburg,Egor Nazarenko,20,Attacking Midfield,Dynamo Moscow,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6369660,,14589,121
+FC Orenburg,Ivan Ignatjev,27,Centre-Forward,Arsenal Tula,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6149538,,14589,3729
+FC Orenburg,Atsamaz Revazov,21,Right Winger,KamAZ Naberezhnye Chelny,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6138491,,14589,3243
+FC Orenburg,Nikolay Koserik,19,Centre-Back,Mashuk-KMV Pyatigorsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6170139,,14589,11123
+FC Orenburg,Timofey Martynov,21,Centre-Forward,Dnepr Mogilev,End of loan 21/07/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6119583,,14589,4394
+FC Orenburg,Vladan Bubanja,27,Defensive Midfield,NK Osijek,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6107816,,14589,327
+FC Orenburg,Aleksey Baranovskiy,21,Attacking Midfield,FC Ufa,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5919025,,14589,28095
+FC Orenburg,Maksim Syshchenko,22,Centre-Back,Chernomorets Novorossijsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5907962,,14589,5287
+FC Orenburg,Fahd Moufi,30,Right-Back,Baltika Kaliningrad,€500Th.,out,Summer,0.5,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6362772,,14589,2741
+FC Orenburg,Pavel Gorelov,23,Defensive Midfield,Rotor Volgograd,€230Th.,out,Summer,0.23,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6400168,,14589,3609
+FC Orenburg,Ivan Gulko,22,Centre-Forward,KamAZ Naberezhnye Chelny,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6401899,,14589,3243
+FC Orenburg,Emircan Gürlük,22,Left Winger,Corum FK,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6349345,,14589,37951
+FC Orenburg,Vladan Bubanja,27,Defensive Midfield,FC Rapid 1923,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6357843,,14589,455
+FC Orenburg,Nikolay Sysuev,27,Goalkeeper,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6346972,,14589,515
+FC Orenburg,Stepan Oganesyan,24,Right Winger,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6347456,,14589,515
+FC Orenburg,Irakliy Kvekveskiri,36,Defensive Midfield,Medialiga (RU),-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6349287,,14589,112192
+FC Orenburg,Ivan Ignatjev,27,Centre-Forward,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6444480,,14589,515
+FC Orenburg,Atsamaz Revazov,21,Right Winger,Rotor Volgograd,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6400564,,14589,3609
+FC Orenburg,Timofey Martynov,21,Centre-Forward,Isloch Minsk Region,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6450502,,14589,36755
+FC Orenburg,Anas El Mahraoui,25,Left Winger,Akhmat Grozny,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6193213,,14589,3725
+FC Orenburg,Du Queiroz,26,Central Midfield,Zenit St. Petersburg,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5874337,,14589,964
+FC Orenburg,Tigran Avanesyan,24,Defensive Midfield,Arsenal Tula,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6170827,,14589,3729
+Akron Tolyatti,Yuriy Zheleznov,23,Left Winger,Ural Yekaterinburg,€450Th.,in,Summer,0.45,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6432761,,71985,11127
+Akron Tolyatti,Slobodan Tedic,26,Centre-Forward,FK Cukaricki,€400Th.,in,Summer,0.4,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6352251,,71985,6621
+Akron Tolyatti,Nikita Platon,19,Defensive Midfield,KamAZ Naberezhnye Chelny,€35Th.,in,Summer,0.035,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6434092,,71985,3243
+Akron Tolyatti,Dudu,24,Right Winger,Aris Thessaloniki,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6439947,,71985,605
+Akron Tolyatti,Kirill Danilin,23,Right Winger,FK Gomel,End of loan 12/07/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6200258,,71985,10694
+Akron Tolyatti,Bojan Dimoski,24,Left-Back,FK TSC Backa Topola,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6157982,,71985,3137
+Akron Tolyatti,Paulo Vitor,24,Centre-Back,Avs Futebol,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5911715,,71985,110302
+Akron Tolyatti,Sergey Volkov,31,Goalkeeper,Rodina Moscow,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5866225,,71985,59024
+Akron Tolyatti,Vyacheslav Bardybakhin,24,Left-Back,Rotor Volgograd,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5748250,,71985,3609
+Akron Tolyatti,Ifet Djakovac,28,Central Midfield,FK Vojvodina Novi Sad,€800Th.,out,Summer,0.8,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6352356,,71985,448
+Akron Tolyatti,Sergey Volkov,31,Goalkeeper,Rodina Moscow,€100Th.,out,Summer,0.1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6350277,,71985,59024
+Akron Tolyatti,Bojan Dimoski,24,Left-Back,Shkendija Tetovo,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6369781,,71985,1167
+Akron Tolyatti,Maksim Kuzmin,30,Attacking Midfield,FC Sochi,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6345019,,71985,41231
+Akron Tolyatti,Kirill Danilin,23,Right Winger,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6442558,,71985,515
+Akron Tolyatti,Aleksandr Vasyutin,31,Goalkeeper,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6413049,,71985,515
+Akron Tolyatti,Artem Dzyuba,37,Centre-Forward,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6323095,,71985,515
+Akron Tolyatti,Edgar Sevikyan,24,Right Winger,Ferencvárosi TC,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5932710,,71985,279
+Dinamo Makhachkala,Andrés Alarcón,25,Centre-Back,Boyacá Patriotas FC,€1.00m,in,Summer,1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6413683,,75231,18231
+Dinamo Makhachkala,Egor Smelov,21,Attacking Midfield,Dynamo Moscow,€385Th.,in,Summer,0.385,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6472703,,75231,121
+Dinamo Makhachkala,Vladimir Khubulov,25,Left Winger,Krylya Sovetov Samara,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6345529,,75231,2696
+Dinamo Makhachkala,Marat Apshatsev,25,Central Midfield,Rubin Kazan,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6392304,,75231,2698
+Dinamo Makhachkala,Dmitriy Aleksandrov,20,Defensive Midfield,Dynamo Moscow,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6539958,,75231,121
+Dinamo Makhachkala,Daniil Lesovoy,28,Left Winger,FC Nizhniy Novgorod,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6419857,,75231,49702
+Dinamo Makhachkala,Shamil Isaev,22,Attacking Midfield,FC Ufa,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,4893884,,75231,28095
+Dinamo Makhachkala,Shamil Gadzhiev,21,Attacking Midfield,Naftan Novopolotsk,End of loan 15/08/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6191136,,75231,8563
+Dinamo Makhachkala,Kirill Pomeshkin,22,Centre-Forward,Chernomorets Novorossijsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5923346,,75231,5287
+Dinamo Makhachkala,Anton Krachkovskiy,24,Central Midfield,Chernomorets Novorossijsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5769528,,75231,5287
+Dinamo Makhachkala,Hazem Mastouri,29,Centre-Forward,Esperance Tunis,€800Th.,out,Summer,0.8,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6540741,,75231,3342
+Dinamo Makhachkala,Jemal Tabidze,30,Centre-Back,Kayserispor,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6378759,,75231,3205
+Dinamo Makhachkala,Shamil Isaev,22,Attacking Midfield,FC Ufa,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6402269,,75231,28095
+Dinamo Makhachkala,Jan Dapo,23,Left-Back,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6514901,,75231,515
+Dinamo Makhachkala,Kirill Pomeshkin,22,Centre-Forward,Mashuk-KMV Pyatigorsk,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6437363,,75231,11123
+Dinamo Makhachkala,Andrés Alarcón,25,Centre-Back,Boyacá Patriotas FC,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5936544,,75231,18231
+Dinamo Makhachkala,Mehdi Moubarik,25,Defensive Midfield,Al-Ain FC,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5840256,,75231,2150
+Rodina Moscow,Iker Pozo,25,Defensive Midfield,HNK Gorica,€1.00m,in,Summer,1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6430222,,59024,24575
+Rodina Moscow,Sergey Volkov,31,Goalkeeper,Akron Tolyatti,€100Th.,in,Summer,0.1,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6350277,,59024,71985
+Rodina Moscow,German Onugkha,30,Centre-Forward,Kayserispor,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6506974,,59024,3205
+Rodina Moscow,Brian Mansilla,29,Left Winger,Akhmat Grozny,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6489353,,59024,3725
+Rodina Moscow,Mickaël Nadé,27,Centre-Back,United FC (UAE),loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6540138,,59024,94732
+Rodina Moscow,Dmitriy Shadrintsev,27,Left-Back,Neftekhimik Nizhnekamsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5804910,,59024,3733
+Rodina Moscow,Dmitriy Tananeev,28,Centre-Back,KamAZ Naberezhnye Chelny,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5936226,,59024,3243
+Rodina Moscow,Arshak Koryan,31,Right Winger,SKA Khabarovsk,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6347425,,59024,3690
+Rodina Moscow,Georgiy Yudintsev,25,Right-Back,Rotor Volgograd,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6430065,,59024,3609
+Rodina Moscow,Teodoro Arce,26,Left Winger,CS Emelec,loan transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6449224,,59024,4561
+Rodina Moscow,Sergey Volkov,31,Goalkeeper,Akron Tolyatti,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5866225,,59024,71985
+Fakel Voronezh,Maksim Turishchev,24,Centre-Forward,FC Rostov,€120Th.,in,Summer,0.12,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6396366,,1124,1083
+Fakel Voronezh,Aleksey Sutormin,32,Right Winger,Krylya Sovetov Samara,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6345528,,1124,2696
+Fakel Voronezh,Hodaifa El Mhassani,26,Right-Back,FUS Rabat,free transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6410675,,1124,6371
+Fakel Voronezh,Matvey Bardachev,20,Centre-Back,Zenit St. Petersburg,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6454390,,1124,964
+Fakel Voronezh,Clayton,26,Centre-Back,Sport Club Internacional,loan transfer,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6533528,,1124,6600
+Fakel Voronezh,Vyacheslav Dorovskikh,22,Goalkeeper,FC Kaluga,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5524948,,1124,28098
+Fakel Voronezh,Anton Kovalev,26,Right Midfield,BATE Borisov,End of loan 15/07/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6139696,,1124,713
+Fakel Voronezh,Maks Dziov,24,Centre-Back,Dynamo Brest,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6167804,,1124,6131
+Fakel Voronezh,Luka Bagatelia,22,Right Winger,Volga Uljanovsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6184531,,1124,12439
+Fakel Voronezh,Georgiy Gongadze,30,Centre-Forward,FK Chelyabinsk,End of loan 30/06/2026,in,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6185475,,1124,23110
+Fakel Voronezh,Luka Bagatelia,22,Right Winger,Volga Uljanovsk,€50Th.,out,Summer,0.05,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6383640,,1124,12439
+Fakel Voronezh,Nikita Motpan,25,Attacking Midfield,SKA Khabarovsk,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6319050,,1124,3690
+Fakel Voronezh,Vasiliy Cherov,30,Right-Back,FC Ufa,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6399064,,1124,28095
+Fakel Voronezh,Georgiy Gongadze,30,Centre-Forward,FC Ufa,free transfer,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6424989,,1124,28095
+Fakel Voronezh,Ilya Gaponov,28,Centre-Back,Without Club,-,out,Summer,NA,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6539347,,1124,515
+Fakel Voronezh,Maksim Turishchev,24,Centre-Forward,FC Rostov,End of loan 30/06/2026,out,Summer,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5715916,,1124,1083
+Zenit St. Petersburg,Robert Renan,23,Centre-Back,Clube de Regatas Vasco da Gama,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5893182,,964,978
+Zenit St. Petersburg,Nikita Goylo,28,Goalkeeper,FK Vitebsk,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6254489,,964,17959
+FC Krasnodar,Konstantin Dorofeev,21,Centre-Forward,FC Atyrau,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5729200,,16704,16198
+FC Krasnodar,Aleksandr Egurnev,24,Right Winger,Zenit 2 St. Petersburg,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,5811109,,16704,16950
+FC Krasnodar,Kirill Kistenev,20,Right-Back,Akhmat Grozny,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6497575,,16704,3725
+Lokomotiv Moscow,Aleksandr Frantsuzov,22,Right Winger,Torpedo-BelAZ Zhodino,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6150726,,932,7964
+Lokomotiv Moscow,Dmitriy Radikovskiy,21,Centre-Forward,Neman Grodno,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6204998,,932,14178
+Lokomotiv Moscow,Arseniy Ageev,22,Right-Back,Torpedo-BelAZ Zhodino,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6453307,,932,7964
+CSKA Moscow,Rodrigo Villagra,25,Defensive Midfield,Sport Club Internacional,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6135135,,2410,6600
+CSKA Moscow,Alerrandro,26,Centre-Forward,Sport Club Internacional,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6153339,,2410,6600
+Baltika Kaliningrad,Alex Fernandes,24,Right Winger,Navbahor Namangan,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6191356,,2741,15310
+Dynamo Moscow,Andrey Kudravets,22,Goalkeeper,Dinamo Minsk,loan transfer,out,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6492258,,121,1180
+Rubin Kazan,Jakhongir Urozov,22,Centre-Back,Dinamo Samarqand,End of loan 31/12/2026,out,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6481358,,2698,15300
+Akhmat Grozny,Kirill Kistenev,20,Right-Back,FC Krasnodar,End of loan 31/12/2026,out,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6497575,,3725,16704
+Krylya Sovetov Samara,Egor Karpitskiy,23,Centre-Forward,Dnepr Mogilev,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6135525,,2696,4394
+FC Orenburg,Timofey Martynov,21,Centre-Forward,Isloch Minsk Region,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6450503,,14589,36755
+Dinamo Makhachkala,Kirill Pomeshkin,22,Centre-Forward,Mashuk-KMV Pyatigorsk,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6437364,,75231,11123
+Fakel Voronezh,Ilya Vasin,20,Centre-Forward,Arsenal Dzerzhinsk,End of loan 31/12/2026,in,Winter,0,Premier Liga,2026,2026/2027,Russia,transfermarkt.com,6175926,,1124,72822

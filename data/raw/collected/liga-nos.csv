@@ -1,0 +1,466 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+FC Porto,Jakub Kiwior,26,Centre-Back,Arsenal FC,€17.00m,in,Summer,17,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6298647,,720,11
+FC Porto,In-beom Hwang,29,Defensive Midfield,Feyenoord Rotterdam,€4.50m,in,Summer,4.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6442749,,720,234
+FC Porto,André Silva,30,Centre-Forward,Elche CF,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6352395,,720,1531
+FC Porto,Seko Fofana,31,Central Midfield,Stade Rennais FC,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6536878,,720,273
+FC Porto,Gabriel Veron,22,Right Winger,Santos FC,End of loan 15/07/2025,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5504090,,720,221
+FC Porto,Samuel Portugal,32,Goalkeeper,Al-Okhdood Club,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5791811,,720,71665
+FC Porto,Danny Namaso,25,Left Winger,AJ Auxerre,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5870132,,720,290
+FC Porto,Iván Jaime,25,Attacking Midfield,CF Montréal,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5887428,,720,4078
+FC Porto,Vasco Sousa,23,Central Midfield,Moreirense FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5910411,,720,979
+FC Porto,Stephen Eustaquio,29,Central Midfield,Los Angeles FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6171997,,720,51828
+FC Porto,Gabriel Veron,23,Right Winger,CD Nacional,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6116900,,720,982
+FC Porto,Rodrigo Mora,19,Attacking Midfield,AS Roma,€25.00m,out,Summer,25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6517054,,720,12
+FC Porto,Danny Namaso,25,Left Winger,AJ Auxerre,€5.00m,out,Summer,5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6318559,,720,290
+FC Porto,Stephen Eustaquio,29,Central Midfield,Swansea City,€4.00m,out,Summer,4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6539329,,720,2288
+FC Porto,Samuel Portugal,32,Goalkeeper,Gil Vicente FC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6495524,,720,2424
+FC Porto,Thiago Silva,41,Centre-Back,Fluminense Football Club,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6320382,,720,2462
+FC Porto,Iván Jaime,25,Attacking Midfield,UD Las Palmas,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6522155,,720,472
+FC Porto,Luuk de Jong,35,Centre-Forward,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330166,,720,515
+FC Porto,Yann Karamoh,27,Left Winger,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6414918,,720,515
+FC Porto,Jakub Kiwior,26,Centre-Back,Arsenal FC,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911456,,720,11
+FC Porto,Seko Fofana,31,Central Midfield,Stade Rennais FC,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6161014,,720,273
+FC Porto,Terem Moffi,27,Centre-Forward,OGC Nice,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6153116,,720,417
+Sporting CP,Rodrigo Zalazar,26,Attacking Midfield,SC Braga,€30.00m,in,Summer,30,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6312429,,336,1075
+Sporting CP,Ibrahima Ba,21,Centre-Back,FC Famalicão,€21.25m,in,Summer,21.25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6448661,,336,3329
+Sporting CP,Issa Doumbia,22,Central Midfield,Venezia FC,€20.53m,in,Summer,20.53,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6334000,,336,607
+Sporting CP,Sergi Altimira,24,Defensive Midfield,Real Betis Balompié,€18.25m,in,Summer,18.25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6391118,,336,150
+Sporting CP,Nestory Irankunda,20,Left Winger,Watford FC,€15.00m,in,Summer,15,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6506976,,336,1010
+Sporting CP,Silas Andersen,22,Defensive Midfield,BK Häcken,€7.25m,in,Summer,7.25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6346062,,336,1109
+Sporting CP,Pedro Lima,23,Central Midfield,Avs Futebol,€4.00m,in,Summer,4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6328914,,336,110302
+Sporting CP,Moncef Zekri,17,Left-Back,KV Mechelen,€3.00m,in,Summer,3,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6534006,,336,354
+Sporting CP,Jesse Derry,19,Left Winger,Chelsea FC U21,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6420409,,336,9250
+Sporting CP,Alisson Santos,23,Left Winger,SSC Napoli,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6162546,,336,6195
+Sporting CP,Biel,25,Left Winger,Al-Taawoun FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6151189,,336,28844
+Sporting CP,Diogo Travassos,22,Right-Back,Moreirense FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5893683,,336,979
+Sporting CP,Alexandre Brito,20,Defensive Midfield,Pafos FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5794726,,336,45457
+Sporting CP,Sotiris Alexandropoulos,24,Central Midfield,Fortuna Düsseldorf,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5747371,,336,38
+Sporting CP,Koba Koindredi,24,Central Midfield,FC Basel 1893,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5732609,,336,26
+Sporting CP,Geovany Quenda,19,Right Winger,Chelsea FC,€50.00m,out,Summer,50,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5577631,,336,631
+Sporting CP,Morten Hjulmand,27,Defensive Midfield,Atlético de Madrid,€40.00m,out,Summer,40,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6419261,,336,13
+Sporting CP,Ousmane Diomande,22,Centre-Back,Nottingham Forest,€40.00m,out,Summer,40,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6495053,,336,703
+Sporting CP,Francisco Trincão,26,Right Winger,Al-Ahli SFC,€39.35m,out,Summer,39.35,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6437777,,336,18487
+Sporting CP,Alisson Santos,23,Left Winger,SSC Napoli,€16.50m,out,Summer,16.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6339595,,336,6195
+Sporting CP,Diogo Travassos,22,Right-Back,SC Braga,€5.50m,out,Summer,5.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6324195,,336,1075
+Sporting CP,Giorgi Kochorashvili,27,Central Midfield,Sevilla FC,€4.50m,out,Summer,4.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6523941,,336,368
+Sporting CP,João Virgínia,26,Goalkeeper,Wolverhampton Wanderers,€1.50m,out,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6539089,,336,543
+Sporting CP,Alexandre Brito,20,Defensive Midfield,Pafos FC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6392945,,336,45457
+Sporting CP,Hidemasa Morita,31,Central Midfield,Hull City,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6454607,,336,3008
+Sporting CP,Biel,25,Left Winger,Pafos FC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6396398,,336,45457
+Sporting CP,Ricardo Mangas,28,Left-Back,AC Monza,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6453483,,336,2919
+Sporting CP,Souleymane Faye,23,Right Winger,FC Lorient,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6479882,,336,1158
+SL Benfica,Georgiy Sudakov,23,Attacking Midfield,Shakhtar Donetsk,€20.25m,in,Summer,20.25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5904948,,294,660
+SL Benfica,Alessandro Circati,22,Centre-Back,Parma Calcio 1913,€18.00m,in,Summer,18,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6518927,,294,130
+SL Benfica,Jakub Kamiński,24,Left Winger,1.FC Köln,€17.00m,in,Summer,17,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409874,,294,3
+SL Benfica,João Palhinha,31,Defensive Midfield,Bayern Munich,€14.00m,in,Summer,14,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6536356,,294,27
+SL Benfica,Enzo Barrenechea,25,Defensive Midfield,Aston Villa,€12.00m,in,Summer,12,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6392669,,294,405
+SL Benfica,Gabriel Índio,18,Centre-Back,Athletic Club,€4.00m,in,Summer,4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6422266,,294,64918
+SL Benfica,Clément Lenglet,31,Centre-Back,Atlético de Madrid,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6391097,,294,13
+SL Benfica,Jhon Durán,22,Centre-Forward,Al-Nassr FC,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6442780,,294,18544
+SL Benfica,Orkun Kökçü,25,Central Midfield,Besiktas JK,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5770268,,294,114
+SL Benfica,Tiago Gouveia,25,Right Winger,OGC Nice,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5905940,,294,417
+SL Benfica,Florentino,26,Defensive Midfield,Burnley FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911403,,294,1132
+SL Benfica,Rafa Obrador,22,Left-Back,Torino FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6131072,,294,416
+SL Benfica,Amar Dedic,24,Right-Back,Newcastle United,€35.90m,out,Summer,35.9,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6514557,,294,762
+SL Benfica,Orkun Kökçü,25,Central Midfield,Besiktas JK,€30.00m,out,Summer,30,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5770269,,294,114
+SL Benfica,António Silva,22,Centre-Back,AFC Bournemouth,€25.00m,out,Summer,25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6476070,,294,989
+SL Benfica,Florentino,26,Defensive Midfield,Burnley FC,€24.00m,out,Summer,24,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6352253,,294,1132
+SL Benfica,Sidny Lopes Cabral,23,Left-Back,Trabzonspor,€7.00m,out,Summer,7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6338462,,294,449
+SL Benfica,Franjo Ivanović,22,Centre-Forward,RC Lens,Loan fee:€2.50m,out,Summer,2.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6496707,,294,826
+SL Benfica,Nicolás Otamendi,38,Centre-Back,CA River Plate,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6315615,,294,209
+SL Benfica,Henrique Araújo,24,Centre-Forward,Casa Pia AC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6466194,,294,3268
+SL Benfica,João Veloso,21,Central Midfield,Moreirense FC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6425237,,294,979
+SL Benfica,Rafa Obrador,22,Left-Back,US Sassuolo,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6505374,,294,6574
+SL Benfica,Tiago Gouveia,25,Right Winger,Genclerbirligi Ankara,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6522258,,294,820
+SL Benfica,João Rego,21,Attacking Midfield,Casa Pia AC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6527104,,294,3268
+SL Benfica,Georgiy Sudakov,23,Attacking Midfield,Shakhtar Donetsk,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5904945,,294,660
+SL Benfica,Enzo Barrenechea,25,Defensive Midfield,Aston Villa,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5791413,,294,405
+SC Braga,Tommy Marqués,19,Defensive Midfield,FC Barcelona,€11.00m,in,Summer,11,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524416,,1075,131
+SC Braga,Jovan Milosevic,21,Centre-Forward,VfB Stuttgart,€8.00m,in,Summer,8,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6518476,,1075,79
+SC Braga,Diogo Travassos,22,Right-Back,Sporting CP,€5.50m,in,Summer,5.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6324195,,1075,336
+SC Braga,Gabriel Silva,24,Left Midfield,CD Santa Clara,€3.50m,in,Summer,3.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6370506,,1075,2423
+SC Braga,Adrian Barisic,24,Centre-Back,FC Basel 1893,€3.50m,in,Summer,3.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6352307,,1075,26
+SC Braga,Adrian Bajrami,24,Centre-Back,FC Luzern,€2.80m,in,Summer,2.8,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6389605,,1075,434
+SC Braga,Sergio Barcia,25,Centre-Back,Legia Warszawa,€1.50m,in,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390332,,1075,255
+SC Braga,Bernardo,23,Goalkeeper,CD Tondela,€400Th.,in,Summer,0.4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6377636,,1075,7179
+SC Braga,Denis Huseinbasic,24,Central Midfield,1.FC Köln,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6347172,,1075,3
+SC Braga,Jonas Wind,27,Centre-Forward,VfL Wolfsburg,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6393568,,1075,82
+SC Braga,João Marques,24,Left Winger,Casa Pia AC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6148835,,1075,3268
+SC Braga,Ismaël Gharbi,22,Left Winger,FC Augsburg,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5910415,,1075,167
+SC Braga,Thiago Helguera,20,Defensive Midfield,CD Mirandés,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5861874,,1075,13222
+SC Braga,Djibril Soumaré,23,Defensive Midfield,Sheffield United,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5834171,,1075,350
+SC Braga,André Horta,29,Central Midfield,UD Almería,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5801402,,1075,3302
+SC Braga,Bartlomiej Wdowik,25,Left-Back,Jagiellonia Bialystok,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5731559,,1075,2300
+SC Braga,Lukas Hornicek,24,Goalkeeper,Newcastle United,€30.60m,out,Summer,30.6,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6480821,,1075,762
+SC Braga,Rodrigo Zalazar,26,Attacking Midfield,Sporting CP,€30.00m,out,Summer,30,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6312429,,1075,336
+SC Braga,Djibril Soumaré,23,Defensive Midfield,Stoke City,€4.00m,out,Summer,4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6381314,,1075,512
+SC Braga,André Horta,29,Central Midfield,UD Almería,€1.50m,out,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6417877,,1075,3302
+SC Braga,Paulo Oliveira,34,Centre-Back,Al-Fayha FC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6490847,,1075,50531
+SC Braga,Florian Grillitsch,31,Defensive Midfield,Frosinone Calcio,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6497533,,1075,8970
+SC Braga,Yanis da Rocha,22,Defensive Midfield,Portimonense SAD,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6501957,,1075,7378
+SC Braga,Ismaël Gharbi,22,Left Winger,CD Leganés,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6450176,,1075,1244
+SC Braga,Amine El Ouazzani,25,Centre-Forward,Angers SCO,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6441316,,1075,1420
+SC Braga,Thiago Helguera,20,Defensive Midfield,Atlético Madrileño,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6539978,,1075,3679
+SC Braga,Alaa Bellaarouch,24,Goalkeeper,FC Dinamo 1948,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6383547,,1075,312
+SC Braga,Adrian Barisic,24,Centre-Back,FC Basel 1893,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6132302,,1075,26
+SC Braga,Gabriel Moscardo,20,Defensive Midfield,Paris Saint-Germain,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5793631,,1075,583
+FC Famalicão,Georgios Koutsias,22,Centre-Forward,FC Lugano,€2.50m,in,Summer,2.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6454792,,3329,2790
+FC Famalicão,Tamás Szűcs,21,Central Midfield,Debreceni VSC,€2.50m,in,Summer,2.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6363428,,3329,84
+FC Famalicão,Finn van Breemen,23,Centre-Back,FC Basel 1893,€1.50m,in,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6349659,,3329,26
+FC Famalicão,Leny Meyer,22,Left-Back,VfB Stuttgart II,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6352512,,3329,102
+FC Famalicão,Mathis Jangéal,18,Attacking Midfield,Paris Saint-Germain U19,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6362883,,3329,6326
+FC Famalicão,Paulo Moreira,26,Central Midfield,CF Estrela Amadora,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6396052,,3329,2431
+FC Famalicão,Vojin Serafimovic,20,Centre-Back,FK Cukaricki,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6328166,,3329,6621
+FC Famalicão,Otso Liimatta,22,Attacking Midfield,Halmstads BK,End of loan 31/07/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6215222,,3329,1011
+FC Famalicão,Ibrahima Ba,21,Centre-Back,Sporting CP,€21.25m,out,Summer,21.25,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6448661,,3329,336
+FC Famalicão,Gustavo Sá,21,Attacking Midfield,Nottingham Forest,€20.00m,out,Summer,20,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6469895,,3329,703
+FC Famalicão,Simon Elisor,26,Centre-Forward,Universitatea Craiova,€1.50m,out,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6394010,,3329,40812
+FC Famalicão,Justin de Haas,26,Centre-Back,Valencia CF,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330235,,3329,1049
+FC Famalicão,Rafa Soares,31,Left-Back,CF Estrela Amadora,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6355540,,3329,2431
+FC Famalicão,Rochinha,31,Left Winger,Casa Pia AC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6433433,,3329,3268
+FC Famalicão,Otso Liimatta,22,Attacking Midfield,IK Sirius,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6490068,,3329,7945
+FC Famalicão,Otar Mamageishvili,23,Central Midfield,Wolfsberger AC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6364437,,3329,4441
+FC Famalicão,Antoine Joujou,23,Left Winger,Parma Calcio 1913,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5899576,,3329,130
+Gil Vicente FC,Andreas Lausen,23,Central Midfield,Esbjerg fB,€700Th.,in,Summer,0.7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6397321,,2424,3426
+Gil Vicente FC,Samuel Portugal,32,Goalkeeper,FC Porto,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6495524,,2424,720
+Gil Vicente FC,Ricardo Esgaio,33,Right-Back,Fatih Karagümrük,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6350372,,2424,6646
+Gil Vicente FC,Agustín Moreira,25,Right Winger,CA Progreso,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6273216,,2424,17595
+Gil Vicente FC,Martín Fernández,23,Attacking Midfield,CA Boston River,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6276299,,2424,18074
+Gil Vicente FC,José Silva,20,Right-Back,Sporting CP B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409703,,2424,10949
+Gil Vicente FC,David Moreira,22,Centre-Back,Sporting CP B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409698,,2424,10949
+Gil Vicente FC,Walace França,20,Centre-Forward,Athletico Paranaense U20,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6407573,,2424,15038
+Gil Vicente FC,Diogo Prioste,22,Central Midfield,SL Benfica B,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401247,,2424,10330
+Gil Vicente FC,Roko Baturina,26,Centre-Forward,AC Horsens,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911624,,2424,2414
+Gil Vicente FC,Jorge Aguirre,26,Centre-Forward,Panetolikos,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5748849,,2424,6418
+Gil Vicente FC,Luís Esteves,28,Attacking Midfield,Atlas Guadalajara,€6.00m,out,Summer,6,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6395518,,2424,8590
+Gil Vicente FC,Jorge Aguirre,26,Centre-Forward,SC União Torreense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390327,,2424,2432
+Gil Vicente FC,Jonathan Mutombo,23,Right-Back,SC União Torreense,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6414100,,2424,2432
+Gil Vicente FC,Dani Figueira,27,Goalkeeper,FC Noah Yerevan,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6382529,,2424,60368
+Gil Vicente FC,Rodrigo Rodrigues,18,Right Winger,Sporting CP B,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409699,,2424,10949
+Gil Vicente FC,Roko Baturina,26,Centre-Forward,FC Aarau,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6405916,,2424,116
+Gil Vicente FC,Zé Carlos,27,Right-Back,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6316717,,2424,515
+Gil Vicente FC,Ghislain Konan,30,Left-Back,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6481963,,2424,515
+Gil Vicente FC,Gustavo Varela,21,Centre-Forward,SL Benfica B,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5764729,,2424,10330
+Gil Vicente FC,Martín Fernández,23,Attacking Midfield,CA Boston River,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5769567,,2424,18074
+Gil Vicente FC,Hevertton,25,Right-Back,Queens Park Rangers,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5769934,,2424,1039
+Gil Vicente FC,Agustín Moreira,25,Right Winger,CA Progreso,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5753366,,2424,17595
+Moreirense FC,Kevyn Monteiro,20,Centre-Back,Red Bull Bragantino,€175Th.,in,Summer,0.175,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330164,,979,8793
+Moreirense FC,Koby Mottoh,19,Right-Back,AFC Bournemouth U21,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6347144,,979,38967
+Moreirense FC,Michael Dacosta,21,Right Winger,AFC Bournemouth U21,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6360738,,979,38967
+Moreirense FC,Tiago Andrade,20,Left Winger,FC Porto B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6538265,,979,10331
+Moreirense FC,Manuel Mendonça,21,Attacking Midfield,Sporting CP B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524287,,979,10949
+Moreirense FC,Janderson,20,Centre-Back,Cruzeiro Esporte Clube,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398709,,979,609
+Moreirense FC,Alexandre Parsemain,23,Centre-Forward,FC Lugano,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6396534,,979,2790
+Moreirense FC,Aranha,21,Goalkeeper,Sociedade Esportiva Palmeiras,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6395624,,979,1023
+Moreirense FC,João Veloso,21,Central Midfield,SL Benfica,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6425237,,979,294
+Moreirense FC,Joel Jorquera,25,Left Winger,Real Murcia CF,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6102837,,979,171
+Moreirense FC,Guilherme Liberato,25,Defensive Midfield,SC União Torreense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5912346,,979,2432
+Moreirense FC,Rebelo,22,Central Midfield,Varzim SC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5501240,,979,4297
+Moreirense FC,Joel Jorquera,25,Left Winger,Real Murcia CF,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6437295,,979,171
+Moreirense FC,Caio Secco,35,Goalkeeper,Leixões SC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390338,,979,3345
+Moreirense FC,Cedric Teguia,24,Left Winger,AD Ceuta FC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6386095,,979,8568
+Moreirense FC,Rebelo,22,Central Midfield,Académica Coimbra,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390911,,979,2990
+Moreirense FC,Fabiano,26,Right-Back,Esporte Clube Vitória,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6404531,,979,2125
+Moreirense FC,Mika,35,Goalkeeper,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6355536,,979,515
+Moreirense FC,Alan,26,Attacking Midfield,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6311885,,979,515
+Moreirense FC,Michel,23,Centre-Back,Sociedade Esportiva Palmeiras,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5493773,,979,1023
+Moreirense FC,Kevyn Monteiro,20,Centre-Back,Red Bull Bragantino,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6160718,,979,8793
+Moreirense FC,Vasco Sousa,23,Central Midfield,FC Porto,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5910411,,979,720
+Moreirense FC,Luís Semedo,22,Centre-Forward,Sunderland AFC,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5897229,,979,289
+Moreirense FC,Diogo Travassos,22,Right-Back,Sporting CP,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5893683,,979,336
+FC Arouca,Mateo Flores,22,Central Midfield,Real Betis Balompié,€1.40m,in,Summer,1.4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6369657,,8024,150
+FC Arouca,Si-hoo Park,18,Left Winger,Chungnam Asan,€437Th.,in,Summer,0.437,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6402082,,8024,78388
+FC Arouca,Orest Lebedenko,27,Left-Back,Vitória Guimarães SC,€400Th.,in,Summer,0.4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491451,,8024,2420
+FC Arouca,Mario Climent,24,Left-Back,Cádiz CF,€100Th.,in,Summer,0.1,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6482546,,8024,2687
+FC Arouca,Martim Duarte,23,Goalkeeper,Amarante FC,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390213,,8024,7789
+FC Arouca,Nico Mantl,26,Goalkeeper,FC Blau-Weiss Linz,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6147201,,8024,2157
+FC Arouca,Arnau Solà,23,Left-Back,UD Ibiza,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6161473,,8024,13241
+FC Arouca,Romualdas Jansonas,21,Centre-Forward,CF Os Belenenses,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6164235,,8024,68608
+FC Arouca,Vladislav Morozov,25,Centre-Forward,Kolding IF,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911628,,8024,12275
+FC Arouca,Vladislav Morozov,25,Centre-Forward,Kolding IF,€200Th.,out,Summer,0.2,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524100,,8024,12275
+FC Arouca,João Valido,26,Goalkeeper,GD Chaves,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6402085,,8024,3325
+FC Arouca,Matías Rocha,25,Centre-Back,CA Unión (Santa Fe),free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6474712,,8024,7097
+FC Arouca,Amadou Dante,25,Left-Back,FC Zbrojovka Brno,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6433173,,8024,5225
+FC Arouca,Arnau Solà,23,Left-Back,Atlético Madrileño,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6447815,,8024,3679
+FC Arouca,Yellu Santiago,22,Central Midfield,Hellas Verona,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6108237,,8024,276
+FC Arouca,José Silva,20,Right-Back,Sporting CP B,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6164227,,8024,10949
+FC Arouca,Bas Kuipers,31,Left-Back,FC Twente Enschede,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6088044,,8024,317
+FC Arouca,Omar Fayed,22,Centre-Back,Fenerbahce,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5864410,,8024,36
+FC Arouca,Mateo Flores,22,Central Midfield,Real Betis Balompié,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5812833,,8024,150
+Vitória Guimarães SC,Yeimar Mosquera,21,Centre-Back,Aston Villa U21,€475Th.,in,Summer,0.475,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6433432,,2420,12124
+Vitória Guimarães SC,Rodrigo Macedo,23,Centre-Forward,AZ Alkmaar U21,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6517595,,2420,11368
+Vitória Guimarães SC,Lohann Doucet,23,Defensive Midfield,Paris FC,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6426677,,2420,10004
+Vitória Guimarães SC,Victor Andersson,21,Left Winger,AIK,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524822,,2420,272
+Vitória Guimarães SC,Patrick Ouotro,20,Centre-Forward,AS Nancy-Lorraine,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6465511,,2420,1159
+Vitória Guimarães SC,Oliwier Zych,22,Goalkeeper,Aston Villa,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6430551,,2420,405
+Vitória Guimarães SC,Ahmed Sidibé,24,Centre-Back,Venezia FC,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6490371,,2420,607
+Vitória Guimarães SC,Vando Félix,23,Left Winger,FK Vojvodina Novi Sad,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6146479,,2420,448
+Vitória Guimarães SC,Dieu-Merci Michel,22,Centre-Forward,UD Leiria,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911090,,2420,2639
+Vitória Guimarães SC,Jota,23,Goalkeeper,SU 1º Dezembro,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5843957,,2420,13573
+Vitória Guimarães SC,Marco Cruz,22,Central Midfield,CS Marítimo,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5784545,,2420,1301
+Vitória Guimarães SC,Noah Saviolo,22,Left Winger,Trabzonspor,€11.50m,out,Summer,11.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6343934,,2420,449
+Vitória Guimarães SC,Diogo Sousa,20,Defensive Midfield,RC Strasbourg Alsace,€10.00m,out,Summer,10,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6379721,,2420,667
+Vitória Guimarães SC,Orest Lebedenko,27,Left-Back,FC Arouca,€400Th.,out,Summer,0.4,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491451,,2420,8024
+Vitória Guimarães SC,Rodrigo Abascal,32,Centre-Back,Al-Riyadh SC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491517,,2420,31008
+Vitória Guimarães SC,Dieu-Merci Michel,22,Centre-Forward,United FC (UAE),?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6470588,,2420,94732
+Vitória Guimarães SC,Jota,23,Goalkeeper,UD Santarém,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6442006,,2420,74155
+Vitória Guimarães SC,Nélson Oliveira,34,Centre-Forward,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330182,,2420,515
+GD Estoril Praia,Xavi Sintes,25,Centre-Back,Córdoba CF,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6538277,,1465,993
+GD Estoril Praia,Fernando Medrano,26,Left-Back,CD Mirandés,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6344256,,1465,13222
+GD Estoril Praia,Stelios Andreou,24,Centre-Back,Widzew Lodz,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6489723,,1465,88
+GD Estoril Praia,Tiago Parente,22,Left-Back,FC Felgueiras 1932,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6164148,,1465,1701
+GD Estoril Praia,Ismael Sierra,23,Centre-Back,Villarreal CF B,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5827718,,1465,11972
+GD Estoril Praia,Tiago Brito,22,Defensive Midfield,UD Oliveirense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6147728,,1465,8827
+GD Estoril Praia,Fabrício Garcia,25,Right Winger,FC Alverca,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6146368,,1465,2521
+GD Estoril Praia,Fran Pereira,24,Central Midfield,Lusitano GC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6141670,,1465,3275
+GD Estoril Praia,Diogo Brasido,23,Right-Back,Polonia Warsaw,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5893689,,1465,2745
+GD Estoril Praia,Israel Salazar,23,Centre-Forward,CD Eldense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5836976,,1465,12567
+GD Estoril Praia,Kévin Boma,23,Centre-Back,Red Bull Salzburg,€7.00m,out,Summer,7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6376626,,1465,409
+GD Estoril Praia,Felix Bacher,25,Centre-Back,Olympique Lyon,€4.30m,out,Summer,4.3,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6477630,,1465,1041
+GD Estoril Praia,Pedro Amaral,29,Left-Back,Rio Ave FC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330469,,1465,2425
+GD Estoril Praia,Alejandro Marqués,25,Centre-Forward,Granada CF,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6455977,,1465,16795
+GD Estoril Praia,Fran Pereira,24,Central Midfield,SU Sintrense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401259,,1465,1992
+GD Estoril Praia,Nodar Lominadze,24,Central Midfield,Torpedo Kutaisi,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6451347,,1465,253
+GD Estoril Praia,Jandro Orellana,26,Defensive Midfield,Cádiz CF,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6533815,,1465,2687
+GD Estoril Praia,Or Israelov,21,Centre-Back,Hapoel Tel Aviv,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5856635,,1465,1017
+GD Estoril Praia,Pizzi,36,Attacking Midfield,Retired,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6305750,,1465,
+FC Alverca,Ian Luccas,23,Defensive Midfield,Cruzeiro Esporte Clube,€1.00m,in,Summer,1,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6496697,,2521,609
+FC Alverca,Zé Rafael,33,Central Midfield,Santos FC,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6529623,,2521,221
+FC Alverca,André Vidigal,28,Left Winger,Wycombe Wanderers,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524310,,2521,2805
+FC Alverca,Marco Essimi,27,Right Winger,USL Dunkerque,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6324475,,2521,9202
+FC Alverca,Lucca Giuntini,20,Attacking Midfield,SC Mirandela,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6328442,,2521,10005
+FC Alverca,Toni Tamarit,20,Right-Back,Villarreal CF B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401874,,2521,11972
+FC Alverca,Gabriel Carioca,20,Striker,Athletic Club U20,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6534299,,2521,120986
+FC Alverca,Mofe Jemide,19,Centre-Back,Crystal Palace U21,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6521820,,2521,6945
+FC Alverca,Rayan Lucas,21,Defensive Midfield,CR Flamengo U20,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6516358,,2521,15002
+FC Alverca,Jhonatan,35,Goalkeeper,Athletic Club,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6449970,,2521,64918
+FC Alverca,Yaya Bojang,21,Centre-Back,Odense Boldklub,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6444248,,2521,173
+FC Alverca,Samy Jr. Merheg,19,Centre-Forward,SC Braga B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6437373,,2521,10789
+FC Alverca,Tiago Octávio,22,Central Midfield,Leça FC,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6427343,,2521,3267
+FC Alverca,Noah Raveyre,21,Goalkeeper,Pau FC,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6397082,,2521,3166
+FC Alverca,Vivaldo Semedo,21,Centre-Forward,Watford FC,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6431886,,2521,1010
+FC Alverca,Armando Jr,24,Centre-Forward,UD Leiria,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5911255,,2521,2639
+FC Alverca,Sandro Lima,35,Centre-Forward,FC Ararat-Armenia,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398711,,2521,53453
+FC Alverca,Armando Jr,24,Centre-Forward,GD Chaves,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6527506,,2521,3325
+FC Alverca,Lincoln,27,Attacking Midfield,Bursaspor,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6385423,,2521,20
+FC Alverca,Felipe Lima,20,Centre-Forward,SL Benfica B,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6456019,,2521,10330
+FC Alverca,Léo Chú,26,Left Winger,Avaí FC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6485591,,2521,2035
+FC Alverca,Tomás Mendes,21,Defensive Midfield,Deportivo Alavés,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5768112,,2521,1108
+FC Alverca,Rhaldney,27,Central Midfield,Göztepe,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6164236,,2521,1467
+FC Alverca,Fabrício Garcia,25,Right Winger,GD Estoril Praia,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6146368,,2521,1465
+FC Alverca,Mathis Clairicia,23,Centre-Forward,VfL Bochum,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6120018,,2521,80
+FC Alverca,Naves,24,Centre-Back,Sociedade Esportiva Palmeiras,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5793217,,2521,1023
+FC Alverca,Marko Milovanović,22,Centre-Forward,UD Almería,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5781438,,2521,3302
+FC Alverca,Ageu,23,Central Midfield,CD Santa Clara,End of loan 30/06/2025,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5770929,,2521,2423
+FC Alverca,André Gomes,21,Goalkeeper,SL Benfica B,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5768773,,2521,10330
+Rio Ave FC,Samuel Alves,18,Centre-Forward,Botafogo FR U20,€600Th.,in,Summer,0.6,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401250,,2425,16653
+Rio Ave FC,Malik Sellouki,26,Attacking Midfield,Stade Lavallois,€300Th.,in,Summer,0.3,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6538264,,2425,1080
+Rio Ave FC,Pedro Amaral,29,Left-Back,GD Estoril Praia,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330469,,2425,1465
+Rio Ave FC,Ennio van der Gouw,26,Goalkeeper,Zulte Waregem,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6331290,,2425,3508
+Rio Ave FC,Roland Galcik,24,Right Winger,Zeleziarne Podbrezova,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6432416,,2425,20063
+Rio Ave FC,Diogo Nascimento,23,Central Midfield,Olympiacos Piraeus,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6430280,,2425,683
+Rio Ave FC,Georgios Okkas,22,Defensive Midfield,Panionios FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5942835,,2425,169
+Rio Ave FC,Antzelo Sina,22,Goalkeeper,PAS Giannina,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5913024,,2425,2671
+Rio Ave FC,Ole Pohlmann,25,Attacking Midfield,SpVgg Greuther Fürth,€700Th.,out,Summer,0.7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6418037,,2425,65
+Rio Ave FC,Marc Gual,30,Centre-Forward,Kairat Almaty,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6354554,,2425,10482
+Rio Ave FC,Georgios Okkas,22,Defensive Midfield,Olympiakos Nicosia,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6443969,,2425,1402
+Rio Ave FC,Karem Zoabi,20,Centre-Forward,SC União Torreense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390239,,2425,2432
+Rio Ave FC,João Graça,31,Central Midfield,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6360744,,2425,515
+Rio Ave FC,Gustavo Mancha,22,Centre-Back,Olympiacos Piraeus,End of loan 30/06/2027,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6162821,,2425,683
+Rio Ave FC,Antonis Papakanellos,20,Attacking Midfield,Olympiacos Piraeus,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5763316,,2425,683
+Rio Ave FC,Leonardo Buta,24,Left-Back,Udinese Calcio,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6162042,,2425,410
+Rio Ave FC,Ennio van der Gouw,26,Goalkeeper,Zulte Waregem,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6160510,,2425,3508
+Rio Ave FC,Omar Richards,28,Left-Back,Nottingham Forest,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5912138,,2425,703
+CD Santa Clara,Neneca,22,Goalkeeper,FC Cascavel (PR),€20Th.,in,Summer,0.02,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5808102,,2423,28621
+CD Santa Clara,Kamika,22,Left Midfield,SU 1º Dezembro,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6406796,,2423,13573
+CD Santa Clara,Lucas França,30,Goalkeeper,CD Nacional,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6449080,,2423,982
+CD Santa Clara,Emanuel Moreira,23,Centre-Back,CD Feirense,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6399258,,2423,3349
+CD Santa Clara,Tiago Ribeiro,24,Central Midfield,CD Feirense,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6400202,,2423,3349
+CD Santa Clara,Afonso Duarte,20,Left Winger,SC Braga B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6433345,,2423,10789
+CD Santa Clara,Sorriso,20,Left Winger,Athletico Paranaense U20,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6418865,,2423,15038
+CD Santa Clara,Vitinho,22,Central Midfield,Cruzeiro Esporte Clube,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6425233,,2423,609
+CD Santa Clara,Vasconcelos,21,Attacking Midfield,SC Braga B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6455389,,2423,10789
+CD Santa Clara,Fredy,20,Attacking Midfield,SC Braga U23,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6461412,,2423,68077
+CD Santa Clara,Léo Jacó,21,Centre-Forward,Atlético Clube Goianiense,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6496825,,2423,15172
+CD Santa Clara,Douglas Borel,24,Right-Back,UD Oliveirense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5806043,,2423,8827
+CD Santa Clara,Rildo,26,Attacking Midfield,Levski Sofia,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5697219,,2423,156
+CD Santa Clara,Reinaldo,25,Left Winger,GD Chaves,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5738944,,2423,3325
+CD Santa Clara,João Bravim,28,Goalkeeper,UD Leiria,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5746701,,2423,2639
+CD Santa Clara,Ageu,23,Central Midfield,FC Alverca,End of loan 30/06/2025,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5770929,,2423,2521
+CD Santa Clara,Alysson,23,Centre-Back,SC Farense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5785584,,2423,4294
+CD Santa Clara,Bruno Almeida,29,Right Winger,SC Farense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5785593,,2423,4294
+CD Santa Clara,Dani Borges,23,Defensive Midfield,UD Leiria,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5793543,,2423,2639
+CD Santa Clara,Pedro Jesus,23,Attacking Midfield,Académica Coimbra,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6238234,,2423,2990
+CD Santa Clara,Thauan Lara,22,Left-Back,Portimonense SAD,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5878510,,2423,7378
+CD Santa Clara,Mateus Sarará,24,Defensive Midfield,Portimonense SAD,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5898029,,2423,7378
+CD Santa Clara,Henrique Pereira,24,Left Winger,GD Chaves,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5912327,,2423,3325
+CD Santa Clara,Miguel Pires,24,Central Midfield,UD Leiria,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5912348,,2423,2639
+CD Santa Clara,Anthony Carter,31,Centre-Forward,SC Farense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6061254,,2423,4294
+CD Santa Clara,Jader Gentil,22,Left Winger,Atlético Clube Goianiense,End of loan 15/07/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6097873,,2423,15172
+CD Santa Clara,Matheusinho,28,Attacking Midfield,Ceará Sporting Club,End of loan 31/07/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6142856,,2423,2029
+CD Santa Clara,Gabriel Silva,24,Left Midfield,SC Braga,€3.50m,out,Summer,3.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6370506,,2423,1075
+CD Santa Clara,João Afonso,19,Goalkeeper,FC Porto B,€1.50m,out,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6324979,,2423,10331
+CD Santa Clara,Reinaldo,25,Left Winger,Levski Sofia,€1.50m,out,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6337610,,2423,156
+CD Santa Clara,Serginho,26,Central Midfield,Levski Sofia,€1.00m,out,Summer,1,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6390411,,2423,156
+CD Santa Clara,Gustavo Klismahn,26,Central Midfield,Neftchi PFK,€300Th.,out,Summer,0.3,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6371151,,2423,8031
+CD Santa Clara,Darlan,28,Central Midfield,Buriram United,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6408226,,2423,25449
+CD Santa Clara,Mateus Sarará,24,Defensive Midfield,CD Tondela,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6481347,,2423,7179
+CD Santa Clara,João Bravim,28,Goalkeeper,FC Ararat-Armenia,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398283,,2423,53453
+CD Santa Clara,Anthony Carter,31,Centre-Forward,FC Vizela,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6334786,,2423,6912
+CD Santa Clara,Paulo Victor,25,Left-Back,Querétaro FC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401269,,2423,4961
+CD Santa Clara,Gabriel Batista,28,Goalkeeper,Botafogo de Futebol e Regatas,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6442259,,2423,537
+CD Santa Clara,Bruno Almeida,29,Right Winger,AEL Limassol,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6445489,,2423,786
+CD Santa Clara,Miguel Pires,24,Central Midfield,FC Vizela,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6475944,,2423,6912
+CD Santa Clara,Matheusinho,28,Attacking Midfield,Atlético Clube Goianiense,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6483301,,2423,15172
+CD Santa Clara,Thauan Lara,22,Left-Back,Portimonense SAD,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491141,,2423,7378
+CD Santa Clara,Jader Gentil,23,Left Winger,Portimonense SAD,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491242,,2423,7378
+CD Santa Clara,Douglas Borel,24,Right-Back,FC Penafiel,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491274,,2423,3327
+CD Santa Clara,Andrey,24,Attacking Midfield,Avs Futebol,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6499781,,2423,110302
+CD Santa Clara,Frederico Venâncio,33,Centre-Back,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6520220,,2423,515
+CD Santa Clara,Neneca,22,Goalkeeper,FC Cascavel (PR),End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5162274,,2423,28621
+CD Santa Clara,Elias Manoel,24,Centre-Forward,Botafogo de Futebol e Regatas,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5813718,,2423,537
+CD Nacional,Matchoi Djaló,23,Attacking Midfield,Basaksehir FK,€200Th.,in,Summer,0.2,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6502002,,982,6890
+CD Nacional,Stavros Gavriel,24,Right Winger,Zulte Waregem,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398309,,982,3508
+CD Nacional,João Gonçalves,25,Goalkeeper,Universitatea Craiova,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6407583,,982,40812
+CD Nacional,Danel Dongmo,25,Central Midfield,Petrolul Ploiesti,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409313,,982,9465
+CD Nacional,Mateus Iseppe,20,Attacking Midfield,Clube Atlético Mineiro,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398377,,982,330
+CD Nacional,Wesley Gasolina,26,Right-Back,Avaí FC,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6447322,,982,2035
+CD Nacional,Markus Jensen,21,Left Winger,Odense Boldklub,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6439372,,982,173
+CD Nacional,Fernando Nava,22,Left Winger,Club Always Ready,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6499940,,982,42208
+CD Nacional,William Kokolo,26,Left Midfield,Hannover 96,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6520340,,982,42
+CD Nacional,Allen Obando,20,Centre-Forward,Inter Miami CF,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6502576,,982,69261
+CD Nacional,Daniel de la Cruz,22,Right-Back,LDU Quito,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6412156,,982,9855
+CD Nacional,Renato Marin,19,Goalkeeper,Paris Saint-Germain,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6406177,,982,583
+CD Nacional,Motez Nourani,24,Left Winger,Club Athlétique Bizertin,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6159330,,982,12717
+CD Nacional,Jesús Ramírez,28,Centre-Forward,Corum FK,€4.30m,out,Summer,4.3,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6489597,,982,37951
+CD Nacional,Jota,33,Central Midfield,AD Machico,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6443150,,982,3264
+CD Nacional,César Augusto,22,Goalkeeper,Unknown,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6322824,,982,75
+CD Nacional,André Sousa,36,Central Midfield,UD Santarém,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330154,,982,74155
+CD Nacional,Lucas João,32,Centre-Forward,CA Petróleos Luanda,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6363144,,982,7084
+CD Nacional,Paulinho Bóia,28,Left Winger,Widzew Lodz,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6441416,,982,88
+CD Nacional,Lucas França,30,Goalkeeper,CD Santa Clara,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6449080,,982,2423
+CD Nacional,Lenny Vallier,27,Left-Back,USL Dunkerque,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6411149,,982,9202
+CD Nacional,Witi,29,Left Winger,FC Pyunik Yerevan,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6447760,,982,10301
+CD Nacional,João Aurélio,37,Right-Back,Retired,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6330196,,982,
+CD Nacional,Gabriel Veron,23,Right Winger,FC Porto,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6116900,,982,720
+CD Nacional,Kaique Pereira,23,Goalkeeper,Sociedade Esportiva Palmeiras,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5778776,,982,1023
+CD Nacional,Alan Núñez,21,Right-Back,Club Cerro Porteño,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5717268,,982,1214
+CF Estrela Amadora,Lovro Zvonarek,21,Attacking Midfield,Bayern Munich,€1.50m,in,Summer,1.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6431789,,2431,27
+CF Estrela Amadora,Stefan Lekovic,22,Centre-Back,Red Star Belgrade,€1.00m,in,Summer,1,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6396397,,2431,159
+CF Estrela Amadora,Joan Jordán,32,Central Midfield,Sevilla FC,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6493491,,2431,368
+CF Estrela Amadora,Rafa Soares,31,Left-Back,FC Famalicão,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6355540,,2431,3329
+CF Estrela Amadora,Bénito,22,Left Winger,SL Benfica B,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6392947,,2431,10330
+CF Estrela Amadora,Santiago Serra,19,Defensive Midfield,CD Mafra,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6480874,,2431,7056
+CF Estrela Amadora,Lucas Mincarelli,22,Left-Back,Montpellier HSC,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6474685,,2431,969
+CF Estrela Amadora,João Gastão,19,Centre-Forward,CF Os Belenenses,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6145275,,2431,68608
+CF Estrela Amadora,Atanas Chernev,24,Centre-Back,1.FC Kaiserslautern,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6135432,,2431,2
+CF Estrela Amadora,Francisco Meixedo,25,Goalkeeper,CD Feirense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5744495,,2431,3349
+CF Estrela Amadora,João Resende,23,Centre-Forward,Pontevedra CF,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5912291,,2431,5650
+CF Estrela Amadora,Semeu Commey,22,Centre-Back,Leixões SC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6238236,,2431,3345
+CF Estrela Amadora,Assane Ndiaye,26,Central Midfield,SC Farense,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5902538,,2431,4294
+CF Estrela Amadora,Otávio,20,Centre-Back,Eintracht Frankfurt,€4.50m,out,Summer,4.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6463895,,2431,24
+CF Estrela Amadora,Assane Ndiaye,26,Central Midfield,Cultural Leonesa,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401800,,2431,4542
+CF Estrela Amadora,Yahya Kalley,25,Left-Back,Dinamo Batumi,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6502966,,2431,11344
+CF Estrela Amadora,Paulo Moreira,26,Central Midfield,FC Famalicão,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6396052,,2431,3329
+CF Estrela Amadora,Issiar Dramé,27,Centre-Back,Unknown,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6502294,,2431,75
+CF Estrela Amadora,João Resende,23,Centre-Forward,SC Farense,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6370505,,2431,4294
+CF Estrela Amadora,Rodrigo Pinho,35,Centre-Forward,Avs Futebol,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6482542,,2431,110302
+CF Estrela Amadora,Semeu Commey,22,Centre-Back,Leixões SC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6401249,,2431,3345
+CF Estrela Amadora,Ni,23,Centre-Back,Académica Coimbra,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6453752,,2431,2990
+CF Estrela Amadora,Francisco Meixedo,25,Goalkeeper,CD Feirense,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6446905,,2431,3349
+CF Estrela Amadora,Jorge Meireles,22,Left Winger,Avs Futebol,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6437234,,2431,110302
+CF Estrela Amadora,Mathew Gbomadu,21,Right Winger,Dinamo Tbilisi,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6446873,,2431,663
+CF Estrela Amadora,Alex Sola,22,Central Midfield,Ironi Kiryat Shmona,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6328187,,2431,6028
+CF Estrela Amadora,Dudu,27,Goalkeeper,Portimonense SAD,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6491040,,2431,7378
+CF Estrela Amadora,Chilohem Onuoha,21,Centre-Forward,TSV Hartberg,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6488334,,2431,4467
+CF Estrela Amadora,João Gastão,19,Centre-Forward,SC Farense,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6443177,,2431,4294
+CF Estrela Amadora,Jovane Cabral,28,Left Winger,Grêmio Foot-Ball Porto Alegrense,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6427963,,2431,210
+CF Estrela Amadora,Renan Ribeiro,36,Goalkeeper,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6380843,,2431,515
+CF Estrela Amadora,Bruno Langa,28,Left-Back,UD Almería,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6158339,,2431,3302
+CF Estrela Amadora,Stefan Lekovic,22,Centre-Back,Red Star Belgrade,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6163063,,2431,159
+CF Estrela Amadora,Billal Brahimi,26,Right Winger,Santos FC,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6164202,,2431,221
+Casa Pia AC,André Gomes,21,Goalkeeper,SL Benfica B,€500Th.,in,Summer,0.5,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6443151,,3268,10330
+Casa Pia AC,Rochinha,31,Left Winger,FC Famalicão,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6433433,,3268,3329
+Casa Pia AC,JP,21,Central Midfield,Clube de Regatas Vasco da Gama,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6516507,,3268,978
+Casa Pia AC,Alassana Jatta,27,Centre-Forward,Notts County,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6467505,,3268,1045
+Casa Pia AC,Henrique Araújo,24,Centre-Forward,SL Benfica,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6466194,,3268,294
+Casa Pia AC,Gabi,26,Central Midfield,FC Felgueiras 1932,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6418866,,3268,1701
+Casa Pia AC,Selvi Clua,21,Defensive Midfield,UD Almería,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6457272,,3268,3302
+Casa Pia AC,Aymen Zouin,19,Left Winger,Parma Calcio 1913,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524686,,3268,130
+Casa Pia AC,João Rego,21,Attacking Midfield,SL Benfica,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6527104,,3268,294
+Casa Pia AC,Miguel Sousa,27,Central Midfield,Leixões SC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6238232,,3268,3345
+Casa Pia AC,Fahem Benaïssa,24,Left-Back,Mantova 1911,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6145607,,3268,2581
+Casa Pia AC,Daniel Azevedo,28,Goalkeeper,Amora FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6135564,,3268,1414
+Casa Pia AC,Max Svensson,24,Centre-Forward,UD Ibiza,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6107289,,3268,13241
+Casa Pia AC,Raúl Blanco,24,Attacking Midfield,AD Alcorcón,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5893100,,3268,11596
+Casa Pia AC,Fahem Benaïssa,24,Left-Back,Mantova 1911,€700Th.,out,Summer,0.7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6368001,,3268,2581
+Casa Pia AC,Gaizka Larrazabal,28,Right-Back,Bolton Wanderers,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6450522,,3268,355
+Casa Pia AC,Kiki,28,Right Winger,CD Trofense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6407585,,3268,3348
+Casa Pia AC,Miguel Sousa,27,Central Midfield,Leixões SC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6388978,,3268,3345
+Casa Pia AC,Iyad Mohamed,25,Defensive Midfield,Portsmouth FC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6540302,,3268,1020
+Casa Pia AC,Max Svensson,24,Centre-Forward,FC Penafiel,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6475942,,3268,3327
+Casa Pia AC,Ricardo Batista,39,Goalkeeper,Lusitano GC,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6513930,,3268,3275
+Casa Pia AC,Rafael Brito,24,Defensive Midfield,Without Club,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6354691,,3268,515
+Casa Pia AC,José Fonte,42,Centre-Back,Retired,-,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6316716,,3268,
+Casa Pia AC,Rodrigo Moura,30,Goalkeeper,GD Chaves,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6160725,,3268,3325
+Casa Pia AC,João Marques,24,Left Winger,SC Braga,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6148835,,3268,1075
+Casa Pia AC,Xander Severina,25,Right Winger,Maccabi Haifa,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5910380,,3268,1064
+Casa Pia AC,Dailon Livramento,25,Centre-Forward,Hellas Verona,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5909078,,3268,276
+Casa Pia AC,Tiago Morais,22,Left Winger,LOSC Lille,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5846800,,3268,1082
+CS Marítimo,Maxime Dominguez,30,Attacking Midfield,Cracovia,€100Th.,in,Summer,0.1,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6394153,,1301,5689
+CS Marítimo,Nathanael Ogbeta,25,Left-Back,Plymouth Argyle,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6424364,,1301,2262
+CS Marítimo,Maurice Boakye,21,Centre-Forward,Hamburger SV II,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409120,,1301,389
+CS Marítimo,Samuel Bamba,22,Right Winger,VfL Bochum,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6471151,,1301,80
+CS Marítimo,Tomás Tavares,25,Right-Back,Wisla Plock,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6327241,,1301,2118
+CS Marítimo,Fran Vieites,27,Goalkeeper,Leicester City,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6490855,,1301,1003
+CS Marítimo,Nilton,25,Left-Back,Beerschot VA,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6536284,,1301,41274
+CS Marítimo,Bryan Limbombe,25,Right Winger,Heracles Almelo,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6490311,,1301,1304
+CS Marítimo,Ibrahim Alani,20,Central Midfield,Real Valladolid CF,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6502100,,1301,366
+CS Marítimo,Gábor Szalai,26,Centre-Back,Ferencvárosi TC,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6453517,,1301,279
+CS Marítimo,Rafael Fernandes,24,Centre-Back,LOSC Lille,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6398311,,1301,1082
+CS Marítimo,Yellu Santiago,22,Central Midfield,Hellas Verona,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6474249,,1301,276
+CS Marítimo,Israel Isaac Ayuma,20,Central Midfield,NK Istra 1961,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6479664,,1301,999
+CS Marítimo,Martim Tavares,22,Centre-Forward,Racing Ferrol,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6163936,,1301,1176
+CS Marítimo,André Rodrigues,28,Attacking Midfield,GD Chaves,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6163784,,1301,3325
+CS Marítimo,Gonçalo Tabuaço,25,Goalkeeper,Leixões SC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6153294,,1301,3345
+CS Marítimo,Pedro Teixeira,24,Goalkeeper,UD Santarém,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5930043,,1301,74155
+CS Marítimo,Francisco França,24,Defensive Midfield,Varzim SC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5930039,,1301,4297
+CS Marítimo,Noah Madsen,24,Centre-Back,Holstein Kiel,€700Th.,out,Summer,0.7,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6517822,,1301,269
+CS Marítimo,André Rodrigues,28,Attacking Midfield,GD Chaves,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6346220,,1301,3325
+CS Marítimo,Afonso Freitas,26,Left-Back,FC Felgueiras 1932,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6453413,,1301,1701
+CS Marítimo,Samu,27,Goalkeeper,Maccabi Netanya,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6410062,,1301,5223
+CS Marítimo,Rodrigo Borges,27,Centre-Back,SC Farense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6465882,,1301,4294
+CS Marítimo,Guirassy,27,Defensive Midfield,UD Leiria,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6400055,,1301,2639
+CS Marítimo,Júnior Almeida,26,Centre-Back,Sabah FK,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6355534,,1301,63993
+CS Marítimo,Preslav Borukov,26,Centre-Forward,Botev Vratsa,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6333988,,1301,26462
+CS Marítimo,Alexandre Guedes,32,Centre-Forward,CD Feirense,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6525697,,1301,3349
+CS Marítimo,Carlos Daniel,32,Attacking Midfield,Al-Jabalain FC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6505168,,1301,68028
+CS Marítimo,Francisco França,24,Defensive Midfield,FC Felgueiras 1932,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6412120,,1301,1701
+CS Marítimo,Martim Tavares,22,Centre-Forward,Académica Coimbra,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6406435,,1301,2990
+CS Marítimo,Marco Cruz,22,Central Midfield,Vitória Guimarães SC,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5784545,,1301,2420
+CS Marítimo,Xavi Grande,21,Right-Back,Levante UD,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5770215,,1301,3368
+Académico Viseu FC,Cristian Ferreira,26,Central Midfield,AA Argentinos Juniors,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6409314,,7788,1030
+Académico Viseu FC,Juan Soriano,28,Goalkeeper,CD Leganés,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6538266,,7788,1244
+Académico Viseu FC,Raphael Nunes,20,Goalkeeper,Serrano FC (RJ),free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6537313,,7788,95478
+Académico Viseu FC,Mohamed Bouldini,30,Centre-Forward,Deportivo A Coruña,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6475032,,7788,897
+Académico Viseu FC,Marcos Lavín,29,Goalkeeper,USL Dunkerque,free transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6411766,,7788,9202
+Académico Viseu FC,Alejandro Mestanza,21,Attacking Midfield,Atlético Madrileño,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6447323,,7788,3679
+Académico Viseu FC,Ewerton,28,Goalkeeper,Barra FC,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6449838,,7788,52519
+Académico Viseu FC,João Guilherme,25,Right Winger,AA Maguary,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6450185,,7788,103697
+Académico Viseu FC,Andro Babic,21,Defensive Midfield,FK Velez Mostar,?,in,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6498494,,7788,628
+Académico Viseu FC,Paulinho,26,Centre-Forward,Wieczysta Krakow,loan transfer,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6524074,,7788,30974
+Académico Viseu FC,Bruno Ramos,21,Centre-Back,Sporting CP B,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5162271,,7788,10949
+Académico Viseu FC,Marquinho,24,Attacking Midfield,Botafogo FC,End of loan 30/06/2026,in,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5697335,,7788,9030
+Académico Viseu FC,Bruno Ramos,21,Centre-Back,Sporting CP B,€2.00m,out,Summer,2,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6355541,,7788,10949
+Académico Viseu FC,Kaique,21,Centre-Forward,Leixões SC,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6404070,,7788,3345
+Académico Viseu FC,Bruno Brígido,35,Goalkeeper,América Futebol Clube (MG),free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6383430,,7788,2863
+Académico Viseu FC,Domen Gril,25,Goalkeeper,Piast Gliwice,free transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6377504,,7788,6112
+Académico Viseu FC,Rodrigo Guedes,25,Defensive Midfield,Amarante FC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6395517,,7788,7789
+Académico Viseu FC,Marquinho,24,Attacking Midfield,Barra FC,?,out,Summer,NA,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6445938,,7788,52519
+Académico Viseu FC,Samba Koné,24,Central Midfield,FC Sheriff Tiraspol,loan transfer,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6381863,,7788,2481
+Académico Viseu FC,Lucas Gabriel,24,Second Striker,CD Mafra,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6109028,,7788,7056
+Académico Viseu FC,João Guilherme,25,Right Winger,AA Maguary,End of loan 30/06/2026,out,Summer,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,5879552,,7788,103697
+FC Famalicão,Riccieli,28,Centre-Back,Esporte Clube Vitória,End of loan 31/12/2026,in,Winter,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6097943,,3329,2125
+FC Alverca,Léo Chú,26,Left Winger,Athletic Club,End of loan 30/06/2026,in,Winter,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6209332,,2521,64918
+FC Alverca,Gian Cabezas,23,Central Midfield,Athletic Club,End of loan 31/12/2026,in,Winter,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6089005,,2521,64918
+CD Santa Clara,Wendel,26,Centre-Forward,Ceará Sporting Club,End of loan 31/12/2026,in,Winter,0,Liga Portugal,2026,2026/2027,Portugal,transfermarkt.com,6184458,,2423,2029

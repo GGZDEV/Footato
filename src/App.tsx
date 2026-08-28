@@ -20,10 +20,10 @@ import {
   type Grouping,
   type SortKey,
 } from './lib/aggregate';
-import { loadDataset, loadFreshness } from './lib/data';
+import { loadDataset, loadFreshness, loadLatest } from './lib/data';
 import { season } from './lib/format';
 import { titleWeight, trophyFamily, type TitlePointBreakdown } from './lib/honours';
-import type { Dataset, FreshnessData } from './lib/types';
+import type { Dataset, FreshnessData, LatestData } from './lib/types';
 
 type AppSection = 'market' | 'honours' | 'coverage';
 type QuickView = 'overview' | 'spend-decade' | 'profit' | 'income' | null;
@@ -121,6 +121,7 @@ function restoreClubAliases(state: UrlState, dataset: Dataset): UrlState {
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [freshness, setFreshness] = useState<FreshnessData | null>(null);
+  const [latest, setLatest] = useState<LatestData | null>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
@@ -137,6 +138,7 @@ export default function App() {
 
   useEffect(() => {
     loadFreshness().then(setFreshness);
+    loadLatest().then(setLatest);
     loadDataset()
       .then((loaded) => {
         const restored = decode(window.location.hash, loaded.meta.yearMax);
@@ -243,9 +245,23 @@ export default function App() {
       : { key, dir: key === 'label' || key === 'sublabel' ? 1 : -1 });
   }, []);
 
-  const refreshFreshness = useCallback(async () => {
+  /**
+   * Re-reads the published control files, bypassing the browser cache.
+   *
+   * It cannot run a collection: the site is a static build, and the collector is
+   * a Node script that reads Transfermarkt server-side. What this does is pick
+   * up a newer publication without a full reload, so the button is labelled for
+   * what it actually does rather than implying it fetches transfers.
+   */
+  const refreshChecks = useCallback(async () => {
     setRefreshing(true);
-    try { setFreshness(await loadFreshness(true)); } finally { setRefreshing(false); }
+    try {
+      const [nextFreshness, nextLatest] = await Promise.all([loadFreshness(true), loadLatest(true)]);
+      setFreshness(nextFreshness);
+      setLatest(nextLatest);
+    } finally {
+      setRefreshing(false);
+    }
   }, []);
 
   const rows = useMemo(() => dataset ? filterMercatos(dataset.mercatos, filters) : [], [dataset, filters]);
@@ -326,9 +342,18 @@ export default function App() {
   if (!dataset) return <div className="center-state"><BrandMark /><span>Chargement des mercatos…</span></div>;
 
   const { meta } = dataset;
-  const sourceDate = meta.sourceUpdatedAt
-    ? new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(`${meta.sourceUpdatedAt}T12:00:00Z`))
-    : 'date inconnue';
+  const formatDay = (iso: string) => new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })
+    .format(new Date(`${iso.slice(0, 10)}T12:00:00Z`));
+  // The header used to show the maintained import's date for everything. That
+  // is the wrong number while a mercato is open: the finished seasons do not
+  // move, the current one does, and in July 2026 a 22-day-old import was
+  // presented with the same confidence as settled history. Show the date of
+  // whatever supplies the season in progress instead.
+  const currentSeasonDate = meta.currentSeason?.updatedAt ?? meta.sourceUpdatedAt;
+  const sourceDate = currentSeasonDate ? formatDay(currentSeasonDate) : 'date inconnue';
+  const currentSeasonAgeDays = currentSeasonDate
+    ? Math.floor((Date.now() - new Date(`${currentSeasonDate.slice(0, 10)}T00:00:00Z`).getTime()) / 86_400_000)
+    : null;
   const currentGrouping = GROUPINGS.find((item) => item.value === grouping)!;
   const quickViewLabel = quickView === 'overview' ? 'Vue globale'
     : quickView === 'spend-decade' ? 'Plus gros acheteurs'
@@ -358,7 +383,17 @@ export default function App() {
 
         <div className="header-actions">
           <ThemeToggle />
-          <button className="data-pill" onClick={() => setSection('coverage')} title="Voir la qualité et les sources" aria-label="Voir la complétude et les sources">
+          <button
+            className="data-pill"
+            onClick={() => setSection('coverage')}
+            title={
+              meta.currentSeason
+                ? `Saison ${meta.currentSeason.year}/${(meta.currentSeason.year + 1) % 100} relevée le ${sourceDate}`
+                  + `${currentSeasonAgeDays == null ? '' : ` (il y a ${currentSeasonAgeDays} j)`}`
+                : 'Voir la qualité et les sources'
+            }
+            aria-label="Voir la complétude et les sources"
+          >
             <i aria-hidden="true" /><span>Données · {sourceDate}</span>
           </button>
         </div>
@@ -371,7 +406,7 @@ export default function App() {
               <div className="market-title-copy">
                 <span className="eyebrow-label"><i aria-hidden="true" /> Observatoire des transferts</span>
                 <h1 id="market-heading">Lire le<br /><em>marché.</em></h1>
-                <p>Achats, ventes et équilibre financier des clubs européens — sans estimer les montants non publiés.</p>
+                <p>Achats, ventes et équilibre financier des clubs — sans estimer les montants non publiés.</p>
               </div>
               <aside className="market-brief" aria-label="Périmètre actif">
                 <span className="brief-kicker">Périmètre actif</span>
@@ -449,7 +484,7 @@ export default function App() {
         )}
 
         {section === 'coverage' && (
-          <CompletenessView groups={coverageGroups} freshness={freshness} sourceDate={sourceDate} refreshing={refreshing} onRefresh={refreshFreshness} />
+          <CompletenessView groups={coverageGroups} freshness={freshness} latest={latest} sourceDate={sourceDate} meta={meta} leagues={dataset.leagues} refreshing={refreshing} onRefresh={refreshChecks} />
         )}
       </main>
 

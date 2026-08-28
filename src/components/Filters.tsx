@@ -165,8 +165,8 @@ export function Filters({ dataset, filters, onChange, onReset }: Props) {
         <div className="advanced-filters">
           <div className="advanced-grid">
             <div className="field">
-              <span className="field-label">Fenêtre</span>
-              <div className="segmented" role="group" aria-label="Fenêtre de transfert">
+              <span className="field-label">Mercato</span>
+              <div className="segmented" role="group" aria-label="Mercato : été ou hiver">
                 {WINDOWS.map((item) => (
                   <button
                     key={String(item.value)}

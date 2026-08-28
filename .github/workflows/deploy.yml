@@ -28,15 +28,41 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # Transfermarkt refuses GitHub-hosted runners: that block is exactly what
+      # froze the upstream dataset in July 2026. The collection is therefore
+      # attempted but never allowed to break the deploy — on failure the build
+      # falls back to the versioned collection in data/raw/collected/.
+      #
+      # That fallback is not a way of tolerating stale data: validate-dataset
+      # still fails the build if the current season is older than the open-window
+      # limit. A blocked runner degrades into a loud failure at validation, with
+      # `npm run data:collect` from a residential address as the fix.
+      - name: Collecter le mercato en cours (non bloquant)
+        continue-on-error: true
+        env:
+          BRIGHTDATA_API_KEY: ${{ secrets.BRIGHTDATA_API_KEY }}
+        run: |
+          npm run data:collect
+          npm run data:latest
+
       - name: Actualiser et contrôler les données
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             npm run data:fresh
+            npm run data:build
             npm test
           else
-            npm run data:refresh
+            npm run data:fetch
+            npm run data:recent
+            npm run data:build
+            npm run data:fresh
+            npm run data:validate
+            npm run collector:verify
+            npm run freshness:validate
+            npm run freshness:verify
+            npm run analytics:verify
           fi
       - name: Construire le site
         run: npm run build

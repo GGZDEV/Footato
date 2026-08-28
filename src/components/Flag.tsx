@@ -49,6 +49,17 @@ const ART: Record<string, ReactNode> = {
   ),
   nl: <>{bands(['#ae1c28', '#ffffff', '#21468b'])}</>,
   ru: <>{bands(['#ffffff', '#0039a6', '#d52b1e'])}</>,
+  // Le champ vert et le sabre. La shahada qui le surmonte est illisible à
+  // 24×16 : la rendre en traits produirait une tache grise, pas une écriture.
+  // Même parti pris que pour les armoiries espagnoles et portugaises.
+  sa: (
+    <>
+      <rect width={W} height={H} fill="#165d31" />
+      <rect x={4} y={9.6} width={15} height={1.1} rx={0.55} fill="#ffffff" />
+      <path d="M19 10.15 L16.6 8.5 L16.6 11.8 Z" fill="#ffffff" />
+      <rect x={3.4} y={8.8} width={1.1} height={2.7} rx={0.5} fill="#ffffff" />
+    </>
+  ),
 };
 
 /** Window markers, drawn rather than typed so they match the flags' weight. */
@@ -89,7 +100,7 @@ const MARKERS: Record<string, ReactNode> = {
 /** Default accessible names, so callers rarely need to pass one. */
 const NAMES: Record<string, string> = {
   eng: 'Angleterre', es: 'Espagne', it: 'Italie', de: 'Allemagne',
-  fr: 'France', pt: 'Portugal', nl: 'Pays-Bas', ru: 'Russie',
+  fr: 'France', pt: 'Portugal', nl: 'Pays-Bas', ru: 'Russie', sa: 'Arabie saoudite',
   summer: 'Mercato d’été', winter: 'Mercato d’hiver',
 };
 

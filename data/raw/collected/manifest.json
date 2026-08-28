@@ -1,0 +1,886 @@
+{
+  "collectedAt": "2026-08-28T06:53:23.948Z",
+  "source": "transfermarkt.com",
+  "method": "first-party collector (scripts/collect-transfermarkt.mjs)",
+  "seasons": [
+    2026
+  ],
+  "leagues": [
+    "DE1",
+    "ES1",
+    "FR1",
+    "GB1",
+    "GB2",
+    "IT1",
+    "NL1",
+    "PT1",
+    "RU1",
+    "SA1"
+  ],
+  "lastRun": {
+    "at": "2026-08-28T06:53:23.948Z",
+    "seasons": [
+      2026
+    ],
+    "leagues": [
+      "GB1"
+    ],
+    "movementCount": 469,
+    "duplicatesRemoved": 0,
+    "requestCount": 2,
+    "unlockerRequestCount": 0
+  },
+  "compositions": [
+    {
+      "leagueId": "DE1",
+      "season": 2026,
+      "teamCount": 18,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:28:03.109Z",
+      "clubs": [
+        {
+          "id": "3",
+          "name": "1.FC Köln"
+        },
+        {
+          "id": "89",
+          "name": "1.FC Union Berlin"
+        },
+        {
+          "id": "39",
+          "name": "1.FSV Mainz 05"
+        },
+        {
+          "id": "15",
+          "name": "Bayer 04 Leverkusen"
+        },
+        {
+          "id": "27",
+          "name": "Bayern Munich"
+        },
+        {
+          "id": "16",
+          "name": "Borussia Dortmund"
+        },
+        {
+          "id": "18",
+          "name": "Borussia Mönchengladbach"
+        },
+        {
+          "id": "24",
+          "name": "Eintracht Frankfurt"
+        },
+        {
+          "id": "167",
+          "name": "FC Augsburg"
+        },
+        {
+          "id": "33",
+          "name": "FC Schalke 04"
+        },
+        {
+          "id": "41",
+          "name": "Hamburger SV"
+        },
+        {
+          "id": "23826",
+          "name": "RB Leipzig"
+        },
+        {
+          "id": "60",
+          "name": "SC Freiburg"
+        },
+        {
+          "id": "127",
+          "name": "SC Paderborn 07"
+        },
+        {
+          "id": "64",
+          "name": "SV 07 Elversberg"
+        },
+        {
+          "id": "86",
+          "name": "SV Werder Bremen"
+        },
+        {
+          "id": "533",
+          "name": "TSG 1899 Hoffenheim"
+        },
+        {
+          "id": "79",
+          "name": "VfB Stuttgart"
+        }
+      ]
+    },
+    {
+      "leagueId": "ES1",
+      "season": 2026,
+      "teamCount": 20,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:27:50.868Z",
+      "clubs": [
+        {
+          "id": "621",
+          "name": "Athletic Bilbao"
+        },
+        {
+          "id": "13",
+          "name": "Atlético de Madrid"
+        },
+        {
+          "id": "331",
+          "name": "CA Osasuna"
+        },
+        {
+          "id": "940",
+          "name": "Celta de Vigo"
+        },
+        {
+          "id": "897",
+          "name": "Deportivo A Coruña"
+        },
+        {
+          "id": "1108",
+          "name": "Deportivo Alavés"
+        },
+        {
+          "id": "1531",
+          "name": "Elche CF"
+        },
+        {
+          "id": "131",
+          "name": "FC Barcelona"
+        },
+        {
+          "id": "3709",
+          "name": "Getafe CF"
+        },
+        {
+          "id": "3368",
+          "name": "Levante UD"
+        },
+        {
+          "id": "1084",
+          "name": "Málaga CF"
+        },
+        {
+          "id": "630",
+          "name": "Racing Santander"
+        },
+        {
+          "id": "367",
+          "name": "Rayo Vallecano"
+        },
+        {
+          "id": "714",
+          "name": "RCD Espanyol Barcelona"
+        },
+        {
+          "id": "150",
+          "name": "Real Betis Balompié"
+        },
+        {
+          "id": "418",
+          "name": "Real Madrid"
+        },
+        {
+          "id": "681",
+          "name": "Real Sociedad"
+        },
+        {
+          "id": "368",
+          "name": "Sevilla FC"
+        },
+        {
+          "id": "1049",
+          "name": "Valencia CF"
+        },
+        {
+          "id": "1050",
+          "name": "Villarreal CF"
+        }
+      ]
+    },
+    {
+      "leagueId": "FR1",
+      "season": 2026,
+      "teamCount": 18,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:28:11.555Z",
+      "clubs": [
+        {
+          "id": "290",
+          "name": "AJ Auxerre"
+        },
+        {
+          "id": "1420",
+          "name": "Angers SCO"
+        },
+        {
+          "id": "162",
+          "name": "AS Monaco"
+        },
+        {
+          "id": "1095",
+          "name": "ESTAC Troyes"
+        },
+        {
+          "id": "1158",
+          "name": "FC Lorient"
+        },
+        {
+          "id": "415",
+          "name": "FC Toulouse"
+        },
+        {
+          "id": "738",
+          "name": "Le Havre AC"
+        },
+        {
+          "id": "1164",
+          "name": "Le Mans FC"
+        },
+        {
+          "id": "1082",
+          "name": "LOSC Lille"
+        },
+        {
+          "id": "417",
+          "name": "OGC Nice"
+        },
+        {
+          "id": "1041",
+          "name": "Olympique Lyon"
+        },
+        {
+          "id": "244",
+          "name": "Olympique Marseille"
+        },
+        {
+          "id": "10004",
+          "name": "Paris FC"
+        },
+        {
+          "id": "583",
+          "name": "Paris Saint-Germain"
+        },
+        {
+          "id": "826",
+          "name": "RC Lens"
+        },
+        {
+          "id": "667",
+          "name": "RC Strasbourg Alsace"
+        },
+        {
+          "id": "3911",
+          "name": "Stade Brestois 29"
+        },
+        {
+          "id": "273",
+          "name": "Stade Rennais FC"
+        }
+      ]
+    },
+    {
+      "leagueId": "GB1",
+      "season": 2026,
+      "teamCount": 20,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-28T06:53:23.895Z",
+      "clubs": [
+        {
+          "id": "989",
+          "name": "AFC Bournemouth"
+        },
+        {
+          "id": "11",
+          "name": "Arsenal FC"
+        },
+        {
+          "id": "405",
+          "name": "Aston Villa"
+        },
+        {
+          "id": "1148",
+          "name": "Brentford FC"
+        },
+        {
+          "id": "1237",
+          "name": "Brighton & Hove Albion"
+        },
+        {
+          "id": "631",
+          "name": "Chelsea FC"
+        },
+        {
+          "id": "990",
+          "name": "Coventry City"
+        },
+        {
+          "id": "873",
+          "name": "Crystal Palace"
+        },
+        {
+          "id": "29",
+          "name": "Everton FC"
+        },
+        {
+          "id": "931",
+          "name": "Fulham FC"
+        },
+        {
+          "id": "3008",
+          "name": "Hull City"
+        },
+        {
+          "id": "677",
+          "name": "Ipswich Town"
+        },
+        {
+          "id": "399",
+          "name": "Leeds United"
+        },
+        {
+          "id": "31",
+          "name": "Liverpool FC"
+        },
+        {
+          "id": "281",
+          "name": "Manchester City"
+        },
+        {
+          "id": "985",
+          "name": "Manchester United"
+        },
+        {
+          "id": "762",
+          "name": "Newcastle United"
+        },
+        {
+          "id": "703",
+          "name": "Nottingham Forest"
+        },
+        {
+          "id": "289",
+          "name": "Sunderland AFC"
+        },
+        {
+          "id": "148",
+          "name": "Tottenham Hotspur"
+        }
+      ]
+    },
+    {
+      "leagueId": "GB2",
+      "season": 2026,
+      "teamCount": 24,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:28:39.780Z",
+      "clubs": [
+        {
+          "id": "337",
+          "name": "Birmingham City"
+        },
+        {
+          "id": "164",
+          "name": "Blackburn Rovers"
+        },
+        {
+          "id": "355",
+          "name": "Bolton Wanderers"
+        },
+        {
+          "id": "698",
+          "name": "Bristol City"
+        },
+        {
+          "id": "1132",
+          "name": "Burnley FC"
+        },
+        {
+          "id": "603",
+          "name": "Cardiff City"
+        },
+        {
+          "id": "358",
+          "name": "Charlton Athletic"
+        },
+        {
+          "id": "22",
+          "name": "Derby County"
+        },
+        {
+          "id": "1198",
+          "name": "Lincoln City"
+        },
+        {
+          "id": "641",
+          "name": "Middlesbrough FC"
+        },
+        {
+          "id": "1028",
+          "name": "Millwall FC"
+        },
+        {
+          "id": "1123",
+          "name": "Norwich City"
+        },
+        {
+          "id": "1020",
+          "name": "Portsmouth FC"
+        },
+        {
+          "id": "466",
+          "name": "Preston North End"
+        },
+        {
+          "id": "1039",
+          "name": "Queens Park Rangers"
+        },
+        {
+          "id": "350",
+          "name": "Sheffield United"
+        },
+        {
+          "id": "180",
+          "name": "Southampton FC"
+        },
+        {
+          "id": "512",
+          "name": "Stoke City"
+        },
+        {
+          "id": "2288",
+          "name": "Swansea City"
+        },
+        {
+          "id": "1010",
+          "name": "Watford FC"
+        },
+        {
+          "id": "984",
+          "name": "West Bromwich Albion"
+        },
+        {
+          "id": "379",
+          "name": "West Ham United"
+        },
+        {
+          "id": "543",
+          "name": "Wolverhampton Wanderers"
+        },
+        {
+          "id": "1112",
+          "name": "Wrexham AFC"
+        }
+      ]
+    },
+    {
+      "leagueId": "IT1",
+      "season": 2026,
+      "teamCount": 20,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:27:55.324Z",
+      "clubs": [
+        {
+          "id": "5",
+          "name": "AC Milan"
+        },
+        {
+          "id": "2919",
+          "name": "AC Monza"
+        },
+        {
+          "id": "430",
+          "name": "ACF Fiorentina"
+        },
+        {
+          "id": "12",
+          "name": "AS Roma"
+        },
+        {
+          "id": "800",
+          "name": "Atalanta BC"
+        },
+        {
+          "id": "1025",
+          "name": "Bologna FC 1909"
+        },
+        {
+          "id": "1390",
+          "name": "Cagliari Calcio"
+        },
+        {
+          "id": "1047",
+          "name": "Como 1907"
+        },
+        {
+          "id": "8970",
+          "name": "Frosinone Calcio"
+        },
+        {
+          "id": "252",
+          "name": "Genoa CFC"
+        },
+        {
+          "id": "46",
+          "name": "Inter Milan"
+        },
+        {
+          "id": "506",
+          "name": "Juventus FC"
+        },
+        {
+          "id": "130",
+          "name": "Parma Calcio 1913"
+        },
+        {
+          "id": "398",
+          "name": "SS Lazio"
+        },
+        {
+          "id": "6195",
+          "name": "SSC Napoli"
+        },
+        {
+          "id": "416",
+          "name": "Torino FC"
+        },
+        {
+          "id": "410",
+          "name": "Udinese Calcio"
+        },
+        {
+          "id": "1005",
+          "name": "US Lecce"
+        },
+        {
+          "id": "6574",
+          "name": "US Sassuolo"
+        },
+        {
+          "id": "607",
+          "name": "Venezia FC"
+        }
+      ]
+    },
+    {
+      "leagueId": "NL1",
+      "season": 2026,
+      "teamCount": 18,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:28:24.115Z",
+      "clubs": [
+        {
+          "id": "1268",
+          "name": "ADO Den Haag"
+        },
+        {
+          "id": "610",
+          "name": "Ajax Amsterdam"
+        },
+        {
+          "id": "1090",
+          "name": "AZ Alkmaar"
+        },
+        {
+          "id": "798",
+          "name": "Excelsior Rotterdam"
+        },
+        {
+          "id": "202",
+          "name": "FC Groningen"
+        },
+        {
+          "id": "317",
+          "name": "FC Twente Enschede"
+        },
+        {
+          "id": "200",
+          "name": "FC Utrecht"
+        },
+        {
+          "id": "234",
+          "name": "Feyenoord Rotterdam"
+        },
+        {
+          "id": "385",
+          "name": "Fortuna Sittard"
+        },
+        {
+          "id": "1435",
+          "name": "Go Ahead Eagles"
+        },
+        {
+          "id": "467",
+          "name": "NEC Nijmegen"
+        },
+        {
+          "id": "1269",
+          "name": "PEC Zwolle"
+        },
+        {
+          "id": "383",
+          "name": "PSV Eindhoven"
+        },
+        {
+          "id": "133",
+          "name": "SC Cambuur Leeuwarden"
+        },
+        {
+          "id": "306",
+          "name": "SC Heerenveen"
+        },
+        {
+          "id": "1434",
+          "name": "SC Telstar"
+        },
+        {
+          "id": "468",
+          "name": "Sparta Rotterdam"
+        },
+        {
+          "id": "403",
+          "name": "Willem II Tilburg"
+        }
+      ]
+    },
+    {
+      "leagueId": "PT1",
+      "season": 2026,
+      "teamCount": 18,
+      "membershipControl": "openfootball",
+      "collectedAt": "2026-08-27T22:28:17.136Z",
+      "clubs": [
+        {
+          "id": "7788",
+          "name": "Académico Viseu FC"
+        },
+        {
+          "id": "3268",
+          "name": "Casa Pia AC"
+        },
+        {
+          "id": "982",
+          "name": "CD Nacional"
+        },
+        {
+          "id": "2423",
+          "name": "CD Santa Clara"
+        },
+        {
+          "id": "2431",
+          "name": "CF Estrela Amadora"
+        },
+        {
+          "id": "1301",
+          "name": "CS Marítimo"
+        },
+        {
+          "id": "2521",
+          "name": "FC Alverca"
+        },
+        {
+          "id": "8024",
+          "name": "FC Arouca"
+        },
+        {
+          "id": "3329",
+          "name": "FC Famalicão"
+        },
+        {
+          "id": "720",
+          "name": "FC Porto"
+        },
+        {
+          "id": "1465",
+          "name": "GD Estoril Praia"
+        },
+        {
+          "id": "2424",
+          "name": "Gil Vicente FC"
+        },
+        {
+          "id": "979",
+          "name": "Moreirense FC"
+        },
+        {
+          "id": "2425",
+          "name": "Rio Ave FC"
+        },
+        {
+          "id": "1075",
+          "name": "SC Braga"
+        },
+        {
+          "id": "294",
+          "name": "SL Benfica"
+        },
+        {
+          "id": "336",
+          "name": "Sporting CP"
+        },
+        {
+          "id": "2420",
+          "name": "Vitória Guimarães SC"
+        }
+      ]
+    },
+    {
+      "leagueId": "RU1",
+      "season": 2026,
+      "teamCount": 16,
+      "membershipControl": null,
+      "collectedAt": "2026-08-27T22:28:31.165Z",
+      "clubs": [
+        {
+          "id": "3725",
+          "name": "Akhmat Grozny"
+        },
+        {
+          "id": "71985",
+          "name": "Akron Tolyatti"
+        },
+        {
+          "id": "2741",
+          "name": "Baltika Kaliningrad"
+        },
+        {
+          "id": "2410",
+          "name": "CSKA Moscow"
+        },
+        {
+          "id": "75231",
+          "name": "Dinamo Makhachkala"
+        },
+        {
+          "id": "121",
+          "name": "Dynamo Moscow"
+        },
+        {
+          "id": "1124",
+          "name": "Fakel Voronezh"
+        },
+        {
+          "id": "16704",
+          "name": "FC Krasnodar"
+        },
+        {
+          "id": "14589",
+          "name": "FC Orenburg"
+        },
+        {
+          "id": "1083",
+          "name": "FC Rostov"
+        },
+        {
+          "id": "2696",
+          "name": "Krylya Sovetov Samara"
+        },
+        {
+          "id": "932",
+          "name": "Lokomotiv Moscow"
+        },
+        {
+          "id": "59024",
+          "name": "Rodina Moscow"
+        },
+        {
+          "id": "2698",
+          "name": "Rubin Kazan"
+        },
+        {
+          "id": "232",
+          "name": "Spartak Moscow"
+        },
+        {
+          "id": "964",
+          "name": "Zenit St. Petersburg"
+        }
+      ]
+    },
+    {
+      "leagueId": "SA1",
+      "season": 2026,
+      "teamCount": 18,
+      "membershipControl": null,
+      "collectedAt": "2026-08-27T22:28:46.461Z",
+      "clubs": [
+        {
+          "id": "40039",
+          "name": "Abha Club"
+        },
+        {
+          "id": "18487",
+          "name": "Al-Ahli SFC"
+        },
+        {
+          "id": "52358",
+          "name": "Al-Diriyah FC"
+        },
+        {
+          "id": "7732",
+          "name": "Al-Ettifaq FC"
+        },
+        {
+          "id": "28848",
+          "name": "Al-Faisaly FC"
+        },
+        {
+          "id": "27221",
+          "name": "Al-Fateh SC"
+        },
+        {
+          "id": "50531",
+          "name": "Al-Fayha FC"
+        },
+        {
+          "id": "9131",
+          "name": "Al-Hazem SC"
+        },
+        {
+          "id": "1114",
+          "name": "Al-Hilal SFC"
+        },
+        {
+          "id": "8023",
+          "name": "Al-Ittihad Club"
+        },
+        {
+          "id": "6070",
+          "name": "Al-Khaleej FC"
+        },
+        {
+          "id": "91427",
+          "name": "Al-Kholood Club"
+        },
+        {
+          "id": "18544",
+          "name": "Al-Nassr FC"
+        },
+        {
+          "id": "26069",
+          "name": "Al-Qadsiah FC"
+        },
+        {
+          "id": "31008",
+          "name": "Al-Riyadh SC"
+        },
+        {
+          "id": "9840",
+          "name": "Al-Shabab FC"
+        },
+        {
+          "id": "28844",
+          "name": "Al-Taawoun FC"
+        },
+        {
+          "id": "34911",
+          "name": "NEOM SC"
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

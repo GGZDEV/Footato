@@ -10,10 +10,32 @@ export interface League {
   tier: number;
 }
 
+/**
+ * One acquisition layer. Seasons are owned by exactly one origin, so a date
+ * here describes the data it supplied rather than the dataset as a whole.
+ */
+export interface Origin {
+  id: 'legacy' | 'recent' | 'collected';
+  dataset: string;
+  updatedAt: string | null;
+  movementCount: number;
+  seasons?: number[];
+  /** True when Footato read the pages itself instead of importing a rebuild. */
+  firstParty: boolean;
+}
+
 export interface Meta {
   generatedAt: string;
   /** Last modification date reported by the maintained upstream export. */
   sourceUpdatedAt: string | null;
+  /** Per-layer provenance; see build-dataset.mjs. */
+  origins?: Origin[];
+  /**
+   * Which origin supplies the season in progress, and when it was read. This is
+   * the number that matters during an open mercato: the dataset as a whole can
+   * be months old without harm, the current window cannot.
+   */
+  currentSeason?: { year: number; origin: string; updatedAt: string | null };
   source: string;
   sourceDataset: string;
   yearMin: number;
@@ -33,6 +55,25 @@ export interface Meta {
       skippedFuture: number;
       skippedBadDate: number;
       skippedNoMembership: number;
+    };
+    collected?: null | {
+      collectedAt: string;
+      seasons: number[];
+      leagues: string[];
+      movementCount: number;
+      requestCount: number | null;
+      failures: Array<{ leagueId: string; season: number; window: string; error: string }>;
+      /**
+       * `membershipControl` is null for leagues no independent fixture list
+       * covers (Russia, Saudi Arabia): their composition rests on Transfermarkt
+       * alone, which the UI states rather than glosses over.
+       */
+      compositions: Array<{
+        leagueId: string;
+        season: number;
+        teamCount: number;
+        membershipControl: string | null;
+      }>;
     };
     memberships: Array<{
       leagueId: string;
@@ -100,6 +141,50 @@ export interface FreshnessSignal {
   toTeam: { id: number; name: string } | null;
   firstDetectedAt: string;
   lastSeenAt: string;
+}
+
+/**
+ * One recent transfer published by Transfermarkt, and whether Footato's data
+ * contains it. `included` is matched on Transfermarkt's own transfer id, so it
+ * is an exact answer rather than a name comparison.
+ */
+export interface LatestTransfer {
+  leagueId: string;
+  transferId: string;
+  date: string;
+  player: string;
+  from: string;
+  fromLeagueId: string | null;
+  to: string;
+  toLeagueId: string | null;
+  fee: string;
+  feeCleaned: string;
+  included: boolean;
+}
+
+export interface LatestData {
+  meta: {
+    checkedAt: string;
+    source: string;
+    provider: string;
+    leagueCount: number;
+    transferCount: number;
+    includedCount: number;
+    /** Most recent transfer the source published, included or not. */
+    newestSeen: string | null;
+    /** Most recent transfer Footato actually holds. A gap between the two is the lag. */
+    newestIncluded: string | null;
+    requestCount: number;
+    failures: Array<{ leagueId: string; error: string }>;
+  };
+  leagues: Array<{
+    leagueId: string;
+    sampled: number;
+    included: number;
+    newestSeen: string | null;
+    newestIncluded: string | null;
+  }>;
+  transfers: LatestTransfer[];
 }
 
 export interface FreshnessData {

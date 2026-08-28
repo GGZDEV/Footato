@@ -1,0 +1,430 @@
+club_name,player_name,age,position,club_involved_name,fee,transfer_movement,transfer_period,fee_cleaned,league_name,year,season,country,source,source_id,transfer_date,club_source_id,counterpart_source_id
+ADO Den Haag,Jonas Jensen-Abbew,24,Centre-Back,Aarhus GF,€400Th.,in,Summer,0.4,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6537701,,1268,678
+ADO Den Haag,Niclas Thiede,27,Goalkeeper,VfL Bochum,€100Th.,in,Summer,0.1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6430421,,1268,80
+ADO Den Haag,Lasse Wilhelm,23,Centre-Back,1.FC Saarbrücken,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6314641,,1268,1
+ADO Den Haag,Jan Zamburek,25,Central Midfield,Heracles Almelo,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6427892,,1268,1304
+ADO Den Haag,Donát Bárány,25,Centre-Forward,Debreceni VSC,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6430868,,1268,84
+ADO Den Haag,Yannick Eduardo,20,Centre-Forward,TSG 1899 Hoffenheim,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6444089,,1268,533
+ADO Den Haag,Othniël Raterink,20,Right-Back,Cagliari Calcio,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6496839,,1268,1390
+ADO Den Haag,Taneli Hämäläinen,25,Centre-Back,Kuopion Palloseura,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5868103,,1268,6251
+ADO Den Haag,Jari Vlak,27,Central Midfield,CD Castellón,€600Th.,out,Summer,0.6,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6412472,,1268,2502
+ADO Den Haag,Steven van der Sloot,23,Right-Back,Fortuna Düsseldorf,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6319248,,1268,38
+ADO Den Haag,Taneli Hämäläinen,25,Centre-Back,Kuopion Palloseura,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6392412,,1268,6251
+ADO Den Haag,Antoine Lejoly,28,Goalkeeper,KAS Eupen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6434809,,1268,1245
+ADO Den Haag,Diogo Tomas,29,Centre-Back,AIK,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6475496,,1268,272
+ADO Den Haag,Devyn Payne,21,Centre-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6255504,,1268,515
+ADO Den Haag,Mees Kreekels,24,Right-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381597,,1268,515
+ADO Den Haag,Lorenzo Maasland,21,Left Winger,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381599,,1268,515
+ADO Den Haag,Joey Brandt,21,Central Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381600,,1268,515
+ADO Den Haag,Bryan Fiabema,23,Centre-Forward,Lech Poznan,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6138870,,1268,238
+Ajax Amsterdam,Marcos Leonardo,23,Centre-Forward,Al-Hilal SFC,€19.90m,in,Summer,19.9,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6435617,,610,1114
+Ajax Amsterdam,Caio Henrique,28,Left-Back,AS Monaco,€10.50m,in,Summer,10.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6389590,,610,162
+Ajax Amsterdam,Viktor Tsygankov,28,Right Winger,Girona FC,€4.00m,in,Summer,4,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6539082,,610,12321
+Ajax Amsterdam,Julian Brandt,30,Attacking Midfield,Borussia Dortmund,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6219295,,610,16
+Ajax Amsterdam,Daley Blind,36,Centre-Back,Girona FC,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6410918,,610,12321
+Ajax Amsterdam,Jofre Torrents,19,Left-Back,FC Barcelona,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6513030,,610,131
+Ajax Amsterdam,Tolu Arokodare,25,Centre-Forward,Wolverhampton Wanderers,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6467407,,610,543
+Ajax Amsterdam,Marc ter Stegen,34,Goalkeeper,FC Barcelona,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6483706,,610,131
+Ajax Amsterdam,Amourricho van Axel Dongen,21,Left Winger,SC Heerenveen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5782166,,610,306
+Ajax Amsterdam,Chuba Akpom,30,Centre-Forward,Ipswich Town,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5852004,,610,677
+Ajax Amsterdam,Sivert Mannsverk,24,Defensive Midfield,AC Sparta Prague,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5879281,,610,197
+Ajax Amsterdam,Ahmetcan Kaplan,23,Centre-Back,NEC Nijmegen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5902716,,610,467
+Ajax Amsterdam,Branco van den Boomen,30,Central Midfield,Angers SCO,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6136058,,610,1420
+Ajax Amsterdam,Mika Godts,21,Left Winger,Paris Saint-Germain,€45.00m,out,Summer,45,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6507736,,610,583
+Ajax Amsterdam,Sean Steur,18,Central Midfield,Newcastle United,€23.50m,out,Summer,23.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6414088,,610,762
+Ajax Amsterdam,Chuba Akpom,30,Centre-Forward,Ipswich Town,€9.30m,out,Summer,9.3,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6298287,,610,677
+Ajax Amsterdam,Ko Itakura,29,Centre-Back,Borussia Mönchengladbach,€3.50m,out,Summer,3.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6520302,,610,18
+Ajax Amsterdam,Josip Sutalo,26,Centre-Back,SS Lazio,Loan fee:€3.00m,out,Summer,3,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6526561,,610,398
+Ajax Amsterdam,Sivert Mannsverk,24,Defensive Midfield,AC Sparta Prague,€2.50m,out,Summer,2.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6371171,,610,197
+Ajax Amsterdam,Ahmetcan Kaplan,23,Centre-Back,NEC Nijmegen,€2.50m,out,Summer,2.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6520365,,610,467
+Ajax Amsterdam,Kian Fitz-Jim,23,Central Midfield,Torino FC,€2.50m,out,Summer,2.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6472751,,610,416
+Ajax Amsterdam,Wout Weghorst,33,Centre-Forward,FC Twente Enschede,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6354552,,610,317
+Ajax Amsterdam,Branco van den Boomen,30,Central Midfield,Angers SCO,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6416446,,610,1420
+Ajax Amsterdam,Takehiro Tomiyasu,27,Centre-Back,Crystal Palace,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6489474,,610,873
+Ajax Amsterdam,Don-Angelo Konadu,20,Centre-Forward,Lommel SK,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6523539,,610,5026
+Ajax Amsterdam,Oleksandr Zinchenko,29,Left-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6365795,,610,515
+Ajax Amsterdam,Vitezslav Jaros,24,Goalkeeper,Liverpool FC,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5713023,,610,31
+AZ Alkmaar,Stije Resink,23,Defensive Midfield,FC Groningen,€4.50m,in,Summer,4.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6515278,,1090,202
+AZ Alkmaar,Andrea Natali,18,Centre-Back,Bayer 04 Leverkusen U19,€2.25m,in,Summer,2.25,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6463871,,1090,4713
+AZ Alkmaar,Sam de Grand,21,Left-Back,Lommel SK,€1.50m,in,Summer,1.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6460052,,1090,5026
+AZ Alkmaar,Abdelnour Soualhia,25,Centre-Back,Le Puy-en-Velay FC,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383200,,1090,26863
+AZ Alkmaar,Calvin Stengs,27,Right Winger,Feyenoord Rotterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6447981,,1090,234
+AZ Alkmaar,Jari De Busser,26,Goalkeeper,Go Ahead Eagles,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369371,,1090,1435
+AZ Alkmaar,Lewis Schouten,22,Centre-Back,Excelsior Rotterdam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5740423,,1090,798
+AZ Alkmaar,Mayckel Lahdo,23,Right Winger,Bröndby IF,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6157166,,1090,206
+AZ Alkmaar,Dave Kwakman,21,Central Midfield,FC Volendam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6112076,,1090,724
+AZ Alkmaar,Lequincio Zeefuik,21,Centre-Forward,Heracles Almelo,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6104750,,1090,1304
+AZ Alkmaar,Zico Buurmeester,24,Central Midfield,PEC Zwolle,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5911500,,1090,1269
+AZ Alkmaar,Kristijan Belic,25,Defensive Midfield,Maccabi Tel Aviv,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5851510,,1090,119
+AZ Alkmaar,Sem Westerveld,23,Goalkeeper,MVV Maastricht,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5746137,,1090,384
+AZ Alkmaar,Troy Parrott,24,Centre-Forward,Real Betis Balompié,€16.00m,out,Summer,16,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6522470,,1090,150
+AZ Alkmaar,Sven Mijnans,26,Attacking Midfield,PSV Eindhoven,€13.00m,out,Summer,13,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6406941,,1090,383
+AZ Alkmaar,Kristijan Belic,25,Defensive Midfield,Maccabi Tel Aviv,€1.30m,out,Summer,1.3,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6332730,,1090,119
+AZ Alkmaar,Zico Buurmeester,24,Central Midfield,CD Leganés,€1.00m,out,Summer,1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6406701,,1090,1244
+AZ Alkmaar,Sem Westerveld,23,Goalkeeper,Real Zaragoza,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6406703,,1090,142
+AZ Alkmaar,Lequincio Zeefuik,21,Centre-Forward,Fortuna Sittard,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6389300,,1090,385
+AZ Alkmaar,Billy van Duijl,20,Centre-Back,SC Cambuur Leeuwarden,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6532227,,1090,133
+AZ Alkmaar,Isak Jensen,22,Left Winger,FC Lorient,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6532017,,1090,1158
+AZ Alkmaar,Alexandre Penetra,24,Centre-Back,Corum FK,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6482750,,1090,37951
+AZ Alkmaar,Kasper Boogaard,20,Defensive Midfield,Willem II Tilburg,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6452746,,1090,403
+AZ Alkmaar,Abdelnour Soualhia,25,Centre-Back,SC Telstar,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383201,,1090,1434
+AZ Alkmaar,Daniël Deen,23,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6319099,,1090,515
+Excelsior Rotterdam,Daniel van Vianen,23,Defensive Midfield,FC Dordrecht,€475Th.,in,Summer,0.475,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369643,,798,1455
+Excelsior Rotterdam,Yacqub Finey,22,Attacking Midfield,GIF Sundsvall,€185Th.,in,Summer,0.185,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6393365,,798,2843
+Excelsior Rotterdam,Alireza Jahanbakhsh,32,Right Winger,FCV Dender EH,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6492897,,798,9010
+Excelsior Rotterdam,Marlon van de Wetering,18,Right-Back,FC Eindhoven,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6368976,,798,3892
+Excelsior Rotterdam,Celton Biai,25,Goalkeeper,FC Dordrecht,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6436584,,798,1455
+Excelsior Rotterdam,Valentin Sulzbacher,21,Central Midfield,Red Bull Salzburg,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6462498,,798,409
+Excelsior Rotterdam,Ilano Silva Timas,23,Left Winger,MVV Maastricht,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6429000,,798,384
+Excelsior Rotterdam,Osman Turay,18,Left-Back,Bayer 04 Leverkusen U19,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6466788,,798,4713
+Excelsior Rotterdam,David Garden,22,Centre-Forward,KVV Quick Boys Katwijk,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6413207,,798,7110
+Excelsior Rotterdam,Ágúst Orri Thorsteinsson,21,Left Winger,Breidablik Kópavogur,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6530533,,798,3737
+Excelsior Rotterdam,Aymen Sliti,20,Left Winger,Feyenoord Rotterdam,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6485409,,798,234
+Excelsior Rotterdam,Mario Domínguez,22,Centre-Forward,Valencia CF,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6490283,,798,1049
+Excelsior Rotterdam,Eric da Silva Moreira,20,Right-Back,Nottingham Forest,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6536246,,798,703
+Excelsior Rotterdam,Jan Plug,21,Centre-Back,Feyenoord Rotterdam,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6424563,,798,234
+Excelsior Rotterdam,Kasey Bos,22,Left-Back,1.FSV Mainz 05,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6336441,,798,39
+Excelsior Rotterdam,Nolan Martens,21,Right-Back,De Graafschap Doetinchem,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6164613,,798,642
+Excelsior Rotterdam,Gyan de Regt,23,Left Winger,Holstein Kiel,€1.70m,out,Summer,1.7,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6517198,,798,269
+Excelsior Rotterdam,Derensili Sanches Fernandes,25,Right Winger,Huddersfield Town,€1.00m,out,Summer,1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6444137,,798,1110
+Excelsior Rotterdam,Arthur Zagré,24,Left-Back,FC Utrecht,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6324110,,798,200
+Excelsior Rotterdam,Mike van Duinen,34,Centre-Forward,VV Katwijk,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381637,,798,9933
+Excelsior Rotterdam,Ilias Bronkhorst,29,Right-Back,Huddersfield Town,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6400907,,798,1110
+Excelsior Rotterdam,Calvin Raatsie,24,Goalkeeper,FC Dordrecht,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6435447,,798,1455
+Excelsior Rotterdam,Adam Carlén,26,Defensive Midfield,SK Artis Brno,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6436997,,798,24325
+Excelsior Rotterdam,Jerolldino Bergraaf,20,Centre-Forward,AZ Alkmaar U21,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6411287,,798,11368
+Excelsior Rotterdam,Hamdi Akujobi,26,Right-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381636,,798,515
+Excelsior Rotterdam,Emil Hansson,28,Left Winger,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6533728,,798,515
+Excelsior Rotterdam,Lewis Schouten,22,Centre-Back,AZ Alkmaar,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5740423,,798,1090
+Excelsior Rotterdam,Miliano Jonathans,22,Right Winger,FC Utrecht,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6122779,,798,200
+Excelsior Rotterdam,Szymon Wlodarczyk,23,Centre-Forward,SK Sturm Graz,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5884990,,798,122
+FC Groningen,Márk Csinger,23,Centre-Back,ETO FC,€1.40m,in,Summer,1.4,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6502894,,202,6055
+FC Groningen,Alvin Nordin,18,Central Midfield,Helsingborgs IF,€1.00m,in,Summer,1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6485403,,202,699
+FC Groningen,Nikolas Brandis,21,Left-Back,AS Trencin,€600Th.,in,Summer,0.6,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6451015,,202,7918
+FC Groningen,Rijk Janse,24,Goalkeeper,NEC Nijmegen,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6343397,,202,467
+FC Groningen,Pelle Clement,30,Central Midfield,Sparta Rotterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6324188,,202,468
+FC Groningen,Travis Hernes,20,Central Midfield,Newcastle United U21,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6335984,,202,9253
+FC Groningen,Malcolm Jeng,21,Centre-Back,Stade Reims,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6469886,,202,1421
+FC Groningen,Jacob Ondrejka,23,Left Winger,Parma Calcio 1913,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6502969,,202,130
+FC Groningen,Noam Emeran,23,Left Winger,FC Emmen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166288,,202,1283
+FC Groningen,Fofin Turay,22,Left Winger,TOP Oss,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5914980,,202,1228
+FC Groningen,Romano Postema,24,Centre-Forward,FC Emmen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5799196,,202,1283
+FC Groningen,Thijs Oosting,26,Attacking Midfield,PEC Zwolle,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5786992,,202,1269
+FC Groningen,Stije Resink,23,Defensive Midfield,AZ Alkmaar,€4.50m,out,Summer,4.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6515278,,202,1090
+FC Groningen,Romano Postema,24,Centre-Forward,Viking FK,€800Th.,out,Summer,0.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6396991,,202,239
+FC Groningen,Thijs Oosting,26,Attacking Midfield,PEC Zwolle,€750Th.,out,Summer,0.75,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6313408,,202,1269
+FC Groningen,Sven Bouland,20,Centre-Back,MVV Maastricht,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6516981,,202,384
+FC Groningen,Fofin Turay,22,Left Winger,SC Telstar,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6500718,,202,1434
+FC Groningen,Hidde Jurjus,32,Goalkeeper,FC Volendam,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6465310,,202,724
+FC Groningen,Mats Seuntjens,34,Attacking Midfield,NAC Breda,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6454078,,202,132
+FC Groningen,Rui Mendes,26,Right Winger,SC Telstar,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6428097,,202,1434
+FC Groningen,Marvin Peersman,35,Centre-Back,SC Telstar,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6408127,,202,1434
+FC Groningen,Dirk Baron,23,Goalkeeper,FC Emmen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6323717,,202,1283
+FC Groningen,Travis Hernes,20,Central Midfield,Newcastle United U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5918953,,202,9253
+FC Groningen,Dies Janse,20,Centre-Back,Ajax Amsterdam U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5874197,,202,8817
+FC Groningen,Younes Taha,23,Right Winger,FC Twente Enschede,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5758914,,202,317
+FC Twente Enschede,Filip Thorvaldsen,20,Right Winger,Vålerenga Fotball Elite,€5.50m,in,Summer,5.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6494911,,317,76
+FC Twente Enschede,Ramiz Zerrouki,28,Defensive Midfield,Feyenoord Rotterdam,€2.25m,in,Summer,2.25,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6441267,,317,234
+FC Twente Enschede,Aske Adelgaard,22,Left-Back,Go Ahead Eagles,€2.00m,in,Summer,2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6363841,,317,1435
+FC Twente Enschede,Joël Drommel,29,Goalkeeper,PSV Eindhoven,€500Th.,in,Summer,0.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6484795,,317,383
+FC Twente Enschede,Krzysztof Kurowski,19,Left-Back,Slask Wroclaw,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6378381,,317,759
+FC Twente Enschede,Remko Pasveer,42,Goalkeeper,Heracles Almelo,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6318779,,317,1304
+FC Twente Enschede,Wout Weghorst,33,Centre-Forward,Ajax Amsterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6354552,,317,610
+FC Twente Enschede,Sayfallah Ltaief,26,Left Winger,SpVgg Greuther Fürth,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6161862,,317,65
+FC Twente Enschede,Naci Ünüvar,23,Left Winger,Heracles Almelo,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6145563,,317,1304
+FC Twente Enschede,Bas Kuipers,31,Left-Back,FC Arouca,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6088044,,317,8024
+FC Twente Enschede,Alec Van Hoorenbeeck,27,Centre-Back,Heracles Almelo,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5914516,,317,1304
+FC Twente Enschede,Gijs Besselink,22,Central Midfield,Willem II Tilburg,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5865369,,317,403
+FC Twente Enschede,Juliën Mesbahi,20,Centre-Back,FC Emmen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5760251,,317,1283
+FC Twente Enschede,Younes Taha,23,Right Winger,FC Groningen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5758914,,317,202
+FC Twente Enschede,Mats Rots,20,Left-Back,TSG 1899 Hoffenheim,€12.00m,out,Summer,12,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6345054,,317,533
+FC Twente Enschede,Bas Kuipers,31,Left-Back,Sparta Rotterdam,€400Th.,out,Summer,0.4,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6379197,,317,468
+FC Twente Enschede,Ricky van Wolfswinkel,37,Centre-Forward,VV Woudenberg,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6298959,,317,57106
+FC Twente Enschede,Sayfallah Ltaief,26,Left Winger,Cracovia,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6521279,,317,5689
+FC Twente Enschede,Harrie Kuster,20,Attacking Midfield,SC Telstar,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6484116,,317,1434
+FC Twente Enschede,Alec Van Hoorenbeeck,27,Centre-Back,HNK Hajduk Split,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6380956,,317,447
+FC Twente Enschede,Sam Karssies,23,Goalkeeper,FC Emmen,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6361064,,317,1283
+FC Twente Enschede,Przemyslaw Tyton,39,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381639,,317,515
+FC Twente Enschede,Ramiz Zerrouki,28,Defensive Midfield,Feyenoord Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5822446,,317,234
+FC Utrecht,Ángel Alarcón,22,Right Winger,FC Porto B,€2.00m,in,Summer,2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6318427,,200,10331
+FC Utrecht,Joris van Overeem,32,Defensive Midfield,SC Heerenveen,€700Th.,in,Summer,0.7,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6441091,,200,306
+FC Utrecht,Jamie Schuldes,19,Centre-Back,RB Leipzig U19,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6333458,,200,26621
+FC Utrecht,Kevin Paredes,23,Left Midfield,VfL Wolfsburg,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6380383,,200,82
+FC Utrecht,Guus Offerhaus,25,Centre-Back,SC Telstar,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6339383,,200,1434
+FC Utrecht,Arthur Zagré,24,Left-Back,Excelsior Rotterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6324110,,200,798
+FC Utrecht,Emmanuel Chigozie Owen,19,Right Winger,Bayer 04 Leverkusen U19,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6386158,,200,4713
+FC Utrecht,Marius Broholm,21,Right Winger,LOSC Lille,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6521842,,200,1082
+FC Utrecht,Jesse van de Haar,21,Centre-Forward,SK Beveren,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6162131,,200,28643
+FC Utrecht,Davy van den Berg,26,Central Midfield,Luton Town,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6163509,,200,1031
+FC Utrecht,Noah Ohio,23,Centre-Forward,Real Valladolid CF,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6136909,,200,366
+FC Utrecht,Miliano Jonathans,22,Right Winger,Excelsior Rotterdam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6122779,,200,798
+FC Utrecht,Tom de Graaff,21,Goalkeeper,PEC Zwolle,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5829460,,200,1269
+FC Utrecht,Neville Ogidi Nwankwo,23,Centre-Back,SC Telstar,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5748892,,200,1434
+FC Utrecht,Miguel Rodríguez,23,Right Winger,Deportivo Alavés,€5.00m,out,Summer,5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6460579,,200,1108
+FC Utrecht,Mike Eerdhuijzen,26,Centre-Back,KV Mechelen,€2.00m,out,Summer,2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6527375,,200,354
+FC Utrecht,Sébastien Haller,32,Centre-Forward,Sanfrecce Hiroshima,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6405027,,200,2697
+FC Utrecht,Mike van der Hoorn,33,Centre-Back,AEK Larnaca,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381657,,200,2156
+FC Utrecht,Nick Viergever,36,Centre-Back,PEC Zwolle,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6328226,,200,1269
+FC Utrecht,Souffian El Karouani,25,Left-Back,Al-Qadsiah FC,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6295624,,200,26069
+FC Utrecht,Tom de Graaff,21,Goalkeeper,PEC Zwolle,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6292282,,200,1269
+FC Utrecht,Jesse van de Haar,21,Centre-Forward,RKC Waalwijk,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6365409,,200,235
+FC Utrecht,Emirhan Demircan,21,Left Winger,SC Telstar,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6444135,,200,1434
+FC Utrecht,Rafik El Arguioui,21,Attacking Midfield,SC Cambuur Leeuwarden,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6475480,,200,133
+FC Utrecht,Emeka Adiele,19,Left-Back,Burton Albion,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6515754,,200,2963
+FC Utrecht,Can Bozdogan,25,Central Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381641,,200,515
+FC Utrecht,Gjivai Zechiël,22,Central Midfield,Feyenoord Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5703196,,200,234
+FC Utrecht,Ángel Alarcón,22,Right Winger,FC Porto B,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6144404,,200,10331
+FC Utrecht,Jesper Karlsson,27,Left Winger,Bologna FC 1909,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6138916,,200,1025
+Feyenoord Rotterdam,Nacho Ferri,21,Centre-Forward,KVC Westerlo,€9.00m,in,Summer,9,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6389513,,234,968
+Feyenoord Rotterdam,Charles Vanhoutte,27,Defensive Midfield,OGC Nice,€5.50m,in,Summer,5.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369059,,234,417
+Feyenoord Rotterdam,Tjark Ernst,23,Goalkeeper,Hertha BSC,€5.00m,in,Summer,5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6431383,,234,44
+Feyenoord Rotterdam,Mika Mármol,24,Centre-Back,UD Las Palmas,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6375060,,234,472
+Feyenoord Rotterdam,Javi López,24,Left-Back,Real Sociedad,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6513033,,234,681
+Feyenoord Rotterdam,Luka Ivanušec,27,Attacking Midfield,PAOK Thessaloniki,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5773721,,234,1091
+Feyenoord Rotterdam,Jan Plug,21,Centre-Back,FC Dordrecht,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6160432,,234,1455
+Feyenoord Rotterdam,Ramiz Zerrouki,28,Defensive Midfield,FC Twente Enschede,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5822446,,234,317
+Feyenoord Rotterdam,Stéphano Carrillo,20,Centre-Forward,FC Dordrecht,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5848706,,234,1455
+Feyenoord Rotterdam,Calvin Stengs,27,Right Winger,Pisa Sporting Club,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5899981,,234,4172
+Feyenoord Rotterdam,Jeyland Mitchell,21,Centre-Back,SK Sturm Graz,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5913474,,234,122
+Feyenoord Rotterdam,Jaden Slory,21,Right Winger,Go Ahead Eagles,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6069573,,234,1435
+Feyenoord Rotterdam,Neraysho Kasanwirjo,24,Centre-Back,Fortuna Sittard,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6100161,,234,385
+Feyenoord Rotterdam,Gjivai Zechiël,22,Central Midfield,FC Utrecht,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5703196,,234,200
+Feyenoord Rotterdam,Plamen Andreev,21,Goalkeeper,Lech Poznan,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6100210,,234,238
+Feyenoord Rotterdam,Leo Sauer,20,Left Winger,VfB Stuttgart,€15.00m,out,Summer,15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6467923,,234,79
+Feyenoord Rotterdam,Anel Ahmedhodzic,27,Centre-Back,Burnley FC,€7.00m,out,Summer,7,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6522556,,234,1132
+Feyenoord Rotterdam,In-beom Hwang,29,Defensive Midfield,FC Porto,€4.50m,out,Summer,4.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6442749,,234,720
+Feyenoord Rotterdam,Ramiz Zerrouki,28,Defensive Midfield,FC Twente Enschede,€2.25m,out,Summer,2.25,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6441267,,234,317
+Feyenoord Rotterdam,Jeyland Mitchell,21,Centre-Back,SK Sturm Graz,€1.80m,out,Summer,1.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6334806,,234,122
+Feyenoord Rotterdam,Timon Wellenreuther,30,Goalkeeper,VfL Wolfsburg,€1.00m,out,Summer,1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6433066,,234,82
+Feyenoord Rotterdam,Plamen Andreev,21,Goalkeeper,Debreceni VSC,€500Th.,out,Summer,0.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6368833,,234,84
+Feyenoord Rotterdam,Chris-Kévin Nadje,24,Central Midfield,KAS Eupen,€250Th.,out,Summer,0.25,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6475483,,234,1245
+Feyenoord Rotterdam,Calvin Stengs,27,Right Winger,AZ Alkmaar,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6447981,,234,1090
+Feyenoord Rotterdam,Aymen Sliti,20,Left Winger,Excelsior Rotterdam,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6485409,,234,798
+Feyenoord Rotterdam,Jaden Slory,21,Right Winger,Willem II Tilburg,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6409559,,234,403
+Feyenoord Rotterdam,Jan Plug,21,Centre-Back,Excelsior Rotterdam,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6424563,,234,798
+Feyenoord Rotterdam,Raheem Sterling,31,Right Winger,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6347328,,234,515
+Feyenoord Rotterdam,Gernot Trauner,34,Centre-Back,Retired,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6347329,,234,
+Feyenoord Rotterdam,Malcolm Jeng,21,Centre-Back,Stade Reims,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5910660,,234,1421
+Feyenoord Rotterdam,Steven Benda,27,Goalkeeper,Fulham FC,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166142,,234,931
+Fortuna Sittard,Nick de Groot,24,Left-Back,FC Den Bosch,€250Th.,in,Summer,0.25,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6430324,,385,404
+Fortuna Sittard,Siebe Wylin,23,Right-Back,Club NXT,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6417791,,385,43560
+Fortuna Sittard,Kaylen,22,Goalkeeper,Sparta Rotterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5719917,,385,468
+Fortuna Sittard,Sven Simons,22,Central Midfield,FC Eindhoven,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6303189,,385,3892
+Fortuna Sittard,Ole Romeny,26,Centre-Forward,Oxford United,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6419244,,385,988
+Fortuna Sittard,Shiloh 't Zand,23,Attacking Midfield,Feyenoord U21,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6431412,,385,24366
+Fortuna Sittard,Lequincio Zeefuik,21,Centre-Forward,AZ Alkmaar,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6389300,,385,1090
+Fortuna Sittard,Rodrigo Guth,25,Centre-Back,CA Talleres,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6519871,,385,3938
+Fortuna Sittard,Anthony Descotte,22,Centre-Forward,Royal Charleroi SC,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6448417,,385,172
+Fortuna Sittard,Onur Demir,23,Centre-Forward,FC Petrzalka,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5803722,,385,2781
+Fortuna Sittard,Hasip Korkmazyürek,23,Central Midfield,Isparta 32 Spor,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381668,,385,55705
+Fortuna Sittard,Kaj Sierhuis,28,Centre-Forward,NEC Nijmegen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6310186,,385,467
+Fortuna Sittard,Nick Marsman,35,Goalkeeper,Go Ahead Eagles,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6307734,,385,1435
+Fortuna Sittard,Tristan Schenkhuizen,21,Defensive Midfield,VVV-Venlo,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6262985,,385,1426
+Fortuna Sittard,Paul Gladon,34,Centre-Forward,NAC Breda,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6262983,,385,132
+Fortuna Sittard,Shawn Adewoye,26,Centre-Back,Lommel SK,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6481688,,385,5026
+Fortuna Sittard,Alen Halilovic,30,Attacking Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381664,,385,515
+Fortuna Sittard,Ramazan Bayram,21,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6475554,,385,515
+Fortuna Sittard,Samuel Bastien,29,Central Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6412023,,385,515
+Fortuna Sittard,Luka Tunjic,20,Attacking Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381666,,385,515
+Fortuna Sittard,Daley Sinkgraven,30,Left-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381665,,385,515
+Fortuna Sittard,Niels Martens,22,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6262984,,385,515
+Fortuna Sittard,Onur Demir,23,Centre-Forward,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6261830,,385,515
+Fortuna Sittard,Lance Duijvestijn,27,Attacking Midfield,Sparta Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6122798,,385,468
+Fortuna Sittard,Neraysho Kasanwirjo,24,Centre-Back,Feyenoord Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6100161,,385,234
+Fortuna Sittard,Justin Lonwijk,26,Central Midfield,Dynamo Kyiv,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5843942,,385,338
+Fortuna Sittard,Dimitrios Limnios,28,Right Winger,Panathinaikos,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5785257,,385,265
+Go Ahead Eagles,Erik Flataker,21,Centre-Forward,AIK,€1.00m,in,Summer,1,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6411152,,1435,272
+Go Ahead Eagles,Tomas Galvez,21,Left-Back,Manchester City U21,€500Th.,in,Summer,0.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6410426,,1435,9265
+Go Ahead Eagles,Kjetil Haug,28,Goalkeeper,FC Toulouse,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6327218,,1435,415
+Go Ahead Eagles,Nick Marsman,35,Goalkeeper,Fortuna Sittard,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6307734,,1435,385
+Go Ahead Eagles,Luca Everink,25,Right-Back,FC Emmen,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5914978,,1435,1283
+Go Ahead Eagles,Calvin Twigt,23,Defensive Midfield,Willem II Tilburg,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166740,,1435,403
+Go Ahead Eagles,Milan Smit,23,Centre-Forward,Stoke City,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6142228,,1435,512
+Go Ahead Eagles,Xander Blomme,24,Defensive Midfield,FC Eindhoven,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6125668,,1435,3892
+Go Ahead Eagles,Milan Smit,23,Centre-Forward,Stoke City,€5.50m,out,Summer,5.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6142229,,1435,512
+Go Ahead Eagles,Jakob Breum,22,Attacking Midfield,AS Saint-Étienne,€2.20m,out,Summer,2.2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6400804,,1435,618
+Go Ahead Eagles,Aske Adelgaard,22,Left-Back,FC Twente Enschede,€2.00m,out,Summer,2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6363841,,1435,317
+Go Ahead Eagles,Calvin Twigt,23,Defensive Midfield,Willem II Tilburg,€800Th.,out,Summer,0.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6512009,,1435,403
+Go Ahead Eagles,Luca Everink,25,Right-Back,FC Emmen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6243639,,1435,1283
+Go Ahead Eagles,Finn Stokkers,30,Centre-Forward,RKC Waalwijk,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6447077,,1435,235
+Go Ahead Eagles,Xander Blomme,24,Defensive Midfield,FC Eindhoven,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6243638,,1435,3892
+Go Ahead Eagles,Sven Jansen,21,Goalkeeper,TOP Oss,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6243630,,1435,1228
+Go Ahead Eagles,Jari De Busser,26,Goalkeeper,AZ Alkmaar,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369371,,1435,1090
+Go Ahead Eagles,Luca Plogmann,26,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6243629,,1435,515
+Go Ahead Eagles,Jaden Slory,21,Right Winger,Feyenoord Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6069573,,1435,234
+Go Ahead Eagles,Kenzo Goudmijn,24,Central Midfield,Derby County,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5918398,,1435,22
+NEC Nijmegen,Ahmetcan Kaplan,23,Centre-Back,Ajax Amsterdam,€2.50m,in,Summer,2.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6520365,,467,610
+NEC Nijmegen,Tobias Storm,21,Centre-Back,Lyngby Boldklub,€1.65m,in,Summer,1.65,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6374807,,467,369
+NEC Nijmegen,Nikolas Polster,24,Goalkeeper,Wolfsberger AC,€1.15m,in,Summer,1.15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6496806,,467,4441
+NEC Nijmegen,Adam Tahaui,20,Attacking Midfield,Vitesse Arnhem,€650Th.,in,Summer,0.65,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6408979,,467,499
+NEC Nijmegen,Jamiro Monteiro,32,Central Midfield,PEC Zwolle,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6250228,,467,1269
+NEC Nijmegen,Emre Mor,28,Right Winger,Fenerbahce,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6290585,,467,36
+NEC Nijmegen,Kaj Sierhuis,28,Centre-Forward,Fortuna Sittard,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6310186,,467,385
+NEC Nijmegen,Dusan Tadic,37,Attacking Midfield,Al-Wahda FC,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6393426,,467,161
+NEC Nijmegen,Gabriel Brás,22,Centre-Back,FC Porto B,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6500605,,467,10331
+NEC Nijmegen,Clement Bischoff,20,Left Winger,Red Bull Salzburg,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6447728,,467,409
+NEC Nijmegen,Almugera Kabar,20,Centre-Back,Borussia Dortmund,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6503013,,467,16
+NEC Nijmegen,Perr Schuurs,26,Centre-Back,Without Club,-,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6363488,,467,515
+NEC Nijmegen,Luc Nieuwenhuijs,19,Left Winger,Sparta Rotterdam U21,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6165874,,467,8621
+NEC Nijmegen,Rober González,25,Right Winger,Real Zaragoza,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6138711,,467,142
+NEC Nijmegen,Yousri Sbai,21,Right-Back,VVV-Venlo,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6114895,,467,1426
+NEC Nijmegen,Vito van Crooij,30,Attacking Midfield,Sparta Rotterdam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6107298,,467,468
+NEC Nijmegen,Argyris Darelas,22,Attacking Midfield,FC Dordrecht,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6069418,,467,1455
+NEC Nijmegen,Kodai Sano,22,Central Midfield,PSV Eindhoven,€15.00m,out,Summer,15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6489489,,467,383
+NEC Nijmegen,Başar Önal,22,Left Winger,LOSC Lille,€12.50m,out,Summer,12.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6412754,,467,1082
+NEC Nijmegen,Youssef El Kachati,26,Centre-Forward,Stade Reims,€1.60m,out,Summer,1.6,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6380864,,467,1421
+NEC Nijmegen,Koki Ogawa,29,Centre-Forward,Machida Zelvia,€1.50m,out,Summer,1.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6529402,,467,23568
+NEC Nijmegen,Dirk Proper,24,Defensive Midfield,SC Heerenveen,€1.50m,out,Summer,1.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6464387,,467,306
+NEC Nijmegen,Rober González,25,Right Winger,Albacete Balompié,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6477958,,467,1532
+NEC Nijmegen,Rijk Janse,24,Goalkeeper,FC Groningen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6343397,,467,202
+NEC Nijmegen,Argyris Darelas,22,Attacking Midfield,Niki Volos,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6504359,,467,5572
+NEC Nijmegen,Luc Nieuwenhuijs,19,Left Winger,Sparta Rotterdam U21,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383602,,467,8621
+NEC Nijmegen,Yousri Sbai,22,Right-Back,FC Utrecht U21,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6538595,,467,17596
+NEC Nijmegen,Danilo,27,Centre-Forward,Rangers FC,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6165260,,467,124
+NEC Nijmegen,Jasper Cillessen,37,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6362246,,467,515
+NEC Nijmegen,Virgil Misidjan,32,Left Winger,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6343395,,467,515
+NEC Nijmegen,Jetro Willems,32,Centre-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6343394,,467,515
+NEC Nijmegen,Eli Dasa,33,Centre-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6343392,,467,515
+NEC Nijmegen,Ahmetcan Kaplan,23,Centre-Back,Ajax Amsterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5902716,,467,610
+PEC Zwolle,Thijs Oosting,26,Attacking Midfield,FC Groningen,€750Th.,in,Summer,0.75,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6313408,,1269,202
+PEC Zwolle,Tobias Sommer,24,Defensive Midfield,Sönderjyske Fodbold,€670Th.,in,Summer,0.67,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6415142,,1269,5817
+PEC Zwolle,Elias Sørensen,26,Left Winger,Vålerenga Fotball Elite,€425Th.,in,Summer,0.425,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369066,,1269,76
+PEC Zwolle,Tijs Velthuis,24,Centre-Back,Sparta Rotterdam,€150Th.,in,Summer,0.15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6308830,,1269,468
+PEC Zwolle,Nick Viergever,36,Centre-Back,FC Utrecht,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6328226,,1269,200
+PEC Zwolle,Jan Bürger,19,Right-Back,VfL Wolfsburg,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6503578,,1269,82
+PEC Zwolle,Ibrahim Cissoko,23,Left Winger,FC Toulouse,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6448159,,1269,415
+PEC Zwolle,Tom de Graaff,21,Goalkeeper,FC Utrecht,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6292282,,1269,200
+PEC Zwolle,Dylan Mbayo,24,Right Winger,Stade Lavallois,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6130522,,1269,1080
+PEC Zwolle,Thomas Buitink,26,Centre-Forward,VV Sparta Nijkerk,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6362418,,1269,10804
+PEC Zwolle,Anselmo García MacNulty,23,Centre-Back,1.FC Magdeburg,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6347810,,1269,187
+PEC Zwolle,Kaj de Rooij,25,Left Winger,Real Valladolid CF,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6117991,,1269,366
+PEC Zwolle,Jamiro Monteiro,32,Central Midfield,NEC Nijmegen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6250228,,1269,467
+PEC Zwolle,Samir Lagsir,23,Attacking Midfield,Retired,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6192867,,1269,
+PEC Zwolle,Tijs Velthuis,24,Centre-Back,Sparta Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166017,,1269,468
+PEC Zwolle,Shola Shoretire,22,Left Winger,PAOK Thessaloniki,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5914632,,1269,1091
+PEC Zwolle,Zico Buurmeester,24,Central Midfield,AZ Alkmaar,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5911500,,1269,1090
+PEC Zwolle,Tristan Gooijer,21,Right-Back,Ajax Amsterdam U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5902762,,1269,8817
+PEC Zwolle,Jan Faberski,20,Right Winger,Ajax Amsterdam U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5902466,,1269,8817
+PEC Zwolle,Tom de Graaff,21,Goalkeeper,FC Utrecht,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5829460,,1269,200
+PEC Zwolle,Thijs Oosting,26,Attacking Midfield,FC Groningen,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5786992,,1269,202
+PSV Eindhoven,Kodai Sano,22,Central Midfield,NEC Nijmegen,€15.00m,in,Summer,15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6489489,,383,467
+PSV Eindhoven,Sven Mijnans,26,Attacking Midfield,AZ Alkmaar,€13.00m,in,Summer,13,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6406941,,383,1090
+PSV Eindhoven,Matej Kovar,26,Goalkeeper,Bayer 04 Leverkusen,€5.00m,in,Summer,5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6115881,,383,15
+PSV Eindhoven,Lutsharel Geertruida,26,Right-Back,RB Leipzig,Loan fee:€1.50m,in,Summer,1.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6523549,,383,23826
+PSV Eindhoven,Filip Kostic,33,Left-Back,Juventus FC,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6489469,,383,506
+PSV Eindhoven,Joël Drommel,29,Goalkeeper,Sparta Rotterdam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5781497,,383,468
+PSV Eindhoven,Isaac Babadi,21,Attacking Midfield,Royal Antwerp FC,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5910057,,383,1096
+PSV Eindhoven,Adamo Nagalo,23,Centre-Back,Konyaspor,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6152709,,383,2293
+PSV Eindhoven,Ismael Saibari,25,Attacking Midfield,Bayern Munich,€50.00m,out,Summer,50,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6393910,,383,27
+PSV Eindhoven,Joey Veerman,27,Central Midfield,Borussia Dortmund,€22.00m,out,Summer,22,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6514643,,383,16
+PSV Eindhoven,Couhaib Driouech,24,Left Winger,Celta de Vigo,€7.00m,out,Summer,7,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6534353,,383,940
+PSV Eindhoven,Joël Drommel,29,Goalkeeper,FC Twente Enschede,€500Th.,out,Summer,0.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6484795,,383,317
+PSV Eindhoven,Niek Schiks,22,Goalkeeper,RKC Waalwijk,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6372384,,383,235
+PSV Eindhoven,Myron Boadu,25,Centre-Forward,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381671,,383,515
+PSV Eindhoven,Matej Kovar,26,Goalkeeper,Bayer 04 Leverkusen,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5779722,,383,15
+PSV Eindhoven,Anass Salah-Eddine,24,Left-Back,AS Roma,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5907026,,383,12
+SC Cambuur Leeuwarden,Sami Bouhoudane,18,Centre-Forward,PSV Eindhoven U21,€350Th.,in,Summer,0.35,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6488612,,133,9715
+SC Cambuur Leeuwarden,Ilyes Hamache,23,Left Winger,FC Schalke 04,€200Th.,in,Summer,0.2,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6381782,,133,33
+SC Cambuur Leeuwarden,Mathieu Maertens,31,Attacking Midfield,Oud-Heverlee Leuven,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6524498,,133,2727
+SC Cambuur Leeuwarden,Devid Eugene Bouah,25,Right Midfield,Carrarese Calcio 1908,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6513513,,133,4159
+SC Cambuur Leeuwarden,Morgan Costarelli,21,Left-Back,LOSC Lille B,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6307001,,133,12765
+SC Cambuur Leeuwarden,Lucas Jetten,19,Left-Back,Ajax Amsterdam U21,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6307403,,133,8817
+SC Cambuur Leeuwarden,Skye Vink,20,Centre-Forward,Ajax Amsterdam U21,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6341008,,133,8817
+SC Cambuur Leeuwarden,Billy van Duijl,20,Centre-Back,AZ Alkmaar,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6532227,,133,1090
+SC Cambuur Leeuwarden,Rafik El Arguioui,21,Attacking Midfield,FC Utrecht,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6475480,,133,200
+SC Cambuur Leeuwarden,Ryan van de Pavert,20,Right-Back,Ajax Amsterdam U21,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383192,,133,8817
+SC Cambuur Leeuwarden,Remco Balk,25,Right Winger,Bali United FC,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6253844,,133,49425
+SC Cambuur Leeuwarden,Toni Jonker,20,Centre-Back,VV Noordbergum,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6427646,,133,74959
+SC Cambuur Leeuwarden,Kian Visser,24,Centre-Forward,Turun Palloseura,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6400217,,133,2275
+SC Cambuur Leeuwarden,Bram Marsman,23,Left-Back,Roda JC Kerkrade,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6380027,,133,192
+SC Cambuur Leeuwarden,Jort van der Sande,30,Centre-Forward,Bali United FC,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6391975,,133,49425
+SC Cambuur Leeuwarden,Mark Diemers,32,Central Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6300361,,133,515
+SC Cambuur Leeuwarden,Diyae Jermoumi,21,Right-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6253847,,133,515
+SC Cambuur Leeuwarden,Tony Rölke,23,Attacking Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6253845,,133,515
+SC Cambuur Leeuwarden,Ryan van de Pavert,20,Right-Back,Ajax Amsterdam U21,End of loan 26/08/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383193,,133,8817
+SC Cambuur Leeuwarden,Ichem Ferrah,20,Right Winger,LOSC Lille,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5880408,,133,1082
+SC Cambuur Leeuwarden,Tomas Galvez,21,Left-Back,Manchester City U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5446368,,133,9265
+SC Heerenveen,Dirk Proper,24,Defensive Midfield,NEC Nijmegen,€1.50m,in,Summer,1.5,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6464387,,306,467
+SC Heerenveen,Darling Bladi,22,Left-Back,Betis Deportivo Balompié,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6400292,,306,2865
+SC Heerenveen,Lanroy Machine,20,Centre-Forward,Angers SCO,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6461900,,306,1420
+SC Heerenveen,Joris van Overeem,32,Defensive Midfield,FC Utrecht,€700Th.,out,Summer,0.7,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6441091,,306,200
+SC Heerenveen,Nordin Bakker,28,Goalkeeper,FC Midtjylland,€300Th.,out,Summer,0.3,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6393656,,306,865
+SC Heerenveen,Eser Gürbüz,19,Right Winger,Willem II Tilburg,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6445205,,306,403
+SC Heerenveen,Jan Bekkema,30,Goalkeeper,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6325299,,306,515
+SC Heerenveen,Amourricho van Axel Dongen,21,Left Winger,Ajax Amsterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5782166,,306,610
+SC Heerenveen,Lasse Nordås,24,Centre-Forward,Luton Town,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6099749,,306,1031
+Sparta Rotterdam,Nick Verschuren,21,Centre-Back,Ajax Amsterdam U21,€800Th.,in,Summer,0.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6389447,,468,8817
+Sparta Rotterdam,Casper Terho,23,Right Winger,Oud-Heverlee Leuven,€600Th.,in,Summer,0.6,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6338484,,468,2727
+Sparta Rotterdam,Bas Kuipers,31,Left-Back,FC Twente Enschede,€400Th.,in,Summer,0.4,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6379197,,468,317
+Sparta Rotterdam,Robin van Cruijsen,20,Attacking Midfield,FC Volendam,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6469699,,468,724
+Sparta Rotterdam,Andrej Kostić,19,Centre-Forward,AC Milan,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6517509,,468,5
+Sparta Rotterdam,Tijs Velthuis,24,Centre-Back,PEC Zwolle,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166017,,468,1269
+Sparta Rotterdam,Nökkvi Thórisson,26,Centre-Forward,SC Telstar,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6165859,,468,1434
+Sparta Rotterdam,Lance Duijvestijn,27,Attacking Midfield,Fortuna Sittard,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6122798,,468,385
+Sparta Rotterdam,Joel Ideho,22,Left Winger,FC Volendam,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5865357,,468,724
+Sparta Rotterdam,Boyd Reith,27,Right-Back,Almere City FC,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5768462,,468,723
+Sparta Rotterdam,Youri Schoonderwaldt,26,Goalkeeper,VVV-Venlo,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5663353,,468,1426
+Sparta Rotterdam,Lance Duijvestijn,27,Attacking Midfield,SV Darmstadt 98,€800Th.,out,Summer,0.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6390431,,468,105
+Sparta Rotterdam,Tijs Velthuis,24,Centre-Back,PEC Zwolle,€150Th.,out,Summer,0.15,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6308830,,468,1269
+Sparta Rotterdam,Kaylen,22,Goalkeeper,Fortuna Sittard,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5719917,,468,385
+Sparta Rotterdam,Tobias Lauritsen,28,Centre-Forward,UC Sampdoria,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6436951,,468,1038
+Sparta Rotterdam,Pelle Clement,30,Central Midfield,FC Groningen,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6324188,,468,202
+Sparta Rotterdam,Joshua Kitolano,24,Defensive Midfield,FK Bodø/Glimt,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6317622,,468,501
+Sparta Rotterdam,Youri Schoonderwaldt,26,Goalkeeper,VVV-Venlo,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6416642,,468,1426
+Sparta Rotterdam,Mike Kleijn,21,Left-Back,FC Volendam,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6468065,,468,724
+Sparta Rotterdam,Saïd Bakari,31,Right-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6252076,,468,515
+Sparta Rotterdam,Patrick van Aanholt,35,Left-Back,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6252061,,468,515
+Sparta Rotterdam,Jonathan de Guzmán,38,Central Midfield,Retired,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6252060,,468,
+Sparta Rotterdam,Casper Terho,23,Right Winger,Oud-Heverlee Leuven,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6161788,,468,2727
+Sparta Rotterdam,Vito van Crooij,30,Attacking Midfield,NEC Nijmegen,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6107298,,468,467
+Sparta Rotterdam,Shurandy Sambo,24,Right-Back,Burnley FC,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5866595,,468,1132
+Sparta Rotterdam,Joël Drommel,29,Goalkeeper,PSV Eindhoven,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5781497,,468,383
+SC Telstar,Fabiano Rust,21,Attacking Midfield,Feyenoord U21,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6449989,,1434,24366
+SC Telstar,Fofin Turay,22,Left Winger,FC Groningen,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6500718,,1434,202
+SC Telstar,Rui Mendes,26,Right Winger,FC Groningen,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6428097,,1434,202
+SC Telstar,Noach Shenkman,19,Defensive Midfield,AFC Amsterdam,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6369538,,1434,2838
+SC Telstar,Prince Aning,22,Left-Back,Borussia Dortmund II,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6450228,,1434,17
+SC Telstar,Marvin Peersman,35,Centre-Back,FC Groningen,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6408127,,1434,202
+SC Telstar,Isaiah Ahmed,20,Central Midfield,SC Heerenveen U21,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6453229,,1434,24368
+SC Telstar,Harrie Kuster,20,Attacking Midfield,FC Twente Enschede,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6484116,,1434,317
+SC Telstar,Sem Valk,24,Centre-Back,FC Dordrecht,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6528945,,1434,1455
+SC Telstar,Abdelnour Soualhia,25,Centre-Back,AZ Alkmaar,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383201,,1434,1090
+SC Telstar,Emirhan Demircan,21,Left Winger,FC Utrecht,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6444135,,1434,200
+SC Telstar,Gabi Caschili,23,Right-Back,Without Club,-,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6487100,,1434,515
+SC Telstar,Tyrese Noslin,23,Right Midfield,Barnsley FC,€300Th.,out,Summer,0.3,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6427793,,1434,349
+SC Telstar,Kay Tejan,29,Centre-Forward,Selangor FC,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6500872,,1434,15831
+SC Telstar,Dylan Mertens,30,Attacking Midfield,Shafa Baku,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6256081,,1434,37246
+SC Telstar,Adil Lechkar,24,Right-Back,FC Dordrecht,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6256082,,1434,1455
+SC Telstar,Danny Bakker,31,Centre-Back,FC Anyang,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6337205,,1434,38898
+SC Telstar,Guus Offerhaus,25,Centre-Back,FC Utrecht,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6339383,,1434,200
+SC Telstar,Devon Koswal,22,Centre-Back,Sandefjord Fotball,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6368977,,1434,6399
+SC Telstar,Tyrick Bodak,24,Goalkeeper,Vitesse Arnhem,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6383198,,1434,499
+SC Telstar,Dion Malone,37,Centre-Back,Retired,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6362868,,1434,
+SC Telstar,Neville Ogidi Nwankwo,23,Centre-Back,FC Utrecht,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5748892,,1434,200
+SC Telstar,Nökkvi Thórisson,26,Centre-Forward,Sparta Rotterdam,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6165859,,1434,468
+SC Telstar,Sem van Duijn,22,Centre-Forward,AZ Alkmaar U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6143776,,1434,11368
+SC Telstar,Cedric Hatenboer,21,Defensive Midfield,RSC Anderlecht,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6096483,,1434,58
+SC Telstar,Jochem Ritmeester van de Kamp,22,Attacking Midfield,Almere City FC,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5872705,,1434,723
+Willem II Tilburg,Calvin Twigt,23,Defensive Midfield,Go Ahead Eagles,€800Th.,in,Summer,0.8,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6512009,,403,1435
+Willem II Tilburg,Mats Lemmens,24,Centre-Back,RWDM Brussels,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6452718,,403,54189
+Willem II Tilburg,Hidde ter Avest,29,Right-Back,Oxford United,free transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6306139,,403,988
+Willem II Tilburg,Finn Stam,23,Centre-Back,AZ Alkmaar U21,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6328170,,403,11368
+Willem II Tilburg,Tonny Vilhena,31,Central Midfield,Panathinaikos,?,in,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6537182,,403,265
+Willem II Tilburg,Jaden Slory,21,Right Winger,Feyenoord Rotterdam,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6409559,,403,234
+Willem II Tilburg,Eser Gürbüz,19,Right Winger,SC Heerenveen,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6445205,,403,306
+Willem II Tilburg,Kasper Boogaard,20,Defensive Midfield,AZ Alkmaar,loan transfer,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6452746,,403,1090
+Willem II Tilburg,Boris Lambert,26,Defensive Midfield,KV Kortrijk,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5739621,,403,601
+Willem II Tilburg,Emilio Kehrer,24,Right Winger,FC Ingolstadt 04,End of loan 30/06/2026,in,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6132228,,403,4795
+Willem II Tilburg,Boris Lambert,26,Defensive Midfield,KV Kortrijk,€475Th.,out,Summer,0.475,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6282154,,403,601
+Willem II Tilburg,Nick Doodeman,29,Right Winger,FC Volendam,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6380680,,403,724
+Willem II Tilburg,Raffael Behounek,29,Centre-Back,Wolfsberger AC,free transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6334502,,403,4441
+Willem II Tilburg,Emilio Kehrer,24,Right Winger,FC Winterthur,?,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6385466,,403,242
+Willem II Tilburg,Siegert Baartmans,20,Centre-Forward,FC Eindhoven,loan transfer,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6449848,,403,3892
+Willem II Tilburg,Mounir El Allouchi,31,Attacking Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6327205,,403,515
+Willem II Tilburg,Dani Mathieu,25,Attacking Midfield,Without Club,-,out,Summer,NA,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6254426,,403,515
+Willem II Tilburg,Calvin Twigt,23,Defensive Midfield,Go Ahead Eagles,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6166740,,403,1435
+Willem II Tilburg,Samuel Bamba,22,Right Winger,VfL Bochum,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5902176,,403,80
+Willem II Tilburg,Finn Stam,23,Centre-Back,AZ Alkmaar U21,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5866829,,403,11368
+Willem II Tilburg,Gijs Besselink,22,Central Midfield,FC Twente Enschede,End of loan 30/06/2026,out,Summer,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,5865369,,403,317
+Ajax Amsterdam,Gastón Ávila,25,Centre-Back,CA Rosario Central,End of loan 31/12/2026,in,Winter,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6109030,,610,1418
+Excelsior Rotterdam,Zach Booth,22,Left Winger,Real Salt Lake City,End of loan 31/12/2026,in,Winter,0,Eredivisie,2026,2026/2027,Netherlands,transfermarkt.com,6102057,,798,6643

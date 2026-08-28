@@ -10,6 +10,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CLUB_ALIASES } from './lib/club-aliases.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_SOURCE = join(ROOT, 'data', 'raw', 'transfermarkt-datasets');
@@ -28,39 +29,13 @@ const COMPETITIONS = {
   // The maintained dataset currently has no GB2 games. The entry is kept so
   // a future upstream extension starts working without changing the importer.
   GB2: { file: 'championship.csv', id: 'GB2' },
+  // Saudi Arabia entered the maintained games export in 2024/25, so membership
+  // resolves for 2024 and 2025 only. Earlier seasons have no fixture list from
+  // any available source and are therefore not published rather than guessed;
+  // the first-party collector covers the season in progress.
+  SA1: { file: 'saudi-pro-league.csv', id: 'SA1' },
 };
 
-// The maintained clubs table increasingly uses legal entity names while the
-// historical transfer pages use public football names. Keep one continuous
-// club identity in the UI. This list is intentionally explicit and auditable:
-// automatic fuzzy matching could merge two genuinely different clubs.
-const CLUB_ALIASES = new Map(Object.entries({
-  '1.FC Köln': '1. FC Köln',
-  'AO FK Zenit Sankt-Peterburg': 'Zenit St. Petersburg',
-  'Associazione Sportiva Roma': 'AS Roma',
-  'Bologna Football Club 1909': 'Bologna FC 1909',
-  'Como 1907': 'Como Calcio',
-  'Bolton Wanderers FC': 'Bolton Wanderers',
-  'Bristol City FC': 'Bristol City',
-  'Derby County FC': 'Derby County',
-  'FC Khimki (-2025)': 'FK Khimki',
-  'FC Orenburg': 'FK Orenburg',
-  'FC Rubin Kazan': 'Rubin Kazan',
-  'FC Twente Enschede': 'Twente Enschede FC',
-  'FK Baltika': 'Baltika Kaliningrad',
-  'FK Dinamo Moskva': 'Dinamo Moscow',
-  'FK Nizhny Novgorod': 'FC Pari Nizhniy Novgorod',
-  'FK Sochi': 'FC Sochi',
-  'FK Spartak Moskva': 'Spartak Moscow',
-  'Fortuna Sittardia Combinatie': 'Fortuna Sittard',
-  'Le Havre AC': 'AC Le Havre',
-  'PFK CSKA Moskva': 'CSKA Moscow',
-  'Preston North End FC': 'Preston North End',
-  'PFK Krylya Sovetov Samara': 'Krylya Sovetov Samara',
-  'RFK Akhmat Grozny': 'Akhmat Grozny',
-  'Società Sportiva Lazio S.p.A.': 'SS Lazio',
-  'Футбольный клуб "Локомотив" Москва': 'Lokomotiv Moscow',
-}));
 
 // OpenFootball deliberately uses long official names, whereas Transfermarkt's
 // exports mix short names and names of youth/reserve sides. These verified ids

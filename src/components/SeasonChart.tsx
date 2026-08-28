@@ -49,14 +49,14 @@ export function SeasonChart({ points, onSelect }: Props) {
         <span className="key"><i className="swatch" style={{ background: 'var(--out)' }} />Achats</span>
         <span className="key"><i className="swatch" style={{ background: 'var(--in)' }} />Ventes</span>
         <span className="muted" style={{ marginLeft: 'auto', fontSize: 12 }}>
-          {points.length} {annual ? `saison${points.length > 1 ? 's' : ''}` : `fenêtre${points.length > 1 ? 's' : ''}`}
+          {points.length} {annual ? `saison${points.length > 1 ? 's' : ''}` : `mercato${points.length > 1 ? 's' : ''}`}
         </span>
       </div>
 
       <div ref={ref} style={{ position: 'relative' }}>
         {width > 0 && (
           <svg className="chart-svg" width={width} height={height} role="img"
-            aria-label={`Achats et ventes ${annual ? 'par saison' : 'par fenêtre de transfert'}, de ${points[0].label} à ${points[last].label}`}>
+            aria-label={`Achats et ventes ${annual ? 'par saison' : 'par mercato'}, de ${points[0].label} à ${points[last].label}`}>
             <g transform={`translate(${margin.left},${margin.top})`}>
               {ticks.map((t) => (
                 <g key={t}>

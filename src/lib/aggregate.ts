@@ -133,7 +133,9 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     } else {
       key = `${m.year}-${m.window}`;
       label = season(m.year);
-      sublabel = `Mercato d'${windowLabel(m.window).toLowerCase()}`;
+      // La colonne s'intitule « Mercato » : répéter le mot dans chaque cellule
+      // donnerait « Mercato : Mercato d'été ».
+      sublabel = windowLabel(m.window);
       flag = m.window === 1 ? 'winter' : 'summer';
     }
 
@@ -188,7 +190,15 @@ export interface Totals {
   spend: number;
   income: number;
   balance: number;
+  /**
+   * Distinct transfer windows in the selection — a mercato is a moment, shared
+   * by every club at once. Summing one row per club produced a five-figure
+   * "mercatos" count that measured the sample's height, not how many mercatos
+   * it spans.
+   */
   mercatos: number;
+  /** One club in one window: the number of rows behind the totals. */
+  clubMercatos: number;
   clubs: number;
   arrivals: number;
   departures: number;
@@ -198,11 +208,13 @@ export interface Totals {
 
 export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
   const t: Totals = {
-    spend: 0, income: 0, balance: 0, mercatos: rows.length, clubs: 0,
+    spend: 0, income: 0, balance: 0, mercatos: 0, clubMercatos: rows.length, clubs: 0,
     arrivals: 0, departures: 0, paidDeals: 0, undisclosed: 0,
   };
   const clubs = new Set<number>();
+  const windows = new Set<string>();
   for (const m of rows) {
+    windows.add(`${m.year}-${m.window}`);
     const r = resolve(m, includeLoanFees);
     t.spend += r.spend;
     t.income += r.income;
@@ -215,6 +227,7 @@ export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
   }
   t.balance = t.income - t.spend;
   t.clubs = clubs.size;
+  t.mercatos = windows.size;
   return t;
 }
 

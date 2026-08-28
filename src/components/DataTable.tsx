@@ -14,7 +14,7 @@ const HEADS: Record<Grouping, [string, string]> = {
   mercato: ['Club', 'Saison'],
   club: ['Club', 'Championnat'],
   league: ['Championnat', 'Pays'],
-  season: ['Saison', 'Fenêtre'],
+  season: ['Saison', 'Mercato'],
 };
 
 interface Props {
@@ -38,7 +38,12 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'label', label: labelHead, align: 'left' },
       { key: 'sublabel', label: sublabelHead, align: 'left' },
     ];
-    if (grouping !== 'mercato') result.push({ key: 'count', label: 'Fenêtres' });
+    // Une ligne par club et par mercato : sur un championnat ou une saison, ce
+    // n'est pas un nombre de mercatos, puisqu'un mercato vaut pour tous les
+    // clubs à la fois. L'infobulle porte la définition, l'en-tête reste court.
+    if (grouping !== 'mercato') {
+      result.push({ key: 'count', label: 'Mercatos club', title: 'Nombre de couples club × mercato agrégés dans cette ligne' });
+    }
     result.push(
       { key: 'spend', label: 'Achats' },
       { key: 'income', label: 'Ventes' },
@@ -158,7 +163,11 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             <span className="result-rank">{String(index + 1).padStart(2, '0')}</span>
             <span className="result-identity">
               <span className="result-name"><Flag code={group.flag} /><b>{group.label}</b></span>
-              <span>{group.sublabel}{grouping !== 'mercato' && ` · ${count(group.count)} fenêtres`}</span>
+              {/* Ce compteur additionne une ligne par club et par mercato. Sur un
+                  championnat ou une saison ce n'est donc pas un nombre de
+                  mercatos — un mercato vaut pour tous les clubs à la fois — mais
+                  bien un nombre de mercatos de club. */}
+              <span>{group.sublabel}{grouping !== 'mercato' && ` · ${count(group.count)} mercatos de club`}</span>
             </span>
             <span className="result-money">
               <span><small>Achats</small><b className="num neg">{money(group.spend)}</b></span>
@@ -177,7 +186,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
         <span>{count(Math.min(limit, groups.length))} sur {count(groups.length)}</span>
         {limit < groups.length && <button className="btn" onClick={() => setLimit((value) => value + PAGE * 4)}>Afficher plus</button>}
         <div className="spacer" />
-        {interactive && <span className="desktop-hint">Une ligne = été + hiver · cliquez pour séparer les fenêtres</span>}
+        {interactive && <span className="desktop-hint">Une ligne = été + hiver · cliquez pour séparer les deux mercatos</span>}
         <button className="btn" onClick={exportCsv}>CSV</button>
       </div>
     </>

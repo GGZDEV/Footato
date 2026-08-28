@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CLUB_ALIASES as SHARED_CLUB_ALIASES } from './lib/club-aliases.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'data', 'raw');
@@ -18,6 +19,18 @@ const RECENT_MANIFEST_PATH = join(RAW, 'recent', 'manifest.json');
 const recentManifest = existsSync(RECENT_MANIFEST_PATH)
   ? JSON.parse(readFileSync(RECENT_MANIFEST_PATH, 'utf8'))
   : null;
+const COLLECTED_MANIFEST_PATH = join(RAW, 'collected', 'manifest.json');
+const collectedManifest = existsSync(COLLECTED_MANIFEST_PATH)
+  ? JSON.parse(readFileSync(COLLECTED_MANIFEST_PATH, 'utf8'))
+  : null;
+// Seasons Footato collected itself take precedence over the same seasons in the
+// maintained import. Both describe the same Transfermarkt moves, so they are not
+// merged: the fresher origin owns the season outright and the other is skipped
+// for those years, which also keeps the movement count free of near-duplicates
+// that differ only by upstream id.
+const collectedSeasons = new Set(
+  (collectedManifest?.seasons ?? []).map(Number).filter(Number.isFinite),
+);
 
 /** Source file -> league identity. `code` selects the inline SVG flag. */
 const LEAGUES = [
@@ -30,6 +43,7 @@ const LEAGUES = [
   { file: 'eredivisie.csv',       id: 'NL1', name: 'Eredivisie',      country: 'Pays-Bas',   code: 'nl', tier: 1 },
   { file: 'premier-liga.csv',     id: 'RU1', name: 'Premier Liga',    country: 'Russie',     code: 'ru', tier: 1 },
   { file: 'championship.csv',     id: 'GB2', name: 'Championship',    country: 'Angleterre', code: 'eng', tier: 2 },
+  { file: 'saudi-pro-league.csv', id: 'SA1', name: 'Saudi Pro League', country: 'Arabie saoudite', code: 'sa', tier: 1 },
 ];
 
 /** Movement kinds, kept as small ints in the emitted JSON. */
@@ -40,14 +54,23 @@ const KIND = {
 
 // Same legal club, different labels in historical Transfermarkt exports.
 // These are explicit on purpose: fuzzy matching could merge unrelated clubs.
-const CLUB_ALIASES = new Map(Object.entries({
+const LOCAL_ALIASES = {
   'SC Cambuur-Leeuwarden': 'SC Cambuur Leeuwarden',
   'Empoli FC': 'FC Empoli',
   'Milan AC': 'AC Milan',
   'AC Parma': 'Parma FC',
   'Torino Calcio': 'Torino FC',
   'FC Internazionale': 'Inter Milan',
-}));
+};
+
+// Reconciliation happens here, at the last step before club ids are assigned,
+// rather than in each collector or importer. Every origin passes through this
+// one point, so a club cannot end up split by the origin that happened to
+// supply a given season, and fixing an alias only needs a rebuild.
+const CLUB_ALIASES = new Map([
+  ...SHARED_CLUB_ALIASES,
+  ...Object.entries(LOCAL_ALIASES),
+]);
 const canonicalClubName = (name) => CLUB_ALIASES.get(name.trim()) ?? name.trim();
 
 function parseCsv(text) {
@@ -117,9 +140,17 @@ const agg = new Map();   // clubId|leagueIdx|year|window -> aggregate row
 const details = new Map(); // leagueId_year_window -> movement list
 const movementKeys = new Set();
 let skipped = 0, movements = 0, duplicates = 0;
+const movementsByOrigin = { legacy: 0, recent: 0, collected: 0 };
 
-/** Reads one canonical CSV and folds its movements into the aggregates. */
-function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
+/**
+ * Reads one canonical CSV and folds its movements into the aggregates.
+ *
+ * `accept` decides which seasons this origin owns. Origins are layered rather
+ * than merged — historical baseline, maintained import, first-party collection —
+ * so exactly one of them supplies any given season and no move is counted twice
+ * under two upstream identifiers.
+ */
+function ingest(path, leagueIdx, league, origin, accept = () => true) {
   const rows = parseCsv(readFileSync(path, 'utf8'));
   const header = rows[0].map((h) => h.trim());
   const col = Object.fromEntries(header.map((h, i) => [h, i]));
@@ -137,7 +168,7 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
 
     const year = Number.parseInt(r[col.year], 10);
     if (!Number.isFinite(year)) { skipped++; continue; }
-    if (year > yearMax) continue;
+    if (!accept(year)) continue;
 
     const w = r[col.transfer_period].trim() === 'Winter' ? 1 : 0;
     const dir = r[col.transfer_movement].trim() === 'out' ? 1 : 0;
@@ -197,22 +228,43 @@ function ingest(path, leagueIdx, league, origin, yearMax = Infinity) {
 for (const [leagueIdx, league] of LEAGUES.entries()) {
   const base = join(RAW, league.file);
   const recent = join(RAW, 'recent', league.file);
+  const collected = join(RAW, 'collected', league.file);
   const hasBase = existsSync(base);
   const hasRecent = existsSync(recent);
+  const hasCollected = existsSync(collected);
 
-  if (!hasBase && !hasRecent) {
+  if (!hasBase && !hasRecent && !hasCollected) {
     console.warn(`! missing ${league.file} — run \`npm run data:fetch\` first`);
     continue;
   }
 
-  // When maintained rows overlap the historical snapshot, the maintained
-  // source owns the overlapping seasons. This prevents accidental double count.
+  // Three layers, oldest first, each owning a disjoint set of seasons:
+  //   legacy    the typed historical snapshot, up to where the import starts
+  //   recent    the maintained import, minus whatever was collected first-party
+  //   collected pages Footato read itself; freshest, so it wins its seasons
   const legacyYearMax = hasRecent && recentManifest?.yearMin != null
     ? recentManifest.yearMin - 1
     : Infinity;
-  const n = hasBase ? ingest(base, leagueIdx, league, 'legacy', legacyYearMax) : 0;
-  const extra = hasRecent ? ingest(recent, leagueIdx, league, 'recent') : 0;
-  console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${n} movements${extra ? ` (+${extra} récents)` : ''}`);
+  const ownedByCollection = (year) => hasCollected && collectedSeasons.has(year);
+
+  const n = hasBase
+    ? ingest(base, leagueIdx, league, 'legacy', (year) => year <= legacyYearMax && !ownedByCollection(year))
+    : 0;
+  const extra = hasRecent
+    ? ingest(recent, leagueIdx, league, 'recent', (year) => !ownedByCollection(year))
+    : 0;
+  const own = hasCollected
+    ? ingest(collected, leagueIdx, league, 'collected', (year) => collectedSeasons.has(year))
+    : 0;
+
+  movementsByOrigin.legacy += n;
+  movementsByOrigin.recent += extra;
+  movementsByOrigin.collected += own;
+
+  const parts = [];
+  if (extra) parts.push(`+${extra} récents`);
+  if (own) parts.push(`+${own} collectés`);
+  console.log(`  ${league.id.padEnd(4)} ${league.name.padEnd(16)} ${n} movements${parts.length ? ` (${parts.join(', ')})` : ''}`);
 }
 
 const rows = [...agg.values()].sort((a, b) => a[2] - b[2] || a[3] - b[3] || a[1] - b[1] || a[0] - b[0]);
@@ -238,10 +290,79 @@ const coverageByLeague = Object.fromEntries(LEAGUES.map((league, leagueIdx) => {
 rmSync(join(OUT, 'windows'), { recursive: true, force: true });
 mkdirSync(join(OUT, 'windows'), { recursive: true });
 
+/**
+ * Provenance, per layer rather than as one date.
+ *
+ * A single `sourceUpdatedAt` conflated two very different things: a finished
+ * season imported from a snapshot months old is fine, while a mercato in
+ * progress read from that same snapshot is stale by weeks. Recording each
+ * origin's own date, and which seasons it owns, lets the UI say which is which
+ * instead of averaging them into one reassuring number.
+ */
+const collectedYears = [...collectedSeasons].sort((a, b) => a - b);
+
+/**
+ * Oldest collection date among the given league-seasons, as YYYY-MM-DD.
+ *
+ * Freshness of a set of files is the age of its stalest member, never the age
+ * of the most recent one: a partial run refreshes some leagues and leaves the
+ * rest untouched, and reporting the newest date would hide exactly the leagues
+ * that need attention.
+ *
+ * An entry with no date of its own predates per-league dating; it falls back to
+ * the manifest's date, which is the last moment the directory as a whole is
+ * known to have been written.
+ */
+const oldestCollection = (entries) => {
+  if (!entries.length) return collectedManifest?.collectedAt?.slice(0, 10) ?? null;
+  const fallback = collectedManifest?.collectedAt ?? null;
+  const dates = entries.map((entry) => entry.collectedAt ?? fallback).filter(Boolean).sort();
+  return dates[0]?.slice(0, 10) ?? null;
+};
+const maxYear = Math.max(...years);
+const origins = [
+  {
+    id: 'legacy',
+    dataset: 'github.com/ewenme/transfers',
+    updatedAt: null,
+    movementCount: movementsByOrigin.legacy,
+    firstParty: false,
+  },
+  {
+    id: 'recent',
+    dataset: 'github.com/dcaribou/transfermarkt-datasets',
+    updatedAt: recentManifest?.sourceUpdatedAt?.slice(0, 10) ?? null,
+    movementCount: movementsByOrigin.recent,
+    firstParty: false,
+  },
+  {
+    id: 'collected',
+    dataset: 'transfermarkt.com',
+    // The weakest link, not the last run. A partial collection refreshes some
+    // leagues and leaves the others in place, and reporting the newest date
+    // would let a league quietly age behind a reassuring headline figure.
+    updatedAt: oldestCollection(collectedManifest?.compositions ?? []),
+    movementCount: movementsByOrigin.collected,
+    seasons: collectedYears,
+    firstParty: true,
+  },
+].filter((origin) => origin.movementCount > 0);
+
+const currentSeasonOrigin = collectedSeasons.has(maxYear) ? 'collected' : 'recent';
+const currentSeason = {
+  year: maxYear,
+  origin: currentSeasonOrigin,
+  updatedAt: currentSeasonOrigin === 'collected'
+    ? oldestCollection((collectedManifest?.compositions ?? []).filter((c) => c.season === maxYear))
+    : origins.find((o) => o.id === currentSeasonOrigin)?.updatedAt ?? null,
+};
+
 const summary = {
   meta: {
     generatedAt: new Date().toISOString().slice(0, 10),
     sourceUpdatedAt: recentManifest?.sourceUpdatedAt?.slice(0, 10) ?? null,
+    origins,
+    currentSeason,
     source: 'Transfermarkt',
     sourceDataset: recentManifest
       ? 'github.com/ewenme/transfers + github.com/dcaribou/transfermarkt-datasets + github.com/openfootball/football.json (league membership)'
@@ -258,6 +379,24 @@ const summary = {
       skippedRows: skipped,
       clubAliases,
       recent: recentManifest?.quality ?? null,
+      collected: collectedManifest
+        ? {
+          collectedAt: collectedManifest.collectedAt,
+          seasons: collectedManifest.seasons,
+          leagues: collectedManifest.leagues,
+          movementCount: movementsByOrigin.collected,
+          requestCount: collectedManifest.lastRun?.requestCount ?? null,
+          failures: collectedManifest.failures ?? [],
+          // Compositions read from Transfermarkt itself. For leagues with no
+          // independent fixture list (Russia, Saudi Arabia) this is a
+          // single-source claim, and says so rather than passing for a check.
+          compositions: (collectedManifest.compositions ?? []).map(
+            ({ leagueId, season, teamCount, membershipControl }) => ({
+              leagueId, season, teamCount, membershipControl,
+            }),
+          ),
+        }
+        : null,
       memberships: recentManifest?.memberships?.leagues?.map(({ leagueId, season, teamCount, complete }) => ({
         leagueId, season, teamCount, complete,
       })) ?? [],

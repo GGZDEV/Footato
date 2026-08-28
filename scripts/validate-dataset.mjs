@@ -166,13 +166,180 @@ for (const audit of membershipAudits) {
   }
 }
 
+/* ------------------------------ freshness -------------------------------- */
+
+/**
+ * A single 45-day threshold was the hole that let the July 2026 stall through.
+ * It is a reasonable age for a finished season and a catastrophic one for a
+ * mercato in progress: the upstream scraper was blocked for six weeks, the site
+ * kept publishing a season that was ~90% missing, and nothing failed because
+ * the dump was only 22 days old.
+ *
+ * Freshness is therefore judged against what the data is *for*. A closed season
+ * does not change, so an old snapshot of it is not a defect. An open window
+ * changes daily, so the origin that owns the current season must be recent.
+ */
+const OPEN_WINDOW_MONTHS = new Set([0, 5, 6, 7, 8]); // janvier, juin-septembre (UTC)
+const MAX_AGE_DAYS = { openWindow: 7, closedWindow: 45 };
+
+const now = new Date();
+const windowIsOpen = OPEN_WINDOW_MONTHS.has(now.getUTCMonth());
+const ageInDays = (isoDate) => (Date.now() - new Date(`${isoDate.slice(0, 10)}T00:00:00Z`).getTime()) / 86_400_000;
+
 if (summary.meta.sourceUpdatedAt) {
-  const sourceDate = new Date(`${summary.meta.sourceUpdatedAt}T00:00:00Z`);
-  const ageDays = (Date.now() - sourceDate.getTime()) / 86_400_000;
-  if (ageDays < -1) fail(`date source future : ${summary.meta.sourceUpdatedAt}`);
-  if (ageDays > 45) fail(`source trop ancienne : ${Math.floor(ageDays)} jours`);
+  const age = ageInDays(summary.meta.sourceUpdatedAt);
+  if (age < -1) fail(`date source future : ${summary.meta.sourceUpdatedAt}`);
+  if (age > MAX_AGE_DAYS.closedWindow) fail(`source trop ancienne : ${Math.floor(age)} jours`);
+}
+
+const currentSeason = summary.meta.currentSeason;
+if (currentSeason) {
+  if (currentSeason.year !== summary.meta.yearMax) {
+    fail(`saison courante déclarée ${currentSeason.year} mais les données s'arrêtent en ${summary.meta.yearMax}`);
+  }
+  if (!currentSeason.updatedAt) {
+    fail(`aucune date de fraîcheur pour la saison courante ${currentSeason.year}`);
+  } else {
+    const age = ageInDays(currentSeason.updatedAt);
+    const limit = windowIsOpen ? MAX_AGE_DAYS.openWindow : MAX_AGE_DAYS.closedWindow;
+    if (age < -1) fail(`date future pour la saison courante : ${currentSeason.updatedAt}`);
+    if (age > limit) {
+      fail(
+        `saison ${currentSeason.year}/${currentSeason.year + 1} vieille de ${Math.floor(age)} jours `
+        + `(origine « ${currentSeason.origin} », limite ${limit} j${windowIsOpen ? ', mercato ouvert' : ''}). `
+        + 'Relancez `npm run data:collect` plutôt que de publier un mercato figé.',
+      );
+    }
+  }
+}
+
+/* --------------------------- relative completeness ------------------------ */
+
+/**
+ * Age is not enough on its own: a source can be published daily and still have
+ * stopped ingesting. This compares the current season against the previous one
+ * on the same measure, per league, and refuses a collapse that no calendar
+ * effect explains.
+ *
+ * The threshold is deliberately loose. A mercato in progress genuinely holds
+ * fewer movements than a finished one — roughly half a summer's business is
+ * booked after early August — so this is not a completeness estimate. It is a
+ * floor that catches an origin which has quietly stopped, which is what
+ * actually happened.
+ */
+// Overridable so the floor can be raised once a window closes, when a season
+// should be near-complete and 25% would no longer be a meaningful bar.
+const MIN_SEASON_RATIO = Number.parseFloat(process.env.FOOTATO_MIN_SEASON_RATIO ?? '0.25');
+
+const movementsBySeason = new Map();
+for (const row of summary.rows) {
+  const key = `${row[1]}|${row[2]}`;
+  movementsBySeason.set(key, (movementsBySeason.get(key) ?? 0) + row[8] + row[14]);
+}
+
+const completeness = [];
+for (const [leagueIdx, league] of summary.leagues.entries()) {
+  const current = movementsBySeason.get(`${leagueIdx}|${summary.meta.yearMax}`) ?? 0;
+  const previous = movementsBySeason.get(`${leagueIdx}|${summary.meta.yearMax - 1}`) ?? 0;
+  // A league Footato does not cover for the current season (no membership
+  // source) legitimately has nothing; only a league that has both is compared.
+  if (!previous || !current) continue;
+  const ratio = current / previous;
+  completeness.push({ leagueId: league.id, current, previous, ratio });
+  if (ratio < MIN_SEASON_RATIO) {
+    fail(
+      `${league.id} : ${current} mouvements en ${summary.meta.yearMax}/${summary.meta.yearMax + 1} `
+      + `contre ${previous} la saison précédente (${(ratio * 100).toFixed(0)} %, plancher ${MIN_SEASON_RATIO * 100} %). `
+      + 'Une source qui a cessé d\'ingérer ressemble exactement à ça.',
+    );
+  }
+}
+
+/* ------------------- recent-transfer cross-check (optional) --------------- */
+
+/**
+ * public/data/latest.json is the one freshness signal that is not self-reported:
+ * it lists what the source published in the last days and whether the data holds
+ * it, matched on Transfermarkt's transfer id.
+ *
+ * A collapsing inclusion rate is a sharper alarm than any date, because it stays
+ * wrong even when the collection ran on time — a league page that stops listing
+ * moves, or a parser that silently drops rows, shows up here and nowhere else.
+ * The floor is loose: a move published between the collection and the check is
+ * legitimately absent, so a handful of misses is normal operation.
+ */
+const MIN_INCLUSION_RATE = Number.parseFloat(process.env.FOOTATO_MIN_INCLUSION_RATE ?? '0.6');
+const latestPath = join(OUT, 'latest.json');
+let latest = null;
+if (existsSync(latestPath)) {
+  latest = JSON.parse(readFileSync(latestPath, 'utf8'));
+  if (!Array.isArray(latest.transfers) || !latest.transfers.length) {
+    fail('latest.json ne contient aucun transfert');
+  }
+  for (const transfer of latest.transfers) {
+    if (!transfer.transferId) fail('transfert récent sans identifiant dans latest.json');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(transfer.date ?? '')) fail(`date invalide dans latest.json : ${transfer.date}`);
+    if (typeof transfer.included !== 'boolean') fail('latest.json : inclusion non renseignée');
+  }
+
+  const age = ageInDays(latest.meta.checkedAt);
+  const limit = windowIsOpen ? MAX_AGE_DAYS.openWindow : MAX_AGE_DAYS.closedWindow;
+  if (age > limit) {
+    fail(`relevé des derniers transferts vieux de ${Math.floor(age)} jours (limite ${limit} j)`);
+  }
+
+  const rate = latest.meta.includedCount / latest.meta.transferCount;
+  if (rate < MIN_INCLUSION_RATE) {
+    fail(
+      `seulement ${latest.meta.includedCount}/${latest.meta.transferCount} `
+      + `(${Math.round(rate * 100)} %) des transferts récents sont dans les données, `
+      + `plancher ${Math.round(MIN_INCLUSION_RATE * 100)} %. La collecte ne suit plus la source.`,
+    );
+  }
+}
+
+/* ----------------------- first-party collection health -------------------- */
+
+const collected = summary.meta.quality?.collected;
+if (collected) {
+  const currentFailures = (collected.failures ?? []).filter((f) => f.season === summary.meta.yearMax);
+  if (currentFailures.length) {
+    const detail = currentFailures.map((f) => `${f.leagueId} ${f.window} (${f.error})`).join(', ');
+    fail(`collecte incomplète sur la saison courante : ${detail}`);
+  }
+  for (const composition of collected.compositions ?? []) {
+    if (composition.teamCount < 14) {
+      fail(`${composition.leagueId} ${composition.season} : ${composition.teamCount} clubs collectés`);
+    }
+  }
 }
 
 console.log(`✓ validation indépendante : ${summary.meta.rowCount} mercatos · ${detailCount} mouvements · ${windows.size} fenêtres`);
 console.log('  montants, prêts, catégories, arrivées et départs recalculés depuis chaque mouvement détaillé');
 console.log(`  couverture ${summary.meta.yearMin}-${summary.meta.yearMax} · source ${summary.meta.sourceUpdatedAt ?? 'historique'}`);
+for (const origin of summary.meta.origins ?? []) {
+  const label = origin.firstParty ? 'collecte propre' : 'import';
+  console.log(`  ${label.padEnd(15)} ${origin.dataset.padEnd(44)} ${origin.updatedAt ?? 'sans date'} · ${origin.movementCount} mouvements`);
+}
+if (currentSeason) {
+  const age = currentSeason.updatedAt ? Math.floor(ageInDays(currentSeason.updatedAt)) : null;
+  console.log(
+    `  saison courante ${currentSeason.year}/${currentSeason.year + 1} · origine ${currentSeason.origin}`
+    + `${age == null ? '' : ` · ${age} jour${age > 1 ? 's' : ''}`}`
+    + ` · fenêtre ${windowIsOpen ? 'ouverte' : 'fermée'} (limite ${windowIsOpen ? MAX_AGE_DAYS.openWindow : MAX_AGE_DAYS.closedWindow} j)`,
+  );
+}
+if (latest) {
+  const rate = Math.round((latest.meta.includedCount / latest.meta.transferCount) * 100);
+  console.log(
+    `  derniers transferts : ${latest.meta.includedCount}/${latest.meta.transferCount} pris en compte (${rate} %)`
+    + ` · source ${latest.meta.newestSeen} · nous ${latest.meta.newestIncluded ?? 'aucun'}`,
+  );
+}
+if (completeness.length) {
+  const weakest = completeness.reduce((a, b) => (a.ratio < b.ratio ? a : b));
+  console.log(
+    `  complétude relative la plus faible : ${weakest.leagueId} à ${(weakest.ratio * 100).toFixed(0)} %`
+    + ` de la saison précédente (${weakest.current} contre ${weakest.previous})`,
+  );
+}

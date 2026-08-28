@@ -22,7 +22,11 @@ export function Kpis({ t }: { t: Totals }) {
       <div className="scope-summary">
         <span>Échantillon filtré</span>
         <strong><b>{count(t.clubs)}</b> clubs</strong>
-        <strong><b>{count(t.mercatos)}</b> fenêtres</strong>
+        {/* Un mercato est un moment, pas une ligne : il vaut pour tous les clubs
+            à la fois. Cumuler une ligne par club donnait un nombre à cinq
+            chiffres qui mesurait la hauteur du tableau, pas la période couverte. */}
+        <strong><b>{count(t.mercatos)}</b> mercatos</strong>
+        <strong><b>{count(t.arrivals + t.departures)}</b> transactions</strong>
       </div>
     </section>
   );

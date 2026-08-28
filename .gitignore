@@ -3,8 +3,18 @@ dist/
 .DS_Store
 *.local
 
-# Raw Transfermarkt CSV exports — ~20 Mo, re-downloadable with `npm run data:fetch`
-data/raw/
+# Raw Transfermarkt CSV exports — ~20 Mo, re-downloadable with `npm run data:fetch`.
+# The contents are excluded rather than the directory itself, because git cannot
+# re-include a path inside an excluded directory.
+data/raw/*
+
+# ...except the first-party collection. It is small (<1 Mo) and, unlike the
+# imports, it cannot be downloaded again: it is a reading of pages that change
+# every day. Versioning it keeps the last good mercato available when a CI
+# runner is blocked, and leaves an auditable trail of what the window looked
+# like on each build.
+!data/raw/collected/
+data/raw/collected/*.part
 
 # TypeScript incremental build info
 tsconfig.tsbuildinfo

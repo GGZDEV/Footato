@@ -1,4 +1,4 @@
-import type { Dataset, FreshnessData, League, Mercato, Meta, Movement, Window } from './types';
+import type { Dataset, FreshnessData, LatestData, League, Mercato, Meta, Movement, Window } from './types';
 
 interface RawSummary {
   meta: Meta;
@@ -57,6 +57,22 @@ export async function loadFreshness(cacheBust = false): Promise<FreshnessData | 
     const res = await fetch(`${asset('freshness.json')}${suffix}`, cacheBust ? { cache: 'no-store' } : undefined);
     if (!res.ok) return null;
     return await res.json() as FreshnessData;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Loads the recent-transfer check. Like the roster radar it is deliberately
+ * separate from the aggregates: it reports what the data does and does not
+ * contain, and never contributes an amount.
+ */
+export async function loadLatest(cacheBust = false): Promise<LatestData | null> {
+  try {
+    const suffix = cacheBust ? `?t=${Date.now()}` : '';
+    const res = await fetch(`${asset('latest.json')}${suffix}`, cacheBust ? { cache: 'no-store' } : undefined);
+    if (!res.ok) return null;
+    return await res.json() as LatestData;
   } catch {
     return null;
   }
