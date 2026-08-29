@@ -1,0 +1,12 @@
+[Unit]
+Description=Vérifier les mises à jour Footato toutes les cinq minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+RandomizedDelaySec=30s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

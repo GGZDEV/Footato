@@ -439,6 +439,30 @@ n'honorerait.
 Le jeton se saisit une fois et reste dans le navigateur. Il ne fait jamais partie
 du build.
 
+### Déploiement automatique du code dans le LXC
+
+L'installation sans Docker peut suivre automatiquement la branche Git configurée :
+
+```bash
+cd /opt/footato
+bash server/install-update-timer.sh
+```
+
+Le minuteur vérifie GitHub toutes les cinq minutes. Lorsqu'un commit apparaît, il
+sauvegarde `data/` et `dist/`, arrête le service, effectue uniquement une avance
+rapide de la branche suivie, installe les dépendances, reconstruit et valide le
+site, puis redémarre. Si une étape échoue, le commit, les données et le site
+précédents sont restaurés avant le redémarrage.
+
+```bash
+systemctl status footato-update.timer
+journalctl -u footato-update.service -n 100 --no-pager
+```
+
+Les cinq sauvegardes de retour arrière les plus récentes sont conservées dans
+`/var/lib/footato-update/`. Le minuteur ne pousse jamais vers GitHub : il ne fait
+que déployer les commits déjà publiés sur la branche distante suivie par le LXC.
+
 ### Points d'attention
 
 - **Un échec de collecte ne dégrade pas le site** : la version précédente reste

@@ -1,0 +1,9 @@
+[Unit]
+Description=Déployer automatiquement la dernière version de Footato
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/footato/server/update.sh
+
