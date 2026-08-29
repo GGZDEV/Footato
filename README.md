@@ -1,8 +1,7 @@
 # ⚽ Footato
 
-Récapitulatif des **montants de transferts**, mercato par mercato — neuf championnats européens
-et la Saudi Pro League. Pour chaque club et chaque fenêtre : les **achats**, les **ventes**
-et le **bilan**.
+Plateforme de lecture économique du football : **montants de transferts** mercato par mercato,
+et, dans une page distincte, **comptes annuels publiés** des clubs français et anglais.
 
 Pas de fiches joueurs — le sujet, ce sont les flux d'argent : qui dépense, qui encaisse,
 et ce qu'il reste à la fin de chaque mercato.
@@ -27,6 +26,8 @@ et ce qu'il reste à la fin de chaque mercato.
   visible pour chaque ligne plutôt qu'un classement présenté comme exact à tort.
 - **Investissement comparé aux titres** — achats, investissement net ou ventes face à un indice
   sportif pondéré, avec championnats, coupes nationales et titres continentaux séparés visuellement.
+- **Comptes annuels séparés du mercato** — revenus, masse salariale, résultat net, fonds propres,
+  trésorerie et détail du bilan, avec exercice, devise, périmètre et document officiel visibles.
 
 ## Démarrer
 
@@ -84,6 +85,34 @@ La Saudi Pro League entre dans le périmètre avec une profondeur volontairement
 des deux sources historiques ne la couvre, et l'export de matchs maintenu ne la fournit qu'à
 partir de 2024/25 : les saisons publiées sont donc **2024/25, 2025/26 et la saison en cours**,
 sans reconstitution des années antérieures.
+
+### Comptes annuels — pipeline indépendant
+
+La page **Finances** ne réutilise aucun agrégat de transfert. Elle lit son propre fichier,
+`public/data/finance.json`, où les valeurs restent dans la devise du dépôt et en milliers.
+Le MVP contient :
+
+- les 20 clubs de Ligue 1 2022/23, dernier rapport de comptes individuels disponible dans
+  l'[archive DNCG de la LFP](https://www.sta.lfp.fr/reports-dncg) ;
+- Arsenal, Liverpool et Manchester City sur leur exercice 2025, à partir des comptes déposés
+  sur [Companies House](https://find-and-update.company-information.service.gov.uk/).
+
+La France est extraite automatiquement du format standard DNCG avec `pdfplumber`. L'exception
+de présentation d'Olympique Lyonnais est explicitement relue et les champs non comparables restent
+vides. Les dépôts Companies House étant des PDF scannés et non des données structurées, le collecteur
+détecte et télécharge le dernier dépôt mais ne remplace la normalisation anglaise qu'après revue.
+Un nouveau dépôt est marqué `pending-review` au lieu de publier silencieusement des chiffres anciens
+sous une date nouvelle.
+
+```bash
+python -m pip install -r requirements-finance.txt
+npm run finance:refresh       # collecte, extrait, construit et valide
+npm run finance:build         # reconstruit depuis les normalisations versionnées
+npm run finance:validate      # bilans, revenus, schéma et provenance
+```
+
+Les comparaisons sont faites **dans un pays à la fois**. Il n'y a ni taux de change implicite,
+ni estimation d'un poste absent, ni confusion entre valeur comptable et valeur de marché du club.
 
 ### Collecte directe
 
@@ -303,9 +332,7 @@ d'une moyenne : `100 M€` signifie « au moins 100 M€ documentés ».
 Autres partis pris :
 
 - Un **mercato** est un moment — une saison et une période, été ou hiver — et il vaut pour tous
-  les clubs à la fois. Une **ligne** du tableau est un *mercato de club* : un club sur ce mercato.
-  Les deux ne se comptent pas de la même façon, et l'interface les distingue : « 54 mercatos »
-  décrit la période couverte, « 8 711 mercatos de club » la hauteur du tableau.
+  les clubs à la fois. Une **ligne** détaillée représente l'activité d'un club sur ce mercato.
 - Un club relégué ou promu change de championnat d'une saison à l'autre : chaque ligne porte
   le championnat de la saison concernée.
 - Un transfert entre deux clubs couverts apparaît une fois comme achat, une fois comme vente —
@@ -351,11 +378,17 @@ scripts/sync-football-data.mjs relève les effectifs et détecte les changements
 scripts/lib/transfermarkt.mjs client poli, détection de blocage et parseur
 scripts/lib/club-aliases.mjs une identité de club unique à travers les trois origines
 scripts/lib/honours-catalog.mjs catalogue officiel versionné et contre-vérifié des titres
+scripts/finance/collect.mjs  télécharge DNCG et derniers dépôts Companies House
+scripts/finance/extract-dncg.py extrait les tableaux de comptes Ligue 1
+scripts/finance/build.mjs    publie le jeu financier indépendant
+scripts/finance/validate.mjs contrôle bilans, ventilation, schéma et sources
+data/finance/               registre, extraction DNCG et normalisation anglaise relue
 data/raw/collected/         la collecte propre, versionnée (elle n'est pas retéléchargeable)
 data/fixtures/              page réelle figée servant de test de non-régression au parseur
 public/data/summary.json    championnats, clubs, un agrégat par club × saison × fenêtre (~0,5 Mo)
 public/data/freshness.json  dernier relevé d'effectifs et signaux séparés des agrégats
 public/data/latest.json     derniers transferts publiés, et lesquels figurent dans les données
+public/data/finance.json    comptes annuels normalisés France + Angleterre
 public/data/windows/*.json  les mouvements de chaque fenêtre, chargés à la demande
 src/lib/                    types, agrégation, filtres, formatage
 src/components/             filtres, tuiles, graphiques, tableau, panneau de détail
@@ -388,6 +421,7 @@ qui gère le certificat.
 | `REFRESH_FULL_EVERY` | `4` | Une passe sur quatre retélécharge les instantanés tiers (20 Mo). |
 | `FOOTATO_ADMIN_TOKEN` | *(vide)* | Sans lui, le bouton « Collecter » et l'endpoint restent inertes. |
 | `FOOTBALL_DATA_TOKEN` | *(vide)* | Facultatif : active le contrôle d'effectifs. |
+| `FINANCE_PYTHON` | Python du conteneur | Interpréteur avec `pdfplumber` pour la DNCG. |
 
 Une passe légère prend environ **100 secondes** et coûte **30 requêtes** : 20 pages
 de championnat, 10 relevés de derniers transferts. À raison de quatre passes par
@@ -452,4 +486,5 @@ Compositions de ligues vérifiées via
 [`openfootball/football.json`](https://github.com/openfootball/football.json) (CC0).
 Effectifs récents contrôlés via [`football-data.org`](https://www.football-data.org/).
 Palmarès issu des historiques officiels des sept ligues suivies et de l'UEFA, liens détaillés ci-dessus.
+Comptes annuels issus de la DNCG/LFP et de Companies House, document source conservé par ligne.
 Projet non affilié à Transfermarkt.

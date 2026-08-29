@@ -1,4 +1,4 @@
-import type { Dataset, FreshnessData, LatestData, League, Mercato, Meta, Movement, ServerStatus, Window } from './types';
+import type { Dataset, FinanceDataset, FreshnessData, LatestData, League, Mercato, Meta, Movement, ServerStatus, Window } from './types';
 
 interface RawSummary {
   meta: Meta;
@@ -48,6 +48,13 @@ export async function loadDataset(): Promise<Dataset> {
   }));
 
   return { meta: raw.meta, leagues: raw.leagues, clubs: raw.clubs, mercatos };
+}
+
+/** Annual accounts live in their own dataset and never feed transfer aggregates. */
+export async function loadFinanceDataset(): Promise<FinanceDataset> {
+  const res = await fetch(asset('finance.json'));
+  if (!res.ok) throw new Error(`Chargement des comptes impossible (HTTP ${res.status})`);
+  return await res.json() as FinanceDataset;
 }
 
 /** Loads the latest published roster check. It is deliberately separate from financial aggregates. */

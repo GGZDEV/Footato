@@ -130,6 +130,71 @@ export interface Dataset {
   clubs: string[];
 }
 
+/** One club's published annual accounts. Every amount is in thousands. */
+export interface FinanceMetrics {
+  revenue: number;
+  broadcasting: number | null;
+  commercial: number | null;
+  matchday: number | null;
+  otherRevenue: number | null;
+  payroll: number | null;
+  playerAmortisation: number | null;
+  agentFees: number | null;
+  operatingExpenses: number | null;
+  operatingResult: number | null;
+  playerTrading: number | null;
+  preTaxResult: number | null;
+  netResult: number | null;
+  intangibleAssets: number | null;
+  transferReceivables: number | null;
+  cash: number | null;
+  totalAssets: number;
+  equity: number | null;
+  shareholderLoans: number | null;
+  financialDebt: number | null;
+  transferPayables: number | null;
+  totalLiabilities: number;
+}
+
+export interface FinanceRecord {
+  id: string;
+  name: string;
+  country: 'France' | 'Angleterre';
+  countryCode: 'FR' | 'GB-ENG';
+  league: 'Ligue 1' | 'Premier League';
+  companyNumber?: string;
+  periodEnd: string;
+  currency: 'EUR' | 'GBP';
+  balanceConvention: 'assets-equals-liabilities' | 'liabilities-exclude-equity';
+  scope: string;
+  quality: 'extracted' | 'reviewed';
+  reviewNote: string;
+  metrics: FinanceMetrics;
+  source: {
+    provider: string;
+    title: string;
+    url: string;
+    documentUrl: string;
+    publicationDate: string | null;
+  };
+}
+
+export interface FinanceDataset {
+  meta: {
+    generatedAt: string;
+    clubCount: number;
+    countries: Array<{
+      country: FinanceRecord['country'];
+      clubCount: number;
+      periodEnds: string[];
+      currency: FinanceRecord['currency'];
+    }>;
+    methodology: string;
+    comparabilityNote: string;
+  };
+  records: FinanceRecord[];
+}
+
 export type FreshnessStatus = 'pending' | 'ready';
 export type FreshnessSignalKind = 'moved' | 'added' | 'removed';
 

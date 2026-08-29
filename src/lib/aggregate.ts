@@ -75,7 +75,6 @@ export interface Group {
     domestic: number;
     continental: number;
   };
-  count: number;
   /** Present on the legacy per-window grouping. */
   mercato?: Mercato;
   /** Present on the annual mercato view — one or two windows for a club and season. */
@@ -84,7 +83,7 @@ export interface Group {
 
 const empty = (key: string, label: string, sublabel: string, flag: string): Group => ({
   key, label, sublabel, flag,
-  spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, count: 0,
+  spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0,
   knownFees: 0, unknownFees: 0, coverage: 1,
 });
 
@@ -110,7 +109,6 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
             + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0),
           m.arrivals.undisclosed + m.departures.undisclosed,
         ),
-        count: 1,
         mercato: m,
       };
     });
@@ -151,7 +149,6 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
     g.knownFees += m.arrivals.paid + m.departures.paid
       + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0);
     g.unknownFees += m.arrivals.undisclosed + m.departures.undisclosed;
-    g.count += 1;
     // A club that changed division keeps the league of its most recent window,
     // independently of the input order.
     if (grouping === 'club') {
@@ -171,7 +168,7 @@ export function group(rows: Mercato[], grouping: Grouping, includeLoanFees: bool
   return [...out.values()];
 }
 
-export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'coverage' | 'titles' | 'count';
+export type SortKey = 'label' | 'sublabel' | 'spend' | 'income' | 'balance' | 'volume' | 'arrivals' | 'departures' | 'coverage' | 'titles';
 
 export function sortGroups(groups: Group[], key: SortKey, dir: 1 | -1): Group[] {
   const sorted = [...groups];
@@ -197,8 +194,6 @@ export interface Totals {
    * it spans.
    */
   mercatos: number;
-  /** One club in one window: the number of rows behind the totals. */
-  clubMercatos: number;
   clubs: number;
   arrivals: number;
   departures: number;
@@ -208,7 +203,7 @@ export interface Totals {
 
 export function totals(rows: Mercato[], includeLoanFees: boolean): Totals {
   const t: Totals = {
-    spend: 0, income: 0, balance: 0, mercatos: 0, clubMercatos: rows.length, clubs: 0,
+    spend: 0, income: 0, balance: 0, mercatos: 0, clubs: 0,
     arrivals: 0, departures: 0, paidDeals: 0, undisclosed: 0,
   };
   const clubs = new Set<number>();
@@ -266,7 +261,6 @@ export function groupAnnualMercatos(rows: Mercato[], includeLoanFees: boolean): 
     g.knownFees += m.arrivals.paid + m.departures.paid
       + (includeLoanFees ? m.arrivals.loanFee + m.departures.loanFee : 0);
     g.unknownFees += m.arrivals.undisclosed + m.departures.undisclosed;
-    g.count += 1;
     g.mercatos!.push(m);
     // Prefer the winter membership when a club changed league during a season.
     if (m.window === 1) g.flag = m.league.code;

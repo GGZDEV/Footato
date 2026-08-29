@@ -16,6 +16,10 @@ data/raw/*
 !data/raw/collected/
 data/raw/collected/*.part
 
+# Pièces comptables officielles (PDF, ~20 Mo), retéléchargeables avec
+# `npm run finance:collect`. Les données normalisées, elles, sont versionnées.
+data/raw/finance/
+
 # TypeScript incremental build info
 tsconfig.tsbuildinfo
 

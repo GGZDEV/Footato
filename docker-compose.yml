@@ -25,6 +25,7 @@ services:
       BRIGHTDATA_API_KEY: ${BRIGHTDATA_API_KEY:-}
       # Facultatif : active le contrôle d'effectifs football-data.org.
       FOOTBALL_DATA_TOKEN: ${FOOTBALL_DATA_TOKEN:-}
+      FINANCE_PYTHON: ${FINANCE_PYTHON:-/opt/finance-venv/bin/python}
       TZ: ${TZ:-Europe/Paris}
 
     volumes:

@@ -67,7 +67,7 @@ const independentFilter = (filters) => mercatos.filter((mercato) => {
 
 const independentTotals = (rows, includeLoanFees) => {
   const result = {
-    spend: 0, income: 0, balance: 0, mercatos: 0, clubMercatos: rows.length, clubs: 0,
+    spend: 0, income: 0, balance: 0, mercatos: 0, clubs: 0,
     arrivals: 0, departures: 0, paidDeals: 0, undisclosed: 0,
   };
   const clubs = new Set();
@@ -123,7 +123,7 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
       flag = mercato.window === 0 ? 'summer' : 'winter';
     }
     if (!result.has(key)) {
-      result.set(key, { key, label, sublabel, flag, spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, knownFees: 0, unknownFees: 0, coverage: 1, count: 0 });
+      result.set(key, { key, label, sublabel, flag, spend: 0, income: 0, balance: 0, volume: 0, arrivals: 0, departures: 0, knownFees: 0, unknownFees: 0, coverage: 1 });
     }
     const target = result.get(key);
     const resolved = independentResolve(mercato, includeLoanFees);
@@ -134,7 +134,6 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
     target.knownFees += mercato.arrivals.paid + mercato.departures.paid
       + (includeLoanFees ? mercato.arrivals.loanFee + mercato.departures.loanFee : 0);
     target.unknownFees += mercato.arrivals.undisclosed + mercato.departures.undisclosed;
-    target.count += 1;
     if (grouping === 'club') {
       const previous = latest.get(key);
       if (!previous || mercato.year > previous[0] || (mercato.year === previous[0] && mercato.window > previous[1])) {
@@ -152,8 +151,8 @@ const independentGroups = (rows, grouping, includeLoanFees) => {
   return [...result.values()].sort((a, b) => a.key.localeCompare(b.key));
 };
 
-const comparableGroup = ({ key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage, count }) => ({
-  key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage, count,
+const comparableGroup = ({ key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage }) => ({
+  key, label, sublabel, flag, spend, income, balance, volume, arrivals, departures, knownFees, unknownFees, coverage,
 });
 
 const scenarioList = [{ name: 'toutes les données', filters: { ...defaults } }];
@@ -206,7 +205,6 @@ for (const { name, filters } of scenarioList) {
     assert.equal(groups.reduce((sum, item) => sum + item.departures, 0), expectedTotals.departures, `départs ${name}/${grouping}`);
     assert.equal(groups.reduce((sum, item) => sum + item.knownFees, 0), expectedTotals.paidDeals, `montants connus ${name}/${grouping}`);
     assert.equal(groups.reduce((sum, item) => sum + item.unknownFees, 0), expectedTotals.undisclosed, `montants inconnus ${name}/${grouping}`);
-    assert.equal(groups.reduce((sum, item) => sum + item.count, 0), actualRows.length, `comptage ${name}/${grouping}`);
     for (const item of groups) {
       assert.equal(item.balance, item.income - item.spend, `formule bilan ${name}/${grouping}/${item.key}`);
       assert.equal(item.volume, item.income + item.spend, `formule volume ${name}/${grouping}/${item.key}`);
@@ -225,7 +223,7 @@ assert.deepEqual(
 );
 
 const allGroups = group(mercatos, 'mercato', false);
-for (const key of ['label', 'sublabel', 'spend', 'income', 'balance', 'volume', 'arrivals', 'departures', 'coverage', 'count']) {
+for (const key of ['label', 'sublabel', 'spend', 'income', 'balance', 'volume', 'arrivals', 'departures', 'coverage']) {
   for (const dir of [1, -1]) {
     const originalKeys = allGroups.map((item) => item.key);
     const sorted = sortGroups(allGroups, key, dir);

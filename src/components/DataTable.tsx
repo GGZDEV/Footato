@@ -38,12 +38,6 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
       { key: 'label', label: labelHead, align: 'left' },
       { key: 'sublabel', label: sublabelHead, align: 'left' },
     ];
-    // Une ligne par club et par mercato : sur un championnat ou une saison, ce
-    // n'est pas un nombre de mercatos, puisqu'un mercato vaut pour tous les
-    // clubs à la fois. L'infobulle porte la définition, l'en-tête reste court.
-    if (grouping !== 'mercato') {
-      result.push({ key: 'count', label: 'Mercatos club', title: 'Nombre de couples club × mercato agrégés dans cette ligne' });
-    }
     result.push(
       { key: 'spend', label: 'Achats' },
       { key: 'income', label: 'Ventes' },
@@ -131,7 +125,6 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
                 <td className="left cell-sub">
                   {group.sublabel}
                 </td>
-                {grouping !== 'mercato' && <td className="num muted">{count(group.count)}</td>}
                 <td className="num neg">{money(group.spend)}</td>
                 <td className="num pos">{money(group.income)}</td>
                 <td className="num bar-cell">
@@ -163,11 +156,7 @@ export function DataTable({ groups, grouping, sort, onSort, onSelect, selectedKe
             <span className="result-rank">{String(index + 1).padStart(2, '0')}</span>
             <span className="result-identity">
               <span className="result-name"><Flag code={group.flag} /><b>{group.label}</b></span>
-              {/* Ce compteur additionne une ligne par club et par mercato. Sur un
-                  championnat ou une saison ce n'est donc pas un nombre de
-                  mercatos — un mercato vaut pour tous les clubs à la fois — mais
-                  bien un nombre de mercatos de club. */}
-              <span>{group.sublabel}{grouping !== 'mercato' && ` · ${count(group.count)} mercatos de club`}</span>
+              <span>{group.sublabel}</span>
             </span>
             <span className="result-money">
               <span><small>Achats</small><b className="num neg">{money(group.spend)}</b></span>

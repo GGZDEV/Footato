@@ -63,6 +63,7 @@ jobs:
             npm run freshness:validate
             npm run freshness:verify
             npm run analytics:verify
+            npm run finance:validate
           fi
       - name: Construire le site
         run: npm run build

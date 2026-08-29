@@ -21,11 +21,15 @@
     "freshness:verify": "node scripts/verify-freshness.mjs",
     "analytics:verify": "node --experimental-strip-types scripts/verify-analytics.mjs",
     "collector:verify": "node scripts/verify-collector.mjs",
-    "test": "npm run data:validate && npm run collector:verify && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify && npm run typecheck",
+    "finance:collect": "node scripts/finance/collect.mjs",
+    "finance:build": "node scripts/finance/build.mjs",
+    "finance:validate": "node scripts/finance/validate.mjs",
+    "finance:refresh": "npm run finance:collect && npm run finance:build && npm run finance:validate",
+    "test": "npm run data:validate && npm run collector:verify && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify && npm run finance:validate && npm run typecheck",
     "data:refresh": "npm run data:fetch && npm run data:recent && npm run data:collect && npm run data:latest && npm run data:build && npm run data:fresh && npm run data:validate && npm run freshness:validate && npm run freshness:verify && npm run analytics:verify",
     "data": "npm run data:refresh",
     "refresh:site": "npm run data:collect && npm run data:latest && npm run data:build && npm run data:validate && npm run collector:verify && npm run analytics:verify && npm run build",
-    "refresh:site:full": "npm run data:fetch && npm run data:recent && npm run refresh:site",
+    "refresh:site:full": "npm run data:fetch && npm run data:recent && npm run finance:refresh && npm run refresh:site",
     "serve": "node server/serve.mjs"
   },
   "dependencies": {

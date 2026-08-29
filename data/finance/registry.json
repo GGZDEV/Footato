@@ -1,0 +1,89 @@
+{
+  "france": {
+    "provider": "DNCG / LFP",
+    "sourceUrl": "https://www.lfp.fr/assets/2223_DNC_Gcomptes_clubs_EN_bae345f5b5.pdf",
+    "documentUrl": "https://www.lfp.fr/assets/2223_DNC_Gcomptes_clubs_EN_bae345f5b5.pdf",
+    "season": "2022-2023",
+    "periodEnd": "2023-06-30",
+    "currency": "EUR",
+    "clubs": [
+      { "id": "ac-ajaccio", "name": "AC Ajaccio", "pdfPage": 3, "side": "left" },
+      { "id": "angers-sco", "name": "Angers SCO", "pdfPage": 3, "side": "right" },
+      { "id": "aj-auxerre", "name": "AJ Auxerre", "pdfPage": 4, "side": "left" },
+      { "id": "stade-brestois", "name": "Stade Brestois 29", "pdfPage": 4, "side": "right" },
+      { "id": "clermont-foot", "name": "Clermont Foot 63", "pdfPage": 5, "side": "left" },
+      { "id": "rc-lens", "name": "RC Lens", "pdfPage": 5, "side": "right" },
+      { "id": "losc", "name": "LOSC Lille", "pdfPage": 6, "side": "left" },
+      { "id": "fc-lorient", "name": "FC Lorient", "pdfPage": 6, "side": "right" },
+      {
+        "id": "olympique-lyonnais",
+        "name": "Olympique Lyonnais",
+        "pdfPage": 7,
+        "side": "full",
+        "layout": "lyon",
+        "reviewedMetrics": {
+          "revenue": 199128,
+          "broadcasting": null,
+          "commercial": null,
+          "matchday": null,
+          "otherRevenue": null,
+          "payroll": 156695,
+          "playerAmortisation": null,
+          "agentFees": null,
+          "operatingExpenses": null,
+          "operatingResult": -76344,
+          "playerTrading": null,
+          "preTaxResult": -99132,
+          "netResult": -98972,
+          "intangibleAssets": 53296,
+          "transferReceivables": 22934,
+          "cash": 34505,
+          "totalAssets": 741543,
+          "equity": 105370,
+          "shareholderLoans": null,
+          "financialDebt": null,
+          "transferPayables": 44154,
+          "totalLiabilities": 741543
+        }
+      },
+      { "id": "olympique-marseille", "name": "Olympique de Marseille", "pdfPage": 8, "side": "left" },
+      { "id": "as-monaco", "name": "AS Monaco", "pdfPage": 8, "side": "right" },
+      { "id": "montpellier-hsc", "name": "Montpellier HSC", "pdfPage": 9, "side": "left" },
+      { "id": "fc-nantes", "name": "FC Nantes", "pdfPage": 9, "side": "right" },
+      { "id": "ogc-nice", "name": "OGC Nice", "pdfPage": 10, "side": "left" },
+      { "id": "paris-saint-germain", "name": "Paris Saint-Germain", "pdfPage": 10, "side": "right" },
+      { "id": "stade-reims", "name": "Stade de Reims", "pdfPage": 11, "side": "left" },
+      { "id": "stade-rennais", "name": "Stade Rennais FC", "pdfPage": 11, "side": "right" },
+      { "id": "rc-strasbourg", "name": "RC Strasbourg Alsace", "pdfPage": 12, "side": "left" },
+      { "id": "toulouse-fc", "name": "Toulouse FC", "pdfPage": 12, "side": "right" },
+      { "id": "estac-troyes", "name": "ESTAC Troyes", "pdfPage": 13, "side": "left" }
+    ]
+  },
+  "england": {
+    "provider": "Companies House",
+    "currency": "GBP",
+    "clubs": [
+      {
+        "id": "arsenal",
+        "name": "Arsenal",
+        "companyNumber": "00109244",
+        "periodEnd": "2025-05-31",
+        "reviewedFilingPath": "/company/00109244/filing-history/MzUwNzE0ODU1N2FkaXF6a2N4/document?format=pdf&download=0"
+      },
+      {
+        "id": "liverpool",
+        "name": "Liverpool",
+        "companyNumber": "00035668",
+        "periodEnd": "2025-05-31",
+        "reviewedFilingPath": "/company/00035668/filing-history/MzUwNzg0MzI1NmFkaXF6a2N4/document?format=pdf&download=0"
+      },
+      {
+        "id": "manchester-city",
+        "name": "Manchester City",
+        "companyNumber": "00040946",
+        "periodEnd": "2025-06-30",
+        "reviewedFilingPath": "/company/00040946/filing-history/MzUwODQ0MDY0MmFkaXF6a2N4/document?format=pdf&download=0"
+      }
+    ]
+  }
+}

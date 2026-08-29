@@ -5,15 +5,17 @@
 # le site à chaque collecte : ce n'est pas un simple serveur de fichiers.
 FROM node:22-alpine
 
-# git n'est pas requis pour construire, mais permet au conteneur de committer la
-# collecte si vous activez cette option (voir README).
-RUN apk add --no-cache git tzdata
+# Python/pdfplumber extrait les tableaux standardisés DNCG lors des passes
+# financières complètes. Poppler sert au diagnostic des PDF déposés.
+RUN apk add --no-cache git tzdata python3 py3-pip poppler-utils
 
 WORKDIR /app
 
 # Couche de dépendances séparée : une modification du code ne réinstalle pas.
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json requirements-finance.txt ./
 RUN npm ci
+RUN python3 -m venv /opt/finance-venv \
+  && /opt/finance-venv/bin/pip install --no-cache-dir -r requirements-finance.txt
 
 COPY . .
 
@@ -25,7 +27,8 @@ ENV NODE_ENV=production \
     PORT=8080 \
     HOST=0.0.0.0 \
     REFRESH_INTERVAL_HOURS=6 \
-    REFRESH_FULL_EVERY=4
+    REFRESH_FULL_EVERY=4 \
+    FINANCE_PYTHON=/opt/finance-venv/bin/python
 
 EXPOSE 8080
 

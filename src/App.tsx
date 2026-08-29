@@ -3,6 +3,7 @@ import { BrandMark } from './components/BrandMark';
 import { CompletenessView } from './components/CompletenessView';
 import { DataTable } from './components/DataTable';
 import { Filters } from './components/Filters';
+import { FinanceView } from './components/FinanceView';
 import { HonoursView } from './components/HonoursView';
 import { Kpis } from './components/Kpis';
 import { MercatoDetail } from './components/MercatoDetail';
@@ -20,12 +21,12 @@ import {
   type Grouping,
   type SortKey,
 } from './lib/aggregate';
-import { loadDataset, loadFreshness, loadLatest, loadServerStatus, triggerRefresh } from './lib/data';
+import { loadDataset, loadFinanceDataset, loadFreshness, loadLatest, loadServerStatus, triggerRefresh } from './lib/data';
 import { season } from './lib/format';
 import { titleWeight, trophyFamily, type TitlePointBreakdown } from './lib/honours';
-import type { Dataset, FreshnessData, LatestData, ServerStatus } from './lib/types';
+import type { Dataset, FinanceDataset, FreshnessData, LatestData, ServerStatus } from './lib/types';
 
-type AppSection = 'market' | 'honours' | 'coverage';
+type AppSection = 'market' | 'finance' | 'honours' | 'coverage';
 type QuickView = 'overview' | 'spend-decade' | 'profit' | 'income' | null;
 
 /**
@@ -43,6 +44,7 @@ const GROUPINGS: { value: Grouping; label: string; hint: string }[] = [
 
 const SECTIONS: { value: AppSection; label: string }[] = [
   { value: 'market', label: 'Marché' },
+  { value: 'finance', label: 'Finances' },
   { value: 'honours', label: 'Palmarès' },
   { value: 'coverage', label: 'Complétude' },
 ];
@@ -127,6 +129,8 @@ function restoreClubAliases(state: UrlState, dataset: Dataset): UrlState {
 export default function App() {
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [freshness, setFreshness] = useState<FreshnessData | null>(null);
+  const [finance, setFinance] = useState<FinanceDataset | null>(null);
+  const [financeError, setFinanceError] = useState<string | null>(null);
   const [latest, setLatest] = useState<LatestData | null>(null);
   // Null tant qu'aucun service de collecte ne répond : sur un hébergement
   // statique les commandes correspondantes restent masquées.
@@ -149,6 +153,7 @@ export default function App() {
 
   useEffect(() => {
     loadFreshness().then(setFreshness);
+    loadFinanceDataset().then(setFinance).catch((caught: Error) => setFinanceError(caught.message));
     loadLatest().then(setLatest);
     loadServerStatus().then(setServer);
     loadDataset()
@@ -191,6 +196,13 @@ export default function App() {
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
     });
   }, [ready, section]);
+
+  useEffect(() => {
+    document.title = section === 'finance' ? 'Footato — Finances des clubs'
+      : section === 'honours' ? 'Footato — Palmarès'
+        : section === 'coverage' ? 'Footato — Complétude des données'
+          : 'Footato — Mercatos';
+  }, [section]);
 
   const patchFilters = useCallback((patch: Partial<F>) => {
     setFilters((current) => ({ ...current, ...patch }));
@@ -247,7 +259,6 @@ export default function App() {
     setGrouping(next);
     setQuickView(null);
     setSelectedKey(null);
-    setSort((current) => next === 'mercato' && current.key === 'count' ? { key: 'volume', dir: -1 } : current);
   }, []);
 
   const onSort = useCallback((key: SortKey) => {
@@ -435,7 +446,7 @@ export default function App() {
       <header className="app-header">
         <button className="brand-button" onClick={resetAll} title="Réinitialiser et revenir au marché" aria-label="Footato — réinitialiser toute la vue">
           <BrandMark />
-          <span><b>Footato</b><small>Le marché, en chiffres</small></span>
+          <span><b>Footato</b><small>Le football, en chiffres</small></span>
         </button>
 
         <nav className="primary-nav" aria-label="Sections principales">
@@ -448,19 +459,25 @@ export default function App() {
 
         <div className="header-actions">
           <ThemeToggle />
-          <button
-            className="data-pill"
-            onClick={() => setSection('coverage')}
-            title={
-              meta.currentSeason
-                ? `Saison ${meta.currentSeason.year}/${(meta.currentSeason.year + 1) % 100} relevée le ${sourceDate}`
-                  + `${currentSeasonAgeDays == null ? '' : ` (il y a ${currentSeasonAgeDays} j)`}`
-                : 'Voir la qualité et les sources'
-            }
-            aria-label="Voir la complétude et les sources"
-          >
-            <i aria-hidden="true" /><span>Données · {sourceDate}</span>
-          </button>
+          {section === 'finance' && finance ? (
+            <span className="data-pill finance-data-pill" aria-label="Exercices financiers affichés">
+              <i aria-hidden="true" /><span>Comptes · 2023 / 2025</span>
+            </span>
+          ) : (
+            <button
+              className="data-pill"
+              onClick={() => setSection('coverage')}
+              title={
+                meta.currentSeason
+                  ? `Saison ${meta.currentSeason.year}/${(meta.currentSeason.year + 1) % 100} relevée le ${sourceDate}`
+                    + `${currentSeasonAgeDays == null ? '' : ` (il y a ${currentSeasonAgeDays} j)`}`
+                  : 'Voir la qualité et les sources'
+              }
+              aria-label="Voir la complétude et les sources"
+            >
+              <i aria-hidden="true" /><span>Données · {sourceDate}</span>
+            </button>
+          )}
         </div>
       </header>
 
@@ -544,6 +561,16 @@ export default function App() {
           />
         )}
 
+        {section === 'finance' && finance && <FinanceView dataset={finance} />}
+
+        {section === 'finance' && !finance && !financeError && (
+          <div className="center-state"><span>Chargement des comptes annuels…</span></div>
+        )}
+
+        {section === 'finance' && financeError && (
+          <div className="center-state"><div className="error-box"><strong>Les comptes n’ont pas pu être chargés.</strong><p>{financeError}</p><code>npm run finance:build</code></div></div>
+        )}
+
         {section === 'honours' && freshness?.honours?.meta.status !== 'ready' && (
           <div className="center-state"><span>Le palmarès est en cours de préparation.</span></div>
         )}
@@ -554,8 +581,13 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
-        <span>{meta.movementCount.toLocaleString('fr-FR')} mouvements · {meta.clubCount} clubs · {dataset.leagues.length} championnats</span>
-        <span>Montants publiés par Transfermarkt · les valeurs non divulguées ne sont pas estimées</span>
+        {section === 'finance' && finance ? <>
+          <span>{finance.meta.clubCount} comptes annuels · France + Angleterre</span>
+          <span>Sources officielles DNCG / LFP et Companies House · montants publiés, sans conversion</span>
+        </> : <>
+          <span>{meta.movementCount.toLocaleString('fr-FR')} mouvements · {meta.clubCount} clubs · {dataset.leagues.length} championnats</span>
+          <span>Montants publiés par Transfermarkt · les valeurs non divulguées ne sont pas estimées</span>
+        </>}
       </footer>
 
       {selectedMercatos && (
