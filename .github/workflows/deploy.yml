@@ -26,10 +26,11 @@ jobs:
           cache: npm
       - run: npm ci
       # The scheduled collect workflow owns external refreshes and commits data
-      # only after validation. A deployment builds the versioned snapshot without
-      # depending on Transfermarkt or football-data.org availability.
+      # only after validation. A deployment rebuilds from those versioned files
+      # without depending on Transfermarkt or football-data.org availability.
       - name: Vérifier les données et le code
         run: |
+          npm run data:build
           npm run collector:verify
           npm run freshness:validate
           npm run freshness:verify
