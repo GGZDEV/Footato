@@ -25,11 +25,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # The scheduled collect workflow owns external refreshes and commits data
-      # only after validation. A deployment rebuilds from those versioned files
-      # without depending on Transfermarkt or football-data.org availability.
+      # The scheduled collect workflow owns the Transfermarkt refresh. Historical
+      # imports are fetched here because data/raw/ is ignored by Git; the current
+      # season comes from the versioned collection.
       - name: Vérifier les données et le code
         run: |
+          npm run data:fetch
+          npm run data:recent
           npm run data:build
           npm run collector:verify
           npm run freshness:validate
